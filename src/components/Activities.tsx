@@ -63,7 +63,7 @@ const Activities = () => {
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg border border-gray-200 p-6 transition-all duration-200 hover:shadow-md hover:-translate-y-1 cursor-pointer"
+              className="bg-white rounded-lg border border-gray-200 p-6 transition-all duration-200 hover:shadow-md hover:-translate-y-1"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="text-gray-700 mb-4 group-hover:scale-105 transition-transform duration-200">

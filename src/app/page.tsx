@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import Activities from "@/components/Activities";
+import GetInvolved from "@/components/GetInvolved";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Hero />
       </div>
       <Activities />
+      <GetInvolved />
     </div>
   );
 }
