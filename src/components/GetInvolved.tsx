@@ -60,7 +60,7 @@ const GetInvolved = () => {
                   <p className="text-gray-600 leading-relaxed mb-6">
                     {option.description}
                   </p>
-                  <div className="text-red-600 font-medium group-hover:text-red-700 transition-colors">
+                  <div className="text-gray-900 font-medium group-hover:text-purple-600 transition-colors">
                     Get Started →
                   </div>
                 </div>

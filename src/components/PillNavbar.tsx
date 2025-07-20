@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function Navbar() {
+export default function PillNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,47 +11,47 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="z-50 w-full">
-      <div className="bg-white border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+      <div className="bg-white/80 border border-gray-200 rounded-full shadow-sm backdrop-blur-sm min-w-max">
+        <div className="px-6 py-1.5">
           <div className="flex justify-between items-center">
-            {/* Logo - Always visible */}
-            <div className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-semibold text-black hover:text-gray-700 transition-colors">
+            {/* Logo */}
+            <div className="flex-shrink-0 md:hidden">
+              <Link href="/" className="text-base font-semibold text-black hover:text-gray-700 transition-colors">
                 Yale AI
               </Link>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
-              <div className="flex items-center space-x-8">
+              <div className="flex items-center space-x-10">
                 <Link
                   href="/"
-                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-1 rounded-full text-sm font-medium transition-all duration-200"
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-1 rounded-full text-sm font-medium transition-all duration-200"
                 >
                   About
                 </Link>
                 <Link
                   href="/projects"
-                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-1 rounded-full text-sm font-medium transition-all duration-200"
                 >
                   Projects
                 </Link>
                 <Link
                   href="/team"
-                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-1 rounded-full text-sm font-medium transition-all duration-200"
                 >
                   Team
                 </Link>
                 <Link
                   href="/sponsors"
-                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-1 rounded-full text-sm font-medium transition-all duration-200"
                 >
                   Sponsors
                 </Link>
@@ -62,15 +62,15 @@ export default function Navbar() {
             <div className="md:hidden">
               <button
                 onClick={toggleMenu}
-                className="inline-flex items-center justify-center p-2 rounded-lg text-black hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 transition-all duration-200"
+                className="inline-flex items-center justify-center p-1 rounded-full text-black hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 transition-all duration-200"
               >
                 <span className="sr-only">Open main menu</span>
                 {!isMenuOpen ? (
-                  <svg className="block h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="block h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
                 ) : (
-                  <svg className="block h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="block h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 )}
@@ -82,38 +82,38 @@ export default function Navbar() {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-6 pt-2 pb-6 space-y-2 bg-white border-t border-gray-200">
+            <div className="px-3 pt-2 pb-3 space-y-1 bg-white/90 border-t border-gray-200 rounded-b-2xl">
               <Link
                 href="/"
-                className="text-black hover:text-gray-700 hover:bg-gray-100 block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                className="text-black hover:text-gray-700 hover:bg-gray-100 block px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-black hover:text-gray-700 hover:bg-gray-100 block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                className="text-black hover:text-gray-700 hover:bg-gray-100 block px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="/projects"
-                className="text-black hover:text-gray-700 hover:bg-gray-100 block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                className="text-black hover:text-gray-700 hover:bg-gray-100 block px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Projects
               </Link>
               <Link
                 href="/team"
-                className="text-black hover:text-gray-700 hover:bg-gray-100 block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                className="text-black hover:text-gray-700 hover:bg-gray-100 block px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Team
               </Link>
               <Link
                 href="/sponsors"
-                className="text-black hover:text-gray-700 hover:bg-gray-100 block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                className="text-black hover:text-gray-700 hover:bg-gray-100 block px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Sponsors
