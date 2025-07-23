@@ -18,8 +18,8 @@ const GetInvolved = () => {
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
         </svg>
       ),
-      title: 'Join a Project Team',
-      description: 'Collaborate with fellow students on cutting-edge AI projects, from research initiatives to practical applications.'
+      title: 'Create With Us',
+      description: 'Join a project team and collaborate with fellow students on AI projects, from research initiatives to practical applications.'
     },
     {
       icon: (
