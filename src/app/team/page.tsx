@@ -51,7 +51,7 @@ export default function Team() {
         <div className="text-center mb-16">
             <h1 className="text-6xl font-bold text-gray-900 mb-8">
               Our{' '}
-              <span className="text-yellow-500">Team</span>
+              <span className="text-red-600">Team</span>
             </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             The people working to get Yale AI off the ground.
