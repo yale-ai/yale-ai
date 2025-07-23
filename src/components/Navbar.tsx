@@ -17,15 +17,8 @@ export default function Navbar() {
           <div className="flex justify-between items-center">
             {/* Logo - Always visible */}
             <div className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-semibold text-black hover:text-gray-700 transition-colors">
-                <span className="relative inline-block cursor-pointer transition-all duration-500 group">
-                  <span className="hover:bg-gradient-to-r hover:from-blue-900 hover:via-blue-600 hover:to-blue-900 hover:bg-clip-text hover:text-transparent hover:drop-shadow-[0_2px_8px_rgba(30,64,175,0.5)] transition-all duration-500">
-                    Yale AI
-                  </span>
-                  <span className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 translate-x-[-100%] group-hover:translate-x-[100%] skew-x-12"></span>
-                  </span>
-                </span>
+              <Link href="/" className="text-2xl font-semibold text-black hover:text-gray-700 transition-colors duration-200">
+                Yale AI
               </Link>
             </div>
 
@@ -51,17 +44,19 @@ export default function Navbar() {
                   Projects
                 </Link>
                 <Link
+                  href="/education"
+                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                >
+                  Education
+                </Link>
+                <Link
                   href="/team"
                   className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
                 >
                   Team
                 </Link>
-                <Link
-                  href="/sponsors"
-                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
-                >
-                  Sponsors
-                </Link>
+
+
               </div>
             </div>
 
@@ -119,11 +114,11 @@ export default function Navbar() {
                 Team
               </Link>
               <Link
-                href="/sponsors"
+                href="/education"
                 className="text-black hover:text-gray-700 hover:bg-gray-100 block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Sponsors
+                Education
               </Link>
             </div>
           </div>

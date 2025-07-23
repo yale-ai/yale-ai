@@ -63,7 +63,7 @@ export default function Team() {
           {executiveBoard.map((member, index) => (
             <div key={index} className="text-center group">
               <div className="relative mb-4 mx-auto">
-                <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-gray-200 group-hover:border-gray-300 transition-colors duration-300">
+                <div className="w-44 h-44 mx-auto rounded-full overflow-hidden border-4 border-gray-200 group-hover:border-gray-300 transition-colors duration-300">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -73,10 +73,10 @@ export default function Team() {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-black mb-2">
+              <h3 className="text-lg font-semibold text-black mb-2">
                 {member.name}
               </h3>
-              <p className="text-gray-600 font-medium">
+              <p className="text-sm text-gray-600 font-medium">
                 {member.role}
               </p>
             </div>

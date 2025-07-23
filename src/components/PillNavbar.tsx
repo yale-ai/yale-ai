@@ -44,17 +44,18 @@ export default function PillNavbar() {
                   Projects
                 </Link>
                 <Link
+                  href="/education"
+                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-1 rounded-full text-sm font-medium transition-all duration-200"
+                >
+                  Education
+                </Link>
+                <Link
                   href="/team"
                   className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-1 rounded-full text-sm font-medium transition-all duration-200"
                 >
                   Team
                 </Link>
-                <Link
-                  href="/sponsors"
-                  className="text-black hover:text-gray-700 hover:bg-gray-100 px-4 py-1 rounded-full text-sm font-medium transition-all duration-200"
-                >
-                  Sponsors
-                </Link>
+                
               </div>
             </div>
 
@@ -112,11 +113,11 @@ export default function PillNavbar() {
                 Team
               </Link>
               <Link
-                href="/sponsors"
+                href="/education"
                 className="text-black hover:text-gray-700 hover:bg-gray-100 block px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Sponsors
+                Education
               </Link>
             </div>
           </div>
