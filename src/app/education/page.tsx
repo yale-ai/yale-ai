@@ -33,13 +33,15 @@ export default function Education() {
             </h1>
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <p className="text-lg text-gray-500 font-medium">Comprehensive AI Learning Experience</p>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Explore our comprehensive AI and machine learning education programs designed to advance your skills
+              </p>
             </div>
             
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
               <p>
                 Our education programs are designed to cater to students at all levels of AI expertise. 
-                Whether you're just starting your journey in artificial intelligence or looking to advance 
+                Whether you&apos;re just starting your journey in artificial intelligence or looking to advance 
                 your existing knowledge, we have programs tailored to help you succeed.
               </p>
               

@@ -28,7 +28,7 @@ export default function Projects() {
               
               <p>
                 Our project teams work closely with faculty mentors and industry professionals 
-                to tackle real-world challenges. Whether you're interested in building AI models, 
+                to tackle real-world challenges. Whether you&apos;re interested in building AI models, 
                 conducting research, or exploring AI policy, our diverse project portfolio offers 
                 opportunities for students at all levels to contribute meaningfully to the field.
               </p>
