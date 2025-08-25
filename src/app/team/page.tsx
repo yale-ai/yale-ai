@@ -89,8 +89,7 @@ export default function Team() {
             Join Our Team
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Interested in joining Yale AI? We're always looking for passionate students 
-            who want to explore the frontiers of artificial intelligence.
+            Interested in joining Yale AI? We'd be very happy to hear from you!
           </p>
           <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors duration-300">
             Get Involved

@@ -97,17 +97,16 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  AI Ethics & Fairness Research
+                  Title
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Investigating bias in machine learning models and developing frameworks 
-                  for ethical AI deployment across various domains.
+                  Short description of the project.
                 </p>
                 <div className="flex items-center text-gray-500 text-sm mb-4">
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
                   </svg>
-                  Fall 2024 - Present
+                  Fall 2025 - Present
                 </div>
                 <button className="text-red-600 font-medium hover:text-red-700 transition-colors">
                   Learn more →
@@ -126,17 +125,16 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Computer Vision for Healthcare
+                  Title
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Developing deep learning models for medical image analysis and 
-                  diagnostic assistance in collaboration with Yale School of Medicine.
+                  Short description of the project.
                 </p>
                 <div className="flex items-center text-gray-500 text-sm mb-4">
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
                   </svg>
-                  Spring 2024 - Present
+                  Fall 2025 - Present
                 </div>
                 <button className="text-red-600 font-medium hover:text-red-700 transition-colors">
                   Learn more →
@@ -155,17 +153,16 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Natural Language Processing
+                  Title
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Building advanced language models and exploring applications in 
-                  education, content generation, and multilingual communication.
+                  Short description of the project.
                 </p>
                 <div className="flex items-center text-gray-500 text-sm mb-4">
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
                   </svg>
-                  Fall 2024 - Present
+                  Fall 2025 - Present
                 </div>
                 <button className="text-red-600 font-medium hover:text-red-700 transition-colors">
                   Learn more →
@@ -184,17 +181,16 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Reinforcement Learning Lab
+                  Title
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Exploring autonomous agents and decision-making systems through 
-                  cutting-edge reinforcement learning algorithms and simulations.
+                  Short description of the project.
                 </p>
                 <div className="flex items-center text-gray-500 text-sm mb-4">
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
                   </svg>
-                  Spring 2024 - Present
+                  Fall 2025 - Present
                 </div>
                 <button className="text-red-600 font-medium hover:text-red-700 transition-colors">
                   Learn more →
@@ -213,17 +209,16 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  AI for Social Good
+                  Title
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Partnering with non-profits to apply AI solutions to pressing social 
-                  challenges including climate change, education access, and public health.
+                  Short description of the project.
                 </p>
                 <div className="flex items-center text-gray-500 text-sm mb-4">
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
                   </svg>
-                  Fall 2024 - Present
+                  Fall 2025 - Present
                 </div>
                 <button className="text-red-600 font-medium hover:text-red-700 transition-colors">
                   Learn more →
@@ -242,17 +237,16 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Quantum Machine Learning
+                  Title
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Investigating the intersection of quantum computing and machine learning 
-                  to develop next-generation AI algorithms and applications.
+                  Short description of the project.
                 </p>
                 <div className="flex items-center text-gray-500 text-sm mb-4">
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
                   </svg>
-                  Spring 2024 - Present
+                  Fall 2025 - Present
                 </div>
                 <button className="text-red-600 font-medium hover:text-red-700 transition-colors">
                   Learn more →
