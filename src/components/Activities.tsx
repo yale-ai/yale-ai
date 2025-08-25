@@ -41,7 +41,7 @@ const Activities = () => {
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-12 h-12">
-          <path d="M10 16V8c0-1.1.9-2 2-2s2 .9 2 2v8c0 1.1-.9 2-2 2s-2-.9-2-2zm10-4c0 1.1-.9 2-2 2s-2-.9-2-2V8c0-1.1.9-2 2-2s2 .9 2 2v4zM6 12c0 1.1-.9 2-2 2s-2-.9-2-2V8c0-1.1.9-2 2-2s2 .9 2 2v4z"/>
+          <path d="M10 16V8c0-1.1.9-2 2-2s2 .9 2 2v8c0 1.1-.9 2-2 2s-2-.9-2-2zm10-4c0 1.1-.9 2-2 2s-2-.9-2-2V8c0 1.1.9-2 2-2s2 .9 2 2v4zM6 12c0 1.1-.9 2-2 2s-2-.9-2-2V8c0 1.1.9-2 2-2s2 .9 2 2v4z"/>
         </svg>
       ),
       title: 'Class and Career Advice',
@@ -50,10 +50,13 @@ const Activities = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/20 to-purple-50/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Programs</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Our{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Programs</span>
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Explore our diverse range of programs designed to advance your AI and machine learning journey
           </p>
@@ -63,11 +66,13 @@ const Activities = () => {
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg border border-gray-200 p-6 transition-all duration-200 hover:shadow-md hover:-translate-y-1"
+              className="bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200/30 p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 group"
             >
               <div className="flex flex-col items-center text-center">
-                <div className="text-gray-700 mb-4 group-hover:scale-105 transition-transform duration-200">
-                  {activity.icon}
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-white">
+                    {activity.icon}
+                  </div>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {activity.title}

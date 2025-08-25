@@ -3,59 +3,45 @@ import Image from "next/image";
 export default function Team() {
   const executiveBoard = [
     {
-      name: "Name, Last Name",
-      role: "Position",
-      image: "https://via.placeholder.com/300x300/4F46E5/FFFFFF?text=LL"
+      name: "Ananya Krishna",
+      role: "Co-President",
+      image: ""
     },
     {
-      name: "Name, Last Name",
-      role: "Position", 
-      image: "https://via.placeholder.com/300x300/7C3AED/FFFFFF?text=RF"
+      name: "Lukass Kellijs",
+      role: "Co-President",
+      image: ""
     },
     {
-      name: "Name, Last Name",
-      role: "Position",
-      image: "https://via.placeholder.com/300x300/059669/FFFFFF?text=JP"
+      name: "Aryan Agarwal",
+      role: "Vice President and Treasurer",
+      image: ""
     },
     {
-      name: "Name, Last Name",
-      role: "Position",
-      image: "https://via.placeholder.com/300x300/DC2626/FFFFFF?text=DW"
+      name: "Helen",
+      role: "Vice President and Secretary",
+      image: ""
     },
     {
-      name: "Name, Last Name",
-      role: "Position",
-      image: "https://via.placeholder.com/300x300/EA580C/FFFFFF?text=AC"
-    },
-    {
-      name: "Name, Last Name",
-      role: "Position",
-      image: "https://via.placeholder.com/300x300/DB2777/FFFFFF?text=SS"
-    },
-    {
-      name: "Name, Last Name",
-      role: "Position",
-      image: "https://via.placeholder.com/300x300/2563EB/FFFFFF?text=CP"
-    },
-    {
-      name: "Name, Last Name",
-      role: "Position",
-      image: "https://via.placeholder.com/300x300/7C2D12/FFFFFF?text=SC"
+      name: "Raymond Hou",
+      role: "Vice President and Project Director",
+      image: ""
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/20 to-purple-50/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-12 pt-32 pb-16">
         {/* Executive Board Section */}
         <div className="text-center mb-16">
-            <h1 className="text-6xl font-bold text-gray-900 mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Our{' '}
-              <span className="text-red-600">Team</span>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Team</span>
             </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            The people working to get Yale AI off the ground.
-          </p>
+            <div className="flex items-center justify-center space-x-3 mb-6">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <p className="text-lg text-gray-500 font-medium">The people working to get Yale AI off the ground</p>
+            </div>
         </div>
 
         {/* Team Grid */}
@@ -63,17 +49,15 @@ export default function Team() {
           {executiveBoard.map((member, index) => (
             <div key={index} className="text-center group">
               <div className="relative mb-4 mx-auto">
-                <div className="w-44 h-44 mx-auto rounded-full overflow-hidden border-4 border-gray-200 group-hover:border-gray-300 transition-colors duration-300">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={300}
-                    height={300}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-44 h-44 mx-auto rounded-2xl overflow-hidden border-4 border-gray-200/30 group-hover:border-blue-500/50 transition-all duration-300 bg-gradient-to-br from-blue-50 to-purple-50 backdrop-blur-xl">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
                 </div>
               </div>
-              <h3 className="text-lg font-semibold text-black mb-2">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {member.name}
               </h3>
               <p className="text-sm text-gray-600 font-medium">
@@ -85,15 +69,21 @@ export default function Team() {
 
         {/* Optional: Add a section for general members or other team categories */}
         <div className="text-center mt-20">
-          <h2 className="text-3xl font-bold text-black mb-4">
-            Join Our Team
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Join Our{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Team</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             Interested in joining Yale AI? We'd be very happy to hear from you!
           </p>
-          <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors duration-300">
+          <a 
+            href="https://yaleconnect.yale.edu/yaia/home/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-200 inline-block"
+          >
             Get Involved
-          </button>
+          </a>
         </div>
       </div>
     </div>

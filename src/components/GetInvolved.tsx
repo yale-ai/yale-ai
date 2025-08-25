@@ -34,9 +34,12 @@ const GetInvolved = () => {
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Get Involved</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Get{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Involved</span>
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Interested in joining the Yale AI community?
           </p>
@@ -44,15 +47,19 @@ const GetInvolved = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {involvementOptions.map((option, index) => (
-            <Link
+            <a
               key={index}
-              href="#"
+              href="https://yaleconnect.yale.edu/yaia/home/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group"
             >
-              <div className="bg-gray-50 rounded-lg border border-gray-200 p-8 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 cursor-pointer hover:bg-white">
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200/30 p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer hover:bg-white">
                 <div className="flex flex-col items-center text-center">
-                  <div className="text-gray-700 mb-6 group-hover:scale-105 transition-transform duration-200">
-                    {option.icon}
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-white">
+                      {option.icon}
+                    </div>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {option.title}
@@ -65,7 +72,7 @@ const GetInvolved = () => {
                   </div>
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
