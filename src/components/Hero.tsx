@@ -4,7 +4,7 @@
 
 export default function Hero() {
   return (
-    <main className="flex items-center justify-center min-h-screen py-4 pt-8">
+    <main className="flex items-center justify-center min-h-screen pt-32 sm:pt-36 md:pt-30 pb-4">
       <div className="max-w-7xl ml-4 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           
@@ -13,14 +13,13 @@ export default function Hero() {
             
             {/* Main Title with Visual Hierarchy */}
             <div className="space-y-3">
-              <h1 className="text-4xl font-bold leading-tight">
+              <h1 className="text-5xl font-bold leading-tight">
                 <div className="text-gray-900 mb-1">Yale</div>
-                <div className="text-gray-800 mb-1">Artificial</div>
+                <div className="text-gray-900 mb-1">Artificial</div>
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1">Intelligence</div>
                 <div className="text-gray-900">Association</div>
               </h1>
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                 <p className="text-base text-gray-500 font-medium">An Undergraduate Organization</p>
               </div>
             </div>
