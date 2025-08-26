@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,38 +35,21 @@ export default function Navbar() {
         }`}>
           <div className="flex justify-between items-center">
 
-            {/* Left side - Logo */}
+            {/* Left side - Brand */}
             <div className="flex-shrink-0">
-              <Link href="/" className="group flex items-center space-x-3">
-                <div className="relative">
-                  {/* Logo Image */}
-                  <div className={`relative overflow-hidden transition-all duration-300 group-hover:scale-105 ${
-                    isScrolled ? 'w-10 h-10' : 'w-12 h-12' // Increased sizes
-                  }`}>
-                    <Image
-                      src="/logo.svg"
-                      alt="Yale AI Logo"
-                      width={isScrolled ? 40 : 48} // Increased dimensions
-                      height={isScrolled ? 40 : 48} // Increased dimensions
-                      className="w-full h-full object-contain"
-                      priority
-                    />
-                  </div>
-                </div>
-
-                {/* Enhanced text with AI gradient */}
-                <div className="flex flex-col">
-                  <span className={`font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:via-purple-700 group-hover:to-cyan-700 transition-all duration-300 ${
-                    isScrolled ? 'text-lg' : 'text-2xl'
-                  }`}>
-                    Yale AI
-                  </span>
-                  <span className={`text-gray-600 font-mono group-hover:text-blue-600 transition-colors duration-300 ${
-                    isScrolled ? 'text-xs' : 'text-xs'
-                  }`}>
-                    Intelligence
-                  </span>
-                </div>
+              <Link
+                href="/"
+                className={`group inline-flex items-center ${
+                  isScrolled ? 'px-5 py-2' : 'px-6 py-3'
+                }`}
+              >
+                <span
+                  className={`font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:via-purple-700 group-hover:to-cyan-700 transition-all duration-300 ${
+                    isScrolled ? 'text-xl' : 'text-2xl'
+                  }`}
+                >
+                  Yale AI
+                </span>
               </Link>
             </div>
 
