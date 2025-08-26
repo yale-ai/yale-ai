@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 
 const GetInvolved = () => {
@@ -46,14 +47,14 @@ const GetInvolved = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {involvementOptions.map((option, index) => (
-            <a
-              key={index}
-              href="https://forms.gle/7B4De3w5aXXvn1h1A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group"
-            >
+          {involvementOptions.map((option, index) => {
+            const href = option.title === 'Create With Us'
+              ? '/projects'
+              : option.title === 'Learn With Us'
+                ? '/education'
+                : 'https://forms.gle/7B4De3w5aXXvn1h1A';
+            const isExternal = href.startsWith('http');
+            const CardContent = (
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200/30 p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer hover:bg-white">
                 <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -72,8 +73,24 @@ const GetInvolved = () => {
                   </div>
                 </div>
               </div>
-            </a>
-          ))}
+            );
+
+            return isExternal ? (
+              <a
+                key={index}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                {CardContent}
+              </a>
+            ) : (
+              <Link key={index} href={href} className="group">
+                {CardContent}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
