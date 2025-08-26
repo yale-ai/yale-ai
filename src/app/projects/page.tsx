@@ -2,7 +2,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/20 to-purple-50/20">
       {/* Content Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-12 pt-32 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left Content */}
           <div className="lg:w-2/3">
@@ -42,7 +42,7 @@ export default function Projects() {
           </div>
 
           {/* Right Decorative Elements */}
-          <div className="lg:w-1/3 flex flex-col gap-6">
+          <div className="hidden md:flex lg:w-1/3 flex-col gap-6">
             <div className="w-full h-48 bg-gradient-to-br from-blue-100/50 to-purple-100/50 rounded-3xl flex items-center justify-center border border-blue-200/30 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30"></div>
               <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
