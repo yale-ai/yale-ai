@@ -5,7 +5,7 @@
 export default function Hero() {
   return (
     <main className="flex items-center justify-center min-h-screen pt-32 sm:pt-36 md:pt-30 pb-4">
-      <div className="max-w-7xl ml-4 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           
           {/* Left Side - Content */}
@@ -109,7 +109,7 @@ export default function Hero() {
           </div>
 
           {/* Right Side - Enhanced Visual with More Content */}
-          <div className="flex justify-center items-center relative">
+          <div className="hidden md:flex justify-center items-center relative">
             <div className="relative w-[400px] h-[400px] flex items-center justify-center ml-36">
               
               {/* Background Elements */}
