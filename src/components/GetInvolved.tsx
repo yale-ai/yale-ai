@@ -49,7 +49,7 @@ const GetInvolved = () => {
           {involvementOptions.map((option, index) => (
             <a
               key={index}
-              href="https://yaleconnect.yale.edu/yaia/home/"
+              href="https://forms.gle/7B4De3w5aXXvn1h1A"
               target="_blank"
               rel="noopener noreferrer"
               className="group"

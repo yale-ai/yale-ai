@@ -115,7 +115,7 @@ export default function Navbar() {
               </Link>
               {/* Join Us Button */}
               <a
-                href="https://yaleconnect.yale.edu/yaia/home/"
+                href="https://forms.gle/7B4De3w5aXXvn1h1A"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2.5 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:scale-105"
@@ -195,7 +195,7 @@ export default function Navbar() {
               </Link>
               {/* Mobile Join Us Button */}
               <a
-                href="https://yaleconnect.yale.edu/yaia/home/"
+                href="https://forms.gle/7B4De3w5aXXvn1h1A"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-200 hover:shadow-lg text-center"

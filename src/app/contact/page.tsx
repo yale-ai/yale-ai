@@ -49,14 +49,22 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="text-center pt-4">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="https://yaleconnect.yale.edu/yaia/home/"
+              href="https://forms.gle/7B4De3w5aXXvn1h1A"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:scale-105"
             >
               Join the mailing list
+            </a>
+            <a
+              href="https://forms.gle/BZ6JD2kKNVzFVEYc7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-600 hover:to-indigo-600 text-white px-8 py-3 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:scale-105"
+            >
+              Give Feedback
             </a>
           </div>
         </div>
