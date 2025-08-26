@@ -1,31 +1,38 @@
 
+import Image from 'next/image';
 
 export default function Team() {
   const executiveBoard = [
     {
       name: "Ananya Krishna",
-      role: "Co-President",
-      image: ""
+      role: "Officer",
+      image: "/team/ananya.jpeg"
     },
     {
       name: "Lukass Kellijs",
-      role: "Co-President",
-      image: ""
+      role: "Officer",
+      image: "/team/lukass.jpg"
     },
     {
       name: "Aryan Agarwal",
-      role: "Vice President and Treasurer",
-      image: ""
+      role: "Officer",
+      image: "/team/aryan.jpeg"
     },
     {
-      name: "Helen",
-      role: "Vice President and Secretary",
+      name: "Helen Mao",
+      role: "Officer",
       image: ""
     },
     {
       name: "Raymond Hou",
-      role: "Vice President and Project Director",
-      image: ""
+      role: "Officer",
+      image: "/team/raymond.jpeg"
+    }
+    ,
+    {
+      name: "Aaron Abrams",
+      role: "Officer",
+      image: "/team/aaron.jpeg"
     }
   ];
 
@@ -49,12 +56,22 @@ export default function Team() {
           {executiveBoard.map((member, index) => (
             <div key={index} className="text-center group">
               <div className="relative mb-4 mx-auto">
-                <div className="w-44 h-44 mx-auto rounded-2xl overflow-hidden border-4 border-gray-200/30 group-hover:border-blue-500/50 transition-all duration-300 bg-gradient-to-br from-blue-50 to-purple-50 backdrop-blur-xl">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                  </div>
+                <div className="w-44 h-44 mx-auto rounded-2xl overflow-hidden border-4 border-gray-200/30 group-hover:border-blue-500/50 transition-all duration-300 bg-gradient-to-br from-blue-50 to-purple-50 backdrop-blur-xl relative">
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={`${member.name} headshot`}
+                      fill
+                      sizes="176px"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                    </div>
+                  )}
                 </div>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
