@@ -93,7 +93,7 @@ export default function Hero() {
             </div>
 
             {/* Call to Action */}
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 pb-4">
               <a 
                 href="https://forms.gle/7B4De3w5aXXvn1h1A" 
                 target="_blank" 
@@ -102,9 +102,12 @@ export default function Hero() {
               >
                 Join Our Community
               </a>
-              <button className="border-2 border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600 px-6 py-2.5 rounded-full font-semibold transition-all duration-200 hover:bg-gray-50 text-sm">
+              <a 
+                href="/about"
+                className="border-2 border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600 px-6 py-2.5 rounded-full font-semibold transition-all duration-200 hover:bg-gray-50 text-sm text-center"
+              >
                 Learn More
-              </button>
+              </a>
             </div>
           </div>
 

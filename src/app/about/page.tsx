@@ -21,7 +21,7 @@ export default function About() {
               Yale AI is a community for Yale students passionate about exploring the possibilities and challenges of artificial intelligence. Our goal is to make AI accessible, engaging, and collaborative—whether through hands-on projects, thought-provoking discussions, or creative applications of cutting-edge tools. We believe that AI is not just a technical field, but one that intersects with nearly every aspect of society, and we aim to provide a space where people from all disciplines can learn, build, and contribute.
               </p>
               <p>
-              We exist to empower Yale students to shape the future of AI together—by working on ambitious projects, hosting conversations with leading thinkers, and organizing workshops, hackathons, and events that spark curiosity and innovation (and are fun too). Whether you're brand new to AI or already deeply immersed, Yale AI is a way for students to help each other connect and grow.
+              We exist to empower Yale students to shape the future of AI together—by working on ambitious projects, hosting conversations with leading thinkers, and organizing workshops, hackathons, and events that spark curiosity and innovation (and are fun too). Whether you&apos;re brand new to AI or already deeply immersed, Yale AI is a way for students to help each other connect and grow.
               </p>
             </div>
 
@@ -52,7 +52,7 @@ export default function About() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Creativity</h4>
-                      <p className="text-sm text-gray-600">Cutting-edge research focus</p>
+                      <p className="text-sm text-gray-600">Ambitious & creative ideas</p>
                     </div>
                   </div>
                 </div>

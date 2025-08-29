@@ -7,7 +7,7 @@ export default function Education() {
         </svg>
       ),
       title: 'Introduction to AI',
-      description: 'Perfect for beginners, this program covers fundamental AI concepts, machine learning basics, and hands-on coding experience with popular frameworks.'
+      description: 'A welcoming, hands-on program for people just starting out. Learn side by side with peers, and build the core AI skills you need.'
     },
     {
       icon: (
@@ -16,7 +16,7 @@ export default function Education() {
         </svg>
       ),
       title: 'Advanced Workshops',
-      description: 'Deep dive into cutting-edge AI research, advanced neural architectures, and real-world applications with industry experts and researchers.'
+      description: 'Deep dive into topics of cutting-edge AI research, and their real-world applications through workshops and hackathons.'
     }
   ];
 
@@ -32,22 +32,16 @@ export default function Education() {
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Programs</span>
             </h1>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Explore our comprehensive AI and machine learning education programs designed to advance your skills
-              </p>
+              <p className="text-lg text-gray-500 font-medium">Explore our AI and ML learning initiative</p>
             </div>
             
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
               <p>
-                Our education programs are designed to cater to students at all levels of AI expertise. 
-                Whether you&apos;re just starting your journey in artificial intelligence or looking to advance 
-                your existing knowledge, we have programs tailored to help you succeed.
+                Our weekly education program is meant to welcome learners at every stage. Each week we&apos;ll dive into clear, focused topics with a practical, hands-on approach—whether it&apos;s diffusion models, reinforcement learning, or MCP servers. 
+                We learn together as a community, sharing the best resources, tips, and self-study opportunities along the way and complementing coursework and lab research.
               </p>
-              
               <p>
-                Through hands-on workshops, collaborative projects, and expert guidance, we provide 
-                comprehensive learning experiences that bridge theory and practice.
+                We also provide a space to share class advice, learn about labs at Yale, and discover new areas and developments in AI. Along the way, we organize workshops and hackathon sessions that bring the community together.
               </p>
             </div>
 

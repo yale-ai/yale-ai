@@ -21,7 +21,7 @@ export default function Team() {
     {
       name: "Helen Mao",
       role: "Officer",
-      image: ""
+      image: "/team/helen.jpg"
     },
     {
       name: "Raymond Hou",
@@ -46,7 +46,6 @@ export default function Team() {
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Team</span>
             </h1>
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               <p className="text-lg text-gray-500 font-medium">The people working to get Yale AI off the ground</p>
             </div>
         </div>

@@ -12,31 +12,28 @@ export default function Projects() {
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
               </h1>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <p className="text-lg text-gray-500 font-medium">Cutting-edge AI Research & Innovation</p>
+                <p className="text-lg text-gray-500 font-medium">Creative and technically-grounded projects </p>
               </div>
             </div>
             
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
-              <p>
-                At Yale AI Club, we believe in learning through hands-on experience. Our projects 
-                span across various domains of artificial intelligence, from computer vision and 
-                natural language processing to machine learning research and AI ethics. Students 
-                collaborate on cutting-edge research, develop practical applications, and explore 
-                the societal implications of AI technology.
-              </p>
               
               <p>
-                Our project teams work closely with faculty mentors and industry professionals 
-                to tackle real-world challenges. Whether you&apos;re interested in building AI models, 
-                conducting research, or exploring AI policy, our diverse project portfolio offers 
-                opportunities for students at all levels to contribute meaningfully to the field.
+                At Yale AI, projects are a key part of how we learn and build together. 
+                We aim to unleash the creativity of our members by hosting projects that span across diverse domains of AI: 
+                from applications in computer vision, robotics, and LLMs to AI-enabled science and AI ethics. To support these efforts, 
+                we provide access to computing clusters, API credits, and general funding, along with guidance in finding collaborators and 
+                technical advisors.
               </p>
-              
+
               <p>
-                From semester-long research initiatives to hackathon-style sprints, our projects 
-                provide a collaborative environment where students can apply theoretical knowledge, 
-                develop technical skills, and make lasting contributions to the AI community.
+                Through projects, we hope to give students the resources, flexibility, and support to pursue 
+                their interests while also gaining practical experience that complements their coursework and lab research. 
+                From small exploratory ideas to large-scale initiatives, our projects create a collaborative environment where 
+                students can apply theoretical knowledge, strengthen technical skills, and work on something they&apos;re genuinely excited about.
+              </p>
+              <p>
+                If you have a project idea related to AI, tell us about it!
               </p>
             </div>
           </div>
@@ -104,11 +101,10 @@ export default function Projects() {
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
             </h2>
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <p className="text-lg text-gray-500 font-medium">Our exciting AI projects are currently in development and will be launching soon!</p>
+              <p className="text-lg text-gray-500 font-medium">Our current projects</p>
             </div>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Check back in the next few weeks to see our cutting-edge research initiatives.
+              We will open proposals for projects in the next few weeks. Join our mailing list to get notified about oppurtunities to lead and join projects.
             </p>
           </div>
 
