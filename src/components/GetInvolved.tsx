@@ -29,7 +29,7 @@ const GetInvolved = () => {
         </svg>
       ),
       title: 'Learn With Us',
-      description: 'Join our workshops, speaker series, and educational programs to advance your AI and machine learning skills.'
+      description: 'Join our workshops, speaker series, and educational programs to advance your AI knowledge.'
     }
   ];
 

@@ -49,7 +49,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 text-sm">AI Innovation</h3>
-                    <p className="text-xs text-gray-600">Cutting-edge research focus</p>
+                    <p className="text-xs text-gray-600">Technical skill & research focus</p>
                   </div>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 text-sm">Community</h3>
-                    <p className="text-xs text-gray-600">Inclusive & vibrant network</p>
+                    <p className="text-xs text-gray-600">Inclusive & vibrant community</p>
                   </div>
                 </div>
               </div>
@@ -87,8 +87,8 @@ export default function Hero() {
             <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 p-4 rounded-xl border-l-4 border-blue-500">
               <h3 className="font-semibold text-gray-900 mb-2 text-sm">Our Mission</h3>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Foster a vibrant, inclusive community where students explore cutting-edge AI research, 
-                connect with leading experts, and work on ambitious, goal-oriented projects.
+                Support students interested in AI and technology by fostering a vibrant, inclusive community where students explore AI research, 
+                connect with leading experts and organizations, and work on ambitious, goal-oriented projects.
               </p>
             </div>
 
