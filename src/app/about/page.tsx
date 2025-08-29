@@ -12,27 +12,16 @@ export default function About() {
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Yale AI</span>
               </h1>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <p className="text-lg text-gray-500 font-medium">Premier AI Organization at Yale University</p>
+                <p className="text-lg text-gray-500 font-medium">The AI Community at Yale</p>
               </div>
             </div>
             
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
               <p>
-                The Yale AI Club is the premier AI organization at Yale University. We are dedicated to fostering 
-                an inclusive and vibrant community for students interested in artificial intelligence. We aim 
-                to provide all students from established AI researchers to folks wanting to get into the field 
-                with the knowledge and opportunity to engage with AI research & development.
+              Yale AI is a community for Yale students passionate about exploring the possibilities and challenges of artificial intelligence. Our goal is to make AI accessible, engaging, and collaborative—whether through hands-on projects, thought-provoking discussions, or creative applications of cutting-edge tools. We believe that AI is not just a technical field, but one that intersects with nearly every aspect of society, and we aim to provide a space where people from all disciplines can learn, build, and contribute.
               </p>
-              
               <p>
-                Our vision is to serve as a centralized hub for the AI community on campus, connecting everyone from 
-                domain experts and practitioners to theorists, creating a collaborative ecosystem where innovation thrives.
-              </p>
-              
-              <p>
-                We offer a wide range of activities such as student-led research projects, reading groups, 
-                workshops, and classes designed to equip members with essential AI skills and real-world experience.
+              We exist to empower Yale students to shape the future of AI together—by working on ambitious projects, hosting conversations with leading thinkers, and organizing workshops, hackathons, and events that spark curiosity and innovation (and are fun too). Whether you're brand new to AI or already deeply immersed, Yale AI is a way for students to help each other connect and grow.
               </p>
             </div>
 
@@ -62,7 +51,7 @@ export default function About() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Innovation</h4>
+                      <h4 className="font-semibold text-gray-900">Creativity</h4>
                       <p className="text-sm text-gray-600">Cutting-edge research focus</p>
                     </div>
                   </div>
