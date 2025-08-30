@@ -104,7 +104,7 @@ export default function Projects() {
               <p className="text-lg text-gray-500 font-medium">Our current projects</p>
             </div>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              We will open proposals for projects in the next few weeks. Join our mailing list to get notified about oppurtunities to lead and join projects.
+              Proposals for projects will open in the next few weeks! Join our mailing list to get notified about opportunities to lead and join projects.
             </p>
           </div>
 
