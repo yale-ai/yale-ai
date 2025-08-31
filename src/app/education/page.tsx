@@ -1,4 +1,10 @@
+'use client';
+
+import { useTheme } from '@/contexts/ThemeContext';
+
 export default function Education() {
+  const { theme } = useTheme();
+  
   const educationOptions = [
     {
       icon: (
@@ -21,21 +27,31 @@ export default function Education() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/20 to-purple-50/20">
+    <div className={`min-h-screen transition-all duration-300 ${
+      theme === 'dark' 
+        ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-black' 
+        : 'bg-gradient-to-br from-gray-50 via-blue-50/20 to-purple-50/20'
+    }`}>
       {/* Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left Content */}
           <div className="lg:w-2/3">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className={`text-4xl font-bold mb-4 transition-colors duration-300 ${
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>
               Education{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Programs</span>
             </h1>
             <div className="flex items-center space-x-3 mb-6">
-              <p className="text-lg text-gray-500 font-medium">Explore our AI and ML learning initiative</p>
+              <p className={`text-lg font-medium transition-colors duration-300 ${
+                theme === 'dark' ? 'text-gray-300' : 'text-gray-500'
+              }`}>Explore our AI and ML learning initiative</p>
             </div>
             
-            <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+            <div className={`space-y-6 text-lg leading-relaxed transition-colors duration-300 ${
+              theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+            }`}>
               <p>
                 Our weekly education program is meant to welcome learners at every stage. Each week we&apos;ll dive into clear, focused topics with a practical, hands-on approach—whether it&apos;s diffusion models, reinforcement learning, or MCP servers. 
                 We learn together as a community, sharing the best resources, tips, and self-study opportunities along the way and complementing coursework and lab research.
@@ -50,7 +66,11 @@ export default function Education() {
               {educationOptions.map((option, index) => (
                 <div
                   key={index}
-                  className="bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200/30 p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer"
+                  className={`backdrop-blur-xl rounded-2xl border p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer ${
+                    theme === 'dark'
+                      ? 'bg-gray-900/80 border-gray-700/30'
+                      : 'bg-white/80 border-gray-200/30'
+                  }`}
                 >
                   <div className="flex flex-col items-center text-center">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
@@ -58,10 +78,14 @@ export default function Education() {
                         {option.icon}
                       </div>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    <h3 className={`text-xl font-semibold mb-4 transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>
                       {option.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className={`leading-relaxed transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                    }`}>
                       {option.description}
                     </p>
                   </div>

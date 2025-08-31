@@ -1,8 +1,10 @@
 "use client";
 
-
+import { useTheme } from '@/contexts/ThemeContext';
 
 export default function Hero() {
+  const { theme } = useTheme();
+  
   return (
     <main className="flex items-center justify-center min-h-screen pt-32 sm:pt-36 md:pt-30 pb-4">
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -14,19 +16,35 @@ export default function Hero() {
             {/* Main Title with Visual Hierarchy */}
             <div className="space-y-3">
               <h1 className="text-5xl font-bold leading-tight">
-                <div className="text-gray-900 mb-1">Yale</div>
-                <div className="text-gray-900 mb-1">Artificial</div>
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1">Intelligence</div>
-                <div className="text-gray-900">Association</div>
+                <div className={`mb-1 transition-colors duration-300 ${
+                  theme === 'dark' ? 'text-blue-100' : 'text-gray-900'
+                }`}>Yale</div>
+                <div className={`mb-1 transition-colors duration-300 ${
+                  theme === 'dark' ? 'text-blue-100' : 'text-gray-900'
+                }`}>Artificial</div>
+                <div className={`mb-1 transition-colors duration-300 ${
+                  theme === 'dark' 
+                    ? 'bg-gradient-to-r from-blue-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent' 
+                    : 'bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'
+                }`}>Intelligence</div>
+                <div className={`transition-colors duration-300 ${
+                  theme === 'dark' ? 'text-blue-100' : 'text-gray-900'
+                }`}>Association</div>
               </h1>
               <div className="flex items-center space-x-3">
-                <p className="text-base text-gray-500 font-medium">An Undergraduate Organization</p>
+                <p className={`text-base font-medium transition-colors duration-300 ${
+                  theme === 'dark' ? 'text-gray-300' : 'text-gray-500'
+                }`}>An Undergraduate Organization</p>
               </div>
             </div>
 
             {/* Key Points - Visual Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-3 rounded-xl border border-blue-100">
+              <div className={`p-3 rounded-xl border transition-all duration-300 ${
+                theme === 'dark'
+                  ? 'bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600'
+                  : 'bg-gradient-to-br from-blue-50 to-purple-50 border-blue-100'
+              }`}>
                 <div className="flex items-center space-x-2">
                   <div className="w-7 h-7 bg-blue-500 rounded-lg flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -34,13 +52,21 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-sm">Student-Led</h3>
-                    <p className="text-xs text-gray-600">Undergraduate driven initiative</p>
+                    <h3 className={`font-semibold text-sm transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>Student-Led</h3>
+                    <p className={`text-xs transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                    }`}>Undergraduate driven initiative</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-3 rounded-xl border border-purple-100">
+              <div className={`p-3 rounded-xl border transition-all duration-300 ${
+                theme === 'dark'
+                  ? 'bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600'
+                  : 'bg-gradient-to-br from-purple-50 to-blue-50 border-purple-100'
+              }`}>
                 <div className="flex items-center space-x-2">
                   <div className="w-7 h-7 bg-purple-500 rounded-lg flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,13 +74,21 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-sm">AI Innovation</h3>
-                    <p className="text-xs text-gray-600">Technical skill & research focus</p>
+                    <h3 className={`font-semibold text-sm transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>AI Innovation</h3>
+                    <p className={`text-xs transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                    }`}>Technical skill & research focus</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-3 rounded-xl border border-cyan-100">
+              <div className={`p-3 rounded-xl border transition-all duration-300 ${
+                theme === 'dark'
+                  ? 'bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600'
+                  : 'bg-gradient-to-br from-cyan-50 to-blue-50 border-cyan-100'
+              }`}>
                 <div className="flex items-center space-x-2">
                   <div className="w-7 h-7 bg-cyan-500 rounded-lg flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,13 +96,21 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-sm">Education</h3>
-                    <p className="text-xs text-gray-600">Workshops & speaker events</p>
+                    <h3 className={`font-semibold text-sm transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>Education</h3>
+                    <p className={`text-xs transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                    }`}>Workshops & speaker events</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-3 rounded-xl border border-green-100">
+              <div className={`p-3 rounded-xl border transition-all duration-300 ${
+                theme === 'dark'
+                  ? 'bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600'
+                  : 'bg-gradient-to-br from-green-50 to-blue-50 border-green-100'
+              }`}>
                 <div className="flex items-center space-x-2">
                   <div className="w-7 h-7 bg-green-500 rounded-lg flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,17 +118,29 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-sm">Community</h3>
-                    <p className="text-xs text-gray-600">Inclusive & vibrant community</p>
+                    <h3 className={`font-semibold text-sm transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>Community</h3>
+                    <p className={`text-xs transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                    }`}>Inclusive & vibrant community</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Mission Statement - Highlighted */}
-            <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 p-4 rounded-xl border-l-4 border-blue-500">
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm">Our Mission</h3>
-              <p className="text-gray-700 leading-relaxed text-sm">
+            <div className={`p-4 rounded-xl border-l-4 border-blue-500 transition-all duration-300 ${
+              theme === 'dark'
+                ? 'bg-gradient-to-r from-blue-600/20 to-purple-600/20'
+                : 'bg-gradient-to-r from-blue-600/10 to-purple-600/10'
+            }`}>
+              <h3 className={`font-semibold mb-2 text-sm transition-colors duration-300 ${
+                theme === 'dark' ? 'text-white' : 'text-gray-900'
+              }`}>Our Mission</h3>
+              <p className={`leading-relaxed text-sm transition-colors duration-300 ${
+                theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+              }`}>
                 Support students interested in AI and technology by fostering a vibrant, inclusive community where students explore AI research, 
                 connect with leading experts and organizations, and work on ambitious, goal-oriented projects.
               </p>
@@ -104,7 +158,11 @@ export default function Hero() {
               </a>
               <a 
                 href="/about"
-                className="border-2 border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600 px-6 py-2.5 rounded-full font-semibold transition-all duration-200 hover:bg-gray-50 text-sm text-center"
+                className={`border-2 px-6 py-2.5 rounded-full font-semibold transition-all duration-200 text-sm text-center ${
+                  theme === 'dark'
+                    ? 'border-gray-600 hover:border-blue-400 text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                    : 'border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
               >
                 Learn More
               </a>
@@ -116,7 +174,11 @@ export default function Hero() {
             <div className="relative w-[400px] h-[400px] flex items-center justify-center ml-36">
               
               {/* Background Elements */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 to-purple-100/30 rounded-full blur-3xl"></div>
+              <div className={`absolute inset-0 rounded-full blur-3xl transition-all duration-300 ${
+                theme === 'dark'
+                  ? 'bg-gradient-to-br from-gray-800/30 to-gray-700/30'
+                  : 'bg-gradient-to-br from-blue-100/30 to-purple-100/30'
+              }`}></div>
               
               {/* Main Y/AI Visual */}
               <div className="text-center font-mono text-[10rem] font-bold leading-none select-none relative z-10">
@@ -159,8 +221,12 @@ export default function Hero() {
               </svg>
 
               {/* Additional Visual Elements */}
-              <div className="absolute top-16 right-16 w-12 h-12 border-2 border-blue-300/40 rounded-full animate-spin-slow"></div>
-              <div className="absolute bottom-16 left-16 w-10 h-10 border-2 border-purple-300/40 rounded-full animate-spin-slow" style={{animationDirection: 'reverse'}}></div>
+              <div className={`absolute top-16 right-16 w-12 h-12 border-2 rounded-full animate-spin-slow transition-all duration-300 ${
+                theme === 'dark' ? 'border-gray-600/40' : 'border-blue-300/40'
+              }`}></div>
+              <div className={`absolute bottom-16 left-16 w-10 h-10 border-2 rounded-full animate-spin-slow transition-all duration-300 ${
+                theme === 'dark' ? 'border-gray-600/40' : 'border-purple-300/40'
+              }`} style={{animationDirection: 'reverse'}}></div>
               
               {/* Neural Network Dots */}
               <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
@@ -168,10 +234,18 @@ export default function Hero() {
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-cyan-500 rounded-full animate-ping" style={{animationDelay: '1.5s'}}></div>
 
               {/* Circuit Pattern */}
-              <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-30"></div>
-              <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-30"></div>
-              <div className="absolute left-12 top-1/2 transform -translate-y-1/2 w-0.5 h-16 bg-gradient-to-b from-transparent via-blue-400 to-transparent opacity-30"></div>
-              <div className="absolute right-12 top-1/2 transform -translate-y-1/2 w-0.5 h-16 bg-gradient-to-b from-transparent via-purple-400 to-transparent opacity-30"></div>
+              <div className={`absolute top-12 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-30 transition-all duration-300 ${
+                theme === 'dark' ? 'opacity-20' : 'opacity-30'
+              }`}></div>
+              <div className={`absolute bottom-12 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-30 transition-all duration-300 ${
+                theme === 'dark' ? 'opacity-20' : 'opacity-30'
+              }`}></div>
+              <div className={`absolute left-12 top-1/2 transform -translate-y-1/2 w-0.5 h-16 bg-gradient-to-b from-transparent via-blue-400 to-transparent opacity-30 transition-all duration-300 ${
+                theme === 'dark' ? 'opacity-20' : 'opacity-30'
+              }`}></div>
+              <div className={`absolute right-12 top-1/2 transform -translate-y-1/2 w-0.5 h-16 bg-gradient-to-b from-transparent via-purple-400 to-transparent opacity-30 transition-all duration-300 ${
+                theme === 'dark' ? 'opacity-20' : 'opacity-30'
+              }`}></div>
             </div>
           </div>
         </div>

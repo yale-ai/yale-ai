@@ -12,6 +12,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Dark mode variables */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
 /* Ensure all text elements use Geist Sans by default */
 * {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
@@ -59,6 +65,15 @@ html {
 
 .shadow-4xl {
   box-shadow: 0 50px 80px -20px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode shadow adjustments */
+.dark .shadow-3xl {
+  box-shadow: 0 35px 60px -12px rgba(255, 255, 255, 0.1);
+}
+
+.dark .shadow-4xl {
+  box-shadow: 0 50px 80px -20px rgba(255, 255, 255, 0.15);
 }
 
 /* Fire effect animations */
@@ -197,7 +212,7 @@ html {
 }
 
 .animate-neural-connect {
-  animation: neural-connect 2s ease-in-out infinite;
+  animation: neural-connect 2s ease-out infinite;
 }
 
 /* Smooth hover transitions */
@@ -227,11 +242,17 @@ html {
   background: #94a3b8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
 }
 
 body {

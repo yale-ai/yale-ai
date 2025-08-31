@@ -1,6 +1,11 @@
+'use client';
+
 import React from 'react';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const Activities = () => {
+  const { theme } = useTheme();
+  
   const activities = [
     {
       icon: (
@@ -50,14 +55,22 @@ const Activities = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-100 via-blue-100/20 to-purple-100/20">
+    <section className={`py-20 transition-all duration-300 ${
+      theme === 'dark'
+        ? 'bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900'
+        : 'bg-gradient-to-br from-gray-100 via-blue-100/20 to-purple-100/20'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className={`text-4xl font-bold mb-4 transition-colors duration-300 ${
+            theme === 'dark' ? 'text-white' : 'text-gray-900'
+          }`}>
             Our{' '}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Programs</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className={`text-lg max-w-2xl mx-auto transition-colors duration-300 ${
+            theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+          }`}>
             See the ways we support students
           </p>
         </div>
@@ -66,7 +79,11 @@ const Activities = () => {
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200/30 p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 group"
+              className={`backdrop-blur-xl rounded-2xl border p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 group ${
+                theme === 'dark'
+                  ? 'bg-gray-900/80 border-gray-700/30'
+                  : 'bg-white/80 border-gray-200/30'
+              }`}
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -74,10 +91,14 @@ const Activities = () => {
                     {activity.icon}
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className={`text-lg font-semibold mb-3 transition-colors duration-300 ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}>
                   {activity.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className={`text-sm leading-relaxed transition-colors duration-300 ${
+                  theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                }`}>
                   {activity.description}
                 </p>
               </div>

@@ -1,14 +1,32 @@
+'use client';
+
+import { useTheme } from '@/contexts/ThemeContext';
+
 export default function Contact() {
+  const { theme } = useTheme();
+  
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/20 to-purple-50/20">
+    <div className={`min-h-screen transition-all duration-300 ${
+      theme === 'dark' 
+        ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-black' 
+        : 'bg-gradient-to-br from-gray-50 via-blue-50/20 to-purple-50/20'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-black mb-4">Contact</h1>
-          <p className="text-lg text-gray-600">We&apos;d love to hear from you</p>
+          <h1 className={`text-4xl font-bold mb-4 transition-colors duration-300 ${
+            theme === 'dark' ? 'text-white' : 'text-black'
+          }`}>Contact</h1>
+          <p className={`text-lg transition-colors duration-300 ${
+            theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+          }`}>We&apos;d love to hear from you</p>
         </div>
 
         <div className="mx-auto max-w-2xl space-y-8">
-          <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-gray-200/30">
+          <div className={`backdrop-blur-xl rounded-2xl p-6 shadow-xl border transition-all duration-300 ${
+            theme === 'dark'
+              ? 'bg-gray-900/80 border-gray-700/30'
+              : 'bg-white/80 border-gray-200/30'
+          }`}>
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -16,13 +34,19 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h2 className="text-xl font-semibold text-gray-900">Email</h2>
+                <h2 className={`text-xl font-semibold transition-colors duration-300 ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}>Email</h2>
                 <a href="mailto:yaleaiassociation@gmail.com" className="text-blue-600 hover:text-blue-700 break-all">yaleaiassociation@gmail.com</a>
               </div>
             </div>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-gray-200/30">
+          <div className={`backdrop-blur-xl rounded-2xl p-6 shadow-xl border transition-all duration-300 ${
+            theme === 'dark'
+              ? 'bg-gray-900/80 border-gray-700/30'
+              : 'bg-white/80 border-gray-200/30'
+          }`}>
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center text-white">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,19 +54,29 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h2 className="text-xl font-semibold text-gray-900">Reach out to Team</h2>
+                <h2 className={`text-xl font-semibold transition-colors duration-300 ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}>Reach out to Team</h2>
                 <div className="mt-2 space-y-1">
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className={`w-4 h-4 transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+                    }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
-                    <a href="mailto:ananya.krishna@yale.edu" className="text-gray-700 hover:text-blue-700">ananya.krishna@yale.edu</a>
+                    <a href="mailto:ananya.krishna@yale.edu" className={`hover:text-blue-700 transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                    }`}>ananya.krishna@yale.edu</a>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className={`w-4 h-4 transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+                    }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
-                    <a href="mailto:lukass.kellijs@yale.edu" className="text-gray-700 hover:text-blue-700">lukass.kellijs@yale.edu</a>
+                    <a href="mailto:lukass.kellijs@yale.edu" className={`hover:text-blue-700 transition-colors duration-300 ${
+                      theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                    }`}>lukass.kellijs@yale.edu</a>
                   </div>
                 </div>
               </div>

@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useTheme } from '@/contexts/ThemeContext';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,11 +30,15 @@ export default function Navbar() {
     }`}>
       <div className="max-w-5xl mx-auto px-6">
         {/* Main Floating Bubble Container */}
-        <div className={`bg-white/95 backdrop-blur-xl rounded-full shadow-xl border border-gray-200/30 transition-all duration-300 ${
+        <div className={`transition-all duration-300 ${
           isScrolled
             ? 'py-2 px-6 shadow-lg'
             : 'py-4 px-8 shadow-2xl'
-        }`}>
+        } ${
+          theme === 'dark' 
+            ? 'bg-gray-900/95 backdrop-blur-xl border-gray-700/30' 
+            : 'bg-white/95 backdrop-blur-xl border-gray-200/30'
+        } rounded-full shadow-xl border`}>
           <div className="flex justify-between items-center">
 
             {/* Left side - Brand */}
@@ -44,8 +50,12 @@ export default function Navbar() {
                 }`}
               >
                 <span
-                  className={`font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:via-purple-700 group-hover:to-cyan-700 transition-all duration-300 ${
+                  className={`font-bold transition-all duration-300 ${
                     isScrolled ? 'text-xl' : 'text-2xl'
+                  } ${
+                    theme === 'dark' 
+                      ? 'bg-gradient-to-r from-blue-300 via-purple-300 to-cyan-300 bg-clip-text text-transparent group-hover:from-blue-200 group-hover:via-purple-200 group-hover:to-cyan-200 group-hover:scale-105' 
+                      : 'bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-cyan-500 group-hover:scale-105'
                   }`}
                 >
                   Yale AI
@@ -57,31 +67,51 @@ export default function Navbar() {
             <div className="hidden md:flex items-center space-x-6">
               <Link
                 href="/"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-gray-50 rounded-full"
+                className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-full ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-gray-50 rounded-full"
+                className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-full ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
               >
                 About
               </Link>
               <Link
                 href="/projects"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-gray-50 rounded-full"
+                className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-full ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
               >
                 Projects
               </Link>
               <Link
                 href="/education"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-gray-50 rounded-full"
+                className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-full ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
               >
                 Education
               </Link>
               <Link
                 href="/team"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-gray-50 rounded-full"
+                className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-full ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
               >
                 Team
               </Link>
@@ -91,10 +121,15 @@ export default function Navbar() {
             <div className="hidden md:flex items-center space-x-3">
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-gray-50 rounded-full"
+                className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-full ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
               >
                 Contact
               </Link>
+              
               {/* Join Us Button */}
               <a
                 href="https://forms.gle/7B4De3w5aXXvn1h1A"
@@ -110,7 +145,11 @@ export default function Navbar() {
             <div className="md:hidden">
               <button
                 onClick={toggleMenu}
-                className="inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-200"
+                className={`inline-flex items-center justify-center p-2 rounded-lg transition-all duration-200 ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-100'
+                } focus:outline-none focus:ring-2 focus:ring-blue-500/50`}
               >
                 <span className="sr-only">Open main menu</span>
                 {!isMenuOpen ? (
@@ -131,50 +170,81 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden mt-4">
-          <div className="bg-white/95 backdrop-blur-md rounded-2xl px-6 pt-4 pb-6 space-y-2 border border-gray-200/50 shadow-lg">
+          <div className={`backdrop-blur-md rounded-2xl px-6 pt-4 pb-6 space-y-2 border shadow-lg transition-all duration-300 ${
+            theme === 'dark'
+              ? 'bg-gray-900/95 border-gray-700/50'
+              : 'bg-white/95 border-gray-200/50'
+          }`}>
             <Link
               href="/"
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200"
+              className={`hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                theme === 'dark'
+                  ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                  : 'text-gray-700 hover:text-blue-600'
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200"
+              className={`hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                theme === 'dark'
+                  ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                  : 'text-gray-700 hover:text-blue-600'
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link
               href="/projects"
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200"
+              className={`hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                theme === 'dark'
+                  ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                  : 'text-gray-700 hover:text-blue-600'
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Projects
             </Link>
             <Link
               href="/education"
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200"
+              className={`hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                theme === 'dark'
+                  ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                  : 'text-gray-700 hover:text-blue-600'
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Education
             </Link>
             <Link
               href="/team"
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200"
+              className={`hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                theme === 'dark'
+                  ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                  : 'text-gray-700 hover:text-blue-600'
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Team
             </Link>
-            <div className="pt-4 border-t border-gray-200">
+            <div className={`pt-4 border-t ${
+              theme === 'dark' ? 'border-gray-700' : 'border-gray-200'
+            }`}>
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200"
+                className={`hover:bg-gray-50 block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
+              
               {/* Mobile Join Us Button */}
               <a
                 href="https://forms.gle/7B4De3w5aXXvn1h1A"

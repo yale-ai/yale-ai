@@ -1,8 +1,12 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-
+import { useTheme } from '@/contexts/ThemeContext';
 
 const GetInvolved = () => {
+  const { theme } = useTheme();
+  
   const involvementOptions = [
     {
       icon: (
@@ -34,14 +38,20 @@ const GetInvolved = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className={`py-20 transition-all duration-300 ${
+      theme === 'dark' ? 'bg-gray-900' : 'bg-white'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className={`text-4xl font-bold mb-4 transition-colors duration-300 ${
+            theme === 'dark' ? 'text-white' : 'text-gray-900'
+          }`}>
             Get{' '}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Involved</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className={`text-lg max-w-2xl mx-auto transition-colors duration-300 ${
+            theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+          }`}>
             Interested in joining the Yale AI community?
           </p>
         </div>
@@ -55,20 +65,30 @@ const GetInvolved = () => {
                 : 'https://forms.gle/7B4De3w5aXXvn1h1A';
             const isExternal = href.startsWith('http');
             const CardContent = (
-              <div className="bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200/30 p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer hover:bg-white">
+              <div className={`backdrop-blur-xl rounded-2xl border p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer ${
+                theme === 'dark'
+                  ? 'bg-gray-800/80 border-gray-700/30 hover:bg-gray-800'
+                  : 'bg-white/80 border-gray-200/30 hover:bg-white'
+              }`}>
                 <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <div className="text-white">
                       {option.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <h3 className={`text-xl font-semibold mb-4 transition-colors duration-300 ${
+                    theme === 'dark' ? 'text-white' : 'text-gray-900'
+                  }`}>
                     {option.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className={`leading-relaxed mb-6 transition-colors duration-300 ${
+                    theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
                     {option.description}
                   </p>
-                  <div className="text-gray-900 font-medium group-hover:text-purple-600 transition-colors">
+                  <div className={`font-medium group-hover:text-purple-600 transition-colors ${
+                    theme === 'dark' ? 'text-gray-300' : 'text-gray-900'
+                  }`}>
                     Get Started →
                   </div>
                 </div>
