@@ -36,8 +36,8 @@ export default function Projects() {
               
               <p>
                 At Yale AI, projects are a key part of how we learn and build together. 
-                We aim to unleash the creativity of our members by hosting projects that span across diverse domains of AI: 
-                from applications in computer vision, robotics, and LLMs to AI-enabled science and AI ethics. To support these efforts, 
+                We aim to unleash the creativity of our members by hosting projects that span diverse areas related to AI: 
+                from applications of deep learning, LLMs, and robotics to AI-enabled science and AI ethics. To support these efforts, 
                 we provide access to computing clusters, API credits, and general funding, along with guidance in finding collaborators and 
                 technical advisors.
               </p>
