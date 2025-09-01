@@ -34,9 +34,9 @@ export default function Team() {
     }
     ,
     {
-      name: "Aaron Abrams",
+      name: "Arjan Kohli",
       role: "Officer",
-      image: "/team/aaron.jpeg"
+      image: "/team/arjan.jpg"
     }
   ];
 
