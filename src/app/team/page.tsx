@@ -23,11 +23,6 @@ export default function Team() {
       image: "/team/aryan.jpeg"
     },
     {
-      name: "Helen Mao",
-      role: "Officer",
-      image: "/team/helen.jpg"
-    },
-    {
       name: "Raymond Hou",
       role: "Officer",
       image: "/team/raymond.jpeg"
