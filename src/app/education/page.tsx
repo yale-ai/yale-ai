@@ -154,6 +154,28 @@ export default function Education() {
             </div>
           </div>
         </div>
+        {/* Sign Up CTA */}
+        <div className="text-center mt-20">
+          <h2 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${
+            theme === 'dark' ? 'text-white' : 'text-gray-900'
+          }`}>
+            Join The{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Program</span>
+          </h2>
+          <p className={`text-lg max-w-2xl mx-auto mb-8 transition-colors duration-300 ${
+            theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+          }`}>
+            Register to be added to the Learning mailing list.
+          </p>
+          <a 
+            href="https://forms.gle/d5uverEed7BFHQcQA" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-200 inline-block"
+          >
+            Sign Up
+          </a>
+        </div>
       </div>
     </div>
   );

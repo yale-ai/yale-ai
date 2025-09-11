@@ -114,7 +114,7 @@ export default function Team() {
             Interested in joining Yale AI? We&apos;d be very happy to hear from you!
           </p>
           <a 
-            href="https://forms.gle/7B4De3w5aXXvn1h1A" 
+            href="https://forms.gle/Foggqs5CKXeGpvJA8" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-200 inline-block"
