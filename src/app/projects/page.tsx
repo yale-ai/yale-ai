@@ -57,8 +57,8 @@ export default function Projects() {
                 <p className={`text-lg mb-6 transition-colors duration-300 ${
                   theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                 }`}>
-                  Ready to turn your ideas into reality? We're now accepting project proposals for the upcoming semester. 
-                  Whether you have a fully-formed concept or just a spark of curiosity, we'd love to help you bring it to life.
+                  Ready to turn your ideas into reality? We&apos;re now accepting project proposals for the upcoming semester. 
+                  Whether you have a fully-formed concept or just a spark of curiosity, we&apos;d love to help you bring it to life.
                 </p>
                 <div className="relative inline-block">
                   <a
