@@ -48,9 +48,38 @@ export default function Projects() {
                 From small exploratory ideas to large-scale initiatives, our projects create a collaborative environment where 
                 students can apply theoretical knowledge, strengthen technical skills, and work on something they&apos;re genuinely excited about.
               </p>
-              <p>
-                If you have a project idea related to AI, tell us about it!
-              </p>
+              {/* Project Submission Call-to-Action */}
+              <div className={`mt-8 p-6 rounded-2xl border transition-all duration-300 ${
+                theme === 'dark'
+                  ? 'bg-gradient-to-br from-gray-800/50 to-gray-700/50 border-gray-600/30'
+                  : 'bg-gradient-to-br from-blue-50/50 to-purple-50/50 border-blue-200/30'
+              }`}>
+                <p className={`text-lg mb-6 transition-colors duration-300 ${
+                  theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                }`}>
+                  Ready to turn your ideas into reality? We're now accepting project proposals for the upcoming semester. 
+                  Whether you have a fully-formed concept or just a spark of curiosity, we'd love to help you bring it to life.
+                </p>
+                <div className="relative inline-block">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSe5vEY6zOWMD27WjcWCJunCdfU_DXuZ6leevE3Lse9DiNQOcg/viewform?usp=header"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-full transition-all duration-200 hover:shadow-lg hover:scale-105"
+                  >
+                    <span>Submit Your Project Idea</span>
+                    <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </a>
+                  
+                  {/* Minimal particle animations */}
+                  <div className="absolute -top-1 -right-1 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
+                  <div className="absolute -bottom-1 -left-1 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-60" style={{animationDelay: '0.8s'}}></div>
+                  <div className="absolute top-1/2 -right-2 w-1 h-1 bg-blue-400 rounded-full animate-bounce opacity-40" style={{animationDelay: '1.2s'}}></div>
+                  <div className="absolute top-1/2 -left-2 w-0.5 h-0.5 bg-purple-300 rounded-full animate-bounce opacity-50" style={{animationDelay: '0.4s'}}></div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -141,7 +170,8 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Projects Section */}
+
+        {/* Current Projects Placeholder */}
         <div className="mt-20">
           <div className="text-center mb-16">
             <h2 className={`text-4xl font-bold mb-4 transition-colors duration-300 ${
@@ -153,12 +183,12 @@ export default function Projects() {
             <div className="flex items-center justify-center space-x-3 mb-6">
               <p className={`text-lg font-medium transition-colors duration-300 ${
                 theme === 'dark' ? 'text-gray-300' : 'text-gray-500'
-              }`}>Our current projects</p>
+              }`}>Projects coming soon</p>
             </div>
             <p className={`text-lg max-w-2xl mx-auto transition-colors duration-300 ${
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}>
-              Proposals for projects will open in the next few weeks! Join our mailing list to get notified about opportunities to lead and join projects.
+              Check back soon to see the exciting projects our community is working on!
             </p>
           </div>
 
