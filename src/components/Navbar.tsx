@@ -26,14 +26,14 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
         ? 'pt-4'
-        : 'pt-6'
+        : 'pt-4'
     }`}>
       <div className="max-w-5xl mx-auto px-6">
         {/* Main Floating Bubble Container */}
         <div className={`transition-all duration-300 ${
           isScrolled
             ? 'py-2 px-6 shadow-lg'
-            : 'py-4 px-8 shadow-2xl'
+            : 'py-3 px-8 shadow-2xl'
         } ${
           theme === 'dark' 
             ? 'bg-gray-900/95 backdrop-blur-xl border-gray-700/30' 
