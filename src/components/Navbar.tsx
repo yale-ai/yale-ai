@@ -267,6 +267,53 @@ export default function Navbar() {
                 Team
               </Link>
             </div>
+
+            {/* Right-side buttons - Only show on very small screens where they're hidden from navbar */}
+            <div className="max-[479px]:block hidden">
+              <div className="my-3 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent dark:via-gray-600"></div>
+              
+              {/* Theme Toggle Button */}
+              <button
+                onClick={toggleTheme}
+                className={`group flex items-center w-full px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 hover:scale-[1.02] ${
+                  theme === 'dark'
+                    ? 'text-gray-200 hover:text-yellow-300 hover:bg-gradient-to-r hover:from-yellow-900/20 hover:to-orange-900/20'
+                    : 'text-gray-700 hover:text-yellow-600 hover:bg-gradient-to-r hover:from-yellow-50 hover:to-orange-50'
+                }`}
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 mr-3 group-hover:scale-110 transition-transform duration-200"></div>
+                {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+              </button>
+
+              {/* Contact Link */}
+              <Link
+                href="/contact"
+                className={`group flex items-center px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 hover:scale-[1.02] ${
+                  theme === 'dark'
+                    ? 'text-gray-200 hover:text-blue-300 hover:bg-gradient-to-r hover:from-blue-900/20 hover:to-purple-900/20'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-blue-500 mr-3 group-hover:scale-110 transition-transform duration-200"></div>
+                Contact
+              </Link>
+
+              {/* Join Us Button */}
+              <button
+                className={`group flex items-center w-full px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 hover:scale-[1.02] ${
+                  theme === 'dark'
+                    ? 'text-white hover:text-purple-200 hover:bg-gradient-to-r hover:from-purple-900/20 hover:to-pink-900/20'
+                    : 'text-white hover:text-purple-100 hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50'
+                }`}
+                style={{
+                  background: 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
+                }}
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-white/80 mr-3 group-hover:scale-110 transition-transform duration-200"></div>
+                Join Us
+              </button>
+            </div>
           </div>
         </div>
       )}
