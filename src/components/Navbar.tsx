@@ -131,14 +131,22 @@ export default function Navbar() {
               </Link>
               
               {/* Join Us Button */}
-              <a
-                href="https://forms.gle/7B4De3w5aXXvn1h1A"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden md:block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2.5 rounded-full font-medium transition-all duration-200 hover:shadow-lg hover:scale-105"
-              >
-                Join Us
-              </a>
+              <div className="hidden md:block relative">
+                <a
+                  href="https://forms.gle/7B4De3w5aXXvn1h1A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-full transition-all duration-200 hover:shadow-lg hover:scale-105"
+                >
+                  <span>Join Us</span>
+                </a>
+                
+                {/* Minimal particle animations */}
+                <div className="absolute -top-1 -right-1 w-1 h-1 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
+                <div className="absolute -bottom-1 -left-1 w-0.5 h-0.5 bg-purple-400 rounded-full animate-ping opacity-60" style={{animationDelay: '0.8s'}}></div>
+                <div className="absolute top-1/2 -right-2 w-0.5 h-0.5 bg-blue-400 rounded-full animate-bounce opacity-40" style={{animationDelay: '1.2s'}}></div>
+                <div className="absolute top-1/2 -left-2 w-0.5 h-0.5 bg-purple-300 rounded-full animate-bounce opacity-50" style={{animationDelay: '0.4s'}}></div>
+              </div>
             </div>
 
             {/* Mobile menu button */}
@@ -246,14 +254,22 @@ export default function Navbar() {
               </Link>
               
               {/* Mobile Join Us Button */}
-              <a
-                href="https://forms.gle/7B4De3w5aXXvn1h1A"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-200 hover:shadow-lg text-center"
-              >
-                Join Us
-              </a>
+              <div className="relative">
+                <a
+                  href="https://forms.gle/7B4De3w5aXXvn1h1A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-full transition-all duration-200 hover:shadow-lg"
+                >
+                  <span>Join Us</span>
+                </a>
+                
+                {/* Minimal particle animations */}
+                <div className="absolute -top-1 -right-1 w-1 h-1 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
+                <div className="absolute -bottom-1 -left-1 w-0.5 h-0.5 bg-purple-400 rounded-full animate-ping opacity-60" style={{animationDelay: '0.8s'}}></div>
+                <div className="absolute top-1/2 -right-2 w-0.5 h-0.5 bg-blue-400 rounded-full animate-bounce opacity-40" style={{animationDelay: '1.2s'}}></div>
+                <div className="absolute top-1/2 -left-2 w-0.5 h-0.5 bg-purple-300 rounded-full animate-bounce opacity-50" style={{animationDelay: '0.4s'}}></div>
+              </div>
             </div>
           </div>
         </div>

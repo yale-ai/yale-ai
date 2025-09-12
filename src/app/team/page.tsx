@@ -113,14 +113,22 @@ export default function Team() {
           }`}>
             Interested in joining Yale AI? We&apos;d be very happy to hear from you!
           </p>
-          <a 
-            href="https://forms.gle/Foggqs5CKXeGpvJA8" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-200 inline-block"
-          >
-            Get Involved
-          </a>
+          <div className="relative inline-block">
+            <a 
+              href="https://forms.gle/Foggqs5CKXeGpvJA8" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-full transition-all duration-200 hover:shadow-lg hover:scale-105"
+            >
+              <span>Get Involved</span>
+            </a>
+            
+            {/* Minimal particle animations */}
+            <div className="absolute -top-1 -right-1 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
+            <div className="absolute -bottom-1 -left-1 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-60" style={{animationDelay: '0.8s'}}></div>
+            <div className="absolute top-1/2 -right-2 w-1 h-1 bg-blue-400 rounded-full animate-bounce opacity-40" style={{animationDelay: '1.2s'}}></div>
+            <div className="absolute top-1/2 -left-2 w-0.5 h-0.5 bg-purple-300 rounded-full animate-bounce opacity-50" style={{animationDelay: '0.4s'}}></div>
+          </div>
         </div>
       </div>
     </div>
