@@ -61,7 +61,7 @@ export default function FloatingNotification() {
         <div className="space-y-2">
             {/* Project Interest Form */}
             <a
-              href="https://forms.gle/BBPjhvF7LNa4QnUb9"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdT4b0jo_9f7RjQmpKtHpuA_Yiqdv-afG3YQjrriTzvcDXNlA/viewform?usp=header"
               target="_blank"
               rel="noopener noreferrer"
               className={`group block p-2.5 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-md ${
