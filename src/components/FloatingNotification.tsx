@@ -78,7 +78,7 @@ export default function FloatingNotification() {
             <p className={`text-xs transition-colors duration-300 ${
               theme === 'dark' ? 'text-blue-200' : 'text-blue-600'
             }`}>
-              Applications close <span className="font-semibold">Sept 21</span>
+              Applications accepted on a <span className="font-semibold">rolling basis</span>
             </p>
           </div>
           

@@ -6,7 +6,11 @@ import { useTheme } from '@/contexts/ThemeContext';
 export default function Team() {
   const { theme } = useTheme();
   
-  const executiveBoard = [
+  const executiveBoard: Array<{
+    name: string;
+    role: string;
+    image: string | null;
+  }> = [
     {
       name: "Ananya Krishna",
       role: "Officer",
@@ -32,6 +36,21 @@ export default function Team() {
       name: "Arjan Kohli",
       role: "Officer",
       image: "/team/arjan.jpg"
+    },
+    {
+      name: "Addison Shea",
+      role: "Officer",
+      image: null
+    },
+    {
+      name: "Wenhe Zhang",
+      role: "Officer",
+      image: null
+    },
+    {
+      name: "Hanson Qin",
+      role: "Officer",
+      image: null
     }
   ];
 
