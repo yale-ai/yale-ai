@@ -68,7 +68,7 @@ export default function Projects() {
                 </p>
                 <div className="relative inline-block">
                   <a
-                    href="https://forms.gle/BBPjhvF7LNa4QnUb9"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdT4b0jo_9f7RjQmpKtHpuA_Yiqdv-afG3YQjrriTzvcDXNlA/viewform?usp=header"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-full transition-all duration-200 hover:shadow-lg hover:scale-105"
