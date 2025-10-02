@@ -40,7 +40,7 @@ export default function Team() {
     {
       name: "Addison Shea",
       role: "Officer",
-      image: null
+      image: "/team/addison.jpeg"
     },
     {
       name: "Wenhe Zhang",
@@ -92,7 +92,7 @@ export default function Team() {
                       alt={`${member.name} headshot`}
                       fill
                       sizes="176px"
-                      className="object-cover"
+                      className={`object-cover ${member.name === "Addison Shea" ? "object-top" : ""}`}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
