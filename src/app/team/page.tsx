@@ -63,16 +63,16 @@ export default function Team() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         {/* Executive Board Section */}
         <div className="text-center mb-16">
-            <h1 className={`text-4xl font-bold mb-4 transition-colors duration-300 ${
+            <h1 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${
               theme === 'dark' ? 'text-white' : 'text-gray-900'
             }`}>
               Our{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Team</span>
             </h1>
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <p className={`text-lg font-medium transition-colors duration-300 ${
-                theme === 'dark' ? 'text-gray-300' : 'text-gray-500'
-              }`}>The people working to get Yale AI off the ground</p>
+                <p className={`text-lg font-medium transition-colors duration-300 ${
+                  theme === 'dark' ? 'text-gray-300' : 'text-gray-500'
+                }`}>The people working to get Yale Artificial Intelligence Association off the ground</p>
             </div>
         </div>
 
@@ -121,7 +121,7 @@ export default function Team() {
 
         {/* Optional: Add a section for general members or other team categories */}
         <div className="text-center mt-20">
-          <h2 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${
+          <h2 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
             theme === 'dark' ? 'text-white' : 'text-gray-900'
           }`}>
             Join Our{' '}
@@ -130,7 +130,7 @@ export default function Team() {
           <p className={`text-lg max-w-2xl mx-auto mb-8 transition-colors duration-300 ${
             theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
           }`}>
-            Interested in joining Yale AI? We&apos;d be very happy to hear from you!
+            Interested in joining Yale Artificial Intelligence Association? We&apos;d be very happy to hear from you!
           </p>
           <div className="relative inline-block">
             <a 

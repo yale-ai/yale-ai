@@ -37,7 +37,7 @@ export default function Education() {
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left Content */}
           <div className="lg:w-2/3">
-            <h1 className={`text-4xl font-bold mb-4 transition-colors duration-300 ${
+            <h1 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${
               theme === 'dark' ? 'text-white' : 'text-gray-900'
             }`}>
               Education{' '}
@@ -156,7 +156,7 @@ export default function Education() {
         </div>
         {/* Sign Up CTA */}
         <div className="text-center mt-20">
-          <h2 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${
+          <h2 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
             theme === 'dark' ? 'text-white' : 'text-gray-900'
           }`}>
             Join The{' '}

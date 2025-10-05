@@ -57,7 +57,7 @@ export default function Navbar() {
                       : 'bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-cyan-500 group-hover:scale-105'
                   }`}
                 >
-                  YAIA
+                  Y/AI
                 </span>
               </Link>
             </div>

@@ -17,11 +17,11 @@ export default function About() {
           {/* Left Content */}
           <div className="lg:w-2/3">
             <div className="mb-8">
-              <h1 className={`text-4xl font-bold mb-4 transition-colors duration-300 ${
+              <h1 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${
                 theme === 'dark' ? 'text-white' : 'text-gray-900'
               }`}>
                 About{' '}
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Yale AI</span>
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Yale Artificial Intelligence Association</span>
               </h1>
               <div className="flex items-center space-x-3 mb-6">
                 <p className={`text-lg font-medium transition-colors duration-300 ${
@@ -34,10 +34,10 @@ export default function About() {
               theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
             }`}>
               <p>
-              Yale AI is a community for Yale students passionate about exploring the possibilities and challenges of artificial intelligence. Our goal is to make AI accessible, engaging, and collaborative—whether through hands-on projects, thought-provoking discussions, or creative applications of cutting-edge tools. We believe that AI is not just a technical field, but one that intersects with nearly every aspect of society, and we aim to provide a space where people from all disciplines can learn, build, and contribute.
+              Yale Artificial Intelligence Association is a community for Yale students passionate about exploring the possibilities and challenges of artificial intelligence. Our goal is to make AI accessible, engaging, and collaborative—whether through hands-on projects, thought-provoking discussions, or creative applications of cutting-edge tools. We believe that AI is not just a technical field, but one that intersects with nearly every aspect of society, and we aim to provide a space where people from all disciplines can learn, build, and contribute.
               </p>
               <p>
-              We exist to empower Yale students to shape the future of AI together—by working on ambitious projects, hosting conversations with leading thinkers, and organizing workshops, hackathons, and events that spark curiosity and innovation (and are fun too). Whether you&apos;re brand new to AI or already deeply immersed, Yale AI is a way for students to help each other connect and grow.
+              We exist to empower Yale students to shape the future of AI together—by working on ambitious projects, hosting conversations with leading thinkers, and organizing workshops, hackathons, and events that spark curiosity and innovation (and are fun too). Whether you&apos;re brand new to AI or already deeply immersed, Yale Artificial Intelligence Association is a way for students to help each other connect and grow.
               </p>
             </div>
 

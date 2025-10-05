@@ -17,7 +17,7 @@ export default function Projects() {
           {/* Left Content */}
           <div className="lg:w-2/3">
             <div className="mb-8">
-              <h1 className={`text-4xl font-bold mb-4 transition-colors duration-300 ${
+              <h1 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${
                 theme === 'dark' ? 'text-white' : 'text-gray-900'
               }`}>
                 Our{' '}
@@ -35,7 +35,7 @@ export default function Projects() {
             }`}>
               
               <p>
-                At Yale AI, projects are a key part of how we learn and build together. 
+                At Yale Artificial Intelligence Association, projects are a key part of how we learn and build together. 
                 We aim to unleash the creativity of our members by hosting projects that span diverse areas related to AI: 
                 from applications of deep learning, LLMs, and robotics to AI-enabled science and AI ethics. To support these efforts, 
                 we provide access to computing clusters, API credits, and general funding, along with guidance in finding collaborators and 
@@ -221,7 +221,7 @@ export default function Projects() {
         {/* Current Projects */}
         <div id="current-projects" className="mt-20">
           <div className="text-center mb-16">
-            <h2 className={`text-4xl font-bold mb-4 transition-colors duration-300 ${
+            <h2 className={`text-3xl font-bold mb-4 transition-colors duration-300 ${
               theme === 'dark' ? 'text-white' : 'text-gray-900'
             }`}>
               Current{' '}

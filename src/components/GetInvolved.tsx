@@ -52,7 +52,7 @@ const GetInvolved = () => {
           <p className={`text-lg max-w-2xl mx-auto transition-colors duration-300 ${
             theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
           }`}>
-            Interested in joining the Yale AI community?
+            Interested in joining the Yale Artificial Intelligence Association community?
           </p>
         </div>
         
