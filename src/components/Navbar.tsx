@@ -95,16 +95,6 @@ export default function Navbar() {
                 Projects
               </Link>
               <Link
-                href="/education"
-                className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-full whitespace-nowrap ${
-                  theme === 'dark'
-                    ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                }`}
-              >
-                Education
-              </Link>
-              <Link
                 href="/team"
                 className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-full whitespace-nowrap ${
                   theme === 'dark'
@@ -241,18 +231,6 @@ export default function Navbar() {
               >
                 <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 mr-3 group-hover:scale-110 transition-transform duration-200"></div>
                 Projects
-              </Link>
-              <Link
-                href="/education"
-                className={`group flex items-center px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 hover:scale-[1.02] ${
-                  theme === 'dark'
-                    ? 'text-gray-200 hover:text-blue-300 hover:bg-gradient-to-r hover:from-blue-900/20 hover:to-purple-900/20'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 mr-3 group-hover:scale-110 transition-transform duration-200"></div>
-                Education
               </Link>
               <Link
                 href="/team"

@@ -25,15 +25,6 @@ const GetInvolved = () => {
       ),
       title: 'Create With Us',
       description: 'Join a project team and collaborate with fellow students on AI projects, from research initiatives to practical applications.'
-    },
-    {
-      icon: (
-        <svg viewBox="0 0 24 24" fill="currentColor" className="w-12 h-12">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-        </svg>
-      ),
-      title: 'Learn With Us',
-      description: 'Join our workshops, speaker series, and educational programs to advance your AI knowledge.'
     }
   ];
 
@@ -56,13 +47,11 @@ const GetInvolved = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {involvementOptions.map((option, index) => {
             const href = option.title === 'Create With Us'
               ? '/projects'
-              : option.title === 'Learn With Us'
-                ? '/education'
-                : 'https://forms.gle/7B4De3w5aXXvn1h1A';
+              : 'https://forms.gle/7B4De3w5aXXvn1h1A';
             const isExternal = href.startsWith('http');
             const CardContent = (
               <div className={`backdrop-blur-xl rounded-2xl border p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer ${
