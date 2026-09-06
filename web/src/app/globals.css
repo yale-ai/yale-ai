@@ -358,3 +358,13 @@ html, body { background: var(--background); color: var(--fg); transition: backgr
 .mobile-backers { text-align: center; }
 .backer { opacity: 0.6; transition: opacity 200ms ease, transform 200ms ease; }
 .backer:hover { opacity: 1; transform: translateY(-1px); }
+
+/* On paper the teal word needs a darker highlight, or the sweep washes it out. */
+:root[data-theme="light"] .teal-flow, .theme-light .teal-flow {
+  background-image: linear-gradient(100deg, var(--teal-ink) 0%, var(--teal-ink) 38%, #6fe0d2 50%, var(--teal-ink) 62%, var(--teal-ink) 100%);
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .teal-flow {
+    background-image: linear-gradient(100deg, var(--teal-ink) 0%, var(--teal-ink) 38%, #6fe0d2 50%, var(--teal-ink) 62%, var(--teal-ink) 100%);
+  }
+}
