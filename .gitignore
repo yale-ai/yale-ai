@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+dist/
+build/
+.vercel/
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+*.log
+.playwright-mcp/
+
+# env files: never commit keys
+.env
+.env.*
+!.env.example
