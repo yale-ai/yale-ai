@@ -21,7 +21,7 @@ export const CAMPAIGN = { id: "kickoff-2026-27", tag: "kickoff-2026-27" };
 
 export const SUBJECT = "YaleAI Kickoff (sponsored by SpaceXAI): You don't want to miss this!";
 export const PREHEADER =
-  "Wednesday at Tsai CITY. A live Grok Bot demo, a month of Cursor Pro+ for everyone, credits to win, and the plan for the year.";
+  "Wednesday at Tsai CITY. A month of Cursor Pro+ for everyone, an exclusive Grok Bot demo, a competition for SpaceXAI credits, free boba.";
 
 export const DEFAULT_LUMA_URL = "https://luma.com/o5g51mh0";
 export const DEFAULT_SITE_URL = "https://yale-ai.org";
@@ -44,7 +44,7 @@ export const EVENTS = {
 export const ASSETS = [
   { key: "logoSrc", cid: "logo", file: "logo.png", type: "image/png" },
   { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai.png", type: "image/png" },
-  { key: "botSrc", cid: "bot", file: "bot.png", type: "image/png" },
+  { key: "botSrc", cid: "bot", file: "bot-calm.png", type: "image/png" },
 ];
 
 // Compact pill row, straight off the poster.
@@ -80,7 +80,7 @@ export function gcalLink(ev, lumaUrl) {
     location: ev.location,
     details:
       `Yale AI Association kickoff. Sponsored by SpaceXAI. Everyone who attends gets 1 month of Cursor Pro+ free, ` +
-      `and there are Cursor and Grok credits to win at the event. Food. All majors, all class years.\n\n` +
+      `there is a competition for SpaceXAI credits, an exclusive Grok Bot demo, and free boba and snacks. All majors, all class years.\n\n` +
       `Capacity is limited, so RSVP on Luma: ${lumaUrl}\n\nyale-ai.org`,
   });
   return `https://calendar.google.com/calendar/render?${p.toString()}`;
@@ -181,8 +181,8 @@ export function renderEmail({
         </tr>`,
   ).join("");
 
-  const stat = (big, small) => `
-        <td valign="top" width="33%" style="padding:0 6px;">
+  const stat = (big, small, pos) => `
+        <td valign="top" width="33%" style="padding:${pos === "first" ? "0 6px 0 0" : pos === "last" ? "0 0 0 6px" : "0 6px"};">
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="${CARD}"><tr>
             <td style="padding:20px 18px 18px;">
               <div style="font-family:${POPPINS};font-weight:700;font-size:24px;line-height:28px;letter-spacing:-0.8px;color:${WHITE};">${big}</div>
@@ -211,7 +211,7 @@ export function renderEmail({
   @media (max-width:620px) {
     .wrap { width:100% !important; }
     .pad { padding-left:20px !important; padding-right:20px !important; }
-    .stack { display:block !important; width:100% !important; padding:0 0 10px 0 !important; }
+    .stack { display:block !important; width:100% !important; padding:14px 0 0 0 !important; }
     .hero-text { padding-right:20px !important; }
     .hero-bot { width:150px !important; }
     .hero-bot img { width:150px !important; }
@@ -235,13 +235,13 @@ export function renderEmail({
   </td></tr>
 
   <!-- hero statement card -->
-  <tr><td style="padding:0 0 12px;">
+  <tr><td style="padding:0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}">
       <tr>
         <td class="hero-text" valign="middle" style="padding:34px 8px 34px 30px;">
           <div style="${label}">Kickoff sponsored by&nbsp;&nbsp;${sponsor}</div>
           <div style="${h}font-size:30px;line-height:36px;padding-top:16px;">Meet your new AI teammate.<br>Then go build one.</div>
-          <div style="${body}font-size:15px;line-height:23px;padding-top:14px;">A live Grok Bot demo, a month of Cursor Pro+ for everyone in the room, and the plan for Yale AI&#8217;s year. Wednesday, Tsai CITY.</div>
+          <div style="${body}font-size:15px;line-height:23px;padding-top:14px;">Fancy learning about the Yale AI Association, <span style="color:${WHITE};font-weight:700;">a month of Cursor Pro+</span> for everyone in the room, an <span style="color:${WHITE};font-weight:700;">exclusive Grok Bot demo</span>, a competition for <span style="color:${WHITE};font-weight:700;">SpaceXAI credits</span>, and free boba and snacks? <span style="color:${WHITE};font-weight:700;">Yeah, we thought so.</span> Wednesday, Tsai CITY.</div>
         </td>
         ${heroBot}
       </tr>
@@ -249,40 +249,40 @@ export function renderEmail({
   </td></tr>
 
   <!-- greeting + pitch -->
-  <tr><td class="pad" style="padding:26px 6px 8px;">
+  <tr><td class="pad" style="padding:30px 6px 0;">
     <div style="${h}font-size:18px;line-height:26px;">${greeting}</div>
-    <div style="${body}padding-top:12px;">Every year a few hundred people at Yale say they want to get into AI. Most never start. This Wednesday we make starting the easy part: show up, get the tools the frontier labs actually use, and pick a project team, a fellowship cohort, or both. No experience needed. All majors, all class years. There will be food.</div>
+    <div style="${body}padding-top:12px;">Every year a few hundred people at Yale say they want to get into AI. Most never start. <span style="color:${WHITE};font-weight:700;">This Wednesday</span> we make starting the easy part: show up, get the tools the frontier labs actually use, and pick a project team, a fellowship cohort, or both. No experience needed. All majors, all class years. There will be boba.</div>
     <div style="${body}padding-top:12px;">It is sponsored by SpaceXAI, and everyone who shows up walks out with <span style="color:${WHITE};font-weight:700;">1 month of Cursor Pro+ free</span>. Seriously :).</div>
   </td></tr>
 
   <!-- three numbers -->
-  <tr><td style="padding:18px 0 6px;">
+  <tr><td style="padding:28px 0 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-      ${stat("1 month", "of Cursor Pro+, free, for everyone who attends")}
-      ${stat("Credits", "Cursor and Grok credits to win on the spot")}
-      ${stat("Live demo", "Grok Bot on stage, twenty minutes, no slides")}
+      ${stat("1 month", "of Cursor Pro+, free, for everyone who attends", "first")}
+      ${stat("Credits", "a competition for SpaceXAI credits, on the spot")}
+      ${stat("Boba", "and snacks. Free. Obviously.", "last")}
     </tr></table>
   </td></tr>
 
   <!-- kickoff card -->
-  <tr><td style="padding:12px 0 12px;">
+  <tr><td style="padding:16px 0 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr>
       <td class="pad" style="padding:30px 30px 28px;">
         <div style="${labelLime}">The kickoff</div>
         <div style="${h}font-size:34px;line-height:38px;letter-spacing:-1px;padding-top:12px;">${k.dayLine}</div>
         <div style="font-family:${SANS};font-size:18px;line-height:26px;font-weight:700;color:${WHITE};padding-top:4px;">${k.timeLine}</div>
         <div style="font-family:${SANS};font-size:16px;line-height:24px;color:#9a9a9a;padding-top:2px;">${k.where}</div>
-        <div style="${body}font-size:15px;line-height:23px;padding-top:16px;">Capacity is limited and we are filling it from the RSVP list. Get on it now and the seat is yours.</div>
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="padding-top:22px;"><tr>
-          <td class="stack" style="padding:0 10px 0 0;">${button(lumaUrl, "RSVP on Luma")}</td>
-          <td class="stack">${ghost(gcal, "Add to calendar")}</td>
+        <div style="${body}font-size:15px;line-height:23px;padding-top:16px;">An exclusive Grok Bot demo, twenty minutes, no slides. <span style="color:${WHITE};font-weight:700;">Capacity is limited</span> and we are filling it from the RSVP list, so get on it now and the seat is yours.</div>
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td class="stack" style="padding:24px 10px 0 0;">${button(lumaUrl, "RSVP on Luma")}</td>
+          <td class="stack" style="padding:24px 0 0 0;">${ghost(gcal, "Add to calendar")}</td>
         </tr></table>
       </td>
     </tr></table>
   </td></tr>
 
   <!-- this year -->
-  <tr><td style="padding:12px 0 12px;">
+  <tr><td style="padding:16px 0 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr>
       <td class="pad" style="padding:30px 30px 14px;">
         <div style="${label}">What Yale AI is doing this year</div>
@@ -296,17 +296,17 @@ export function renderEmail({
   </td></tr>
 
   <!-- closing statement -->
-  <tr><td class="pad" style="padding:30px 6px 10px;">
+  <tr><td class="pad" style="padding:40px 6px 36px;">
     <div style="${h}font-size:26px;line-height:32px;">The people who build the next decade are picking rooms right now.<br>Pick this one.</div>
     <div style="${body}padding-top:12px;">Come Wednesday. Bring a friend who thinks AI is not for them. All majors welcome.</div>
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="padding-top:22px;"><tr>
-      <td class="stack" style="padding:0 10px 0 0;">${button(lumaUrl, "RSVP on Luma")}</td>
-      <td class="stack">${ghost(siteUrl, "yale-ai.org")}</td>
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td class="stack" style="padding:24px 10px 0 0;">${button(lumaUrl, "RSVP on Luma")}</td>
+      <td class="stack" style="padding:24px 0 0 0;">${ghost(siteUrl, "yale-ai.org")}</td>
     </tr></table>
   </td></tr>
 
   <!-- footer -->
-  <tr><td class="pad" style="padding:38px 6px 0;border-top:1px solid #1e1e1e;">
+  <tr><td class="pad" style="padding:32px 6px 0;border-top:1px solid #1e1e1e;">
     <div style="font-family:${SANS};font-size:14px;line-height:21px;font-weight:700;color:${WHITE};">Questions? Just reply to this email.</div>
     <div style="font-family:${SANS};font-size:13px;line-height:20px;color:#8d8d8d;padding-top:4px;">It goes to the Yale AI leadership (fellow Yale students).</div>
     <div style="font-family:${SANS};font-size:12px;line-height:19px;color:#6a6a6a;padding-top:22px;">&copy; 2026 Yale Artificial Intelligence Association &middot; <a href="${siteUrl}" style="color:#9a9a9a;text-decoration:none;">yale-ai.org</a><br>Student-run and independent of Yale University. You are on this list because you signed up at the EC Bazaar, our website, or a past event. To stop, reply &#8220;unsubscribe&#8221; or <a href="${unsubMailto}" style="color:#9a9a9a;text-decoration:underline;">click here to unsubscribe</a>.</div>
@@ -323,22 +323,23 @@ export function renderEmail({
 KICKOFF 2026-27, SPONSORED BY SPACEXAI
 
 MEET YOUR NEW AI TEAMMATE. THEN GO BUILD ONE.
-A live Grok Bot demo, a month of Cursor Pro+ for everyone in the room, and the plan for Yale AI's year. Wednesday, Tsai CITY.
+Fancy learning about the Yale AI Association, a month of Cursor Pro+ for everyone in the room, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba and snacks? Yeah, we thought so. Wednesday, Tsai CITY.
 
 ${greeting}
 
-Every year a few hundred people at Yale say they want to get into AI. Most never start. This Wednesday we make starting the easy part: show up, get the tools the frontier labs actually use, and pick a project team, a fellowship cohort, or both. No experience needed. All majors, all class years. There will be food.
+Every year a few hundred people at Yale say they want to get into AI. Most never start. <span style="color:${WHITE};font-weight:700;">This Wednesday</span> we make starting the easy part: show up, get the tools the frontier labs actually use, and pick a project team, a fellowship cohort, or both. No experience needed. All majors, all class years. There will be boba.
 
 It is sponsored by SpaceXAI, and everyone who shows up walks out with 1 month of Cursor Pro+ free. Seriously :).
 
   - 1 month of Cursor Pro+, free, for everyone who attends.
-  - Cursor and Grok credits to win on the spot.
-  - A live Grok Bot demo on stage. Twenty minutes, no slides.
+  - A competition for SpaceXAI credits, on the spot.
+  - An exclusive Grok Bot demo on stage. Twenty minutes, no slides.
+  - Free boba and snacks. Obviously.
 
 THE KICKOFF
 ${k.dayLine}, ${k.timeLine}
 ${k.where}
-Capacity is limited and we are filling it from the RSVP list. Get on it now and the seat is yours.
+An exclusive Grok Bot demo, twenty minutes, no slides. Capacity is limited and we are filling it from the RSVP list, so get on it now and the seat is yours.
 
 RSVP on Luma: ${lumaUrl}
 Add to Google Calendar: ${gcal}
