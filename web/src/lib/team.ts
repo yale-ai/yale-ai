@@ -1,5 +1,5 @@
 // The 2026-27 board. Photos live in public/team/<slug>.jpg; a missing photo
-// falls back to initials on the team page.
+// falls back to initials on the team page. An empty role hides the badge.
 
 export type Member = {
   slug: string;
@@ -18,9 +18,31 @@ export type Member = {
 
 export const TEAM: Member[] = [
   {
+    slug: "aryan",
+    name: "Aryan Agarwal",
+    role: "Co-President",
+    email: "aryan.agarwal@yale.edu",
+    classYear: "2027",
+    major: "Cognitive Science",
+    bio: "Undergraduate researcher in the Turk-Browne lab at the Wu Tsai Institute. Debates for Yale on the APDA circuit.",
+    linkedin: "https://www.linkedin.com/in/aryan-agarwal-5299a3208/",
+    photo: "/team/aryan.jpg",
+  },
+  {
+    slug: "addison",
+    name: "Addison Shea",
+    role: "Co-President",
+    email: "addison.shea@yale.edu",
+    classYear: "2029",
+    major: "Physics + Energy Studies",
+    bio: "Regeneron Science Talent Search finalist for spatial-statistics research on Arctic whale migration. Former NASA Langley intern. Writes for Yale Scientific.",
+    linkedin: "https://www.linkedin.com/in/addison-shea-ba2468311/",
+    photo: "/team/addison.jpg",
+  },
+  {
     slug: "filippo",
     name: "Filippo Fonseca",
-    role: "President",
+    role: "Head of Development",
     email: "filippo.fonseca@yale.edu",
     classYear: "2028",
     major: "Mechanical Engineering + EECS",
@@ -34,13 +56,13 @@ export const TEAM: Member[] = [
   {
     slug: "hari",
     name: "Hari Viswanathan",
-    role: "Board",
+    role: "",
     email: "hari.viswanathan@yale.edu",
   },
   {
     slug: "hanson",
     name: "Hanson Qin",
-    role: "Treasurer",
+    role: "",
     email: "hanson.qin@yale.edu",
     classYear: "2028",
     major: "Mathematics + Computer Science",
@@ -53,41 +75,19 @@ export const TEAM: Member[] = [
   {
     slug: "henry",
     name: "Henry Ng",
-    role: "Board",
+    role: "",
     email: "henry.ng@yale.edu",
     bio: "Quantum computing and quant finance. Part of the team that won first place in the Alice & Bob challenge at MIT's iQuHack 2026.",
     linkedin: "https://www.linkedin.com/in/henrywn/",
   },
   {
-    slug: "addison",
-    name: "Addison Shea",
-    role: "Board",
-    email: "addison.shea@yale.edu",
-    classYear: "2029",
-    major: "Physics + Energy Studies",
-    bio: "Regeneron Science Talent Search finalist for spatial-statistics research on Arctic whale migration. Former NASA Langley intern. Writes for Yale Scientific.",
-    linkedin: "https://www.linkedin.com/in/addison-shea-ba2468311/",
-    photo: "/team/addison.jpg",
-  },
-  {
     slug: "david",
     name: "David Antwi",
-    role: "Board",
+    role: "",
     email: "david.antwi@yale.edu",
     major: "EECS",
     bio: "Researches wearable sensing for soft robotics at the Faboratory. Led a team to second place at the Google x Yale SOM Build with AI hackathon.",
     linkedin: "https://www.linkedin.com/in/david-antwi-b17727205/",
-  },
-  {
-    slug: "aryan",
-    name: "Aryan Agarwal",
-    role: "Board",
-    email: "aryan.agarwal@yale.edu",
-    classYear: "2027",
-    major: "Cognitive Science",
-    bio: "Undergraduate researcher in the Turk-Browne lab at the Wu Tsai Institute. Debates for Yale on the APDA circuit.",
-    linkedin: "https://www.linkedin.com/in/aryan-agarwal-5299a3208/",
-    photo: "/team/aryan.jpg",
   },
 ];
 

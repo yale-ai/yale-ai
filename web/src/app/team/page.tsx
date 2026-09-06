@@ -71,7 +71,7 @@ function MemberCard({ m }: { m: Member }) {
             <span className="font-pixel text-[3.6rem] font-medium text-fg">{initials(m.name)}</span>
           </div>
         )}
-        <span className="pill pill-fill absolute left-3 top-3 px-2.5 py-1 text-[0.66rem] uppercase tracking-[0.12em]">{m.role}</span>
+        {m.role && <span className="pill pill-fill absolute left-3 top-3 px-2.5 py-1 text-[0.66rem] uppercase tracking-[0.12em]">{m.role}</span>}
       </div>
       <div className="flex flex-1 flex-col gap-2 p-5">
         <h2 className="text-[1.15rem] font-semibold leading-tight">{m.name}</h2>
