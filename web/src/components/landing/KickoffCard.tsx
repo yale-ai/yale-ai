@@ -20,7 +20,7 @@ export default function KickoffCard() {
 
         <div className="flex flex-col justify-between gap-6 rounded-2xl border border-white/10 bg-black/40 p-5 md:p-6">
           <div className="leading-none">
-            <p className="text-[clamp(1.5rem,2.6vw,2rem)] font-bold italic text-blue">{KICKOFF.dayLine}</p>
+            <p className="text-[clamp(1.35rem,2.1vw,1.7rem)] font-bold italic text-blue">{KICKOFF.dayLine}</p>
             <p className="mt-2 text-[clamp(1.3rem,2.2vw,1.7rem)] font-semibold text-white">{KICKOFF.timeLine}</p>
             <p className="mt-2 text-[clamp(1.1rem,1.9vw,1.4rem)] font-medium text-white/85">@ {KICKOFF.where}</p>
             <p className="mt-4 text-sm font-semibold text-lime">All majors welcome.</p>
