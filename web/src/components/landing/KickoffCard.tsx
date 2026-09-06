@@ -2,70 +2,46 @@ import Link from "next/link";
 import { KICKOFF, LUMA_URL, calendarUrl } from "@/lib/site";
 import JoinInline from "@/components/landing/JoinInline";
 
-const PERKS = ["1 month of Cursor Pro+ for everyone", "AI credits to win", "Food", "No AI experience needed"];
-
-const THIS_YEAR = [
-  "Project teams",
-  "Yale AI Fellowship",
-  "Research showcase",
-  "Biweekly workshops",
-  "Fireside chats",
-  "Spring company trip",
-];
-
 export default function KickoffCard() {
   return (
     <section
-      className="glass reveal reveal-4 grid gap-6 p-6 md:grid-cols-[1.15fr_1fr] md:gap-10 md:p-[clamp(1.4rem,3vh,2.2rem)]"
+      id="kickoff"
+      className="glass relative flex flex-col p-5 md:p-[clamp(1.2rem,2.6vh,1.8rem)]"
+      style={{ gap: "clamp(0.5rem, 1.4vh, 0.9rem)" }}
       aria-labelledby="kickoff-title"
     >
-      <div className="flex flex-col" style={{ gap: "clamp(0.6rem, 1.5vh, 1rem)" }}>
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-          <p className="pixel-caps text-[0.66rem]">Kickoff</p>
-          <span className="inline-flex items-center gap-2 text-[0.66rem] uppercase tracking-[0.16em] text-faint">
-            sponsored by <span className="spacexai h-[0.72rem] text-fg" role="img" aria-label="SpaceXAI" />
-          </span>
-        </div>
-        <h2 id="kickoff-title" className="font-semibold leading-tight text-fg text-[clamp(1.25rem,2.8vh,1.8rem)]">
-          Come Wednesday. Hear the plan for the year, leave with a month of Cursor Pro+.
+      {/* Grok Bot, whole, floating at the card's right on wide screens. */}
+      <img src="/bot.png" alt="" aria-hidden className="bot-float hidden lg:block" />
+
+      <div className="relative lg:pr-[15rem]">
+        <p className="pixel-caps text-[0.68rem]">Kickoff night. Free perks for everyone in the room.</p>
+        <h2 id="kickoff-title" className="mt-1.5 font-semibold leading-tight text-fg text-[clamp(1.05rem,2.3vh,1.4rem)]">
+          Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba?{" "}
+          <span className="text-accent-ink">Yeah, we thought so.</span>
         </h2>
-        <div className="leading-none">
-          <p className="font-bold italic text-blue-ink text-[clamp(1.35rem,3.4vh,2rem)]">{KICKOFF.dayLine}</p>
-          <p className="mt-1.5 font-semibold text-fg text-[clamp(1.1rem,2.6vh,1.5rem)]">{KICKOFF.timeLine}</p>
-          <p className="mt-1.5 text-muted text-[clamp(0.95rem,2vh,1.15rem)]">{KICKOFF.where}</p>
-        </div>
-        <ul className="flex flex-wrap gap-1.5">
-          {PERKS.map((p, i) => (
-            <li key={p} className={`pill ${i === 0 ? "pill-fill" : ""}`}>{p}</li>
-          ))}
-        </ul>
-        <div className="flex flex-wrap items-center gap-2.5 pt-0.5">
-          <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="cta px-6 py-3 text-xs md:text-[0.8rem]">
-            Apply to attend <span aria-hidden>→</span>
-          </Link>
-          <Link href={calendarUrl()} target="_blank" rel="noopener noreferrer" className="ghost px-5 py-3 text-xs md:text-[0.8rem]">
-            Add to calendar
-          </Link>
-        </div>
-        <p className="text-[0.74rem] text-faint">Limited capacity. RSVP on Luma to attend.</p>
       </div>
 
-      <div className="flex flex-col justify-between border-t border-line pt-6 md:border-l md:border-t-0 md:pl-10 md:pt-0" style={{ gap: "clamp(0.8rem, 2vh, 1.4rem)" }}>
-        <div>
-          <p className="pixel-caps text-[0.66rem]">This year</p>
-          <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1.5 text-[clamp(0.86rem,1.8vh,1rem)] text-fg">
-            {THIS_YEAR.map((t, i) => (
-              <li key={t} className="flex items-baseline gap-2">
-                <span className="font-mono text-[0.66rem] text-teal-ink">{String(i + 1).padStart(2, "0")}</span>
-                {t}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-3 text-[0.8rem] leading-snug text-muted">
-            Applications for the fellowship and the project teams open at the kickoff.
-          </p>
+      <div className="relative flex flex-wrap items-baseline gap-x-6 gap-y-1 font-extrabold leading-none lg:pr-[15rem]">
+        <p className="text-fg text-[clamp(1.25rem,3vh,1.85rem)]">{KICKOFF.dayLine}</p>
+        <p className="text-accent-ink text-[clamp(1.25rem,3vh,1.85rem)]">{KICKOFF.timeLine}</p>
+        <p className="font-medium text-muted text-[clamp(0.95rem,2.1vh,1.2rem)]">{KICKOFF.where}</p>
+      </div>
+
+      <p className="relative font-medium leading-snug text-muted text-[clamp(0.9rem,1.9vh,1.05rem)] lg:pr-[15rem]">
+        Capacity is limited and we are filling it from the RSVP list. Applications for the fellowship and the project teams open
+        in the room. No AI experience needed.
+      </p>
+
+      <div className="relative flex flex-wrap items-center gap-2.5 pt-0.5 lg:pr-[15rem]">
+        <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="cta px-5 py-2.5 text-xs md:text-[0.76rem] uppercase tracking-[0.08em]">
+          RSVP on Luma <span aria-hidden>→</span>
+        </Link>
+        <Link href={calendarUrl()} target="_blank" rel="noopener noreferrer" className="ghost px-4 py-2.5 text-xs md:text-[0.76rem]">
+          Add to calendar
+        </Link>
+        <div className="min-w-[15rem] flex-1 md:max-w-xs">
+          <JoinInline compact />
         </div>
-        <JoinInline />
       </div>
     </section>
   );
