@@ -1,0 +1,3 @@
+# Sent ledger for the kickoff-2026-27 campaign. One line per successful send.
+# Tab separated: email	resend message id	ISO timestamp.
+# scripts/send.js appends here and skips any address already listed.
