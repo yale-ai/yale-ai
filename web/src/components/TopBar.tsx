@@ -9,6 +9,7 @@ import { LUMA_URL, SOCIALS } from "@/lib/site";
 
 const iconBtn =
   "grid h-8 w-8 place-items-center rounded-full border border-line bg-surface text-muted transition-colors hover:text-fg";
+const navLink = "hidden sm:inline text-sm font-semibold tracking-wide text-muted transition-colors hover:text-fg";
 
 export default function TopBar() {
   const pathname = usePathname();
@@ -16,15 +17,16 @@ export default function TopBar() {
   return (
     <header className="flex items-center justify-between gap-4">
       <Link href="/" className="group flex items-center gap-2.5" aria-label="Yale AI home">
-        <Wordmark className="text-[1.4rem] md:text-[1.6rem] transition-transform duration-300 group-hover:-translate-y-px" />
+        <Wordmark className="text-[1.45rem] md:text-[1.7rem] transition-transform duration-300 group-hover:-translate-y-px" />
+        <span className="hidden sm:inline pixel-caps text-[0.58rem] translate-y-[1px]">association</span>
       </Link>
 
-      <nav className="flex items-center gap-1.5 md:gap-2">
-        <Link
-          href={onTeam ? "/" : "/team"}
-          className="hidden sm:inline px-2.5 py-1.5 text-[0.86rem] font-medium tracking-wide text-muted transition-colors hover:text-fg"
-        >
+      <nav className="flex items-center gap-2 md:gap-4">
+        <Link href={onTeam ? "/" : "/team"} className={navLink}>
           {onTeam ? "Home" : "Team"}
+        </Link>
+        <Link href="/#kickoff" className={navLink}>
+          Kickoff
         </Link>
         <Link href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Yale AI on Instagram" className={iconBtn}>
           <InstagramIcon className="h-[0.95rem] w-[0.95rem]" />
@@ -33,7 +35,7 @@ export default function TopBar() {
           <LinkedInIcon className="h-[0.9rem] w-[0.9rem]" />
         </Link>
         <ThemeToggle />
-        <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="cta ml-1 px-4 py-2 text-[0.72rem] md:text-[0.78rem]">
+        <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="cta px-4 py-2 text-[0.66rem] md:text-[0.7rem] uppercase tracking-[0.08em]">
           Kickoff Sep 9 <span aria-hidden>→</span>
         </Link>
       </nav>

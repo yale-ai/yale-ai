@@ -5,7 +5,7 @@ import { FormEvent, useState } from "react";
 type State = { kind: "idle" } | { kind: "sending" } | { kind: "done"; message: string } | { kind: "error"; message: string };
 
 // One field, one button: the mailing list, without a form page.
-export default function JoinInline() {
+export default function JoinInline({ compact = false }: { compact?: boolean }) {
   const [state, setState] = useState<State>({ kind: "idle" });
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -32,21 +32,21 @@ export default function JoinInline() {
   }
 
   return (
-    <form onSubmit={onSubmit} aria-label="Join the Yale AI mailing list" className="flex flex-col gap-2">
-      <label htmlFor="join-email" className="pixel-caps text-[0.66rem]">
-        Mailing list
+    <form onSubmit={onSubmit} aria-label="Join the Yale AI mailing list" className={`flex flex-col ${compact ? "gap-1.5" : "gap-2"}`}>
+      <label htmlFor="join-email" className={`pixel-caps text-[0.66rem] ${compact ? "sr-only" : ""}`}>
+        {compact ? "Get the emails" : "Mailing list"}
       </label>
       <div className="flex gap-2">
-        <input id="join-email" name="email" type="email" required autoComplete="email" placeholder="you@yale.edu" className="field" />
+        <input id="join-email" name="email" type="email" required autoComplete="email" placeholder={compact ? "or get the emails: you@yale.edu" : "you@yale.edu"} className="field" />
         <input name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
-        <button type="submit" disabled={state.kind === "sending"} className="cta shrink-0 px-4 py-2 text-[0.72rem] disabled:opacity-60">
+        <button type="submit" disabled={state.kind === "sending"} className={`cta shrink-0 ${compact ? "px-3.5 py-2 text-[0.68rem]" : "px-4 py-2 text-[0.72rem]"} disabled:opacity-60`}>
           {state.kind === "sending" ? "Adding..." : "Join"}
         </button>
       </div>
-      <p className="min-h-[1.1em] text-[0.74rem] leading-snug text-faint" aria-live="polite">
+      <p className={`text-[0.74rem] leading-snug text-faint ${compact ? "min-h-0 empty:hidden" : "min-h-[1.1em]"}`} aria-live="polite">
         {state.kind === "done" ? <span className="text-teal-ink">{state.message}</span> : null}
         {state.kind === "error" ? <span className="text-red-400">{state.message}</span> : null}
-        {state.kind === "idle" || state.kind === "sending" ? "One email every week or two. Unsubscribe with one reply." : null}
+        {(state.kind === "idle" || state.kind === "sending") && !compact ? "One email every week or two. Unsubscribe with one reply." : null}
       </p>
     </form>
   );
