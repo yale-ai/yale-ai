@@ -22,7 +22,7 @@ export const KICKOFF = {
   dayLine: "Wednesday, September 9",
   timeLine: "8:00 to 9:30 PM",
   where: "Tsai CITY, ground floor",
-  sponsor: "SpaceX",
+  sponsor: "SpaceXAI",
   // Sep 9 2026, 8:00 to 9:30 PM America/New_York (EDT, UTC-4)
   startUtc: "20260910T000000Z",
   endUtc: "20260910T013000Z",
