@@ -45,6 +45,7 @@ export const ASSETS = [
   { key: "logoSrc", cid: "logo", file: "logo.png", type: "image/png" },
   { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai.png", type: "image/png" },
   { key: "botSrc", cid: "bot", file: "bot-peek.png", type: "image/png" },
+  { key: "quoteAvatarSrc", cid: "rauch", file: "rauch.png", type: "image/png" },
 ];
 
 // Compact pill row, straight off the poster.
@@ -109,6 +110,7 @@ export const THIS_YEAR = [
  * @param {string} [o.logoSrc]         optional wordmark image; empty falls back to text
  * @param {string} [o.sponsorLogoSrc]  the SpaceXAI wordmark; empty falls back to text
  * @param {string} [o.botSrc]          the Grok Bot character for the hero card; empty drops it
+ * @param {string} [o.quoteAvatarSrc]  Guillermo Rauch's avatar for the quote card; empty shows initials
  * @returns {{subject:string, html:string, text:string}}
  */
 export function renderEmail({
@@ -118,6 +120,7 @@ export function renderEmail({
   logoSrc = "",
   sponsorLogoSrc = "",
   botSrc = "",
+  quoteAvatarSrc = "",
 } = {}) {
   const k = EVENTS.kickoff;
   const gcal = gcalLink(k, lumaUrl);
@@ -295,10 +298,33 @@ export function renderEmail({
     </tr></table>
   </td></tr>
 
+  <!-- the time is now: a post from Guillermo Rauch -->
+  <tr><td class="pad" style="padding:40px 6px 0;">
+    <div style="${labelLime}">The time is now</div>
+  </td></tr>
+  <tr><td style="padding:14px 0 0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr>
+      <td class="pad" style="padding:26px 30px 26px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td valign="middle" width="48" style="width:48px;padding:0 14px 0 0;">${
+            quoteAvatarSrc
+              ? `<img src="${quoteAvatarSrc}" width="48" height="48" alt="" style="width:48px;height:48px;border-radius:50%;display:block;border:0;">`
+              : `<div style="width:48px;height:48px;border-radius:50%;background:#2a2a2a;font-family:${SANS};font-size:16px;line-height:48px;text-align:center;font-weight:700;color:${WHITE};">GR</div>`
+          }</td>
+          <td valign="middle">
+            <div style="font-family:${SANS};font-size:15px;line-height:20px;font-weight:700;color:${WHITE};">Guillermo Rauch <span style="display:inline-block;background:#0a66c2;color:#fff;border-radius:3px;font-size:10px;line-height:14px;padding:0 4px;font-weight:700;vertical-align:1px;margin-left:4px;">in</span></div>
+            <div style="font-family:${SANS};font-size:13px;line-height:18px;color:#8d8d8d;">CEO at Vercel</div>
+          </td>
+        </tr></table>
+        <div style="font-family:${SANS};font-size:16px;line-height:26px;color:#e6e6e6;padding-top:16px;">Anyone that works in AI is working the hardest they&#8217;ve ever worked in their lives. On the surface it&#8217;s somewhat ironic (AI should give us back time!), but the reality is that it&#8217;s the most fun, fascinating and empowering epoch in human history. <span style="color:${WHITE};font-weight:700;">The intelligence revolution.</span></div>
+      </td>
+    </tr></table>
+  </td></tr>
+
   <!-- closing statement -->
-  <tr><td class="pad" style="padding:40px 6px 36px;">
-    <div style="${h}font-size:26px;line-height:32px;">The people who build the next decade are picking rooms right now.<br>Pick this one.</div>
-    <div style="${body}padding-top:12px;">Come Wednesday. Bring a friend who thinks AI is not for them. All majors welcome.</div>
+  <tr><td class="pad" style="padding:30px 6px 36px;">
+    <div style="${h}font-size:30px;line-height:36px;">Let&#8217;s do this.</div>
+    <div style="${body}padding-top:12px;">The people who build the next decade are picking rooms right now. Pick this one. Come Wednesday, and bring a friend who thinks AI is not for them. All majors welcome.</div>
     <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
       <td class="stack" style="padding:24px 10px 0 0;">${button(lumaUrl, "RSVP on Luma")}</td>
       <td class="stack" style="padding:24px 0 0 0;">${ghost(siteUrl, "yale-ai.org")}</td>
@@ -348,7 +374,12 @@ WHAT YALE AI IS DOING THIS YEAR
 ${THIS_YEAR.map(([t, l], i) => `  ${String(i + 1).padStart(2, "0")}  ${t}: ${l}`).join("\n")}
 Applications for the fellowship and the project teams open at the kickoff.
 
-The people who build the next decade are picking rooms right now. Pick this one. Come Wednesday. Bring a friend who thinks AI is not for them. All majors welcome.
+THE TIME IS NOW
+Guillermo Rauch, CEO at Vercel, on LinkedIn:
+"Anyone that works in AI is working the hardest they've ever worked in their lives. On the surface it's somewhat ironic (AI should give us back time!), but the reality is that it's the most fun, fascinating and empowering epoch in human history. The intelligence revolution."
+
+LET'S DO THIS.
+The people who build the next decade are picking rooms right now. Pick this one. Come Wednesday, and bring a friend who thinks AI is not for them. All majors welcome.
 
 RSVP on Luma: ${lumaUrl}
 More about us: ${siteUrl}
