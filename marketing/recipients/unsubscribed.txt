@@ -1,0 +1,4 @@
+# One address per line. The send scripts never email these, in any campaign.
+morgan.vannell@yale.edu
+sophie.zheng@yale.edu
+islay.ross@yale.edu
