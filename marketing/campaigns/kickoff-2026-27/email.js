@@ -44,7 +44,7 @@ export const EVENTS = {
 export const ASSETS = [
   { key: "logoSrc", cid: "logo", file: "logo.png", type: "image/png" },
   { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai.png", type: "image/png" },
-  { key: "botSrc", cid: "bot", file: "bot-calm.png", type: "image/png" },
+  { key: "botSrc", cid: "bot", file: "bot-peek.png", type: "image/png" },
 ];
 
 // Compact pill row, straight off the poster.
@@ -272,7 +272,7 @@ export function renderEmail({
         <div style="${h}font-size:34px;line-height:38px;letter-spacing:-1px;padding-top:12px;">${k.dayLine}</div>
         <div style="font-family:${SANS};font-size:18px;line-height:26px;font-weight:700;color:${WHITE};padding-top:4px;">${k.timeLine}</div>
         <div style="font-family:${SANS};font-size:16px;line-height:24px;color:#9a9a9a;padding-top:2px;">${k.where}</div>
-        <div style="${body}font-size:15px;line-height:23px;padding-top:16px;">An exclusive Grok Bot demo, twenty minutes, no slides. <span style="color:${WHITE};font-weight:700;">Capacity is limited</span> and we are filling it from the RSVP list, so get on it now and the seat is yours.</div>
+        <div style="${body}font-size:15px;line-height:23px;padding-top:16px;">Twenty minutes of Grok Bot, live, no slides. <span style="color:${WHITE};font-weight:700;">Capacity is limited</span> and we are filling it from the RSVP list, so get on it now and the seat is yours.</div>
         <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
           <td class="stack" style="padding:24px 10px 0 0;">${button(lumaUrl, "RSVP on Luma")}</td>
           <td class="stack" style="padding:24px 0 0 0;">${ghost(gcal, "Add to calendar")}</td>
@@ -339,7 +339,7 @@ It is sponsored by SpaceXAI, and everyone who shows up walks out with 1 month of
 THE KICKOFF
 ${k.dayLine}, ${k.timeLine}
 ${k.where}
-An exclusive Grok Bot demo, twenty minutes, no slides. Capacity is limited and we are filling it from the RSVP list, so get on it now and the seat is yours.
+Twenty minutes of Grok Bot, live, no slides. Capacity is limited and we are filling it from the RSVP list, so get on it now and the seat is yours.
 
 RSVP on Luma: ${lumaUrl}
 Add to Google Calendar: ${gcal}
