@@ -11,7 +11,7 @@ const sans = Poppins({
   display: "swap",
 });
 
-// The pixel face from the EC Bazaar banner ("Build the future at").
+// The pixel face from the EC Bazaar banner, kept for the small caps.
 const pixel = Pixelify_Sans({
   variable: "--font-pixel",
   subsets: ["latin"],
@@ -44,9 +44,16 @@ export const metadata: Metadata = {
   },
 };
 
+// Applies a stored theme before first paint so there is no flash. No stored
+// theme means the system preference decides, via CSS.
+const themeInit = `try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}`;
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${pixel.variable} ${mono.variable}`}>
+    <html lang="en" className={`${sans.variable} ${pixel.variable} ${mono.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );
