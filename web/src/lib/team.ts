@@ -56,13 +56,13 @@ export const TEAM: Member[] = [
   {
     slug: "hari",
     name: "Hari Viswanathan",
-    role: "",
+    role: "Head of Events",
     email: "hari.viswanathan@yale.edu",
   },
   {
     slug: "hanson",
     name: "Hanson Qin",
-    role: "",
+    role: "Treasurer",
     email: "hanson.qin@yale.edu",
     classYear: "2028",
     major: "Mathematics + Computer Science",
@@ -75,7 +75,7 @@ export const TEAM: Member[] = [
   {
     slug: "henry",
     name: "Henry Ng",
-    role: "",
+    role: "Head of Sponsorships",
     email: "henry.ng@yale.edu",
     bio: "Quantum computing and quant finance. Part of the team that won first place in the Alice & Bob challenge at MIT's iQuHack 2026.",
     linkedin: "https://www.linkedin.com/in/henrywn/",
@@ -83,7 +83,7 @@ export const TEAM: Member[] = [
   {
     slug: "david",
     name: "David Antwi",
-    role: "",
+    role: "Projects Director",
     email: "david.antwi@yale.edu",
     major: "EECS",
     bio: "Researches wearable sensing for soft robotics at the Faboratory. Led a team to second place at the Google x Yale SOM Build with AI hackathon.",
