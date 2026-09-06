@@ -5,8 +5,24 @@ export const alt = "Yale AI Association";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+// Poppins from Google Fonts, fetched at render time (an old UA gets the TTF, which Satori needs).
+async function poppins(weight: 400 | 800) {
+  const css = await fetch(`https://fonts.googleapis.com/css2?family=Poppins:wght@${weight}`, {
+    headers: { "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0" },
+  }).then((r) => r.text());
+  const url = css.match(/src: url\((.+?)\) format\('(?:truetype|opentype|woff)'\)/)?.[1];
+  if (!url) return null;
+  return fetch(url).then((r) => r.arrayBuffer());
+}
+
 // Renders the banner's top half as a link preview: black ground, grey bloom, big wordmark, lime pills.
-export default function Image() {
+export default async function Image() {
+  const [regular, bold] = await Promise.all([poppins(400), poppins(800)]);
+  const fonts = [
+    regular && { name: "Poppins", data: regular, weight: 400 as const, style: "normal" as const },
+    bold && { name: "Poppins", data: bold, weight: 800 as const, style: "normal" as const },
+  ].filter((f): f is NonNullable<typeof f> => Boolean(f));
+
   return new ImageResponse(
     (
       <div
@@ -20,7 +36,7 @@ export default function Image() {
           backgroundColor: "#0b0b0b",
           backgroundImage: "radial-gradient(circle at 92% 0%, rgba(120,120,120,0.45), transparent 45%)",
           color: "#fff",
-          fontFamily: "Helvetica, Arial, sans-serif",
+          fontFamily: "Poppins, Helvetica, Arial, sans-serif",
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -59,6 +75,6 @@ export default function Image() {
         </div>
       </div>
     ),
-    size,
+    fonts.length ? { ...size, fonts } : size,
   );
 }
