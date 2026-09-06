@@ -19,9 +19,9 @@ export const CARD_BORDER = "rgba(255,255,255,0.09)";
 
 export const CAMPAIGN = { id: "kickoff-2026-27", tag: "kickoff-2026-27" };
 
-export const SUBJECT = "Build the future at Yale AI: kickoff Wed 9/9, free Cursor Pro+ for everyone";
+export const SUBJECT = "YaleAI Kickoff (sponsored by SpaceXAI): You don't want to miss this!";
 export const PREHEADER =
-  "SpaceX-sponsored kickoff at Tsai CITY. Project teams, the Yale AI Fellowship, research showcase, and a month of Cursor Pro+.";
+  "SpaceXAI-sponsored kickoff at Tsai CITY. Project teams, the Yale AI Fellowship, research showcase, and a month of Cursor Pro+.";
 
 export const DEFAULT_LUMA_URL = "https://luma.com/o5g51mh0";
 export const DEFAULT_SITE_URL = "https://yale-ai.org";
@@ -43,7 +43,7 @@ export const EVENTS = {
 // omitted by the template, so a logo can be dropped in later without a code change.
 export const ASSETS = [
   { key: "logoSrc", cid: "logo", file: "logo.png", type: "image/png" },
-  { key: "posterSrc", cid: "poster", file: "poster.jpg", type: "image/jpeg" },
+  { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai.png", type: "image/png" },
 ];
 
 // Compact pill row, straight off the poster.
@@ -78,7 +78,7 @@ export function gcalLink(ev, lumaUrl) {
     dates: `${ev.startUtc}/${ev.endUtc}`,
     location: ev.location,
     details:
-      `Yale AI Association kickoff. Sponsored by SpaceX. Everyone who attends gets 1 month of Cursor Pro+ free, ` +
+      `Yale AI Association kickoff. Sponsored by SpaceXAI. Everyone who attends gets 1 month of Cursor Pro+ free, ` +
       `and there are Cursor and Grok credits to win at the event. Food. All majors, all class years.\n\n` +
       `Capacity is limited, so RSVP on Luma: ${lumaUrl}\n\nyale-ai.org`,
   });
@@ -98,6 +98,7 @@ const CARD = `border-radius:18px;background:${CARD_BG};border:1px solid ${CARD_B
  * @param {string} [o.lumaUrl]    Luma RSVP link (the primary CTA)
  * @param {string} [o.siteUrl]    yale-ai.org
  * @param {string} [o.logoSrc]    optional wordmark image; empty falls back to text
+ * @param {string} [o.sponsorLogoSrc] the SpaceXAI wordmark; empty falls back to text
  * @param {string} [o.posterSrc]  the bazaar banner, shown near the bottom
  * @returns {{subject:string, html:string, text:string}}
  */
@@ -106,6 +107,7 @@ export function renderEmail({
   lumaUrl = DEFAULT_LUMA_URL,
   siteUrl = DEFAULT_SITE_URL,
   logoSrc = "",
+  sponsorLogoSrc = "",
   posterSrc = "",
 } = {}) {
   const k = EVENTS.kickoff;
@@ -159,15 +161,6 @@ export function renderEmail({
     ? `<a href="${siteUrl}" target="_blank" style="text-decoration:none;"><img src="${logoSrc}" width="96" alt="Yale AI" style="width:96px;height:auto;display:block;"></a>`
     : `<a href="${siteUrl}" target="_blank" style="font-family:${POPPINS};font-weight:700;font-size:22px;line-height:28px;letter-spacing:-0.5px;color:${WHITE};text-decoration:none;">Yale AI</a>`;
 
-  const posterBlock = posterSrc
-    ? `
-  <tr><td align="center" style="padding:34px 30px 0;" class="pad">
-    <a href="${lumaUrl}" target="_blank" style="display:block;text-decoration:none;">
-      <img src="${posterSrc}" width="540" alt="Yale AI Association kickoff 2026-27 banner" style="width:100%;max-width:540px;height:auto;display:block;border-radius:14px;border:1px solid ${CARD_BORDER};">
-    </a>
-    <div style="font-family:${MONO};font-size:11px;line-height:18px;letter-spacing:0.06em;color:#7a7a7a;padding-top:10px;">The banner from the EC Bazaar</div>
-  </td></tr>`
-    : "";
 
   const html = `<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -245,7 +238,7 @@ ${PREHEADER}${"&#847;&zwnj;&nbsp;".repeat(40)}
 
   <!-- sponsor pill -->
   <tr><td style="padding:16px 30px 0;" class="pad">
-    <span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:8px 16px;font-family:${POPPINS};font-size:13px;line-height:18px;font-weight:600;color:${LIME};">Kickoff sponsored by SpaceX</span>
+    <span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:8px 16px;font-family:${POPPINS};font-size:13px;line-height:18px;font-weight:600;color:${LIME};">Kickoff sponsored by ${sponsorLogoSrc ? `<img src="${sponsorLogoSrc}" width="104" height="14" alt="SpaceXAI" style="width:104px;height:14px;display:inline-block;vertical-align:-1px;margin-left:6px;border:0;">` : "SpaceXAI"}</span>
   </td></tr>
 
   <!-- intro -->
@@ -253,7 +246,7 @@ ${PREHEADER}${"&#847;&zwnj;&nbsp;".repeat(40)}
     <div class="fg" style="font-family:${POPPINS};font-weight:700;font-size:17px;line-height:26px;color:${WHITE};">${greeting}</div>
     <div style="${body}padding-top:8px;">
       We are the Yale Artificial Intelligence Association. This year we are building, shipping, and putting Yale students in the room with the people making AI.
-      Our kickoff is this Wednesday. It is sponsored by SpaceX, and everyone who shows up walks out with
+      Our kickoff is this Wednesday. It is sponsored by SpaceXAI, and everyone who shows up walks out with
       <span class="lm" style="color:${LIME};font-weight:700;">1 month of Cursor Pro+ free</span>.
     </div>
   </td></tr>
@@ -318,14 +311,13 @@ ${PREHEADER}${"&#847;&zwnj;&nbsp;".repeat(40)}
       <td class="stack">${ghost(siteUrl, "yale-ai.org")}</td>
     </tr></table>
   </td></tr>
-${posterBlock}
 
   <!-- footer -->
   <tr><td style="padding:38px 30px 40px;" class="pad">
     <div style="border-top:1px solid ${CARD_BORDER};padding-top:22px;">
       <div class="fg" style="font-family:${POPPINS};font-weight:700;font-size:14px;line-height:22px;color:${WHITE};">Questions? Just reply to this email.</div>
       <div style="font-family:${SANS};font-size:12px;line-height:19px;color:#8a8a8a;padding-top:4px;">
-        It goes to <a href="mailto:${CONTACT_EMAIL}" style="color:#a9a9a9;text-decoration:none;">${CONTACT_EMAIL}</a>, and a fellow Yale student writes back.
+        It goes to the Yale AI leadership (fellow Yale students).
       </div>
       <div style="font-family:${SANS};font-size:11px;line-height:18px;color:#6f6f6f;padding-top:16px;">
         &copy; 2026 Yale Artificial Intelligence Association &nbsp;&middot;&nbsp;
@@ -347,11 +339,11 @@ ${posterBlock}
 DON'T GET LEFT BEHIND.
 
 BUILD THE FUTURE AT YALE AI.
-Kickoff 2026-27. Sponsored by SpaceX.
+Kickoff 2026-27. Sponsored by SpaceXAI.
 
 ${greeting}
 
-We are the Yale Artificial Intelligence Association. This year we are building, shipping, and putting Yale students in the room with the people making AI. Our kickoff is this Wednesday. It is sponsored by SpaceX, and everyone who shows up walks out with 1 month of Cursor Pro+ free.
+We are the Yale Artificial Intelligence Association. This year we are building, shipping, and putting Yale students in the room with the people making AI. Our kickoff is this Wednesday. It is sponsored by SpaceXAI, and everyone who shows up walks out with 1 month of Cursor Pro+ free.
 
 THE KICKOFF
 ${k.dayLine}, ${k.timeLine}
@@ -380,7 +372,7 @@ Want free Cursor and Grok credits, a month of Cursor Pro+, and a real seat at wh
 RSVP on Luma: ${lumaUrl}
 More about us: ${siteUrl}
 
-Questions? Just reply to this email. It goes to ${CONTACT_EMAIL}, and a fellow Yale student writes back.
+Questions? Just reply to this email. It goes to the Yale AI leadership (fellow Yale students).
 
 (c) 2026 Yale Artificial Intelligence Association - yale-ai.org
 Student-run and independent of Yale University. You are on this list because you signed up at the EC Bazaar, our website, or a past event. To stop, reply "unsubscribe".

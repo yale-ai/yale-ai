@@ -29,7 +29,7 @@ requires an RSVP on Luma.
 
 - `email.js` exports `CAMPAIGN`, `SUBJECT`, `PREHEADER`, `EVENTS`, `ASSETS`, `PILLS`,
   `PROGRAM`, and `renderEmail({ firstName, lumaUrl, siteUrl, logoSrc, posterSrc })`.
-- `assets/poster.jpg` is the EC Bazaar banner, rendered from `design/ec-bazaar-banner-2026-27.pdf`.
+- `assets/` is the EC Bazaar banner, rendered from `design/ec-bazaar-banner-2026-27.pdf`.
   Regenerate it with:
 
   ```sh
