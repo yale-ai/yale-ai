@@ -47,7 +47,7 @@ export function dataUriProps(assets) {
  * Public base URL where the same files are hosted. Set ASSET_BASE_URL in .env
  * once the assets are deployed somewhere (a static Vercel project works).
  */
-export const HOSTED_BASE = process.env.ASSET_BASE_URL || "https://yale-ai.org/email-assets";
+export const HOSTED_BASE = process.env.ASSET_BASE_URL || "https://yale-ai-email-assets.vercel.app";
 
 /**
  * Template props using hosted https URLs. Preferred for sending: nothing is
