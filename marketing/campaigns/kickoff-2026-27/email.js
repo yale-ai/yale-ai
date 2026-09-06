@@ -247,7 +247,7 @@ ${PREHEADER}${"&#847;&zwnj;&nbsp;".repeat(40)}
     <div style="${body}padding-top:8px;">
       We are the Yale Artificial Intelligence Association. This year we are building, shipping, and putting Yale students in the room with the people making AI.
       Our kickoff is this Wednesday. It is sponsored by SpaceXAI, and everyone who shows up walks out with
-      <span class="lm" style="color:${LIME};font-weight:700;">1 month of Cursor Pro+ free</span>.
+      <span class="lm" style="color:${LIME};font-weight:700;">1 month of Cursor Pro+ free</span>. Seriously :).
     </div>
   </td></tr>
 
@@ -343,7 +343,7 @@ Kickoff 2026-27. Sponsored by SpaceXAI.
 
 ${greeting}
 
-We are the Yale Artificial Intelligence Association. This year we are building, shipping, and putting Yale students in the room with the people making AI. Our kickoff is this Wednesday. It is sponsored by SpaceXAI, and everyone who shows up walks out with 1 month of Cursor Pro+ free.
+We are the Yale Artificial Intelligence Association. This year we are building, shipping, and putting Yale students in the room with the people making AI. Our kickoff is this Wednesday. It is sponsored by SpaceXAI, and everyone who shows up walks out with 1 month of Cursor Pro+ free. Seriously :).
 
 THE KICKOFF
 ${k.dayLine}, ${k.timeLine}
