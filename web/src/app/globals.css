@@ -2,17 +2,17 @@
 
 /*
   Brand, shared with the EC Bazaar banner and the recruiting email:
-  near-black ground with a dot grid, white Poppins, one lime, one teal,
-  one blue for dates, and a pixel face for the small caps.
+  black ground, white Poppins, one lime, one teal, one blue for dates,
+  and a pixel face for the small caps. The site takes the palette, not the layout.
 */
 :root {
-  --background: #0b0b0b;
+  --background: #000000;
   --foreground: #ffffff;
   --lime: #d9e4a8;
   --lime-deep: #c4d485;
   --teal: #4fd8c8;
   --blue: #6ea8ff;
-  --card: #141414;
+  --gap: clamp(0.8rem, 2vh, 1.4rem);
 }
 
 @theme inline {
@@ -22,7 +22,6 @@
   --color-lime-deep: var(--lime-deep);
   --color-teal: var(--teal);
   --color-blue: var(--blue);
-  --color-card: var(--card);
   --font-sans: var(--font-sans), Poppins, system-ui, sans-serif;
   --font-pixel: var(--font-pixel), "Pixelify Sans", monospace;
   --font-mono: var(--font-mono), ui-monospace, Menlo, monospace;
@@ -31,7 +30,6 @@
 button, [role="button"], a, label[for], select, summary { cursor: pointer; }
 button:disabled { cursor: not-allowed; }
 
-html { scroll-behavior: smooth; }
 html, body {
   background: var(--background);
   color: var(--foreground);
@@ -40,145 +38,46 @@ html, body {
 
 ::selection { background: var(--lime); color: #000; }
 
-/* The banner ground: near-black, a grey bloom top right, a quiet dot grid. */
+/* Black ground with a quiet teal bloom at the top and a faint drafting grid. */
 .bg-stage {
-  position: relative;
   background:
-    radial-gradient(900px 520px at 88% 6%, rgba(120, 120, 120, 0.42), transparent 60%),
-    radial-gradient(700px 420px at 10% 100%, rgba(79, 216, 200, 0.06), transparent 60%),
-    var(--background);
+    radial-gradient(1100px 520px at 50% -10%, rgba(79, 216, 200, 0.14), transparent 60%),
+    radial-gradient(800px 420px at 88% 100%, rgba(217, 228, 168, 0.07), transparent 60%),
+    radial-gradient(700px 400px at 8% 92%, rgba(110, 168, 255, 0.05), transparent 60%),
+    #000;
 }
-
-.dot-grid {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.11) 1.2px, transparent 1.3px);
-  background-size: 22px 22px;
-  background-position: 0 0;
-  -webkit-mask-image: radial-gradient(1400px 900px at 50% 30%, black 45%, transparent 100%);
-  mask-image: radial-gradient(1400px 900px at 50% 30%, black 45%, transparent 100%);
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+  -webkit-mask-image: radial-gradient(1200px 800px at 50% 40%, black 60%, transparent 100%);
+  mask-image: radial-gradient(1200px 800px at 50% 40%, black 60%, transparent 100%);
   opacity: 0.55;
 }
 
-/* Small pixel-face caps in teal, as in "DON'T GET LEFT BEHIND." */
+/* One screen, no scroll, when the viewport can hold it. Smaller screens scroll. */
+@media (min-width: 1024px) and (min-height: 640px) {
+  .stage-lock { height: 100dvh; overflow: hidden; }
+}
+@media (min-width: 1280px) and (min-height: 820px) {
+  :root { --gap: clamp(1rem, 2.4vh, 1.8rem); }
+}
+
+/* Small pixel caps in teal. */
 .pixel-caps {
   font-family: var(--font-pixel);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--teal);
   line-height: 1.25;
 }
 
-/* The wide-tracked lime line, as in "KICKOFF 2026-27". */
-.tracked-caps {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--lime);
-}
-
-/* Pills: a filled lime one and an outlined one, straight off the banner. */
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  border-radius: 9999px;
-  padding: 0.42rem 1rem 0.4rem;
-  font-weight: 500;
-  font-size: 0.9rem;
-  line-height: 1.2;
-  white-space: nowrap;
-  border: 1px solid var(--lime);
-  color: var(--lime);
-  background: transparent;
-  transition: background 200ms ease, color 200ms ease, transform 200ms ease;
-}
-.pill-fill {
-  background: var(--lime);
-  color: #0b0b0b;
-  font-weight: 600;
-}
-a.pill:hover { background: rgba(217, 228, 168, 0.12); transform: translateY(-1px); }
-a.pill-fill:hover { background: var(--lime-deep); }
-
-/* Bordered pill with a dark fill, as in "Kickoff sponsored by SpaceX". */
-.pill-dark {
-  border: 1px solid var(--lime);
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
-  font-weight: 600;
-}
-
-/* Primary CTA: lime, black text, a light sweeping around the rim. */
-@property --shine-angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
-.cta {
-  position: relative;
-  isolation: isolate;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border-radius: 9999px;
-  border: 1.5px solid transparent;
-  color: #0b0b0b;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  background:
-    linear-gradient(180deg, #e6efc0, var(--lime) 55%, var(--lime-deep)) padding-box,
-    conic-gradient(from var(--shine-angle), rgba(255, 255, 255, 0.12) 0 62%, #ffffff 74%, #f4f9dc 80%, #ffffff 86%, rgba(255, 255, 255, 0.12) 100%) border-box;
-  box-shadow:
-    0 10px 30px -10px rgba(217, 228, 168, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
-  animation: shine 3s linear infinite;
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
-.cta:hover {
-  transform: translateY(-1px);
-  box-shadow:
-    0 16px 40px -12px rgba(217, 228, 168, 0.75),
-    inset 0 1px 0 rgba(255, 255, 255, 0.55);
-}
-.cta:active { transform: translateY(0); }
-@keyframes shine { to { --shine-angle: 360deg; } }
-
-/* Quiet outline button, same size as the primary. */
-.ghost {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.88);
-  font-weight: 600;
-  transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
-}
-.ghost:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px);
-}
-
-/* Card surface: the banner's near-black with a hairline and a soft top light. */
-.card {
-  border-radius: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02) 45%, rgba(255, 255, 255, 0.01)), var(--card);
-  box-shadow:
-    0 20px 50px -20px rgba(0, 0, 0, 0.8),
-    inset 0 1px 0 rgba(255, 255, 255, 0.07);
-}
-.card-hover { transition: border-color 200ms ease, transform 200ms ease; }
-.card-hover:hover { border-color: rgba(217, 228, 168, 0.45); transform: translateY(-2px); }
-
 /* The teal word: a highlight slides through it. */
 .teal-flow {
   display: inline-block;
-  background-image: linear-gradient(100deg, var(--teal) 0%, var(--teal) 38%, #dffcf8 50%, var(--teal) 62%, var(--teal) 100%);
+  background-image: linear-gradient(100deg, var(--teal) 0%, var(--teal) 38%, #e6fffb 50%, var(--teal) 62%, var(--teal) 100%);
   background-size: 260% 100%;
   background-repeat: no-repeat;
   -webkit-background-clip: text;
@@ -186,35 +85,225 @@ a.pill-fill:hover { background: var(--lime-deep); }
   color: transparent;
   animation: teal-flow 3.6s linear infinite;
 }
-@keyframes teal-flow {
-  from { background-position: 100% 0; }
-  to { background-position: 0% 0; }
-}
+@keyframes teal-flow { from { background-position: 100% 0; } to { background-position: 0% 0; } }
 
-/* Lime underline, as in the banner's "free Cursor / Grok credits". */
-.u-lime {
-  text-decoration: underline;
-  text-decoration-color: var(--lime);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.18em;
-}
+/* Page-load reveal, staggered top to bottom. */
+.reveal { opacity: 0; transform: translateY(10px); animation: reveal 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98) forwards; }
+.reveal-1 { animation-delay: 0.05s; } .reveal-2 { animation-delay: 0.15s; } .reveal-3 { animation-delay: 0.25s; }
+.reveal-4 { animation-delay: 0.35s; } .reveal-5 { animation-delay: 0.45s; }
+@keyframes reveal { to { opacity: 1; transform: none; } }
 
-/* Inputs on the join form. */
-.field {
-  width: 100%;
-  border-radius: 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.04);
+/* Glass surface: translucent fill, hairline, soft top light. */
+.glass {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025) 45%, rgba(255, 255, 255, 0.015));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.glass-hover { transition: border-color 200ms ease, transform 200ms ease; }
+.glass-hover:hover { border-color: rgba(217, 228, 168, 0.4); transform: translateY(-2px); }
+
+/* Badge pill, as in the email. */
+.badge {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(217, 228, 168, 0.55);
+  background: linear-gradient(180deg, rgba(217, 228, 168, 0.22), rgba(217, 228, 168, 0.1) 55%, rgba(217, 228, 168, 0.06));
+  padding: 0.35rem 0.9rem 0.3rem;
+  font-weight: 700; font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
   color: #fff;
-  padding: 0.75rem 0.95rem;
-  font-size: 0.95rem;
-  outline: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Primary CTA: lime, black text, a light sweeping around the rim. */
+@property --shine-angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+.cta {
+  position: relative; isolation: isolate;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  border-radius: 9999px; border: 1.5px solid transparent;
+  color: #000; font-weight: 700; letter-spacing: 0.02em; white-space: nowrap;
+  background:
+    linear-gradient(180deg, #eaf2c9, var(--lime) 55%, var(--lime-deep)) padding-box,
+    conic-gradient(from var(--shine-angle), rgba(255,255,255,0.12) 0 62%, #fff 74%, #f4f9dc 80%, #fff 86%, rgba(255,255,255,0.12) 100%) border-box;
+  box-shadow: 0 10px 30px -10px rgba(217, 228, 168, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  animation: shine 3s linear infinite;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.cta:hover { transform: translateY(-1px); box-shadow: 0 16px 40px -12px rgba(217, 228, 168, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.55); }
+.cta:active { transform: translateY(0); }
+@keyframes shine { to { --shine-angle: 360deg; } }
+
+/* Quiet outline button, same size as the primary. */
+.ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  border-radius: 9999px; border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04); color: rgba(255, 255, 255, 0.88);
+  font-weight: 600; white-space: nowrap;
+  transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+.ghost:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.3); transform: translateY(-1px); }
+
+/* Filled and outlined pills, from the banner. Used sparingly. */
+.pill {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  border-radius: 9999px; padding: 0.36rem 0.85rem 0.34rem;
+  font-weight: 500; font-size: 0.8rem; line-height: 1.2; white-space: nowrap;
+  border: 1px solid rgba(217, 228, 168, 0.7); color: var(--lime); background: transparent;
+}
+.pill-fill { background: var(--lime); border-color: var(--lime); color: #000; font-weight: 600; }
+
+/* Inputs. */
+.field {
+  width: 100%; border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.14); background: rgba(255, 255, 255, 0.05);
+  color: #fff; padding: 0.65rem 1.05rem; font-size: 0.88rem; outline: none;
   transition: border-color 200ms ease, background 200ms ease;
 }
 .field::placeholder { color: rgba(255, 255, 255, 0.35); }
-.field:focus { border-color: var(--lime); background: rgba(255, 255, 255, 0.06); }
+.field:focus { border-color: var(--lime); background: rgba(255, 255, 255, 0.07); }
+select.field { border-radius: 0.8rem; }
 select.field option { color: #000; }
+
+.u-lime { text-decoration: underline; text-decoration-color: var(--lime); text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
 
 @media (prefers-reduced-motion: reduce) {
   .teal-flow, .cta { animation: none; }
+  .reveal { opacity: 1; transform: none; animation: none; }
+}
+
+/* ---------- Themes ----------
+   Semantic tokens. Dark is the brand default; light is the same system on paper.
+   [data-theme] wins; with none set, the system preference decides. */
+:root {
+  --fg: #ffffff;
+  --fg-muted: rgba(255, 255, 255, 0.7);
+  --fg-faint: rgba(255, 255, 255, 0.45);
+  --line: rgba(255, 255, 255, 0.12);
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-strong: rgba(255, 255, 255, 0.08);
+  --accent: var(--lime);
+  --accent-ink: #000000;
+  --teal-ink: var(--teal);
+  --blue-ink: var(--blue);
+  --grid-line: rgba(255, 255, 255, 0.05);
+  --logo-url: url("/sponsors/spacexai-white.png");
+  color-scheme: dark;
+}
+.theme-light {
+  --background: #f4f4ef;
+  --fg: #101010;
+  --fg-muted: rgba(16, 16, 16, 0.68);
+  --fg-faint: rgba(16, 16, 16, 0.45);
+  --line: rgba(16, 16, 16, 0.12);
+  --surface: rgba(16, 16, 16, 0.035);
+  --surface-strong: rgba(255, 255, 255, 0.7);
+  --accent: #c9d98a;
+  --accent-ink: #101010;
+  --teal-ink: #148f82;
+  --blue-ink: #2f6fd6;
+  --grid-line: rgba(16, 16, 16, 0.06);
+  --logo-url: url("/sponsors/spacexai-black.png");
+  color-scheme: light;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --background: #f4f4ef;
+    --fg: #101010;
+    --fg-muted: rgba(16, 16, 16, 0.68);
+    --fg-faint: rgba(16, 16, 16, 0.45);
+    --line: rgba(16, 16, 16, 0.12);
+    --surface: rgba(16, 16, 16, 0.035);
+    --surface-strong: rgba(255, 255, 255, 0.7);
+    --accent: #c9d98a;
+    --accent-ink: #101010;
+    --teal-ink: #148f82;
+    --blue-ink: #2f6fd6;
+    --grid-line: rgba(16, 16, 16, 0.06);
+    --logo-url: url("/sponsors/spacexai-black.png");
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --background: #f4f4ef;
+  --fg: #101010;
+  --fg-muted: rgba(16, 16, 16, 0.68);
+  --fg-faint: rgba(16, 16, 16, 0.45);
+  --line: rgba(16, 16, 16, 0.12);
+  --surface: rgba(16, 16, 16, 0.035);
+  --surface-strong: rgba(255, 255, 255, 0.7);
+  --accent: #c9d98a;
+  --accent-ink: #101010;
+  --teal-ink: #148f82;
+  --blue-ink: #2f6fd6;
+  --grid-line: rgba(16, 16, 16, 0.06);
+  --logo-url: url("/sponsors/spacexai-black.png");
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-fg: var(--fg);
+  --color-muted: var(--fg-muted);
+  --color-faint: var(--fg-faint);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-teal-ink: var(--teal-ink);
+  --color-blue-ink: var(--blue-ink);
+}
+
+html, body { background: var(--background); color: var(--fg); transition: background-color 250ms ease, color 250ms ease; }
+
+/* Theme-aware overrides of the surfaces above. */
+.bg-stage {
+  background:
+    radial-gradient(1100px 520px at 50% -10%, rgba(79, 216, 200, 0.14), transparent 60%),
+    radial-gradient(800px 420px at 88% 100%, rgba(217, 228, 168, 0.08), transparent 60%),
+    radial-gradient(700px 400px at 8% 92%, rgba(110, 168, 255, 0.05), transparent 60%),
+    var(--background);
+}
+:root[data-theme="light"] .bg-stage,
+.theme-light .bg-stage {
+  background:
+    radial-gradient(1100px 520px at 50% -10%, rgba(20, 143, 130, 0.12), transparent 60%),
+    radial-gradient(800px 420px at 88% 100%, rgba(160, 180, 80, 0.14), transparent 60%),
+    var(--background);
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .bg-stage {
+    background:
+      radial-gradient(1100px 520px at 50% -10%, rgba(20, 143, 130, 0.12), transparent 60%),
+      radial-gradient(800px 420px at 88% 100%, rgba(160, 180, 80, 0.14), transparent 60%),
+      var(--background);
+  }
+}
+.grid-overlay {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+}
+.glass {
+  border-color: var(--line);
+  background: linear-gradient(180deg, var(--surface-strong), var(--surface) 45%, var(--surface));
+}
+.ghost { border-color: var(--line); background: var(--surface); color: var(--fg); }
+.ghost:hover { background: var(--surface-strong); }
+.field { border-color: var(--line); background: var(--surface); color: var(--fg); }
+.field::placeholder { color: var(--fg-faint); }
+.pixel-caps { color: var(--teal-ink); }
+.teal-flow { background-image: linear-gradient(100deg, var(--teal-ink) 0%, var(--teal-ink) 38%, #e6fffb 50%, var(--teal-ink) 62%, var(--teal-ink) 100%); }
+.pill { border-color: color-mix(in srgb, var(--accent) 80%, transparent); color: var(--fg); }
+.pill-fill { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.badge { color: var(--fg); }
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+/* The SpaceXAI wordmark, drawn in the current text colour via a mask so it
+   works on both themes from one asset pair. */
+.spacexai {
+  display: inline-block;
+  aspect-ratio: 1200 / 161;
+  background-color: currentColor;
+  -webkit-mask: var(--logo-url) center / contain no-repeat;
+  mask: var(--logo-url) center / contain no-repeat;
 }
