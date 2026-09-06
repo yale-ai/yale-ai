@@ -162,9 +162,6 @@ export function renderEmail({
     ? `<a href="${siteUrl}" target="_blank" style="text-decoration:none;"><img src="${logoSrc}" width="88" alt="Yale AI" style="width:88px;height:auto;display:block;border:0;"></a>`
     : `<a href="${siteUrl}" target="_blank" style="font-family:${POPPINS};font-weight:700;font-size:21px;line-height:24px;letter-spacing:-0.6px;color:${WHITE};text-decoration:none;">Yale AI<span style="color:${TEAL};">.</span></a>`;
 
-  const sponsor = sponsorLogoSrc
-    ? `<img src="${sponsorLogoSrc}" width="112" height="15" alt="SpaceXAI" style="width:112px;height:15px;display:inline-block;vertical-align:-2px;border:0;">`
-    : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${WHITE};">SPACEXAI</span>`;
 
   // The hero: text on the left, the bot bleeding off the right edge of the card.
   const heroBot = botSrc
@@ -232,7 +229,15 @@ export function renderEmail({
   <!-- header -->
   <tr><td class="pad" style="padding:8px 6px 26px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-      <td align="left" valign="middle">${wordmark}</td>
+      <td align="left" valign="middle">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td valign="middle">${wordmark}</td>
+          <td valign="middle" style="padding:0 12px;font-family:${SANS};font-size:16px;line-height:24px;color:#6f6f6f;">&#215;</td>
+          <td valign="middle">${sponsorLogoSrc
+            ? `<img src="${sponsorLogoSrc}" width="128" height="17" alt="SpaceXAI" style="width:128px;height:17px;display:block;border:0;">`
+            : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${WHITE};">SPACEXAI</span>`}</td>
+        </tr></table>
+      </td>
       <td align="right" valign="middle" style="${labelLime}">Kickoff 2026&#8211;27</td>
     </tr></table>
   </td></tr>
@@ -242,7 +247,7 @@ export function renderEmail({
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}">
       <tr>
         <td class="hero-text" valign="middle" style="padding:34px 8px 34px 30px;">
-          <div style="${label}">Kickoff sponsored by&nbsp;&nbsp;${sponsor}</div>
+          <div style="${label}">Kickoff sponsored by SpaceXAI</div>
           <div style="${h}font-size:30px;line-height:36px;padding-top:16px;">Meet your new AI teammate.<br>Then go build one.</div>
           <div style="${body}font-size:15px;line-height:23px;padding-top:14px;">Fancy learning about the Yale AI Association, <span style="color:${WHITE};font-weight:700;">a month of Cursor Pro+</span> for everyone in the room, an <span style="color:${WHITE};font-weight:700;">exclusive Grok Bot demo</span>, a competition for <span style="color:${WHITE};font-weight:700;">SpaceXAI credits</span>, and free boba and snacks? <span style="color:${WHITE};font-weight:700;">Yeah, we thought so.</span> Wednesday, Tsai CITY.</div>
         </td>
