@@ -169,7 +169,7 @@ export function renderEmail({
     </v:roundrect>
     <![endif]-->
     <!--[if !mso]><!-->
-    <a href="${href}" target="_blank" class="btn" style="display:inline-block;${big}font-family:${SANS};font-weight:700;letter-spacing:0.01em;color:#000000 !important;text-decoration:none;white-space:nowrap;border-radius:999px;background:${LIME};background-image:linear-gradient(180deg,#eef4d2 0%,${LIME} 55%,#c9d88f 100%);border:1.5px solid #f4f9dc;box-shadow:0 12px 32px -10px rgba(217,228,168,0.75), inset 0 1px 0 rgba(255,255,255,0.7);mso-hide:all;"><font color="#000000"><span style="color:#000000 !important;">${text} &nbsp;&#8594;</span></font></a>
+    <a href="${href}" target="_blank" class="btn" style="display:inline-block;${big}font-family:${SANS};font-weight:700;letter-spacing:0.01em;color:#000000 !important;-webkit-text-fill-color:#000000 !important;text-decoration:none;white-space:nowrap;border-radius:999px;background:${LIME};background-image:linear-gradient(180deg,#eef4d2 0%,${LIME} 55%,#c9d88f 100%);border:1.5px solid #f4f9dc;box-shadow:0 12px 32px -10px rgba(217,228,168,0.75), inset 0 1px 0 rgba(255,255,255,0.7);mso-hide:all;"><font color="#000000"><span style="color:#000000 !important;-webkit-text-fill-color:#000000 !important;">${text} &nbsp;&#8594;</span></font></a>
     <!--<![endif]-->`;
   };
   // Secondary: a bordered pill on the anchor itself, no cell background, so nothing draws a box behind it.
@@ -217,7 +217,7 @@ export function renderEmail({
   img { border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
   table { border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; }
   a { color:${WHITE}; }
-  a.btn, a.btn *, a.btn:visited { color:#000000 !important; }
+  a.btn, a.btn *, a.btn:visited, a.btn:hover { color:#000000 !important; -webkit-text-fill-color:#000000 !important; }
   u + .body a.btn, u + .body a.btn * { color:#000000 !important; }
   [data-ogsc] a.btn, [data-ogsc] a.btn *, [data-ogsb] a.btn { color:#000000 !important; background:${LIME} !important; }
   @media (prefers-color-scheme: dark) { a.btn, a.btn * { color:#000000 !important; } }
