@@ -171,7 +171,7 @@ export function renderEmail({
     </v:roundrect>
     <![endif]-->
     <!--[if !mso]><!-->
-    <a href="${href}" target="_blank" class="btn" style="display:inline-block;${big}font-family:${SANS};font-weight:700;letter-spacing:0.01em;color:#000000 !important;-webkit-text-fill-color:#000000 !important;text-decoration:none;white-space:nowrap;border-radius:999px;background:${LIME};background-image:linear-gradient(180deg,#eef4d2 0%,${LIME} 55%,#c9d88f 100%);border:1.5px solid #b9c97a;box-shadow:0 12px 28px -12px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.7);mso-hide:all;"><font color="#000000"><span style="color:#000000 !important;-webkit-text-fill-color:#000000 !important;">${text} &nbsp;&#8594;</span></font></a>
+    <a href="${href}" target="_blank" class="btn" style="display:inline-block;${big}font-family:${SANS};font-weight:700;letter-spacing:0.01em;color:#000000 !important;-webkit-text-fill-color:#000000 !important;text-decoration:none;white-space:nowrap;border-radius:999px;background:${LIME};background-image:linear-gradient(180deg,#eef4d2 0%,${LIME} 55%,#c9d88f 100%);border:1.5px solid #b9c97a;mso-hide:all;"><font color="#000000"><span style="color:#000000 !important;-webkit-text-fill-color:#000000 !important;">${text} &nbsp;&#8594;</span></font></a>
     <!--<![endif]-->`;
   };
   // Secondary: a bordered pill on the anchor itself, no cell background, so nothing draws a box behind it.
@@ -256,7 +256,7 @@ export function renderEmail({
     <div style="display:inline-block;border:1px solid rgba(16,16,16,0.1);border-radius:999px;background:#ffffff;padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#5f5f5f;"><span style="color:${INK};font-weight:600;">Kickoff is Wednesday, Sep 9</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
     <div class="h1" style="${serif}font-size:44px;line-height:48px;letter-spacing:-0.5px;padding-top:22px;white-space:nowrap;">Build the <span style="font-weight:600;">future of AI</span> at Yale.</div>
     <div style="${serif}font-size:32px;line-height:40px;color:#5a5a5a;padding-top:6px;">Now backed by ${sponsorBig}</div>
-    <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${INK};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</div>
+    <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${INK};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. <span style="font-style:italic;text-decoration:underline;text-underline-offset:3px;">And they want you there. Yes. You.</span></div>
     <div style="padding-top:26px;">${button(lumaUrl, "RSVP for the kickoff", { big: true })}</div>
     <div style="${pixel}color:#6a6a6a;text-transform:none;letter-spacing:0.02em;font-size:13px;line-height:20px;padding-top:18px;">built by Yalies who ship. no AI experience required.</div>
   </td></tr>
