@@ -31,8 +31,8 @@ Then create `marketing/.env`. It is gitignored and is never committed.
 | Variable | Required | Default | What it is |
 | --- | --- | --- | --- |
 | `RESEND_API_KEY` | yes, for real sends | none | Resend API key. `--dry-run` does not need one. |
-| `EMAIL_FROM` | no | `YaleAI <hello@yale-ai.org>` | Sender. Must be on a domain verified in Resend. |
-| `REPLY_TO` | no | `filippo.fonseca@yale.edu` | Comma-separated reply addresses. The first one also backs the `List-Unsubscribe` mailto. |
+| `EMAIL_FROM` | no | `YaleAI <info@yale-ai.org>` | Sender. Must be on a domain verified in Resend. |
+| `REPLY_TO` | no | `filippo.fonseca@yale.edu, yaleaiassociation@gmail.com, aryan.agarwal@yale.edu, addison.shea@yale.edu` | Comma-separated reply addresses. The first one also backs the `List-Unsubscribe` mailto. |
 | `ASSET_BASE_URL` | no | `https://yale-ai.org/email-assets` | Public base URL for hosted images. Files are namespaced per campaign, so a poster resolves to `<ASSET_BASE_URL>/<campaign>/poster.jpg`. |
 | `LUMA_URL` | no | the campaign's own default | Overrides the RSVP link. |
 | `SITE_URL` | no | `https://yale-ai.org` | Overrides the site link. |

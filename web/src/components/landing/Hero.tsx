@@ -7,11 +7,7 @@ export default function Hero() {
       <span className="badge hero-badge max-w-full whitespace-normal">
         <span className="h-1.5 w-1.5 rounded-full bg-teal-ink shadow-[0_0_0_3px_rgba(79,216,200,0.25)]" aria-hidden />
         <span className="flex flex-col items-center gap-0.5 text-center leading-snug">
-          <span className="inline-flex items-center gap-2">
-            <span className="font-semibold text-fg">Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY</span>
-            <span className="text-faint" aria-hidden>·</span> sponsored by{" "}
-            <span className="spacexai h-[0.7em] text-fg" role="img" aria-label="SpaceXAI" />
-          </span>
+          <span className="font-semibold text-fg">Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY</span>
           <span>a month of Cursor Pro+ for everyone, free credits, giveaways, more</span>
         </span>
       </span>
