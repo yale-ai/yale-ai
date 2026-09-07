@@ -33,7 +33,7 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <a href="#this-year" className="reveal reveal-3 mx-auto mb-1 flex flex-col items-center gap-1 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-faint transition-colors hover:text-fg" aria-label="Scroll to this year">
+        <a href="#this-year" className="reveal reveal-3 mx-auto flex flex-col items-center gap-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-faint transition-colors hover:text-fg" aria-label="Scroll to this year">
           this year
           <span aria-hidden className="scroll-cue" />
         </a>
