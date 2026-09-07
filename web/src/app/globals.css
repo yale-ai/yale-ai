@@ -72,10 +72,12 @@ html, body {
 h1, .display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em; }
 .cta, .badge { font-family: var(--font-sans); }
 /* Neutral pill, as on degreeint.com: a quiet surface with a hairline and a soft shadow. */
+/* The hero pill, as in the email: a quiet filled pill, two centred lines, the first one bold. */
 .badge.hero-badge {
-  border-color: var(--line); background: var(--surface-strong);
-  box-shadow: 0 6px 20px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  text-transform: none; letter-spacing: 0.01em; font-weight: 500; font-size: clamp(0.62rem, 1.5vh, 0.76rem); color: var(--fg-muted);
+  border: 0; background: var(--surface-strong);
+  box-shadow: none;
+  text-transform: none; letter-spacing: 0; font-weight: 400; font-size: clamp(0.7rem, 1.6vh, 0.8rem); line-height: 1.35; color: var(--fg-muted);
+  padding: 0.55rem 1.1rem;
 }
 .mono-aside { font-family: var(--font-mono); font-size: 0.84rem; letter-spacing: 0.01em; color: var(--fg-muted); }
 @media (min-width: 1280px) and (min-height: 820px) {
