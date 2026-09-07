@@ -15,9 +15,7 @@ export default function KickoffCard() {
 
       {/* Kicker row: what this is, and who powers it. */}
       <div className="relative flex flex-wrap items-center gap-x-4 gap-y-2 lg:pr-[13.5rem]">
-        <span className="pixel-caps text-[0.78rem]">Kickoff night</span>
-        <span className="hidden h-3 w-px bg-line sm:block" aria-hidden />
-        <span className="text-[0.8rem] font-medium text-muted">Free perks for everyone in the room</span>
+        <span className="pixel-caps text-[0.78rem]">Our kickoff night with free perks for everyone in the room.</span>
         <span className="hidden h-3 w-px bg-line sm:block" aria-hidden />
         <span className="inline-flex items-center gap-2 text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-faint">
           powered by <span className="spacexai h-[0.74rem] text-fg" role="img" aria-label="SpaceXAI" />
