@@ -147,6 +147,9 @@ export function renderEmail({
   const serif = `font-family:${SERIF};font-weight:400;color:${WHITE};`;
   const CARD = `border-radius:22px;background:${CARD_BG};border:1px solid ${CARD_BORDER};`;
 
+  const sponsorHeader = sponsorLogoSrc
+    ? `<img src="${sponsorLogoSrc}" width="164" height="22" alt="SpaceXAI" style="width:164px;height:22px;display:block;border:0;">`
+    : `<span style="font-family:${SANS};font-weight:700;font-size:19px;letter-spacing:0.2em;color:${WHITE};">SPACEXAI</span>`;
   const sponsor = sponsorLogoSrc
     ? `<img src="${sponsorLogoSrc}" width="112" height="15" alt="SpaceXAI" style="width:112px;height:15px;display:inline-block;vertical-align:-1px;border:0;">`
     : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${WHITE};">SPACEXAI</span>`;
@@ -237,8 +240,8 @@ export function renderEmail({
       <td align="left" valign="middle">
         <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
           <td valign="middle">${wordmark}</td>
-          <td valign="middle" style="padding:0 12px;font-family:${SANS};font-size:16px;line-height:24px;color:#6f6f6f;">&#215;</td>
-          <td valign="middle">${sponsor}</td>
+          <td valign="middle" style="padding:0 14px;font-family:${SANS};font-size:18px;line-height:24px;color:#6f6f6f;">&#215;</td>
+          <td valign="middle">${sponsorHeader}</td>
         </tr></table>
       </td>
       <td class="hide-m" align="right" valign="middle" style="${label}color:${LIME};">Kickoff 2026&#8211;27</td>
