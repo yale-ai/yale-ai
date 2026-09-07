@@ -44,7 +44,7 @@ export const EVENTS = {
 // Files expected in campaigns/kickoff-2026-27/assets/. Missing files are simply
 // omitted by the template, so a logo can be dropped in later without a code change.
 export const ASSETS = [
-  { key: "markSrc", cid: "mark", file: "mark-light.png", type: "image/png" },
+  { key: "markSrc", cid: "mark", file: "mark-white.png", type: "image/png" },
   { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai-black.png", type: "image/png" },
   { key: "botSrc", cid: "bot", file: "bot-dark.png", type: "image/png" },
   { key: "photo1Src", cid: "photo1", file: "mit-ibm-1.jpg", type: "image/jpeg" },
@@ -352,7 +352,7 @@ export function renderEmail({
   <tr><td class="pad" style="padding:30px 6px 0;border-top:1px solid rgba(16,16,16,0.14);">
     <div style="font-family:${SANS};font-size:14px;line-height:21px;font-weight:700;color:${INK};">Questions? Just reply to this email.</div>
     <div style="font-family:${SANS};font-size:13px;line-height:20px;color:#6a6a6a;padding-top:4px;">It goes to the Yale AI leadership (fellow Yale students).</div>
-    <div style="font-family:${SANS};font-size:12px;line-height:19px;color:#6a6a6a;padding-top:22px;">&copy; 2026 Yale Artificial Intelligence Association &middot; <a href="${siteUrl}" style="color:#5f5f5f;text-decoration:none;">yale-ai.org</a><br>Student-run and independent of Yale University. You are on this list because you signed up at the EC Bazaar, our website, or a past event. To stop, reply &#8220;unsubscribe&#8221; or <a href="${unsubMailto}" style="color:#5f5f5f;text-decoration:underline;">click here to unsubscribe</a>.</div>
+    <div style="font-family:${SANS};font-size:12px;line-height:19px;color:#6a6a6a;padding-top:22px;">&copy; 2026 Yale Artificial Intelligence Association &middot; <a href="${siteUrl}" style="color:#5f5f5f;text-decoration:none;">yale-ai.org</a><br>Student-run and independent of Yale University. To stop, reply &#8220;unsubscribe&#8221; or <a href="${unsubMailto}" style="color:#5f5f5f;text-decoration:underline;">click here to unsubscribe</a>.</div>
   </td></tr>
 
 </table>
@@ -408,7 +408,7 @@ More about us: ${siteUrl}
 Questions? Just reply to this email. It goes to the Yale AI leadership (fellow Yale students).
 
 (c) 2026 Yale Artificial Intelligence Association - yale-ai.org
-Student-run and independent of Yale University. You are on this list because you signed up at the EC Bazaar, our website, or a past event. To stop, reply "unsubscribe".
+Student-run and independent of Yale University. To stop, reply "unsubscribe".
 `;
 
   return { subject: SUBJECT, html, text };
