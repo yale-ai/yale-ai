@@ -40,43 +40,55 @@ export function calendarUrl() {
   return `https://calendar.google.com/calendar/render?${p.toString()}`;
 }
 
-// What the club is doing this year, in the order the banner lists them.
-export const PROGRAMS: { title: string; blurb: string; tag?: string }[] = [
+// The year, in order. Dates are what the board has set so far.
+export const PROGRAMS: { when: string; title: string; blurb: string; tag?: string }[] = [
   {
-    title: "Project teams",
-    blurb: "Small teams that ship a real AI project over the semester, paired with a professor or grad student, ending in a demo day.",
-    tag: "apply",
+    when: "Wed, Sep 9",
+    title: "Kickoff, sponsored by SpaceXAI",
+    blurb: "A month of Cursor Pro+ for everyone in the room, an exclusive Grok Bot demo, a competition for SpaceXAI credits, boba.",
+    tag: "RSVP",
   },
   {
+    when: "Applications open at the kickoff",
     title: "Yale AI Fellowship",
-    blurb: "A structured, application-based program with a curriculum run by the board. Finish it and you have something to show for it.",
+    blurb: "A structured cohort with a curriculum run by the board. Finish it and you have something real to point to.",
     tag: "apply",
   },
   {
+    when: "Fall",
+    title: "Project teams and demo day",
+    blurb: "Small teams, paired with a professor or grad student, shipping one real thing. A poster-session demo day closes the term.",
+    tag: "apply",
+  },
+  {
+    when: "Every other week",
+    title: "Hands-on workshops",
+    blurb: "Coding agents, AI-native workflows, mini hackathons. Build an agent that runs your classes.",
+  },
+  {
+    when: "Nov 10",
+    title: "Fireside chat with a climate-AI founder",
+    blurb: "In partnership with SciCity. We lead the conversation, you bring the questions.",
+  },
+  {
+    when: "Fall",
     title: "Research showcase",
-    blurb: "Labs across Yale present their AI work to undergrads. Last year: ten labs, a hundred people in the room.",
+    blurb: "Ten Yale labs, grad students presenting to undergrads. Last year a hundred people came.",
   },
   {
-    title: "Workshops",
-    blurb: "Biweekly, hands-on. Coding agents, AI-native workflows, mini hackathons like building an agent to run your classes.",
+    when: "Spring",
+    title: "Company trip",
+    blurb: "A day inside a frontier company. SpaceX New York and Cursor are on the shortlist.",
   },
   {
-    title: "Fireside chats",
-    blurb: "Founders and researchers in conversation. First up this fall: a climate-AI founder, in November.",
-  },
-  {
-    title: "Company trips",
-    blurb: "A spring visit to a frontier AI company. Meet the people building the thing.",
-  },
-  {
-    title: "AI x medicine, AI x finance",
-    blurb: "Verticals for people who want to apply AI to a field, not just study it.",
-  },
-  {
+    when: "May",
     title: "Yale AI Symposium",
-    blurb: "May. Project teams get a stage in front of the whole community.",
+    blurb: "Project teams get a stage in front of the whole Yale AI community.",
   },
 ];
+
+// Who we already know, and who is in the pipeline.
+export const CONNECTIONS = ["SpaceXAI", "Cursor", "OpenAI", "MIT-IBM Watson AI Lab"];
 
 export const PILLS = [
   "builders + community",

@@ -1,9 +1,11 @@
-// The wordmark: "Yale AI" in Poppins Bold with a teal dot.
+import LogoMark from "@/components/LogoMark";
+
+// The lockup: the graph-Y mark and "Yale AI" in the body sans, heavy and tight.
 export default function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <span className={`inline-flex items-baseline gap-1.5 whitespace-nowrap font-bold tracking-[-0.03em] leading-none text-fg ${className}`}>
+    <span className={`inline-flex items-center gap-[0.38em] whitespace-nowrap font-bold tracking-[-0.03em] leading-none text-fg ${className}`}>
+      <LogoMark className="h-[1.15em] w-[1.15em] shrink-0" />
       <span>Yale AI</span>
-      <span aria-hidden className="inline-block h-[0.28em] w-[0.28em] rounded-full bg-teal-ink translate-y-[-0.05em]" />
     </span>
   );
 }
