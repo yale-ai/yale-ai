@@ -276,7 +276,7 @@ export function renderEmail({
   <tr><td style="padding:26px 0 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr>
       <td class="pad" valign="middle" style="padding:28px 8px 28px 28px;">
-        <div style="${pixel}">Kickoff night. Free perks for everyone in the room.</div>
+        <div style="${pixel}">Our kickoff night with free perks for everyone in the room.</div>
         <div style="${label}padding-top:6px;">Powered by&nbsp;&nbsp;${sponsor}</div>
         <div style="font-family:${SANS};font-size:19px;line-height:26px;font-weight:600;color:${WHITE};padding-top:14px;">Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba? <span style="color:${LIME};">Yeah, we thought so.</span></div>
         <div style="font-family:${SANS};font-size:24px;line-height:30px;font-weight:700;color:${WHITE};padding-top:16px;">${k.dayLine}</div>
