@@ -23,7 +23,7 @@ export default function Hero() {
       </h1>
 
       <p className="mx-auto mt-[clamp(0.9rem,2.2vh,1.4rem)] max-w-3xl leading-relaxed text-muted text-[clamp(0.88rem,min(1.45vw,1.8vh),0.98rem)]">
-        <span className="font-semibold text-fg">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</span>{" "}
+        <span className="font-semibold text-fg">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. <em className="underline decoration-1 underline-offset-4">And they want you there. Yes. You.</em></span>{" "}
         We&apos;re the hub for AI companies, research, networking, and learning on campus, and we want you in.
       </p>
 
