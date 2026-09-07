@@ -12,7 +12,7 @@
   --lime-deep: #c4d485;
   --teal: #4fd8c8;
   --blue: #6ea8ff;
-  --gap: clamp(0.8rem, 2vh, 1.4rem);
+  --gap: clamp(1rem, 2.6vh, 1.9rem);
 }
 
 @theme inline {
@@ -22,7 +22,8 @@
   --color-lime-deep: var(--lime-deep);
   --color-teal: var(--teal);
   --color-blue: var(--blue);
-  --font-sans: var(--font-sans), Poppins, system-ui, sans-serif;
+  --font-sans: var(--font-sans), "Instrument Sans", system-ui, sans-serif;
+  --font-display: var(--font-display), "Instrument Serif", Georgia, serif;
   --font-pixel: var(--font-pixel), "Pixelify Sans", monospace;
   --font-mono: var(--font-mono), ui-monospace, Menlo, monospace;
 }
@@ -57,11 +58,21 @@ html, body {
 }
 
 /* One screen, no scroll, when the viewport can hold it. Smaller screens scroll. */
-@media (min-width: 1024px) and (min-height: 760px) {
+@media (min-width: 1024px) and (min-height: 820px) {
   .stage-lock { height: 100dvh; overflow: hidden; }
 }
+/* Display type for the big moments: the serif. Buttons and badges stay sans. */
+h1, .display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em; }
+.cta, .badge { font-family: var(--font-sans); }
+/* Neutral pill, as on degreeint.com: a quiet surface with a hairline and a soft shadow. */
+.badge.hero-badge {
+  border-color: var(--line); background: var(--surface-strong);
+  box-shadow: 0 6px 20px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  text-transform: none; letter-spacing: 0.01em; font-weight: 500; font-size: clamp(0.62rem, 1.5vh, 0.76rem); color: var(--fg-muted);
+}
+.mono-aside { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.01em; color: var(--fg-faint); }
 @media (min-width: 1280px) and (min-height: 820px) {
-  :root { --gap: clamp(1rem, 2.4vh, 1.8rem); }
+  :root { --gap: clamp(1.2rem, 3vh, 2.2rem); }
 }
 
 /* Small pixel caps in teal. */
@@ -158,7 +169,7 @@ html, body {
 .field {
   width: 100%; border-radius: 9999px;
   border: 1px solid rgba(255, 255, 255, 0.14); background: rgba(255, 255, 255, 0.05);
-  color: #fff; padding: 0.65rem 1.05rem; font-size: 0.88rem; outline: none;
+  color: #fff; padding: 0.55rem 1rem; font-size: 0.8rem; outline: none;
   transition: border-color 200ms ease, background 200ms ease;
 }
 .field::placeholder { color: rgba(255, 255, 255, 0.35); }
@@ -342,7 +353,7 @@ html, body { background: var(--background); color: var(--fg); transition: backgr
 /* Grok Bot, whole, floating at the kickoff card's right. White on dark; inverted on paper. */
 .bot-float {
   position: absolute; right: clamp(1rem, 2.4vw, 2.2rem); top: 50%;
-  width: clamp(11rem, 22vh, 14.5rem); height: auto;
+  width: clamp(9.5rem, 19vh, 12rem); height: auto;
   transform: translateY(-50%);
   pointer-events: none; user-select: none;
   filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.55));

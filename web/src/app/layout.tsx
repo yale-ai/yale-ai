@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Poppins, Pixelify_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Instrument_Serif, Instrument_Sans, Pixelify_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 
-const sans = Poppins({
+// Body: Instrument Sans, a clean grotesk with some warmth.
+const sans = Instrument_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+// Display: Instrument Serif, the refined editorial serif in the degreeint.com register.
+const display = Instrument_Serif({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -50,7 +60,7 @@ const themeInit = `try{var t=localStorage.getItem("theme");if(t==="light"||t==="
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${pixel.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${sans.variable} ${display.variable} ${pixel.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>

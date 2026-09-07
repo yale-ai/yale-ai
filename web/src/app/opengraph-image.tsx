@@ -70,7 +70,7 @@ export default async function Image() {
             fellowship
           </div>
           <div style={{ display: "flex", border: "2px solid #d9e4a8", color: "#d9e4a8", borderRadius: 999, padding: "10px 22px" }}>
-            all majors welcome
+            all years welcome
           </div>
         </div>
       </div>
