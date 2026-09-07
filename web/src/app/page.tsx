@@ -6,8 +6,7 @@ import KickoffCard from "@/components/landing/KickoffCard";
 import ThisYear from "@/components/landing/ThisYear";
 import FieldTrips from "@/components/landing/FieldTrips";
 import Constellation from "@/components/landing/Constellation";
-import { TEAM } from "@/lib/team";
-import { SITE, SOCIALS } from "@/lib/site";
+import { CONTACT_EMAIL, SITE, SOCIALS } from "@/lib/site";
 
 /*
   First screen: the hero and the kickoff card, pinned to the viewport height on
@@ -44,12 +43,10 @@ export default function Home() {
         <FieldTrips />
 
         <footer className="flex flex-col gap-3 border-t border-line pt-8">
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[0.74rem] font-medium tracking-wide text-muted">
-            {TEAM.map((m) => (
-              <Link key={m.email} href={`mailto:${m.email}`} className="transition-colors hover:text-fg">
-                {m.email}
-              </Link>
-            ))}
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[0.8rem] font-medium tracking-wide text-muted">
+            <Link href={`mailto:${CONTACT_EMAIL}`} className="transition-colors hover:text-fg">
+              {CONTACT_EMAIL}
+            </Link>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[0.66rem] font-medium tracking-wide text-faint">
             <span>&copy; {new Date().getFullYear()} {SITE.name}</span>

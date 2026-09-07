@@ -1,17 +1,14 @@
 import Link from "next/link";
-import { TEAM } from "@/lib/team";
-import { SITE, SOCIALS } from "@/lib/site";
+import { CONTACT_EMAIL, SITE, SOCIALS } from "@/lib/site";
 
 // Compact, one line on wide screens: board emails, then the small print.
 export default function Footer() {
   return (
     <footer className="flex flex-col gap-2 pb-1" style={{ gap: "clamp(0.5rem, 1.2vh, 0.9rem)" }}>
       <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[clamp(0.7rem,1.4vh,0.8rem)] font-medium text-muted">
-        {TEAM.map((m) => (
-          <Link key={m.email} href={`mailto:${m.email}`} className="transition-colors hover:text-fg">
-            {m.email}
-          </Link>
-        ))}
+        <Link href={`mailto:${CONTACT_EMAIL}`} className="transition-colors hover:text-fg">
+          {CONTACT_EMAIL}
+        </Link>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[clamp(0.62rem,1.3vh,0.72rem)] text-faint">
         <span>&copy; {new Date().getFullYear()} {SITE.name}</span>

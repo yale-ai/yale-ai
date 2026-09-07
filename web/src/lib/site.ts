@@ -9,7 +9,7 @@ export const SITE = {
 };
 
 export const LUMA_URL = "https://luma.com/o5g51mh0";
-export const CONTACT_EMAIL = "filippo.fonseca@yale.edu";
+export const CONTACT_EMAIL = "yaleaiassociation@gmail.com";
 
 export const SOCIALS = {
   instagram: "https://www.instagram.com/yale_ai/",
