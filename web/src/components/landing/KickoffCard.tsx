@@ -42,7 +42,7 @@ export default function KickoffCard() {
 
       <div className="relative flex flex-wrap items-center gap-3 lg:pr-[13.5rem]">
         <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="cta px-5 py-2.5 text-[0.76rem] md:text-[0.8rem]">
-          RSVP on Luma <span aria-hidden>→</span>
+          RSVP for the kickoff <span aria-hidden>→</span>
         </Link>
         <Link href={calendarUrl()} target="_blank" rel="noopener noreferrer" className="ghost px-4 py-2.5 text-[0.76rem] md:text-[0.8rem]">
           Add to calendar

@@ -87,7 +87,7 @@ export function gcalLink(ev, lumaUrl) {
     details:
       `Yale AI Association kickoff. Sponsored by SpaceXAI. Everyone who attends gets 1 month of Cursor Pro+ free, ` +
       `there is a competition for SpaceXAI credits, an exclusive Grok Bot demo, and free boba and snacks. All majors, all class years.\n\n` +
-      `Capacity is limited, so RSVP on Luma: ${lumaUrl}\n\nyale-ai.org`,
+      `Capacity is limited, so RSVP for the kickoff: ${lumaUrl}\n\nyale-ai.org`,
   });
   return `https://calendar.google.com/calendar/render?${p.toString()}`;
 }
@@ -181,7 +181,7 @@ export function renderEmail({
       ${markSrc ? `<td valign="middle" style="padding:0 8px 0 0;"><img src="${markSrc}" width="34" height="34" alt="" style="width:34px;height:34px;display:block;border:0;"></td>` : ""}
       <td valign="middle">
         <div style="font-family:${SANS};font-weight:700;font-size:19px;line-height:20px;letter-spacing:-0.5px;color:${WHITE};">Yale AI</div>
-        <div style="font-family:${SANS};font-weight:600;font-size:8px;line-height:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8d8d;">An Undergraduate Association</div>
+        <div style="font-family:${SANS};font-weight:600;font-size:8px;line-height:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8d8d;">An Undergraduate Organization</div>
       </td>
     </tr></table></a>`;
 
@@ -262,7 +262,7 @@ export function renderEmail({
     <div style="display:inline-block;border:1px solid ${CARD_BORDER};border-radius:999px;background:${CARD_BG};padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#9a9a9a;"><span style="color:${WHITE};font-weight:600;">Kickoff is Wednesday, Sep 9</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
     <div class="h1" style="${serif}font-size:44px;line-height:48px;letter-spacing:-0.5px;padding-top:22px;white-space:nowrap;">Build the <span style="font-weight:600;">future of AI</span> at Yale.</div>
     <div style="${serif}font-size:32px;line-height:40px;color:#a7a7a7;padding-top:6px;">Now backed by ${sponsorBig}</div>
-    <div style="${body}font-size:15px;line-height:24px;padding-top:18px;max-width:520px;margin:0 auto;"><span style="color:${WHITE};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</span> Frontier-lab tools, credits, and people are coming to campus, and it&#8217;s all through Yale AI. <span style="color:${WHITE};font-weight:600;">We&#8217;re the hub for artificial intelligence companies, research, networking, and learning on campus, and we want you to be a part of it.</span> Come to our kickoff Wednesday at 8pm (Tsai CITY) and you&#8217;ll get one month of free Cursor Pro+, the chance to win even more credits, exclusive demos from SpaceXAI, and the chance to learn how you can get involved with Yale AI events this year.</div>
+    <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${WHITE};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</div>
     <div style="padding-top:26px;">${button(lumaUrl, "RSVP for the kickoff", { big: true })}</div>
     <div style="${pixel}color:#8d8d8d;text-transform:none;letter-spacing:0.02em;font-size:13px;line-height:20px;padding-top:18px;">built by Yalies who ship. no AI experience required.</div>
   </td></tr>
@@ -270,7 +270,7 @@ export function renderEmail({
   <!-- greeting -->
   <tr><td class="pad" style="padding:34px 6px 0;">
     <div style="font-family:${SANS};font-size:17px;line-height:24px;font-weight:600;color:${WHITE};">${greeting}</div>
-    <div style="${body}padding-top:10px;">Every year a few hundred people at Yale say they want to get into AI. Most never start. <span style="color:${WHITE};font-weight:600;">This Wednesday</span> we make starting the easy part: show up and get the tools the frontier labs actually use. If you&#8217;re interested, you can also learn about the projects, trips, and fellowships Yale AI will be offering this year (as well as future events with frontier AI companies, quant firms, etc. and networking panels). It is sponsored by SpaceXAI, and everyone who shows up walks out with <span style="color:${WHITE};font-weight:700;">1 month of Cursor Pro+ free</span>. Seriously :).</div>
+    <div style="${body}padding-top:10px;"><span style="color:${WHITE};font-weight:600;">We&#8217;re the hub for AI companies, research, networking, and learning on campus, and we want you in.</span> Come to our kickoff <span style="color:${WHITE};font-weight:600;">Wednesday at 8pm (Tsai CITY)</span> and you&#8217;ll get <span style="color:${WHITE};font-weight:700;">1 month of Cursor Pro+ free</span>, a shot at more credits, exclusive demos from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year (plus future events with frontier AI companies, quant firms, and networking panels). Seriously :).</div>
     <div style="${body}padding-top:12px;">&#8211; The Yale AI team</div>
   </td></tr>
 
@@ -286,7 +286,7 @@ export function renderEmail({
         <div style="font-family:${SANS};font-size:15px;line-height:22px;color:#a7a7a7;padding-top:2px;">${k.where}</div>
         <div style="${body}font-size:14px;line-height:22px;padding-top:12px;"><span style="color:${WHITE};font-weight:600;">There&#8217;s a quick build competition during the kickoff too</span>, for the chance to win more SpaceXAI credits. Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.</div>
         <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-          <td class="stack" valign="middle" style="padding:22px 14px 0 0;">${button(lumaUrl, "RSVP on Luma")}</td>
+          <td class="stack" valign="middle" style="padding:22px 14px 0 0;">${button(lumaUrl, "RSVP for the kickoff")}</td>
           <td class="stack" valign="middle" style="padding:22px 0 0 0;">${ghost(gcal, "Add to calendar")}</td>
         </tr></table>
       </td>
@@ -350,7 +350,7 @@ export function renderEmail({
   <tr><td class="pad" align="center" style="padding:40px 6px 34px;">
     <div class="h2" style="${serif}font-size:40px;line-height:44px;">Let&#8217;s do this.</div>
     <div style="${body}font-size:15px;line-height:24px;padding-top:12px;max-width:500px;margin:0 auto;">The people who build the next decade are picking rooms right now. Pick this one. Come Wednesday, and bring a friend who thinks AI is not for them.</div>
-    <div style="padding-top:26px;">${button(lumaUrl, "RSVP on Luma", { big: true })}</div>
+    <div style="padding-top:26px;">${button(lumaUrl, "RSVP for the kickoff", { big: true })}</div>
     <div style="padding-top:14px;">${textLink(siteUrl, "yale-ai.org")}</div>
   </td></tr>
 
@@ -373,13 +373,13 @@ export function renderEmail({
 BUILD THE FUTURE OF AI AT YALE. NOW BACKED BY SPACEXAI.
 Kickoff is Wednesday, Sep 9. A month of Cursor Pro+ for everyone, free credits, giveaways, more.
 
-The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You. Frontier-lab tools, credits, and people are coming to campus, and it's all through Yale AI. We're the hub for artificial intelligence companies, research, networking, and learning on campus, and we want you to be a part of it. Come to our kickoff Wednesday at 8pm (Tsai CITY) and you'll get one month of free Cursor Pro+, the chance to win even more credits, exclusive demos from SpaceXAI, and the chance to learn how you can get involved with Yale AI events this year.
+The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.
 
 RSVP for the kickoff: ${lumaUrl}
 
 ${greeting}
 
-Every year a few hundred people at Yale say they want to get into AI. Most never start. This Wednesday we make starting the easy part: show up and get the tools the frontier labs actually use. If you're interested, you can also learn about the projects, trips, and fellowships Yale AI will be offering this year (as well as future events with frontier AI companies, quant firms, etc. and networking panels). It is sponsored by SpaceXAI, and everyone who shows up walks out with 1 month of Cursor Pro+ free. Seriously :).
+We're the hub for AI companies, research, networking, and learning on campus, and we want you in. Come to our kickoff Wednesday at 8pm (Tsai CITY) and you'll get 1 month of Cursor Pro+ free, a shot at more credits, exclusive demos from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year (plus future events with frontier AI companies, quant firms, and networking panels). Seriously :).
 
 - The Yale AI team
 
@@ -389,7 +389,7 @@ ${k.dayLine}, ${k.timeLine}
 ${k.where}
 There's a quick build competition during the kickoff too, for the chance to win more SpaceXAI credits. Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.
 
-RSVP on Luma: ${lumaUrl}
+RSVP for the kickoff: ${lumaUrl}
 Add to Google Calendar: ${gcal}
 
 THIS YEAR, IN ONE GLANCE
@@ -408,7 +408,7 @@ Guillermo Rauch, CEO at Vercel, on LinkedIn:
 LET'S DO THIS.
 The people who build the next decade are picking rooms right now. Pick this one. Come Wednesday, and bring a friend who thinks AI is not for them.
 
-RSVP on Luma: ${lumaUrl}
+RSVP for the kickoff: ${lumaUrl}
 More about us: ${siteUrl}
 
 Questions? Just reply to this email. It goes to the Yale AI leadership (fellow Yale students).
