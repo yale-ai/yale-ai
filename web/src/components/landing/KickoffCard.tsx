@@ -22,9 +22,9 @@ export default function KickoffCard() {
         </span>
       </div>
 
-      <h2 id="kickoff-title" className="relative font-semibold leading-[1.35] text-fg text-[clamp(1rem,2.1vh,1.25rem)] lg:pr-[13.5rem]">
-        Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba?{" "}
-        <span className="text-accent-ink">Yeah, we thought so.</span>
+      <h2 id="kickoff-title" className="relative font-normal leading-[1.35] text-fg text-[clamp(1rem,2.1vh,1.25rem)] lg:pr-[13.5rem]">
+        Fancy <strong>a month of Cursor Pro+</strong>, <strong>an exclusive Grok Bot demo</strong>, <strong>a competition for SpaceXAI credits</strong>, and <strong>free boba</strong>?{" "}
+        <span className="font-semibold text-accent-ink">Yeah, we thought so.</span>
       </h2>
 
       {/* One line: day, time, place. */}
@@ -37,7 +37,7 @@ export default function KickoffCard() {
       </div>
 
       <p className="relative max-w-xl leading-relaxed text-muted text-[clamp(0.85rem,1.75vh,0.95rem)] lg:pr-[13.5rem]">
-        <span className="font-semibold text-fg">There&apos;s a quick build competition during the kickoff too</span>, for the chance to win more SpaceXAI credits. Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.
+        <span className="font-semibold text-fg">There&apos;s a quick build competition during the kickoff too</span> (for the chance to win more SpaceXAI credits). Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.
       </p>
 
       <div className="relative flex flex-wrap items-center gap-3 lg:pr-[13.5rem]">
