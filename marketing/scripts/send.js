@@ -131,7 +131,7 @@ const apiKey = dryRun ? process.env.RESEND_API_KEY || "" : need("RESEND_API_KEY"
 // Sender on the verified yale-ai.org domain. Override with EMAIL_FROM / REPLY_TO
 // (comma-separated) in marketing/.env.
 const from = process.env.EMAIL_FROM || "YaleAI Association <info@yale-ai.org>";
-const replyTo = (process.env.REPLY_TO || "filippo.fonseca@yale.edu, yaleaiassociation@gmail.com, aryan.agarwal@yale.edu, addison.shea@yale.edu")
+const replyTo = (process.env.REPLY_TO || "yaleaiassociation@gmail.com, aryan.agarwal@yale.edu, addison.shea@yale.edu, filippo.fonseca@yale.edu")
   .split(",")
   .map((s) => s.trim())
   .filter(Boolean);
@@ -224,6 +224,13 @@ function idemFor(r, payload) {
   return `${campaign.id}-${createHash("sha256").update(fingerprint).digest("hex").slice(0, 48)}`;
 }
 
+function idemForBatch(chunk, payloads) {
+  const fingerprint =
+    `${campaign.id}|${payloads[0].subject}|${chunk.map((r) => r.email.toLowerCase()).join(",")}` +
+    `|${payloads[0].html}${force ? `|${Date.now()}` : ""}`;
+  return `${campaign.id}-batch-${createHash("sha256").update(fingerprint).digest("hex").slice(0, 40)}`;
+}
+
 let ok = 0;
 let failed = 0;
 
@@ -261,9 +268,24 @@ if (dryRun) {
         if (error) throw new Error(error.message || JSON.stringify(error));
         ids = [data.id];
       } else {
-        const { data, error } = await resend.batch.send(payloads);
-        if (error) throw new Error(error.message || JSON.stringify(error));
-        ids = (data?.data || data || []).map((d) => d.id);
+        // One idempotency key per batch, derived from its contents, so a retry
+        // after a timeout or 429 can never deliver the same batch twice.
+        const key = idemForBatch(chunk, payloads);
+        let last;
+        for (let attempt = 1; attempt <= 3; attempt++) {
+          try {
+            const { data, error } = await resend.batch.send(payloads, { idempotencyKey: key });
+            if (error) throw new Error(error.message || JSON.stringify(error));
+            ids = (data?.data || data || []).map((d) => d.id);
+            last = null;
+            break;
+          } catch (e) {
+            last = e;
+            console.error(`  batch ${Math.floor(i / BATCH) + 1} attempt ${attempt} failed: ${e.message}`);
+            await sleep(3000 * attempt);
+          }
+        }
+        if (last) throw last;
       }
       chunk.forEach((r, j) => appendSent(campaign.dir, r.email, ids[j] || "?"));
       ok += chunk.length;
