@@ -5,7 +5,7 @@ export const SITE = {
   shortName: "Yale AI",
   url: "https://yale-ai.org",
   description:
-    "Yale AI is the home for people who build with AI at Yale. Project teams, the Yale AI Fellowship, a research showcase, workshops, company trips, and a community of builders. All builders and people interested in AI are invited. All years.",
+    "Yale AI is the hub for AI companies, research, networking, and learning on campus. Kickoff Wednesday, September 9 at 8pm, Tsai CITY, sponsored by SpaceXAI: a month of Cursor Pro+ for everyone, free credits, giveaways, and more. All builders and people interested in AI are invited. All years.",
 };
 
 export const LUMA_URL = "https://luma.com/o5g51mh0";

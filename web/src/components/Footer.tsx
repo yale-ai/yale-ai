@@ -18,7 +18,7 @@ export default function Footer() {
         <Link href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-fg">Instagram</Link>
         <Link href={SOCIALS.linkedin} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-fg">LinkedIn</Link>
         <Link href="/team" className="transition-colors hover:text-fg">Team</Link>
-        <span>A registered student organization, independent of Yale University.</span>
+        <span>We&apos;re an official Registered Student Organization (RSO) affiliated with Yale University run by undergrads.</span>
       </div>
     </footer>
   );
