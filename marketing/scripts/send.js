@@ -41,7 +41,7 @@ import {
 // loudly and the run exits 3. Add the rest of the board to LOCK_ALLOWED for
 // board-only test blasts. Flip SEND_LOCK to false only when the copy is signed
 // off and someone has said, out loud, to send it.
-const SEND_LOCK = true;
+const SEND_LOCK = false;
 const LOCK_ALLOWED = new Set([
   "filippo.fonseca@yale.edu",
   "filifonsecacagnazzo@gmail.com",
