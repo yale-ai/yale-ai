@@ -9,13 +9,15 @@
 // one lime button. Table-based and inline-styled so it survives Gmail, Apple
 // Mail, and Outlook. Images are hosted, never attached.
 
-export const BG = "#0b0b0b";
+export const BG = "#f4f4ef";
 export const LIME = "#d9e4a8";
-export const TEAL = "#4fd8c8";
+export const TEAL = "#148f82";
 export const BLUE = "#6ea8ff";
 export const WHITE = "#ffffff";
-export const CARD_BG = "#141414";
-export const CARD_BORDER = "rgba(255,255,255,0.09)";
+export const INK = "#101010";
+export const LIME_INK = "#5f6d22";
+export const CARD_BG = "#ffffff";
+export const CARD_BORDER = "rgba(16,16,16,0.12)";
 
 export const CAMPAIGN = { id: "kickoff-2026-27", tag: "kickoff-2026-27" };
 
@@ -42,13 +44,13 @@ export const EVENTS = {
 // Files expected in campaigns/kickoff-2026-27/assets/. Missing files are simply
 // omitted by the template, so a logo can be dropped in later without a code change.
 export const ASSETS = [
-  { key: "markSrc", cid: "mark", file: "mark.png", type: "image/png" },
-  { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai.png", type: "image/png" },
-  { key: "botSrc", cid: "bot", file: "bot-full.png", type: "image/png" },
+  { key: "markSrc", cid: "mark", file: "mark-light.png", type: "image/png" },
+  { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai-black.png", type: "image/png" },
+  { key: "botSrc", cid: "bot", file: "bot-dark.png", type: "image/png" },
   { key: "photo1Src", cid: "photo1", file: "mit-ibm-1.jpg", type: "image/jpeg" },
   { key: "photo2Src", cid: "photo2", file: "mit-ibm-2.jpg", type: "image/jpeg" },
   { key: "photo3Src", cid: "photo3", file: "mit-ibm-3.jpg", type: "image/jpeg" },
-  { key: "labLogoSrc", cid: "lablogo", file: "mit-ibm-lab-2.png", type: "image/png" },
+  { key: "labLogoSrc", cid: "lablogo", file: "mit-ibm-lab-dark.png", type: "image/png" },
   { key: "mitLogoSrc", cid: "mit", file: "mit.png", type: "image/png" },
   { key: "quoteAvatarSrc", cid: "rauch", file: "rauch.png", type: "image/png" },
 ];
@@ -145,20 +147,20 @@ export function renderEmail({
   const unsubMailto = `mailto:${CONTACT_EMAIL}?subject=unsubscribe&body=${encodeURIComponent("Please take me off the Yale AI list.")}`;
 
   const pixel = `font-family:${MONO};font-size:12px;line-height:18px;letter-spacing:0.16em;text-transform:uppercase;color:${TEAL};`;
-  const label = `font-family:${SANS};font-size:11px;line-height:16px;letter-spacing:0.18em;text-transform:uppercase;color:#8d8d8d;`;
-  const body = `font-family:${SANS};font-weight:400;font-size:16px;line-height:26px;color:#c9c9c9;`;
-  const serif = `font-family:${SERIF};font-weight:400;color:${WHITE};`;
-  const CARD = `border-radius:22px;background:${CARD_BG};border:1px solid ${CARD_BORDER};`;
+  const label = `font-family:${SANS};font-size:11px;line-height:16px;letter-spacing:0.18em;text-transform:uppercase;color:#6a6a6a;`;
+  const body = `font-family:${SANS};font-weight:400;font-size:16px;line-height:26px;color:#3d3d3d;`;
+  const serif = `font-family:${SERIF};font-weight:400;color:${INK};`;
+  const CARD = `border-radius:22px;background:${CARD_BG};border:1px solid ${CARD_BORDER};box-shadow:0 10px 30px -18px rgba(0,0,0,0.25);`;
 
   const sponsorHeader = sponsorLogoSrc
     ? `<img src="${sponsorLogoSrc}" width="164" height="22" alt="SpaceXAI" style="width:164px;height:22px;display:block;border:0;">`
-    : `<span style="font-family:${SANS};font-weight:700;font-size:19px;letter-spacing:0.2em;color:${WHITE};">SPACEXAI</span>`;
+    : `<span style="font-family:${SANS};font-weight:700;font-size:19px;letter-spacing:0.2em;color:${INK};">SPACEXAI</span>`;
   const sponsor = sponsorLogoSrc
     ? `<img src="${sponsorLogoSrc}" width="112" height="15" alt="SpaceXAI" style="width:112px;height:15px;display:inline-block;vertical-align:-1px;border:0;">`
-    : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${WHITE};">SPACEXAI</span>`;
+    : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${INK};">SPACEXAI</span>`;
   const sponsorBig = sponsorLogoSrc
     ? `<img src="${sponsorLogoSrc}" width="210" height="28" alt="SpaceXAI" style="width:210px;height:28px;display:inline-block;vertical-align:-3px;border:0;">`
-    : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${WHITE};">SPACEXAI</span>`;
+    : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${INK};">SPACEXAI</span>`;
 
   const button = (href, text, opts = {}) => {
     const big = opts.big ? "padding:17px 36px;font-size:17px;" : "padding:14px 28px;font-size:15px;";
@@ -169,19 +171,19 @@ export function renderEmail({
     </v:roundrect>
     <![endif]-->
     <!--[if !mso]><!-->
-    <a href="${href}" target="_blank" class="btn" style="display:inline-block;${big}font-family:${SANS};font-weight:700;letter-spacing:0.01em;color:#000000 !important;-webkit-text-fill-color:#000000 !important;text-decoration:none;white-space:nowrap;border-radius:999px;background:${LIME};background-image:linear-gradient(180deg,#eef4d2 0%,${LIME} 55%,#c9d88f 100%);border:1.5px solid #f4f9dc;box-shadow:0 12px 32px -10px rgba(217,228,168,0.75), inset 0 1px 0 rgba(255,255,255,0.7);mso-hide:all;"><font color="#000000"><span style="color:#000000 !important;-webkit-text-fill-color:#000000 !important;">${text} &nbsp;&#8594;</span></font></a>
+    <a href="${href}" target="_blank" class="btn" style="display:inline-block;${big}font-family:${SANS};font-weight:700;letter-spacing:0.01em;color:#000000 !important;-webkit-text-fill-color:#000000 !important;text-decoration:none;white-space:nowrap;border-radius:999px;background:${LIME};background-image:linear-gradient(180deg,#eef4d2 0%,${LIME} 55%,#c9d88f 100%);border:1.5px solid #b9c97a;box-shadow:0 12px 28px -12px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.7);mso-hide:all;"><font color="#000000"><span style="color:#000000 !important;-webkit-text-fill-color:#000000 !important;">${text} &nbsp;&#8594;</span></font></a>
     <!--<![endif]-->`;
   };
   // Secondary: a bordered pill on the anchor itself, no cell background, so nothing draws a box behind it.
-  const ghost = (href, text) => `<a href="${href}" target="_blank" style="display:inline-block;padding:13px 22px;font-family:${SANS};font-size:14px;font-weight:600;color:${WHITE};text-decoration:none;white-space:nowrap;border-radius:999px;border:1px solid rgba(255,255,255,0.22);">${text}</a>`;
-  const textLink = (href, text) => `<a href="${href}" target="_blank" style="font-family:${SANS};font-size:14px;font-weight:600;color:#c9c9c9;text-decoration:underline;text-underline-offset:3px;">${text} &#8594;</a>`;
+  const ghost = (href, text) => `<a href="${href}" target="_blank" style="display:inline-block;padding:13px 22px;font-family:${SANS};font-size:14px;font-weight:600;color:${INK};text-decoration:none;white-space:nowrap;border-radius:999px;border:1px solid rgba(16,16,16,0.28);">${text}</a>`;
+  const textLink = (href, text) => `<a href="${href}" target="_blank" style="font-family:${SANS};font-size:14px;font-weight:600;color:#3d3d3d;text-decoration:underline;text-underline-offset:3px;">${text} &#8594;</a>`;
 
   const wordmark = `<a href="${siteUrl}" target="_blank" style="text-decoration:none;">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
       ${markSrc ? `<td valign="middle" style="padding:0 8px 0 0;"><img src="${markSrc}" width="34" height="34" alt="" style="width:34px;height:34px;display:block;border:0;"></td>` : ""}
       <td valign="middle">
-        <div style="font-family:${SANS};font-weight:700;font-size:19px;line-height:20px;letter-spacing:-0.5px;color:${WHITE};">Yale AI</div>
-        <div style="font-family:${SANS};font-weight:600;font-size:8px;line-height:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8d8d;">An Undergraduate Organization</div>
+        <div style="font-family:${SANS};font-weight:700;font-size:19px;line-height:20px;letter-spacing:-0.5px;color:${INK};">Yale AI</div>
+        <div style="font-family:${SANS};font-weight:600;font-size:8px;line-height:12px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;">An Undergraduate Organization</div>
       </td>
     </tr></table></a>`;
 
@@ -192,8 +194,8 @@ export function renderEmail({
         ? `<td class="stack" valign="top" width="50%" style="width:50%;padding:0 8px 16px 0;">
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr><td style="padding:18px 18px 16px;">
               <div style="${pixel}color:${TEAL};">${item[0]}</div>
-              <div style="font-family:${SANS};font-size:16px;line-height:21px;font-weight:700;color:${WHITE};padding-top:8px;">${item[1]}</div>
-              <div style="font-family:${SANS};font-size:13px;line-height:20px;color:#9a9a9a;padding-top:6px;">${item[2]}</div>
+              <div style="font-family:${SANS};font-size:16px;line-height:21px;font-weight:700;color:${INK};padding-top:8px;">${item[1]}</div>
+              <div style="font-family:${SANS};font-size:13px;line-height:20px;color:#5f5f5f;padding-top:6px;">${item[2]}</div>
             </td></tr></table>
           </td>`
         : `<td class="stack" width="50%"></td>`;
@@ -206,21 +208,20 @@ export function renderEmail({
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="x-apple-disable-message-reformatting">
-<meta name="color-scheme" content="dark">
-<meta name="supported-color-schemes" content="dark">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
 <title>${SUBJECT}</title>
 <!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wght@400;500;600;700&display=swap');
-  :root { color-scheme: dark; supported-color-schemes: dark; }
-  body { margin:0; padding:0; background:#000000; }
+  :root { color-scheme: light; supported-color-schemes: light; }
+  body { margin:0; padding:0; background:${BG}; }
   img { border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
   table { border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; }
-  a { color:${WHITE}; }
+  a { color:${INK}; }
   a.btn, a.btn *, a.btn:visited, a.btn:hover { color:#000000 !important; -webkit-text-fill-color:#000000 !important; }
   u + .body a.btn, u + .body a.btn * { color:#000000 !important; }
   [data-ogsc] a.btn, [data-ogsc] a.btn *, [data-ogsb] a.btn { color:#000000 !important; background:${LIME} !important; }
-  @media (prefers-color-scheme: dark) { a.btn, a.btn * { color:#000000 !important; } }
   @media (max-width:620px) {
     .wrap { width:100% !important; }
     .outer { padding:14px 10px 28px !important; }
@@ -233,12 +234,12 @@ export function renderEmail({
     .h1 { font-size:26px !important; line-height:30px !important; white-space:nowrap !important; }
     .h2 { font-size:28px !important; line-height:34px !important; }
   }
-  [data-ogsc] body, [data-ogsc] .bg { background:#000000 !important; }
+  [data-ogsc] body, [data-ogsc] .bg { background:${BG} !important; }
 </style>
 </head>
-<body class="body" style="margin:0;padding:0;background:#000000;">
+<body class="body" style="margin:0;padding:0;background:${BG};">
 <div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${PREHEADER}${"&#847;&zwnj;&nbsp;".repeat(40)}</div>
-<table role="presentation" class="bg" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#000000" style="background:#000000;">
+<table role="presentation" class="bg" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${BG}" style="background:${BG};">
 <tr><td class="outer" align="center" style="padding:24px 12px 40px;">
 <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
 <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;">
@@ -249,28 +250,28 @@ export function renderEmail({
       <td align="left" valign="middle">
         <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
           <td valign="middle">${wordmark}</td>
-          <td valign="middle" style="padding:0 14px;font-family:${SANS};font-size:18px;line-height:24px;color:#6f6f6f;">&#215;</td>
+          <td valign="middle" style="padding:0 14px;font-family:${SANS};font-size:18px;line-height:24px;color:#767676;">&#215;</td>
           <td valign="middle">${sponsorHeader}</td>
         </tr></table>
       </td>
-      <td class="hide-m" align="right" valign="middle" style="${label}color:${LIME};font-weight:700;">Kickoff 2026&#8211;27</td>
+      <td class="hide-m" align="right" valign="middle" style="${label}color:${LIME_INK};font-weight:700;">Kickoff 2026&#8211;27</td>
     </tr></table>
   </td></tr>
 
   <!-- hero, centred, as on the site -->
   <tr><td class="pad" align="center" style="padding:0 6px;">
-    <div style="display:inline-block;border:1px solid ${CARD_BORDER};border-radius:999px;background:${CARD_BG};padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#9a9a9a;"><span style="color:${WHITE};font-weight:600;">Kickoff is Wednesday, Sep 9</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
+    <div style="display:inline-block;border:1px solid rgba(16,16,16,0.1);border-radius:999px;background:#ffffff;box-shadow:0 6px 20px -12px rgba(0,0,0,0.3);padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#5f5f5f;"><span style="color:${INK};font-weight:600;">Kickoff is Wednesday, Sep 9</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
     <div class="h1" style="${serif}font-size:44px;line-height:48px;letter-spacing:-0.5px;padding-top:22px;white-space:nowrap;">Build the <span style="font-weight:600;">future of AI</span> at Yale.</div>
-    <div style="${serif}font-size:32px;line-height:40px;color:#a7a7a7;padding-top:6px;">Now backed by ${sponsorBig}</div>
-    <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${WHITE};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</div>
+    <div style="${serif}font-size:32px;line-height:40px;color:#5a5a5a;padding-top:6px;">Now backed by ${sponsorBig}</div>
+    <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${INK};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</div>
     <div style="padding-top:26px;">${button(lumaUrl, "RSVP for the kickoff", { big: true })}</div>
-    <div style="${pixel}color:#8d8d8d;text-transform:none;letter-spacing:0.02em;font-size:13px;line-height:20px;padding-top:18px;">built by Yalies who ship. no AI experience required.</div>
+    <div style="${pixel}color:#6a6a6a;text-transform:none;letter-spacing:0.02em;font-size:13px;line-height:20px;padding-top:18px;">built by Yalies who ship. no AI experience required.</div>
   </td></tr>
 
   <!-- greeting -->
   <tr><td class="pad" style="padding:34px 6px 0;">
-    <div style="font-family:${SANS};font-size:17px;line-height:24px;font-weight:600;color:${WHITE};">${greeting}</div>
-    <div style="${body}padding-top:10px;"><span style="color:${WHITE};font-weight:600;">We&#8217;re the hub for AI companies, research, networking, and learning on campus, and we want you in.</span> Come to our kickoff <span style="color:${WHITE};font-weight:600;">Wednesday at 8pm (Tsai CITY)</span> and you&#8217;ll get <span style="color:${WHITE};font-weight:700;">1 month of Cursor Pro+ free</span>, a shot at more credits, exclusive demos from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year (plus future events with frontier AI companies, quant firms, and networking panels). Seriously :).</div>
+    <div style="font-family:${SANS};font-size:17px;line-height:24px;font-weight:600;color:${INK};">${greeting}</div>
+    <div style="${body}padding-top:10px;"><span style="color:${INK};font-weight:600;">We&#8217;re the hub for AI companies, research, networking, and learning on campus, and we want you in.</span> Come to our kickoff <span style="color:${INK};font-weight:600;">Wednesday at 8pm (Tsai CITY)</span> and you&#8217;ll get <span style="color:${INK};font-weight:700;">1 month of Cursor Pro+ free</span>, a shot at more credits, exclusive demos from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year (plus future events with frontier AI companies, quant firms, and networking panels). Seriously :).</div>
     <div style="${body}padding-top:12px;">&#8211; The Yale AI team</div>
   </td></tr>
 
@@ -280,11 +281,11 @@ export function renderEmail({
       <td class="pad" valign="middle" style="padding:28px 8px 28px 28px;">
         <div style="${pixel}">Our kickoff night with free perks for everyone in the room.</div>
         <div style="${label}padding-top:6px;">Powered by&nbsp;&nbsp;${sponsor}</div>
-        <div style="font-family:${SANS};font-size:19px;line-height:26px;font-weight:600;color:${WHITE};padding-top:14px;">Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba? <span style="color:${LIME};">Yeah, we thought so.</span></div>
-        <div style="font-family:${SANS};font-size:24px;line-height:30px;font-weight:700;color:${WHITE};padding-top:16px;">${k.dayLine}</div>
-        <div style="font-family:${SANS};font-size:20px;line-height:26px;font-weight:700;color:${LIME};">${k.timeLine}</div>
-        <div style="font-family:${SANS};font-size:15px;line-height:22px;color:#a7a7a7;padding-top:2px;">${k.where}</div>
-        <div style="${body}font-size:14px;line-height:22px;padding-top:12px;"><span style="color:${WHITE};font-weight:600;">There&#8217;s a quick build competition during the kickoff too</span>, for the chance to win more SpaceXAI credits. Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.</div>
+        <div style="font-family:${SANS};font-size:19px;line-height:26px;font-weight:600;color:${INK};padding-top:14px;">Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba? <span style="color:${LIME_INK};">Yeah, we thought so.</span></div>
+        <div style="font-family:${SANS};font-size:24px;line-height:30px;font-weight:700;color:${INK};padding-top:16px;">${k.dayLine}</div>
+        <div style="font-family:${SANS};font-size:20px;line-height:26px;font-weight:700;color:${LIME_INK};">${k.timeLine}</div>
+        <div style="font-family:${SANS};font-size:15px;line-height:22px;color:#5a5a5a;padding-top:2px;">${k.where}</div>
+        <div style="${body}font-size:14px;line-height:22px;padding-top:12px;"><span style="color:${INK};font-weight:600;">There&#8217;s a quick build competition during the kickoff too</span>, for the chance to win more SpaceXAI credits. Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.</div>
         <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
           <td class="stack" valign="middle" style="padding:22px 14px 0 0;">${button(lumaUrl, "RSVP for the kickoff")}</td>
           <td class="stack" valign="middle" style="padding:22px 0 0 0;">${ghost(gcal, "Add to calendar")}</td>
@@ -302,7 +303,7 @@ export function renderEmail({
   </td></tr>
   <tr><td style="padding:0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${yearRows.join("")}</table>
-    <div style="font-family:${MONO};font-size:11px;line-height:16px;color:#6f6f6f;text-align:center;padding:4px 0 0;">More on our programs this year coming soon.</div>
+    <div style="font-family:${MONO};font-size:11px;line-height:16px;color:#767676;text-align:center;padding:4px 0 0;">More on our programs this year coming soon.</div>
   </td></tr>
 
   <!-- connections: the MIT-IBM trip -->
@@ -318,14 +319,14 @@ export function renderEmail({
       ${photo3Src ? `<img src="${photo3Src}" width="540" alt="A panel on stage at the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;margin-top:12px;">` : ""}
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
         <td valign="middle" style="padding:56px 14px 0 0;">${mitLogoSrc ? `<img src="${mitLogoSrc}" width="58" height="30" alt="MIT" style="width:58px;height:30px;display:block;border:0;">` : `<span style="font-family:${SANS};font-weight:800;font-size:26px;line-height:28px;letter-spacing:-1px;color:#a31f34;">MIT</span>`}</td>
-        ${labLogoSrc ? `<td valign="middle" style="padding:56px 0 0 14px;"><span style="display:inline-block;border-left:1px solid #2a2a2a;padding-left:14px;"><img src="${labLogoSrc}" width="56" alt="MIT-IBM Watson AI Lab" style="width:56px;height:auto;display:block;border:0;"></span></td>` : ""}
-        <td valign="middle" style="padding:56px 0 0 16px;font-family:${MONO};font-size:11px;line-height:16px;color:#6f6f6f;">spring 2026 &middot; Boston, MA</td>
+        ${labLogoSrc ? `<td valign="middle" style="padding:56px 0 0 14px;"><span style="display:inline-block;border-left:1px solid rgba(16,16,16,0.18);padding-left:14px;"><img src="${labLogoSrc}" width="56" alt="MIT-IBM Watson AI Lab" style="width:56px;height:auto;display:block;border:0;"></span></td>` : ""}
+        <td valign="middle" style="padding:56px 0 0 16px;font-family:${MONO};font-size:11px;line-height:16px;color:#767676;">spring 2026 &middot; Boston, MA</td>
       </tr></table>` : ""}
       <div style="${body}font-size:14px;line-height:22px;padding-top:14px;">Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston.</div>
-      <div style="${body}font-size:15px;line-height:24px;padding-top:14px;">This year we are working on trips to top companies and AI labs in <span style="color:${WHITE};font-weight:600;">New York City and Boston</span>. Travel, food, the lot: <span style="color:${WHITE};font-weight:600;">all paid for.</span></div>
-      <div style="font-family:${SANS};font-size:15px;line-height:24px;font-weight:600;color:${WHITE};padding-top:12px;">We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.</div>
+      <div style="${body}font-size:15px;line-height:24px;padding-top:14px;">This year we are working on trips to top companies and AI labs in <span style="color:${INK};font-weight:600;">New York City and Boston</span>. Travel, food, the lot: <span style="color:${INK};font-weight:600;">all paid for.</span></div>
+      <div style="font-family:${SANS};font-size:15px;line-height:24px;font-weight:600;color:${INK};padding-top:12px;">We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.</div>
       <div style="padding-top:14px;">
-        <span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">${sponsor}</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">Cursor</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">OpenAI</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">MIT-IBM Watson AI Lab</span><span style="display:inline-block;border:1px dashed #555;border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:#8d8d8d;">more in the pipeline</span>
+        <span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">${sponsor}</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">Cursor</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">OpenAI</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">MIT-IBM Watson AI Lab</span><span style="display:inline-block;border:1px dashed #555;border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:#6a6a6a;">more in the pipeline</span>
       </div>
     </td></tr></table>
   </td></tr>
@@ -336,13 +337,13 @@ export function renderEmail({
   <tr><td style="padding:12px 0 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr><td class="pad" style="padding:24px 28px 24px;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-        <td valign="middle" width="44" style="width:44px;padding:0 12px 0 0;">${quoteAvatarSrc ? `<img src="${quoteAvatarSrc}" width="44" height="44" alt="" style="width:44px;height:44px;border-radius:50%;display:block;border:0;">` : `<div style="width:44px;height:44px;border-radius:50%;background:#2a2a2a;font-family:${SANS};font-size:15px;line-height:44px;text-align:center;font-weight:700;color:${WHITE};">GR</div>`}</td>
+        <td valign="middle" width="44" style="width:44px;padding:0 12px 0 0;">${quoteAvatarSrc ? `<img src="${quoteAvatarSrc}" width="44" height="44" alt="" style="width:44px;height:44px;border-radius:50%;display:block;border:0;">` : `<div style="width:44px;height:44px;border-radius:50%;background:rgba(16,16,16,0.18);font-family:${SANS};font-size:15px;line-height:44px;text-align:center;font-weight:700;color:${INK};">GR</div>`}</td>
         <td valign="middle">
-          <div style="font-family:${SANS};font-size:15px;line-height:20px;font-weight:700;color:${WHITE};">Guillermo Rauch <span style="display:inline-block;background:#0a66c2;color:#fff;border-radius:3px;font-size:10px;line-height:14px;padding:0 4px;font-weight:700;vertical-align:1px;margin-left:4px;">in</span></div>
-          <div style="font-family:${SANS};font-size:13px;line-height:18px;color:#8d8d8d;">CEO at Vercel</div>
+          <div style="font-family:${SANS};font-size:15px;line-height:20px;font-weight:700;color:${INK};">Guillermo Rauch <span style="display:inline-block;background:#0a66c2;color:#fff;border-radius:3px;font-size:10px;line-height:14px;padding:0 4px;font-weight:700;vertical-align:1px;margin-left:4px;">in</span></div>
+          <div style="font-family:${SANS};font-size:13px;line-height:18px;color:#6a6a6a;">CEO at Vercel</div>
         </td>
       </tr></table>
-      <div style="${body}font-size:15px;line-height:24px;color:#e6e6e6;padding-top:14px;">Anyone that works in AI is working the hardest they&#8217;ve ever worked in their lives. On the surface it&#8217;s somewhat ironic (AI should give us back time!), but the reality is that it&#8217;s the most fun, fascinating and empowering epoch in human history. <span style="color:${WHITE};font-weight:700;">The intelligence revolution.</span></div>
+      <div style="${body}font-size:15px;line-height:24px;color:#262626;padding-top:14px;">Anyone that works in AI is working the hardest they&#8217;ve ever worked in their lives. On the surface it&#8217;s somewhat ironic (AI should give us back time!), but the reality is that it&#8217;s the most fun, fascinating and empowering epoch in human history. <span style="color:${INK};font-weight:700;">The intelligence revolution.</span></div>
     </td></tr></table>
   </td></tr>
 
@@ -355,10 +356,10 @@ export function renderEmail({
   </td></tr>
 
   <!-- footer -->
-  <tr><td class="pad" style="padding:30px 6px 0;border-top:1px solid #1e1e1e;">
-    <div style="font-family:${SANS};font-size:14px;line-height:21px;font-weight:700;color:${WHITE};">Questions? Just reply to this email.</div>
-    <div style="font-family:${SANS};font-size:13px;line-height:20px;color:#8d8d8d;padding-top:4px;">It goes to the Yale AI leadership (fellow Yale students).</div>
-    <div style="font-family:${SANS};font-size:12px;line-height:19px;color:#6a6a6a;padding-top:22px;">&copy; 2026 Yale Artificial Intelligence Association &middot; <a href="${siteUrl}" style="color:#9a9a9a;text-decoration:none;">yale-ai.org</a><br>Student-run and independent of Yale University. You are on this list because you signed up at the EC Bazaar, our website, or a past event. To stop, reply &#8220;unsubscribe&#8221; or <a href="${unsubMailto}" style="color:#9a9a9a;text-decoration:underline;">click here to unsubscribe</a>.</div>
+  <tr><td class="pad" style="padding:30px 6px 0;border-top:1px solid rgba(16,16,16,0.14);">
+    <div style="font-family:${SANS};font-size:14px;line-height:21px;font-weight:700;color:${INK};">Questions? Just reply to this email.</div>
+    <div style="font-family:${SANS};font-size:13px;line-height:20px;color:#6a6a6a;padding-top:4px;">It goes to the Yale AI leadership (fellow Yale students).</div>
+    <div style="font-family:${SANS};font-size:12px;line-height:19px;color:#6a6a6a;padding-top:22px;">&copy; 2026 Yale Artificial Intelligence Association &middot; <a href="${siteUrl}" style="color:#5f5f5f;text-decoration:none;">yale-ai.org</a><br>Student-run and independent of Yale University. You are on this list because you signed up at the EC Bazaar, our website, or a past event. To stop, reply &#8220;unsubscribe&#8221; or <a href="${unsubMailto}" style="color:#5f5f5f;text-decoration:underline;">click here to unsubscribe</a>.</div>
   </td></tr>
 
 </table>
