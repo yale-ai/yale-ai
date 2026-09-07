@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="text-center pt-[clamp(0.4rem,1.4vh,1.2rem)]" aria-labelledby="hero-title">
       <span className="badge hero-badge max-w-full whitespace-normal sm:whitespace-nowrap">
         <span className="h-1.5 w-1.5 rounded-full bg-teal-ink shadow-[0_0_0_3px_rgba(79,216,200,0.25)]" aria-hidden />
-        <span className="font-semibold text-fg">Kickoff is Wednesday, Sep 9</span>
+        <span className="font-semibold text-fg">Kickoff is Wednesday, Sep 9 @ 8pm</span>
         <span className="text-faint" aria-hidden>·</span> sponsored by{" "}
         <span className="spacexai h-[0.7em] text-fg" role="img" aria-label="SpaceXAI" />
         <span className="text-faint" aria-hidden>·</span> a month of Cursor Pro+ for everyone, free credits, giveaways, more
