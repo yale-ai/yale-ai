@@ -262,7 +262,6 @@ export function renderEmail({
     <div style="${serif}font-size:32px;line-height:40px;color:#a7a7a7;padding-top:6px;">Now backed by ${sponsorBig}</div>
     <div style="${body}font-size:15px;line-height:24px;padding-top:18px;max-width:520px;margin:0 auto;"><span style="color:${WHITE};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</span> Frontier-lab tools, credits, and people are coming to campus, and it&#8217;s all through Yale AI. <span style="color:${WHITE};font-weight:600;">We&#8217;re the hub for artificial intelligence companies, research, networking, and learning on campus, and we want you to be a part of it.</span> Come to our kickoff Wednesday at 8pm (Tsai CITY) and you&#8217;ll get one month of free Cursor Pro+, the chance to win even more credits, exclusive demos from SpaceXAI, and the chance to learn how you can get involved with Yale AI events this year.</div>
     <div style="padding-top:26px;">${button(lumaUrl, "RSVP for the kickoff", { big: true })}</div>
-    <div style="padding-top:14px;">${textLink(siteUrl + "/team", "Meet the board")}</div>
     <div style="${pixel}color:#6f6f6f;text-transform:none;letter-spacing:0.02em;font-size:11px;padding-top:18px;">built by Yalies who ship. no AI experience required.</div>
   </td></tr>
 
@@ -372,7 +371,6 @@ Kickoff is Wednesday, Sep 9. A month of Cursor Pro+ for everyone, free credits, 
 The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You. Frontier-lab tools, credits, and people are coming to campus, and it's all through Yale AI. We're the hub for artificial intelligence companies, research, networking, and learning on campus, and we want you to be a part of it. Come to our kickoff Wednesday at 8pm (Tsai CITY) and you'll get one month of free Cursor Pro+, the chance to win even more credits, exclusive demos from SpaceXAI, and the chance to learn how you can get involved with Yale AI events this year.
 
 RSVP for the kickoff: ${lumaUrl}
-Meet the board: ${siteUrl}/team
 
 ${greeting}
 
