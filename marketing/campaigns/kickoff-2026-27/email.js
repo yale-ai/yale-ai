@@ -265,6 +265,7 @@ export function renderEmail({
   <tr><td class="pad" style="padding:34px 6px 0;">
     <div style="font-family:${SANS};font-size:17px;line-height:24px;font-weight:600;color:${INK};">${greeting}</div>
     <div style="${body}padding-top:10px;"><span style="color:${INK};font-weight:600;">We&#8217;re the hub for AI companies, research, networking, and learning on campus, and we want you in.</span> Come to our kickoff <span style="color:${INK};font-weight:600;">Wednesday at 8pm (Tsai CITY)</span> and you&#8217;ll get <span style="color:${INK};font-weight:700;">1 month of Cursor Pro+ free</span>, a shot at more credits, exclusive demos from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year (plus future events with frontier AI companies, quant firms, and networking panels). Seriously :).</div>
+    <div style="${body}padding-top:12px;">Remember to RSVP for the kickoff <a href="${lumaUrl}" target="_blank" style="color:${INK};font-weight:600;text-decoration:underline;text-underline-offset:3px;">here</a>!</div>
     <div style="${body}padding-top:12px;">&#8211; The Yale AI team</div>
   </td></tr>
 
@@ -374,6 +375,8 @@ RSVP for the kickoff: ${lumaUrl}
 ${greeting}
 
 We're the hub for AI companies, research, networking, and learning on campus, and we want you in. Come to our kickoff Wednesday at 8pm (Tsai CITY) and you'll get 1 month of Cursor Pro+ free, a shot at more credits, exclusive demos from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year (plus future events with frontier AI companies, quant firms, and networking panels). Seriously :).
+
+Remember to RSVP for the kickoff here: ${lumaUrl}
 
 - The Yale AI team
 
