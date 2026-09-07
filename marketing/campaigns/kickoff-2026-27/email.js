@@ -48,7 +48,7 @@ export const ASSETS = [
   { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai-black.png", type: "image/png" },
   { key: "botSrc", cid: "bot", file: "bot-dark.png", type: "image/png" },
   { key: "photo1Src", cid: "photo1", file: "mit-ibm-1.jpg", type: "image/jpeg" },
-  { key: "photo2Src", cid: "photo2", file: "mit-ibm-2.jpg", type: "image/jpeg" },
+  { key: "photo2Src", cid: "photo2", file: "mit-ibm-2-sq.jpg", type: "image/jpeg" },
   { key: "photo3Src", cid: "photo3", file: "mit-ibm-3.jpg", type: "image/jpeg" },
   { key: "labLogoSrc", cid: "lablogo", file: "mit-ibm-lab-dark.png", type: "image/png" },
   { key: "mitLogoSrc", cid: "mit", file: "mit.png", type: "image/png" },
@@ -292,9 +292,7 @@ export function renderEmail({
 
   <!-- this year -->
   <tr><td class="pad" align="center" style="padding:44px 6px 18px;">
-    <div style="${pixel}">This year, in one glance</div>
-    <div class="h2" style="${serif}font-size:34px;line-height:40px;padding-top:12px;">We&#8217;re a club with <span style="font-weight:600;">real outputs</span>, not just a mailing list.</div>
-    <div style="${body}font-size:14px;line-height:22px;padding-top:10px;max-width:500px;margin:0 auto;">Everything below has a date, an owner on the board, and a way in. Applications for the fellowship and the project teams open at the kickoff.</div>
+    <div class="h2" style="${serif}font-size:34px;line-height:40px;">We&#8217;re a club with <span style="font-weight:600;">real outputs</span>, not just a mailing list.</div>
   </td></tr>
   <tr><td style="padding:0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${yearRows.join("")}</table>
@@ -388,7 +386,7 @@ There's a quick build competition during the kickoff too, for the chance to win 
 RSVP for the kickoff: ${lumaUrl}
 Add to Google Calendar: ${gcal}
 
-THIS YEAR, IN ONE GLANCE
+WHAT WE ARE DOING THIS YEAR
 ${THIS_YEAR.map(([w, t, l]) => `  - ${w}: ${t}. ${l}`).join("\n")}
 More on our programs this year coming soon.
 
