@@ -58,9 +58,16 @@ html, body {
 }
 
 /* One screen, no scroll, when the viewport can hold it. Smaller screens scroll. */
+/* The first screen fills the viewport on desktop; the page scrolls past it. */
 @media (min-width: 1024px) and (min-height: 820px) {
-  .stage-lock { height: 100dvh; overflow: hidden; }
+  .stage { min-height: calc(100dvh - 2.4rem); }
 }
+.scroll-cue { display: block; width: 1px; height: 1.6rem; background: linear-gradient(to bottom, var(--fg-faint), transparent); animation: cue 1.8s ease-in-out infinite; }
+@keyframes cue { 0%, 100% { transform: translateY(0); opacity: 0.6; } 50% { transform: translateY(4px); opacity: 1; } }
+.mit { color: #a31f34; }
+.ibm { color: #0f62fe; }
+:root[data-theme="dark"] .ibm { color: #4589ff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ibm { color: #4589ff; } }
 /* Display type for the big moments: the serif. Buttons and badges stay sans. */
 h1, .display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em; }
 .cta, .badge { font-family: var(--font-sans); }
