@@ -156,7 +156,7 @@ export function renderEmail({
     ? `<img src="${sponsorLogoSrc}" width="164" height="22" alt="SpaceXAI" style="width:164px;height:22px;display:block;border:0;">`
     : `<span style="font-family:${SANS};font-weight:700;font-size:19px;letter-spacing:0.2em;color:${INK};">SPACEXAI</span>`;
   const sponsor = sponsorLogoSrc
-    ? `<img src="${sponsorLogoSrc}" width="112" height="15" alt="SpaceXAI" style="width:112px;height:15px;display:inline-block;vertical-align:-1px;border:0;">`
+    ? `<img src="${sponsorLogoSrc}" width="112" height="15" alt="SpaceXAI" style="width:112px;height:15px;display:block;border:0;">`
     : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${INK};">SPACEXAI</span>`;
   const sponsorBig = sponsorLogoSrc
     ? `<img src="${sponsorLogoSrc}" width="210" height="28" alt="SpaceXAI" style="width:210px;height:28px;display:inline-block;vertical-align:-3px;border:0;">`
@@ -275,7 +275,10 @@ export function renderEmail({
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
       <td class="pad" valign="middle" style="padding:28px 8px 28px 28px;">
         <div style="${pixel}">Our kickoff night with free perks for everyone in the room.</div>
-        <div style="${label}padding-top:6px;">Powered by&nbsp;&nbsp;${sponsor}</div>
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:8px;"><tr>
+          <td valign="middle" style="${label}padding:0 8px 0 0;">Powered by</td>
+          <td valign="middle" style="padding:0;">${sponsor}</td>
+        </tr></table>
         <div style="font-family:${SANS};font-size:19px;line-height:26px;font-weight:400;color:${INK};padding-top:14px;">Fancy <span style="font-weight:700;">a month of Cursor Pro+</span>, <span style="font-weight:700;">an exclusive Grok Bot demo</span>, <span style="font-weight:700;">a competition for SpaceXAI credits</span>, and <span style="font-weight:700;">free boba</span>? <span style="color:${LIME_INK};font-weight:600;">Yeah, we thought so.</span></div>
         <div style="font-family:${SANS};font-size:24px;line-height:30px;font-weight:700;color:${INK};padding-top:16px;">${k.dayLine}</div>
         <div style="font-family:${SANS};font-size:20px;line-height:26px;font-weight:700;color:${LIME_INK};">${k.timeLine}</div>
