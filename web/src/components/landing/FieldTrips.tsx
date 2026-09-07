@@ -29,9 +29,9 @@ export default function FieldTrips() {
             around the tech hub that is Boston.
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <img src="/logos/mit.svg" alt="MIT" className="h-8 w-auto" />
-            <span className="h-8 w-px bg-line" aria-hidden />
-            <img src="/logos/mit-ibm-watson-ai-lab.png" alt="MIT-IBM Watson AI Lab" className="lab-logo h-[4.6rem] w-auto" />
+            <img src="/logos/mit.svg" alt="MIT" className="h-10 w-auto" />
+            <span className="h-10 w-px bg-line" aria-hidden />
+            <img src="/logos/mit-ibm-watson-ai-lab.png" alt="MIT-IBM Watson AI Lab" className="lab-logo h-10 w-auto" />
             <span className="mono-aside ml-auto">spring 2026 · Boston, MA</span>
           </div>
         </AnimateIn>
