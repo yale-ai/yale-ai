@@ -18,7 +18,7 @@ export default function Hero() {
       >
         Build the <span className="font-semibold">future of AI</span> at Yale.
         <span className="mt-[0.12em] block text-muted text-[0.82em]">
-          Now backed by <span className="spacexai h-[0.72em] translate-y-[0.04em] text-fg" role="img" aria-label="SpaceXAI" />
+          Now backed by <span className="spacexai h-[0.64em] align-middle -translate-y-[0.1em] text-fg" role="img" aria-label="SpaceXAI" />
         </span>
       </h1>
 
