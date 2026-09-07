@@ -91,6 +91,7 @@ export const TEAM: Member[] = [
     major: "EECS",
     bio: "Researches wearable sensing for soft robotics at the Faboratory. Led a team to second place at the Google x Yale SOM Build with AI hackathon.",
     linkedin: "https://www.linkedin.com/in/david-antwi-b17727205/",
+    github: "https://github.com/Alienware2000",
     photo: "/team/david.jpg",
   },
 ];
