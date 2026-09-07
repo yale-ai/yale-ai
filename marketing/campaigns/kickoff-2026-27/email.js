@@ -227,6 +227,7 @@ export function renderEmail({
     .pad { padding-left:18px !important; padding-right:18px !important; }
     .stack { display:block !important; width:100% !important; padding-right:0 !important; }
     .photo { display:block !important; width:100% !important; padding:0 0 8px 0 !important; }
+    .photo-first { padding-top:26px !important; }
     .bot-cell, .hide-m { display:none !important; }
     .h1 { font-size:26px !important; line-height:30px !important; white-space:nowrap !important; }
     .h2 { font-size:28px !important; line-height:34px !important; }
@@ -306,9 +307,9 @@ export function renderEmail({
       <div style="${pixel}">Trips</div>
       <div class="h2" style="${serif}font-size:30px;line-height:36px;padding-top:10px;">We get you in the rooms that matter. <span style="font-weight:600;">All paid for.</span></div>
       ${photo1Src && photo2Src ? `
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:18px;"><tr>
-        <td class="photo" width="58%" valign="top" style="padding:0 6px 0 0;"><img src="${photo1Src}" width="310" alt="A talk in the MIT-IBM Watson AI Lab auditorium" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
-        <td class="photo" width="42%" valign="top" style="padding:0 0 0 6px;"><img src="${photo2Src}" width="220" alt="Yale AI members outside the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td class="photo photo-first" width="58%" valign="top" style="padding:30px 6px 0 0;"><img src="${photo1Src}" width="310" alt="A talk in the MIT-IBM Watson AI Lab auditorium" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
+        <td class="photo" width="42%" valign="top" style="padding:30px 0 0 6px;"><img src="${photo2Src}" width="220" alt="Yale AI members outside the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
       </tr></table>
       ${photo3Src ? `<img src="${photo3Src}" width="540" alt="A panel on stage at the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;margin-top:12px;">` : ""}
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
