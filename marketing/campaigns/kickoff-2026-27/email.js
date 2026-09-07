@@ -298,7 +298,7 @@ export function renderEmail({
   <tr><td style="padding:28px 0 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr><td class="pad" style="padding:28px 28px 26px;">
       <div style="${pixel}">Trips</div>
-      <div class="h2" style="${serif}font-size:30px;line-height:36px;padding-top:10px;">We go where the work is. <span style="font-weight:600;">All paid for.</span></div>
+      <div class="h2" style="${serif}font-size:30px;line-height:36px;padding-top:10px;">We get you in the rooms that matter. <span style="font-weight:600;">All paid for.</span></div>
       ${photo1Src && photo2Src ? `
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:18px;"><tr>
         <td class="photo" width="58%" valign="top" style="padding:0 6px 0 0;"><img src="${photo1Src}" width="310" alt="A talk in the MIT-IBM Watson AI Lab auditorium" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
@@ -311,7 +311,7 @@ export function renderEmail({
         <td valign="middle" style="padding:0 0 0 16px;font-family:${MONO};font-size:11px;line-height:16px;color:#6f6f6f;">spring 2026 &middot; Boston, MA</td>
       </tr></table>` : ""}
       <div style="${body}font-size:14px;line-height:22px;padding-top:14px;">Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston.</div>
-      <div style="${body}font-size:15px;line-height:24px;padding-top:14px;">We&#8217;ll get you in the rooms that matter. This year we are working on trips to top companies and AI labs in <span style="color:${WHITE};font-weight:600;">New York City and Boston</span>. Travel, food, the lot: <span style="color:${WHITE};font-weight:600;">all paid for.</span></div>
+      <div style="${body}font-size:15px;line-height:24px;padding-top:14px;">This year we are working on trips to top companies and AI labs in <span style="color:${WHITE};font-weight:600;">New York City and Boston</span>. Travel, food, the lot: <span style="color:${WHITE};font-weight:600;">all paid for.</span></div>
       <div style="font-family:${SANS};font-size:15px;line-height:24px;font-weight:600;color:${WHITE};padding-top:12px;">We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.</div>
       <div style="padding-top:14px;">
         <span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">${sponsor}</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">Cursor</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">OpenAI</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">MIT-IBM Watson AI Lab</span><span style="display:inline-block;border:1px dashed #555;border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:#8d8d8d;">more in the pipeline</span>
@@ -386,7 +386,7 @@ ${THIS_YEAR.map(([w, t, l]) => `  - ${w}: ${t}. ${l}`).join("\n")}
 More on our programs this year coming soon.
 
 TRIPS
-Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston. We'll get you in the rooms that matter. This year we are working on trips to top companies and AI labs in New York City and Boston. All paid for. We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.
+Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston. We get you in the rooms that matter, all paid for. This year we are working on trips to top companies and AI labs in New York City and Boston. All paid for. We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.
 
 THE TIME IS NOW
 Guillermo Rauch, CEO at Vercel, on LinkedIn:
