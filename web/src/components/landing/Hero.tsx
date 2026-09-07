@@ -29,7 +29,7 @@ export default function Hero() {
       </p>
 
       <div className="mt-[clamp(1rem,2.6vh,1.7rem)] flex flex-wrap items-center justify-center gap-3">
-        <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="cta px-5 py-2.5 text-[0.78rem] md:text-[0.82rem]">
+        <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="cta px-9 py-4 text-[1rem] md:text-[1.06rem]">
           RSVP for the kickoff <span aria-hidden>→</span>
         </Link>
       </div>
