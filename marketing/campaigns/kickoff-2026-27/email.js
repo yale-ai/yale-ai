@@ -344,7 +344,7 @@ export function renderEmail({
   <!-- close -->
   <tr><td class="pad" align="center" style="padding:40px 6px 34px;">
     <div class="h2" style="${serif}font-size:40px;line-height:44px;">Let&#8217;s do this.</div>
-    <div style="${body}font-size:15px;line-height:24px;padding-top:12px;max-width:500px;margin:0 auto;">The people who build the next decade are picking rooms right now. Pick this one. Come Wednesday, and bring a friend who thinks AI is not for them.</div>
+    <div style="${body}font-size:15px;line-height:24px;padding-top:12px;max-width:500px;margin:0 auto;">Those of us who build the next decade are picking what to do (and acting on it) right now. Will you?</div>
     <div style="padding-top:26px;">${button(lumaUrl, "RSVP for the kickoff", { big: true })}</div>
     <div style="padding-top:14px;">${textLink(siteUrl, "yale-ai.org")}</div>
   </td></tr>
@@ -403,7 +403,7 @@ Guillermo Rauch, CEO at Vercel, on LinkedIn:
 "Anyone that works in AI is working the hardest they've ever worked in their lives. On the surface it's somewhat ironic (AI should give us back time!), but the reality is that it's the most fun, fascinating and empowering epoch in human history. The intelligence revolution."
 
 LET'S DO THIS.
-The people who build the next decade are picking rooms right now. Pick this one. Come Wednesday, and bring a friend who thinks AI is not for them.
+Those of us who build the next decade are picking what to do (and acting on it) right now. Will you?
 
 RSVP for the kickoff: ${lumaUrl}
 More about us: ${siteUrl}
