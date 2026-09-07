@@ -29,7 +29,7 @@ export default function TeamPage() {
             Email any of us. We answer.
           </p>
 
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {TEAM.map((m, i) => (
               <AnimateIn key={m.slug} delay={Math.min(i * 0.05, 0.3)}>
                 <MemberCard m={m} />
@@ -54,7 +54,6 @@ export default function TeamPage() {
 }
 
 function MemberCard({ m }: { m: Member }) {
-  const meta = [m.classYear && `'${m.classYear.slice(2)}`, m.major].filter(Boolean).join(" · ");
   return (
     <li className="glass glass-hover flex h-full flex-col overflow-hidden">
       <div className="relative aspect-square w-full overflow-hidden bg-surface">
@@ -73,11 +72,12 @@ function MemberCard({ m }: { m: Member }) {
         )}
         {m.role && <span className="pill pill-fill absolute left-3 top-3 px-2.5 py-1 text-[0.66rem] uppercase tracking-[0.12em]">{m.role}</span>}
       </div>
-      <div className="flex flex-1 flex-col gap-2 p-5">
-        <h2 className="text-[1.15rem] font-semibold leading-tight">{m.name}</h2>
-        {meta && <p className="font-mono text-[0.72rem] text-teal-ink">{meta}</p>}
-        {m.bio && <p className="text-[0.86rem] leading-relaxed text-muted">{m.bio}</p>}
-        <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-3">
+      <div className="flex flex-1 flex-col gap-2 p-4">
+        <h2 className="text-[1.02rem] font-semibold leading-tight">{m.name}</h2>
+        <Link href={`mailto:${m.email}`} className="truncate text-[0.78rem] text-muted transition-colors hover:text-fg">
+          {m.email}
+        </Link>
+        <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-2">
           <IconLink href={`mailto:${m.email}`} label={`Email ${m.name}`}>
             <MailIcon className="h-4 w-4" />
           </IconLink>
@@ -101,7 +101,6 @@ function MemberCard({ m }: { m: Member }) {
               <XIcon className="h-[0.8rem] w-[0.8rem]" />
             </IconLink>
           )}
-          <span className="ml-auto truncate text-[0.72rem] text-faint">{m.email}</span>
         </div>
       </div>
     </li>
