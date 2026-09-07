@@ -251,7 +251,7 @@ export function renderEmail({
           <td valign="middle">${sponsorHeader}</td>
         </tr></table>
       </td>
-      <td class="hide-m" align="right" valign="middle" style="${label}color:${LIME};">Kickoff 2026&#8211;27</td>
+      <td class="hide-m" align="right" valign="middle" style="${label}color:${LIME};font-weight:700;">Kickoff 2026&#8211;27</td>
     </tr></table>
   </td></tr>
 
