@@ -187,13 +187,17 @@ if (SEND_LOCK) console.log(`lock:     SEND_LOCK is ON (allowlist of ${LOCK_ALLOW
 // Google and Yahoo require one-click unsubscribe headers from bulk senders.
 const unsubMailto = `mailto:${replyTo[0] || "hello@yale-ai.org"}?subject=unsubscribe`;
 
+// --subject-prefix "[TEST] " prepends to the subject, so a test lands in its own thread.
+const subjectPrefix = (() => { const k = args.indexOf("--subject-prefix"); return k >= 0 ? args[k + 1] || "" : ""; })();
+
 function buildPayload(r) {
-  const { subject, html, text } = campaign.render({
+  const { subject: baseSubject, html, text } = campaign.render({
     firstName: r.firstName,
     ...(lumaUrl ? { lumaUrl } : {}),
     ...(siteUrl ? { siteUrl } : {}),
     ...imageProps,
   });
+  const subject = subjectPrefix + baseSubject;
   return {
     from,
     to: [r.display],
