@@ -42,8 +42,7 @@ export default function FieldTrips() {
             We go where the work is. <span className="font-semibold">All paid for.</span>
           </h2>
           <p className="mt-5 leading-relaxed text-muted text-[clamp(0.92rem,1.5vw,1.02rem)]">
-            A room of Yale students, a lab director at the front, and the kind of conversation you cannot get from a
-            lecture hall. This year we are working on trips to top companies and AI labs in <span className="font-semibold text-fg">New York City and Boston</span>. Travel, food, the
+            We&apos;ll get you in the rooms that matter. This year we are working on trips to top companies and AI labs in <span className="font-semibold text-fg">New York City and Boston</span>. Travel, food, the
             lot: <span className="font-semibold text-fg">all paid for.</span>
           </p>
           <p className="mt-4 font-semibold leading-relaxed text-fg text-[clamp(0.95rem,1.55vw,1.05rem)]">
