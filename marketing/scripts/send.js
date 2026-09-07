@@ -128,8 +128,8 @@ const need = (k) => {
 const apiKey = dryRun ? process.env.RESEND_API_KEY || "" : need("RESEND_API_KEY");
 // Sender on the verified yale-ai.org domain. Override with EMAIL_FROM / REPLY_TO
 // (comma-separated) in marketing/.env.
-const from = process.env.EMAIL_FROM || "YaleAI <hello@yale-ai.org>";
-const replyTo = (process.env.REPLY_TO || "filippo.fonseca@yale.edu")
+const from = process.env.EMAIL_FROM || "YaleAI <info@yale-ai.org>";
+const replyTo = (process.env.REPLY_TO || "filippo.fonseca@yale.edu, yaleaiassociation@gmail.com, aryan.agarwal@yale.edu, addison.shea@yale.edu")
   .split(",")
   .map((s) => s.trim())
   .filter(Boolean);
@@ -187,7 +187,7 @@ console.log(
 if (SEND_LOCK) console.log(`lock:     SEND_LOCK is ON (allowlist of ${LOCK_ALLOWED.size})`);
 
 // Google and Yahoo require one-click unsubscribe headers from bulk senders.
-const unsubMailto = `mailto:${replyTo[0] || "hello@yale-ai.org"}?subject=unsubscribe`;
+const unsubMailto = `mailto:${replyTo[0] || "info@yale-ai.org"}?subject=unsubscribe`;
 
 function buildPayload(r) {
   const { subject: baseSubject, html, text } = campaign.render({
