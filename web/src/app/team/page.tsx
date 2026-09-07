@@ -57,14 +57,14 @@ function MemberCard({ m }: { m: Member }) {
   const meta = [m.classYear && `'${m.classYear.slice(2)}`, m.major].filter(Boolean).join(" · ");
   return (
     <li className="glass glass-hover flex h-full flex-col overflow-hidden">
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface">
+      <div className="relative aspect-square w-full overflow-hidden bg-surface">
         {m.photo ? (
           <Image
             src={m.photo}
             alt={m.name}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="object-cover object-top"
+            className="object-cover object-[50%_20%]"
           />
         ) : (
           <div className="grid h-full w-full place-items-center bg-[radial-gradient(circle_at_30%_20%,rgba(79,216,200,0.28),transparent_55%),radial-gradient(circle_at_80%_90%,rgba(217,228,168,0.22),transparent_55%)]">
