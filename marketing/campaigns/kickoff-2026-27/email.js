@@ -150,7 +150,7 @@ export function renderEmail({
   const label = `font-family:${SANS};font-size:11px;line-height:16px;letter-spacing:0.18em;text-transform:uppercase;color:#6a6a6a;`;
   const body = `font-family:${SANS};font-weight:400;font-size:16px;line-height:26px;color:#3d3d3d;`;
   const serif = `font-family:${SERIF};font-weight:400;color:${INK};`;
-  const CARD = `border-radius:22px;background:${CARD_BG};border:1px solid ${CARD_BORDER};box-shadow:0 10px 30px -18px rgba(0,0,0,0.25);`;
+  const CARD = `border-radius:22px;background:${CARD_BG};border:1px solid ${CARD_BORDER};`;
 
   const sponsorHeader = sponsorLogoSrc
     ? `<img src="${sponsorLogoSrc}" width="164" height="22" alt="SpaceXAI" style="width:164px;height:22px;display:block;border:0;">`
@@ -247,20 +247,13 @@ export function renderEmail({
   <!-- header: Yale AI x SpaceXAI -->
   <tr><td class="pad" style="padding:6px 6px 30px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-      <td align="left" valign="middle">
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-          <td valign="middle">${wordmark}</td>
-          <td valign="middle" style="padding:0 14px;font-family:${SANS};font-size:18px;line-height:24px;color:#767676;">&#215;</td>
-          <td valign="middle">${sponsorHeader}</td>
-        </tr></table>
-      </td>
-      <td class="hide-m" align="right" valign="middle" style="${label}color:${LIME_INK};font-weight:700;">Kickoff 2026&#8211;27</td>
+      <td align="left" valign="middle">${wordmark}</td>
     </tr></table>
   </td></tr>
 
   <!-- hero, centred, as on the site -->
   <tr><td class="pad" align="center" style="padding:0 6px;">
-    <div style="display:inline-block;border:1px solid rgba(16,16,16,0.1);border-radius:999px;background:#ffffff;box-shadow:0 6px 20px -12px rgba(0,0,0,0.3);padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#5f5f5f;"><span style="color:${INK};font-weight:600;">Kickoff is Wednesday, Sep 9</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
+    <div style="display:inline-block;border:1px solid rgba(16,16,16,0.1);border-radius:999px;background:#ffffff;padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#5f5f5f;"><span style="color:${INK};font-weight:600;">Kickoff is Wednesday, Sep 9</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
     <div class="h1" style="${serif}font-size:44px;line-height:48px;letter-spacing:-0.5px;padding-top:22px;white-space:nowrap;">Build the <span style="font-weight:600;">future of AI</span> at Yale.</div>
     <div style="${serif}font-size:32px;line-height:40px;color:#5a5a5a;padding-top:6px;">Now backed by ${sponsorBig}</div>
     <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${INK};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</div>
@@ -277,7 +270,8 @@ export function renderEmail({
 
   <!-- kickoff card with the bot -->
   <tr><td style="padding:26px 0 0;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="${CARD_BG}" style="${CARD}padding:0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
       <td class="pad" valign="middle" style="padding:28px 8px 28px 28px;">
         <div style="${pixel}">Our kickoff night with free perks for everyone in the room.</div>
         <div style="${label}padding-top:6px;">Powered by&nbsp;&nbsp;${sponsor}</div>
@@ -293,6 +287,7 @@ export function renderEmail({
       </td>
       ${botSrc ? `<td class="bot-cell" valign="middle" align="center" width="190" style="width:190px;padding:0 24px 0 0;"><img src="${botSrc}" width="170" alt="" style="width:170px;height:auto;display:block;border:0;"></td>` : ""}
     </tr></table>
+    </td></tr></table>
   </td></tr>
 
   <!-- this year -->
