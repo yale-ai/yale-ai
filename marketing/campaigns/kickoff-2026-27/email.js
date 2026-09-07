@@ -226,6 +226,7 @@ export function renderEmail({
     .outer { padding:14px 10px 28px !important; }
     .pad { padding-left:18px !important; padding-right:18px !important; }
     .stack { display:block !important; width:100% !important; padding-right:0 !important; }
+    td.stack + td.stack { padding-top:12px !important; }
     .photo { display:block !important; width:100% !important; padding:0 0 8px 0 !important; }
     .photo-first { padding-top:26px !important; }
     .bot-cell, .hide-m { display:none !important; }
@@ -284,7 +285,10 @@ export function renderEmail({
         <div style="font-family:${SANS};font-size:20px;line-height:26px;font-weight:700;color:${LIME};">${k.timeLine}</div>
         <div style="font-family:${SANS};font-size:15px;line-height:22px;color:#a7a7a7;padding-top:2px;">${k.where}</div>
         <div style="${body}font-size:14px;line-height:22px;padding-top:12px;"><span style="color:${WHITE};font-weight:600;">There&#8217;s a quick build competition during the kickoff too</span>, for the chance to win more SpaceXAI credits. Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.</div>
-        <div style="padding-top:20px;">${button(lumaUrl, "RSVP on Luma")}&nbsp;&nbsp;&nbsp;${ghost(gcal, "Add to calendar")}</div>
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td class="stack" valign="middle" style="padding:22px 14px 0 0;">${button(lumaUrl, "RSVP on Luma")}</td>
+          <td class="stack" valign="middle" style="padding:22px 0 0 0;">${ghost(gcal, "Add to calendar")}</td>
+        </tr></table>
       </td>
       ${botSrc ? `<td class="bot-cell" valign="middle" align="center" width="190" style="width:190px;padding:0 24px 0 0;"><img src="${botSrc}" width="170" alt="" style="width:170px;height:auto;display:block;border:0;"></td>` : ""}
     </tr></table>
