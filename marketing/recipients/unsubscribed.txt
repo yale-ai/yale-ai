@@ -2,3 +2,4 @@
 morgan.vannell@yale.edu
 sophie.zheng@yale.edu
 islay.ross@yale.edu
+ethan.rodriguez@yale.edu
