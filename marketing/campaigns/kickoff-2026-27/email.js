@@ -146,7 +146,7 @@ export function renderEmail({
   const greeting = firstName ? `Hey ${firstName},` : "Hey there,";
   const unsubMailto = `mailto:${CONTACT_EMAIL}?subject=unsubscribe&body=${encodeURIComponent("Please take me off the Yale AI list.")}`;
 
-  const pixel = `font-family:${MONO};font-size:12px;line-height:18px;letter-spacing:0.16em;text-transform:uppercase;color:${TEAL};`;
+  const pixel = `font-family:${MONO};font-size:13px;line-height:19px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:${TEAL};`;
   const label = `font-family:${SANS};font-size:11px;line-height:16px;letter-spacing:0.18em;text-transform:uppercase;color:#6a6a6a;`;
   const body = `font-family:${SANS};font-weight:400;font-size:16px;line-height:26px;color:#3d3d3d;`;
   const serif = `font-family:${SERIF};font-weight:400;color:${INK};`;
@@ -317,7 +317,7 @@ export function renderEmail({
       </tr></table>` : ""}
       <div style="${body}font-size:14px;line-height:22px;padding-top:14px;">Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston.</div>
       <div style="${body}font-size:15px;line-height:24px;padding-top:14px;">This year we are working on trips to top companies and AI labs in <span style="color:${INK};font-weight:600;">New York City and Boston</span>. Travel, food, the lot: <span style="color:${INK};font-weight:600;">all paid for.</span></div>
-      <div style="font-family:${SANS};font-size:15px;line-height:24px;font-weight:600;color:${INK};padding-top:12px;">We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.</div>
+      <div style="font-family:${SANS};font-size:15px;line-height:24px;font-weight:600;color:${INK};padding-top:12px;">We have numerous top companies in the pipeline to connect you with.</div>
       <div style="padding-top:14px;">
         <span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">${sponsor}</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">Cursor</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">OpenAI</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">MIT-IBM Watson AI Lab</span><span style="display:inline-block;border:1px dashed #555;border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:#6a6a6a;">more in the pipeline</span>
       </div>
@@ -391,7 +391,7 @@ ${THIS_YEAR.map(([w, t, l]) => `  - ${w}: ${t}. ${l}`).join("\n")}
 More on our programs this year coming soon.
 
 TRIPS
-Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston. We get you in the rooms that matter, all paid for. This year we are working on trips to top companies and AI labs in New York City and Boston. All paid for. We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.
+Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston. We get you in the rooms that matter, all paid for. This year we are working on trips to top companies and AI labs in New York City and Boston. All paid for. We have numerous top companies in the pipeline to connect you with.
 
 THE TIME IS NOW
 We'll leave you with this to instill a certain sense of urgency (and hopefully excitement!). It really is the best time to be alive and build amazing tech.
