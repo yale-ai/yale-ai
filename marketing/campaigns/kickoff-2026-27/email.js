@@ -150,7 +150,7 @@ export function renderEmail({
   const label = `font-family:${SANS};font-size:11px;line-height:16px;letter-spacing:0.18em;text-transform:uppercase;color:#6a6a6a;`;
   const body = `font-family:${SANS};font-weight:400;font-size:16px;line-height:26px;color:#3d3d3d;`;
   const serif = `font-family:${SERIF};font-weight:400;color:${INK};`;
-  const CARD = `border-radius:22px;background:${CARD_BG};border:1px solid ${CARD_BORDER};`;
+  const CARD = `border-radius:22px;background:${CARD_BG};`;
 
   const sponsorHeader = sponsorLogoSrc
     ? `<img src="${sponsorLogoSrc}" width="164" height="22" alt="SpaceXAI" style="width:164px;height:22px;display:block;border:0;">`
@@ -175,7 +175,7 @@ export function renderEmail({
     <!--<![endif]-->`;
   };
   // Secondary: a bordered pill on the anchor itself, no cell background, so nothing draws a box behind it.
-  const ghost = (href, text) => `<a href="${href}" target="_blank" style="display:inline-block;padding:13px 22px;font-family:${SANS};font-size:14px;font-weight:600;color:${INK};text-decoration:none;white-space:nowrap;border-radius:999px;border:1px solid rgba(16,16,16,0.28);">${text}</a>`;
+  const ghost = (href, text) => `<a href="${href}" target="_blank" style="display:inline-block;padding:13px 22px;font-family:${SANS};font-size:14px;font-weight:600;color:${INK};text-decoration:none;white-space:nowrap;border-radius:999px;background:#ffffff;">${text}</a>`;
   const textLink = (href, text) => `<a href="${href}" target="_blank" style="font-family:${SANS};font-size:14px;font-weight:600;color:#3d3d3d;text-decoration:underline;text-underline-offset:3px;">${text} &#8594;</a>`;
 
   const wordmark = `<a href="${siteUrl}" target="_blank" style="text-decoration:none;">
@@ -253,7 +253,7 @@ export function renderEmail({
 
   <!-- hero, centred, as on the site -->
   <tr><td class="pad" align="center" style="padding:0 6px;">
-    <div style="display:inline-block;border:1px solid rgba(16,16,16,0.1);border-radius:999px;background:#ffffff;padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#5f5f5f;"><span style="color:${INK};font-weight:600;">Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
+    <div style="display:inline-block;border-radius:999px;background:${CARD_BG};padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#5f5f5f;"><span style="color:${INK};font-weight:600;">Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
     <div class="h1" style="${serif}font-size:44px;line-height:48px;letter-spacing:-0.5px;padding-top:22px;white-space:nowrap;">Build the <span style="font-weight:600;">future of AI</span> at Yale.</div>
     <div style="${serif}font-size:32px;line-height:40px;color:#5a5a5a;padding-top:6px;">Now backed by ${sponsorBig}</div>
     <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${INK};">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. <span style="font-style:italic;text-decoration:underline;text-underline-offset:3px;font-weight:600;">And they want you there. Yes. You.</span></div>
@@ -270,7 +270,7 @@ export function renderEmail({
 
   <!-- kickoff card with the bot -->
   <tr><td style="padding:26px 0 0;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="${CARD_BG}" style="${CARD}padding:0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="${CARD}padding:0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
       <td class="pad" valign="middle" style="padding:28px 8px 28px 28px;">
         <div style="${pixel}">Our kickoff night with free perks for everyone in the room.</div>
@@ -319,7 +319,7 @@ export function renderEmail({
       <div style="${body}font-size:15px;line-height:24px;padding-top:14px;">This year we are working on trips to top companies and AI labs in <span style="color:${INK};font-weight:600;">New York City and Boston</span>. Travel, food, the lot: <span style="color:${INK};font-weight:600;">all paid for.</span></div>
       <div style="font-family:${SANS};font-size:15px;line-height:24px;font-weight:600;color:${INK};padding-top:12px;">We have numerous top companies in the pipeline to connect you with.</div>
       <div style="padding-top:14px;">
-        <span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">${sponsor}</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">Cursor</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">OpenAI</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">MIT-IBM Watson AI Lab</span><span style="display:inline-block;border:1px dashed #555;border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:#6a6a6a;">more in the pipeline</span>
+        <span style="display:inline-block;background:#ffffff;border-radius:999px;padding:7px 13px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">${sponsor}</span><span style="display:inline-block;background:#ffffff;border-radius:999px;padding:7px 13px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">Cursor</span><span style="display:inline-block;background:#ffffff;border-radius:999px;padding:7px 13px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">OpenAI</span><span style="display:inline-block;background:#ffffff;border-radius:999px;padding:7px 13px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${INK};">MIT-IBM Watson AI Lab</span><span style="display:inline-block;background:#ffffff;border-radius:999px;padding:7px 13px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:#6a6a6a;">more in the pipeline</span>
       </div>
     </td></tr></table>
   </td></tr>
