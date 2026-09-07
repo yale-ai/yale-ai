@@ -39,10 +39,10 @@ export default function FieldTrips() {
         <AnimateIn delay={0.1}>
           <p className="pixel-caps text-[0.82rem]">Trips</p>
           <h2 id="trips-title" className="display mt-4 leading-[1.05] text-fg text-[clamp(1.9rem,4.2vw,3.1rem)]">
-            We go where the work is. <span className="font-semibold">All paid for.</span>
+            We get you in the rooms that matter. <span className="font-semibold">All paid for.</span>
           </h2>
           <p className="mt-5 leading-relaxed text-muted text-[clamp(0.92rem,1.5vw,1.02rem)]">
-            We&apos;ll get you in the rooms that matter. This year we are working on trips to top companies and AI labs in <span className="font-semibold text-fg">New York City and Boston</span>. Travel, food, the
+            This year we are working on trips to top companies and AI labs in <span className="font-semibold text-fg">New York City and Boston</span>. Travel, food, the
             lot: <span className="font-semibold text-fg">all paid for.</span>
           </p>
           <p className="mt-4 font-semibold leading-relaxed text-fg text-[clamp(0.95rem,1.55vw,1.05rem)]">
