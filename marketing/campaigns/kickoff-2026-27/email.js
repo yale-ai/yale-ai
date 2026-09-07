@@ -45,12 +45,12 @@ export const EVENTS = {
 // omitted by the template, so a logo can be dropped in later without a code change.
 export const ASSETS = [
   { key: "markSrc", cid: "mark", file: "mark-y.png", type: "image/png" },
-  { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai-black.png", type: "image/png" },
+  { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai-plate.png", type: "image/png" },
   { key: "botSrc", cid: "bot", file: "bot-dark.png", type: "image/png" },
   { key: "photo1Src", cid: "photo1", file: "mit-ibm-1.jpg", type: "image/jpeg" },
   { key: "photo2Src", cid: "photo2", file: "mit-ibm-2-sq.jpg", type: "image/jpeg" },
   { key: "photo3Src", cid: "photo3", file: "mit-ibm-3.jpg", type: "image/jpeg" },
-  { key: "labLogoSrc", cid: "lablogo", file: "mit-ibm-lab-dark.png", type: "image/png" },
+  { key: "labLogoSrc", cid: "lablogo", file: "mit-ibm-lab-plate.png", type: "image/png" },
   { key: "mitLogoSrc", cid: "mit", file: "mit.png", type: "image/png" },
   { key: "quoteAvatarSrc", cid: "rauch", file: "rauch.png", type: "image/png" },
 ];
@@ -156,10 +156,10 @@ export function renderEmail({
     ? `<img src="${sponsorLogoSrc}" width="164" height="22" alt="SpaceXAI" style="width:164px;height:22px;display:block;border:0;">`
     : `<span style="font-family:${SANS};font-weight:700;font-size:19px;letter-spacing:0.2em;color:${INK};">SPACEXAI</span>`;
   const sponsor = sponsorLogoSrc
-    ? `<img src="${sponsorLogoSrc}" width="112" height="15" alt="SpaceXAI" style="width:112px;height:15px;display:block;border:0;">`
+    ? `<img src="${sponsorLogoSrc}" width="124" height="23" alt="SpaceXAI" style="width:124px;height:23px;display:block;border:0;">`
     : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${INK};">SPACEXAI</span>`;
   const sponsorBig = sponsorLogoSrc
-    ? `<img src="${sponsorLogoSrc}" width="210" height="28" alt="SpaceXAI" style="width:210px;height:28px;display:inline-block;vertical-align:-3px;border:0;">`
+    ? `<img src="${sponsorLogoSrc}" width="230" height="42" alt="SpaceXAI" style="width:230px;height:42px;display:inline-block;vertical-align:-10px;border:0;">`
     : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${INK};">SPACEXAI</span>`;
 
   const button = (href, text, opts = {}) => {
@@ -208,13 +208,14 @@ export function renderEmail({
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="x-apple-disable-message-reformatting">
-<meta name="color-scheme" content="light">
-<meta name="supported-color-schemes" content="light">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
 <title>${SUBJECT}</title>
 <!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wght@400;500;600;700&display=swap');
-  :root { color-scheme: light; supported-color-schemes: light; }
+  :root { color-scheme: light only; supported-color-schemes: light only; }
+  html, body { color-scheme: light only; }
   body { margin:0; padding:0; background:${BG}; }
   img { border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
   table { border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; }
@@ -316,7 +317,7 @@ export function renderEmail({
       ${photo3Src ? `<img src="${photo3Src}" width="540" alt="A panel on stage at the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;margin-top:12px;">` : ""}
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
         <td valign="middle" style="padding:56px 14px 0 0;">${mitLogoSrc ? `<img src="${mitLogoSrc}" width="58" height="30" alt="MIT" style="width:58px;height:30px;display:block;border:0;">` : `<span style="font-family:${SANS};font-weight:800;font-size:26px;line-height:28px;letter-spacing:-1px;color:#a31f34;">MIT</span>`}</td>
-        ${labLogoSrc ? `<td valign="middle" style="padding:56px 0 0 14px;"><span style="display:inline-block;border-left:1px solid rgba(16,16,16,0.18);padding-left:14px;"><img src="${labLogoSrc}" width="56" alt="MIT-IBM Watson AI Lab" style="width:56px;height:auto;display:block;border:0;"></span></td>` : ""}
+        ${labLogoSrc ? `<td valign="middle" style="padding:56px 0 0 14px;"><span style="display:inline-block;border-left:1px solid rgba(16,16,16,0.18);padding-left:14px;"><img src="${labLogoSrc}" width="62" alt="MIT-IBM Watson AI Lab" style="width:62px;height:auto;display:block;border:0;"></span></td>` : ""}
         <td valign="middle" style="padding:56px 0 0 16px;font-family:${MONO};font-size:11px;line-height:16px;color:#767676;">spring 2026 &middot; Boston, MA</td>
       </tr></table>` : ""}
       <div style="${body}font-size:14px;line-height:22px;padding-top:14px;">Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston.</div>
