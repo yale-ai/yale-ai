@@ -256,7 +256,7 @@ export function renderEmail({
     <div style="display:inline-block;border:1px solid rgba(16,16,16,0.1);border-radius:999px;background:#ffffff;padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#5f5f5f;"><span style="color:${INK};font-weight:600;">Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
     <div class="h1" style="${serif}font-size:44px;line-height:48px;letter-spacing:-0.5px;padding-top:22px;white-space:nowrap;">Build the <span style="font-weight:600;">future of AI</span> at Yale.</div>
     <div style="${serif}font-size:32px;line-height:40px;color:#5a5a5a;padding-top:6px;">Now backed by ${sponsorBig}</div>
-    <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${INK};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. <span style="font-style:italic;text-decoration:underline;text-underline-offset:3px;">And they want you there. Yes. You.</span></div>
+    <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${INK};">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. <span style="font-style:italic;text-decoration:underline;text-underline-offset:3px;font-weight:600;">And they want you there. Yes. You.</span></div>
     <div style="padding-top:26px;">${button(lumaUrl, "RSVP for the kickoff", { big: true })}</div>
     <div style="${pixel}color:#6a6a6a;text-transform:none;letter-spacing:0.02em;font-size:13px;line-height:20px;padding-top:18px;">made for all Yalies interested in AI. first-year or senior? come anyway!</div>
   </td></tr>
