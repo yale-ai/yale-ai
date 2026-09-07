@@ -268,7 +268,7 @@ export function renderEmail({
   <!-- greeting -->
   <tr><td class="pad" style="padding:34px 6px 0;">
     <div style="font-family:${SANS};font-size:17px;line-height:24px;font-weight:600;color:${WHITE};">${greeting}</div>
-    <div style="${body}padding-top:10px;">Every year a few hundred people at Yale say they want to get into AI. Most never start. <span style="color:${WHITE};font-weight:600;">This Wednesday</span> we make starting the easy part: show up, get the tools the frontier labs actually use, and pick a project team, a fellowship cohort, or both. It is sponsored by SpaceXAI, and everyone who shows up walks out with <span style="color:${WHITE};font-weight:700;">1 month of Cursor Pro+ free</span>. Seriously :).</div>
+    <div style="${body}padding-top:10px;">Every year a few hundred people at Yale say they want to get into AI. Most never start. <span style="color:${WHITE};font-weight:600;">This Wednesday</span> we make starting the easy part: show up and get the tools the frontier labs actually use. If you&#8217;re interested, you can also learn about the projects, trips, and fellowships Yale AI will be offering this year (as well as future events with frontier AI companies, quant firms, etc. and networking panels). It is sponsored by SpaceXAI, and everyone who shows up walks out with <span style="color:${WHITE};font-weight:700;">1 month of Cursor Pro+ free</span>. Seriously :).</div>
     <div style="${body}padding-top:12px;">&#8211; The Yale AI team</div>
   </td></tr>
 
@@ -374,7 +374,7 @@ RSVP for the kickoff: ${lumaUrl}
 
 ${greeting}
 
-Every year a few hundred people at Yale say they want to get into AI. Most never start. This Wednesday we make starting the easy part: show up, get the tools the frontier labs actually use, and pick a project team, a fellowship cohort, or both. It is sponsored by SpaceXAI, and everyone who shows up walks out with 1 month of Cursor Pro+ free. Seriously :).
+Every year a few hundred people at Yale say they want to get into AI. Most never start. This Wednesday we make starting the easy part: show up and get the tools the frontier labs actually use. If you're interested, you can also learn about the projects, trips, and fellowships Yale AI will be offering this year (as well as future events with frontier AI companies, quant firms, etc. and networking panels). It is sponsored by SpaceXAI, and everyone who shows up walks out with 1 month of Cursor Pro+ free. Seriously :).
 
 - The Yale AI team
 
