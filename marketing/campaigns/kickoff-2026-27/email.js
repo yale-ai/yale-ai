@@ -263,6 +263,7 @@ export function renderEmail({
   <tr><td class="pad" style="padding:34px 6px 0;">
     <div style="font-family:${SANS};font-size:17px;line-height:24px;font-weight:600;color:${WHITE};">${greeting}</div>
     <div style="${body}padding-top:10px;">Every year a few hundred people at Yale say they want to get into AI. Most never start. <span style="color:${WHITE};font-weight:600;">This Wednesday</span> we make starting the easy part: show up, get the tools the frontier labs actually use, and pick a project team, a fellowship cohort, or both. It is sponsored by SpaceXAI, and everyone who shows up walks out with <span style="color:${WHITE};font-weight:700;">1 month of Cursor Pro+ free</span>. Seriously :).</div>
+    <div style="${body}padding-top:12px;">&#8211; The Yale AI team</div>
   </td></tr>
 
   <!-- kickoff card with the bot -->
@@ -368,6 +369,8 @@ Meet the board: ${siteUrl}/team
 ${greeting}
 
 Every year a few hundred people at Yale say they want to get into AI. Most never start. This Wednesday we make starting the easy part: show up, get the tools the frontier labs actually use, and pick a project team, a fellowship cohort, or both. It is sponsored by SpaceXAI, and everyone who shows up walks out with 1 month of Cursor Pro+ free. Seriously :).
+
+- The Yale AI team
 
 THE KICKOFF (powered by SpaceXAI)
 Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba? Yeah, we thought so.
