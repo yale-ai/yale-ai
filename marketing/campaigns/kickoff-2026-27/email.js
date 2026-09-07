@@ -327,7 +327,7 @@ export function renderEmail({
 
   <!-- the time is now -->
   <tr><td class="pad" style="padding:40px 6px 0;"><div style="${pixel}">The time is now</div>
-    <div style="${body}padding-top:10px;">We&#8217;ll leave you with this to instill a certain sense of urgency (and hopefully excitement!). It really is the best time to be alive.</div></td></tr>
+    <div style="${body}padding-top:10px;">We&#8217;ll leave you with this to instill a certain sense of urgency (and hopefully excitement!). It really is the best time to be alive and build amazing tech.</div></td></tr>
   <tr><td style="padding:12px 0 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr><td class="pad" style="padding:24px 28px 24px;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
@@ -395,7 +395,7 @@ TRIPS
 Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston. We get you in the rooms that matter, all paid for. This year we are working on trips to top companies and AI labs in New York City and Boston. All paid for. We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.
 
 THE TIME IS NOW
-We'll leave you with this to instill a certain sense of urgency (and hopefully excitement!). It really is the best time to be alive.
+We'll leave you with this to instill a certain sense of urgency (and hopefully excitement!). It really is the best time to be alive and build amazing tech.
 
 Guillermo Rauch, CEO at Vercel, on LinkedIn:
 "Anyone that works in AI is working the hardest they've ever worked in their lives. On the surface it's somewhat ironic (AI should give us back time!), but the reality is that it's the most fun, fascinating and empowering epoch in human history. The intelligence revolution."
