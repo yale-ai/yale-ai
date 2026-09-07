@@ -17,3 +17,6 @@ next-env.d.ts
 
 # Recipient lists stay local. The repo is public.
 marketing/recipients/
+
+# Send ledgers fill with recipient addresses after a real send. Local only.
+marketing/campaigns/*/sent.tsv
