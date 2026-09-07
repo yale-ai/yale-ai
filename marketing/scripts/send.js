@@ -52,6 +52,8 @@ const LOCK_ALLOWED = new Set([
   "addison.shea@yale.edu",
   "david.antwi@yale.edu",
   "aryan.agarwal@yale.edu",
+  // Test recipients approved by Filippo.
+  "emir.ahmed@yale.edu",
 ]);
 
 // ---- args -------------------------------------------------------------------
