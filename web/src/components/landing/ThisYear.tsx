@@ -5,7 +5,7 @@ export default function ThisYear() {
   return (
     <section id="this-year" className="scroll-mt-20" aria-labelledby="this-year-title">
       <div className="mx-auto max-w-3xl text-center">
-        <p className="pixel-caps text-[0.82rem]">This year, in one glance</p>
+        <p className="pixel-caps text-[0.92rem]">This year, in one glance</p>
         <h2 id="this-year-title" className="display mt-4 leading-[1.05] text-fg text-[clamp(2rem,4.6vw,3.4rem)]">
           We&apos;re a club with <span className="font-semibold">real outputs</span>, not just a mailing list.
         </h2>

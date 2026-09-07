@@ -37,7 +37,7 @@ export default function FieldTrips() {
         </AnimateIn>
 
         <AnimateIn delay={0.1}>
-          <p className="pixel-caps text-[0.82rem]">Trips</p>
+          <p className="pixel-caps text-[0.92rem]">Trips</p>
           <h2 id="trips-title" className="display mt-4 leading-[1.05] text-fg text-[clamp(1.9rem,4.2vw,3.1rem)]">
             We get you in the rooms that matter. <span className="font-semibold">All paid for.</span>
           </h2>
@@ -46,7 +46,7 @@ export default function FieldTrips() {
             lot: <span className="font-semibold text-fg">all paid for.</span>
           </p>
           <p className="mt-4 font-semibold leading-relaxed text-fg text-[clamp(0.95rem,1.55vw,1.05rem)]">
-            We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.
+            We have numerous top companies in the pipeline to connect you with.
           </p>
           <ul className="mt-6 flex flex-wrap items-center gap-2">
             {CONNECTIONS.map((c) =>
