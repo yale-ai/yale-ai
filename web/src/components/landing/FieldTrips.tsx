@@ -23,23 +23,27 @@ export default function FieldTrips() {
               <Image src="/photos/mit-ibm-3.jpg" alt="A panel on stage at the MIT-IBM Watson AI Lab" fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover object-[50%_35%]" />
             </div>
           </div>
+          <p className="mt-4 leading-relaxed text-muted text-[0.9rem]">
+            Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM
+            Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked
+            around the tech hub that is Boston.
+          </p>
           <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <img src="/logos/mit.svg" alt="MIT" className="h-6 w-auto" />
-            <span className="h-5 w-px bg-line" aria-hidden />
-            <img src="/logos/mit-ibm-watson-ai-lab.png" alt="MIT-IBM Watson AI Lab" className="lab-logo h-9 w-auto" />
+            <img src="/logos/mit.svg" alt="MIT" className="h-8 w-auto" />
+            <span className="h-8 w-px bg-line" aria-hidden />
+            <img src="/logos/mit-ibm-watson-ai-lab.png" alt="MIT-IBM Watson AI Lab" className="lab-logo h-[4.6rem] w-auto" />
             <span className="mono-aside ml-auto">spring 2026 · Boston, MA</span>
           </div>
         </AnimateIn>
 
         <AnimateIn delay={0.1}>
-          <p className="pixel-caps text-[0.64rem]">Trips</p>
+          <p className="pixel-caps text-[0.82rem]">Trips</p>
           <h2 id="trips-title" className="display mt-4 leading-[1.05] text-fg text-[clamp(1.9rem,4.2vw,3.1rem)]">
             We go where the work is. <span className="font-semibold">All paid for.</span>
           </h2>
           <p className="mt-5 leading-relaxed text-muted text-[clamp(0.92rem,1.5vw,1.02rem)]">
-            Last spring we sat in the MIT-IBM Watson AI Lab in Boston: a room of Yale students, a lab director at the front,
-            and the kind of conversation you cannot get from a lecture hall. This year we are working on trips to top
-            companies and AI labs in <span className="font-semibold text-fg">New York City and Boston</span>. Travel, food, the
+            A room of Yale students, a lab director at the front, and the kind of conversation you cannot get from a
+            lecture hall. This year we are working on trips to top companies and AI labs in <span className="font-semibold text-fg">New York City and Boston</span>. Travel, food, the
             lot: <span className="font-semibold text-fg">all paid for.</span>
           </p>
           <p className="mt-4 font-semibold leading-relaxed text-fg text-[clamp(0.95rem,1.55vw,1.05rem)]">
