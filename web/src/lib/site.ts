@@ -41,24 +41,21 @@ export function calendarUrl() {
 }
 
 // The year, in order. Dates are what the board has set so far.
-export const PROGRAMS: { when: string; title: string; blurb: string; tag?: string }[] = [
+export const PROGRAMS: { when: string; title: string; blurb: string }[] = [
   {
     when: "Wed, Sep 9",
     title: "Kickoff, sponsored by SpaceXAI",
     blurb: "A month of Cursor Pro+ for everyone in the room, an exclusive Grok Bot demo, a competition for SpaceXAI credits, boba.",
-    tag: "RSVP",
   },
   {
     when: "Applications open at the kickoff",
     title: "Yale AI Fellowship",
     blurb: "A structured cohort with a curriculum run by the board. Finish it and you have something real to point to.",
-    tag: "apply",
   },
   {
     when: "Fall",
     title: "Project teams and demo day",
     blurb: "Small teams, paired with a professor or grad student, shipping one real thing. A poster-session demo day closes the term.",
-    tag: "apply",
   },
   {
     when: "Every other week",
@@ -78,7 +75,7 @@ export const PROGRAMS: { when: string; title: string; blurb: string; tag?: strin
   {
     when: "Spring",
     title: "Company trip",
-    blurb: "A day inside a frontier company. SpaceX New York and Cursor are on the shortlist.",
+    blurb: "A day inside top companies and AI labs in New York City and Boston. All paid for.",
   },
   {
     when: "May",

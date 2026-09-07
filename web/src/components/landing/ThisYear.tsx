@@ -19,10 +19,7 @@ export default function ThisYear() {
         {PROGRAMS.map((p, i) => (
           <AnimateIn key={p.title} delay={Math.min(i * 0.05, 0.35)}>
             <li className="glass glass-hover flex h-full flex-col gap-3 p-5">
-              <div className="flex items-start justify-between gap-2">
-                <span className="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-teal-ink">{p.when}</span>
-                {p.tag && <span className="pill px-2.5 py-1 text-[0.62rem] uppercase tracking-[0.12em]">{p.tag}</span>}
-              </div>
+              <span className="font-mono text-[0.66rem] uppercase tracking-[0.12em] text-teal-ink">{p.when}</span>
               <h3 className="text-[1.02rem] font-semibold leading-snug text-fg">{p.title}</h3>
               <p className="text-[0.86rem] leading-relaxed text-muted">{p.blurb}</p>
             </li>

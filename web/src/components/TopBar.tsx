@@ -17,8 +17,7 @@ export default function TopBar() {
   return (
     <header className="flex items-center justify-between gap-4">
       <Link href="/" className="group flex items-center gap-2.5" aria-label="Yale AI home">
-        <Wordmark className="text-[1.3rem] md:text-[1.45rem] transition-transform duration-300 group-hover:-translate-y-px" />
-        <span className="hidden sm:inline pixel-caps text-[0.58rem] translate-y-[1px]">association</span>
+        <Wordmark className="text-[1.05rem] md:text-[1.15rem] transition-transform duration-300 group-hover:-translate-y-px" />
       </Link>
 
       <nav className="flex items-center gap-2 md:gap-4">
