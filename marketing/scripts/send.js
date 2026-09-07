@@ -64,6 +64,7 @@ let inlineImages = false; // default: hosted https images; --inline-images switc
 let force = false; // --force: resend even if identical content already went out
 let limit = Infinity; // --limit N: send at most N this run
 let ignoreLog = false; // --ignore-log: do not skip addresses found in the ledger
+let subjectPrefix = ""; // --subject-prefix "[TEST] ": a test lands in its own thread
 for (let i = 0; i < args.length; i++) {
   if (args[i] === "--campaign") campaignName = args[++i];
   else if (args[i] === "--to") tos.push(args[++i]);
@@ -73,6 +74,7 @@ for (let i = 0; i < args.length; i++) {
   else if (args[i] === "--force") force = true;
   else if (args[i] === "--limit") limit = Number(args[++i]);
   else if (args[i] === "--ignore-log") ignoreLog = true;
+  else if (args[i] === "--subject-prefix") subjectPrefix = args[++i] || "";
   else {
     console.error(`unknown arg: ${args[i]}`);
     process.exit(2);
@@ -80,7 +82,7 @@ for (let i = 0; i < args.length; i++) {
 }
 const usage =
   "usage: node scripts/send.js --campaign <name> (--to <email> [--to <email>] | --list <file>) " +
-  "[--dry-run] [--limit N] [--inline-images] [--force] [--ignore-log]";
+  "[--dry-run] [--limit N] [--inline-images] [--force] [--ignore-log] [--subject-prefix S]";
 if (!campaignName) {
   console.error(usage);
   console.error(`campaigns: ${listCampaigns().join(", ") || "(none)"}`);
@@ -186,9 +188,6 @@ if (SEND_LOCK) console.log(`lock:     SEND_LOCK is ON (allowlist of ${LOCK_ALLOW
 
 // Google and Yahoo require one-click unsubscribe headers from bulk senders.
 const unsubMailto = `mailto:${replyTo[0] || "hello@yale-ai.org"}?subject=unsubscribe`;
-
-// --subject-prefix "[TEST] " prepends to the subject, so a test lands in its own thread.
-const subjectPrefix = (() => { const k = args.indexOf("--subject-prefix"); return k >= 0 ? args[k + 1] || "" : ""; })();
 
 function buildPayload(r) {
   const { subject: baseSubject, html, text } = campaign.render({
