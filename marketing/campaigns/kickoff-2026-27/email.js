@@ -103,7 +103,7 @@ export const THIS_YEAR = [
   ["Wed, Sep 9", "Kickoff, sponsored by SpaceXAI", "The night the year starts. Perks, a demo, and the plan for everything below."],
   ["Opens at the kickoff", "Yale AI Fellowship", "A structured cohort with a curriculum. Finish it with something real to show."],
   ["Fall", "Project teams and demo day", "Small teams, real builds, and a demo day to close the term."],
-  ["Every other week", "Hands-on workshops", "Agents, AI-native workflows, mini hackathons."],
+  ["Every other week", "Hands-on learning workshops", "Agents, AI-native workflows, mini hackathons."],
   ["Fall", "Fireside chats", "Founders and researchers in conversation, in partnership with Tsai CITY."],
   ["Fall", "Research showcase", "Yale labs and grad students presenting their work to undergrads."],
   ["Spring", "Trips", "Top companies and AI labs in New York City and Boston. All paid for."],
