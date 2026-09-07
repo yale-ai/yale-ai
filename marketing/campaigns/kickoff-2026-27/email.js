@@ -47,6 +47,8 @@ export const ASSETS = [
   { key: "botSrc", cid: "bot", file: "bot-full.png", type: "image/png" },
   { key: "photo1Src", cid: "photo1", file: "mit-ibm-1.jpg", type: "image/jpeg" },
   { key: "photo2Src", cid: "photo2", file: "mit-ibm-2.jpg", type: "image/jpeg" },
+  { key: "photo3Src", cid: "photo3", file: "mit-ibm-3.jpg", type: "image/jpeg" },
+  { key: "labLogoSrc", cid: "lablogo", file: "mit-ibm-lab.png", type: "image/png" },
   { key: "quoteAvatarSrc", cid: "rauch", file: "rauch.png", type: "image/png" },
 ];
 
@@ -95,14 +97,14 @@ const MONO = "Menlo, Consolas, 'Courier New', monospace";
 
 // The year, in order, as on the site.
 export const THIS_YEAR = [
-  ["Wed, Sep 9", "Kickoff, sponsored by SpaceXAI", "A month of Cursor Pro+ for everyone in the room, an exclusive Grok Bot demo, a competition for SpaceXAI credits, boba."],
-  ["Opens at the kickoff", "Yale AI Fellowship", "A structured cohort with a curriculum run by the board. Finish it and you have something real to point to."],
-  ["Fall", "Project teams and demo day", "Small teams, paired with a professor or grad student, shipping one real thing. A poster-session demo day closes the term."],
-  ["Every other week", "Hands-on workshops", "Coding agents, AI-native workflows, mini hackathons. Build an agent that runs your classes."],
-  ["Nov 10", "Fireside chat with a climate-AI founder", "In partnership with SciCity. We lead the conversation, you bring the questions."],
-  ["Fall", "Research showcase", "Ten Yale labs, grad students presenting to undergrads. Last year a hundred people came."],
-  ["Spring", "Company trip", "A day inside a frontier company. SpaceX New York and Cursor are on the shortlist."],
-  ["May", "Yale AI Symposium", "Project teams get a stage in front of the whole Yale AI community."],
+  ["Wed, Sep 9", "Kickoff, sponsored by SpaceXAI", "The night the year starts. Perks, a demo, and the plan for everything below."],
+  ["Opens at the kickoff", "Yale AI Fellowship", "A structured cohort with a curriculum. Finish it with something real to show."],
+  ["Fall", "Project teams and demo day", "Small teams, real builds, and a demo day to close the term."],
+  ["Every other week", "Hands-on workshops", "Agents, AI-native workflows, mini hackathons."],
+  ["Fall", "Fireside chats", "Founders and researchers in conversation, in partnership with Tsai CITY."],
+  ["Fall", "Research showcase", "Yale labs and grad students presenting their work to undergrads."],
+  ["Spring", "Trips", "Top companies and AI labs in New York City and Boston. All paid for."],
+  ["May", "Yale AI Symposium", "Project teams on stage in front of the whole community."],
 ];
 
 /**
@@ -116,6 +118,8 @@ export const THIS_YEAR = [
  * @param {string} [o.botSrc]          the Grok Bot, whole; empty drops it
  * @param {string} [o.photo1Src]       MIT-IBM Watson AI Lab, the talk
  * @param {string} [o.photo2Src]       MIT-IBM Watson AI Lab, the group
+ * @param {string} [o.photo3Src]       MIT-IBM Watson AI Lab, the panel
+ * @param {string} [o.labLogoSrc]      the MIT-IBM Watson AI Lab lockup, white on transparent
  * @param {string} [o.quoteAvatarSrc]  Guillermo Rauch's avatar; empty shows initials
  * @returns {{subject:string, html:string, text:string}}
  */
@@ -128,6 +132,8 @@ export function renderEmail({
   botSrc = "",
   photo1Src = "",
   photo2Src = "",
+  photo3Src = "",
+  labLogoSrc = "",
   quoteAvatarSrc = "",
 } = {}) {
   const k = EVENTS.kickoff;
@@ -135,7 +141,7 @@ export function renderEmail({
   const greeting = firstName ? `Hey ${firstName},` : "Hey there,";
   const unsubMailto = `mailto:${CONTACT_EMAIL}?subject=unsubscribe&body=${encodeURIComponent("Please take me off the Yale AI list.")}`;
 
-  const pixel = `font-family:${MONO};font-size:10px;line-height:15px;letter-spacing:0.16em;text-transform:uppercase;color:${TEAL};`;
+  const pixel = `font-family:${MONO};font-size:12px;line-height:18px;letter-spacing:0.16em;text-transform:uppercase;color:${TEAL};`;
   const label = `font-family:${SANS};font-size:11px;line-height:16px;letter-spacing:0.18em;text-transform:uppercase;color:#8d8d8d;`;
   const body = `font-family:${SANS};font-weight:400;font-size:16px;line-height:26px;color:#c9c9c9;`;
   const serif = `font-family:${SERIF};font-weight:400;color:${WHITE};`;
@@ -168,9 +174,14 @@ export function renderEmail({
       </td>
     </tr></table>`;
 
-  const wordmark = `<a href="${siteUrl}" target="_blank" style="text-decoration:none;font-family:${SANS};font-weight:700;font-size:20px;line-height:24px;letter-spacing:-0.5px;color:${WHITE};">${
-    markSrc ? `<img src="${markSrc}" width="24" height="24" alt="" style="width:24px;height:24px;display:inline-block;vertical-align:-5px;margin-right:8px;border:0;">` : ""
-  }Yale AI</a>`;
+  const wordmark = `<a href="${siteUrl}" target="_blank" style="text-decoration:none;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+      ${markSrc ? `<td valign="middle" style="padding:0 8px 0 0;"><img src="${markSrc}" width="34" height="34" alt="" style="width:34px;height:34px;display:block;border:0;"></td>` : ""}
+      <td valign="middle">
+        <div style="font-family:${SANS};font-weight:700;font-size:19px;line-height:20px;letter-spacing:-0.5px;color:${WHITE};">Yale AI</div>
+        <div style="font-family:${SANS};font-weight:600;font-size:8px;line-height:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8d8d8d;">An Undergraduate Association</div>
+      </td>
+    </tr></table></a>`;
 
   const yearRows = [];
   for (let i = 0; i < THIS_YEAR.length; i += 2) {
@@ -282,20 +293,27 @@ export function renderEmail({
   </td></tr>
   <tr><td style="padding:0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${yearRows.join("")}</table>
+    <div style="font-family:${MONO};font-size:11px;line-height:16px;color:#6f6f6f;text-align:center;padding:4px 0 0;">More on our programs this year coming soon.</div>
   </td></tr>
 
   <!-- connections: the MIT-IBM trip -->
   <tr><td style="padding:28px 0 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr><td class="pad" style="padding:28px 28px 26px;">
-      <div style="${pixel}">Connections</div>
-      <div style="${serif}font-size:30px;line-height:36px;padding-top:10px;">Last spring we sat in the <span style="font-weight:600;"><span style="color:#a31f34;">MIT</span>-<span style="color:#4589ff;">IBM</span> Watson AI Lab.</span></div>
+      <div style="${pixel}">Trips</div>
+      <div style="${serif}font-size:30px;line-height:36px;padding-top:10px;">We go where the work is. <span style="font-weight:600;">All paid for.</span></div>
       ${photo1Src && photo2Src ? `
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:18px;"><tr>
         <td width="58%" valign="top" style="padding:0 6px 0 0;"><img src="${photo1Src}" width="310" alt="A talk in the MIT-IBM Watson AI Lab auditorium" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
         <td width="42%" valign="top" style="padding:0 0 0 6px;"><img src="${photo2Src}" width="220" alt="Yale AI members outside the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
       </tr></table>
-      <div style="font-family:${MONO};font-size:11px;line-height:16px;color:#6f6f6f;padding-top:10px;">spring 2026 &middot; MIT-IBM Watson AI Lab, Boston, MA</div>` : ""}
-      <div style="${body}font-size:15px;line-height:24px;padding-top:16px;">A room of Yale students, a lab director at the front, and the kind of conversation you cannot get from a lecture hall. That is one trip. This year the kickoff is backed by SpaceXAI, the spring trip has SpaceX New York and Cursor on the shortlist, and we are building the pipeline out from there.</div>
+      ${photo3Src ? `<img src="${photo3Src}" width="540" alt="A panel on stage at the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;margin-top:12px;">` : ""}
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="padding-top:14px;"><tr>
+        <td valign="middle" style="padding:0 14px 0 0;font-family:${SANS};font-weight:800;font-size:22px;line-height:24px;letter-spacing:-1px;color:#a31f34;">MIT</td>
+        ${labLogoSrc ? `<td valign="middle" style="padding:0 0 0 14px;border-left:1px solid #2a2a2a;"><img src="${labLogoSrc}" width="120" alt="MIT-IBM Watson AI Lab" style="width:120px;height:auto;display:block;border:0;"></td>` : ""}
+        <td valign="middle" style="padding:0 0 0 16px;font-family:${MONO};font-size:11px;line-height:16px;color:#6f6f6f;">spring 2026 &middot; Boston, MA</td>
+      </tr></table>` : ""}
+      <div style="${body}font-size:14px;line-height:22px;padding-top:14px;">Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston.</div>
+      <div style="${body}font-size:15px;line-height:24px;padding-top:14px;">A room of Yale students, a lab director at the front, and the kind of conversation you cannot get from a lecture hall. This year we are working on trips to top companies and AI labs in <span style="color:${WHITE};font-weight:600;">New York City and Boston</span>. Travel, food, the lot: <span style="color:${WHITE};font-weight:600;">all paid for.</span></div>
       <div style="font-family:${SANS};font-size:15px;line-height:24px;font-weight:600;color:${WHITE};padding-top:12px;">We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.</div>
       <div style="padding-top:14px;">
         <span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">${sponsor}</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">Cursor</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">OpenAI</span><span style="display:inline-block;border:1px solid ${LIME};border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:${WHITE};">MIT-IBM Watson AI Lab</span><span style="display:inline-block;border:1px dashed #555;border-radius:999px;padding:6px 12px;margin:0 6px 8px 0;font-family:${SANS};font-size:12px;line-height:16px;color:#8d8d8d;">more in the pipeline</span>
@@ -367,9 +385,10 @@ Add to Google Calendar: ${gcal}
 
 THIS YEAR, IN ONE GLANCE
 ${THIS_YEAR.map(([w, t, l]) => `  - ${w}: ${t}. ${l}`).join("\n")}
+More on our programs this year coming soon.
 
-CONNECTIONS
-Last spring we sat in the MIT-IBM Watson AI Lab in Boston. A room of Yale students, a lab director at the front, and the kind of conversation you cannot get from a lecture hall. This year the kickoff is backed by SpaceXAI, the spring trip has SpaceX New York and Cursor on the shortlist, and we are building the pipeline out from there. We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.
+TRIPS
+Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston. A room of Yale students, a lab director at the front, and the kind of conversation you cannot get from a lecture hall. This year we are working on trips to top companies and AI labs in New York City and Boston. All paid for. We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.
 
 THE TIME IS NOW
 Guillermo Rauch, CEO at Vercel, on LinkedIn:

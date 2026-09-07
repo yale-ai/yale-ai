@@ -40,48 +40,16 @@ export function calendarUrl() {
   return `https://calendar.google.com/calendar/render?${p.toString()}`;
 }
 
-// The year, in order. Dates are what the board has set so far.
+// The year, in order. Kept general on purpose; details land as they are set.
 export const PROGRAMS: { when: string; title: string; blurb: string }[] = [
-  {
-    when: "Wed, Sep 9",
-    title: "Kickoff, sponsored by SpaceXAI",
-    blurb: "A month of Cursor Pro+ for everyone in the room, an exclusive Grok Bot demo, a competition for SpaceXAI credits, boba.",
-  },
-  {
-    when: "Applications open at the kickoff",
-    title: "Yale AI Fellowship",
-    blurb: "A structured cohort with a curriculum run by the board. Finish it and you have something real to point to.",
-  },
-  {
-    when: "Fall",
-    title: "Project teams and demo day",
-    blurb: "Small teams, paired with a professor or grad student, shipping one real thing. A poster-session demo day closes the term.",
-  },
-  {
-    when: "Every other week",
-    title: "Hands-on workshops",
-    blurb: "Coding agents, AI-native workflows, mini hackathons. Build an agent that runs your classes.",
-  },
-  {
-    when: "Nov 10",
-    title: "Fireside chat with a climate-AI founder",
-    blurb: "In partnership with SciCity. We lead the conversation, you bring the questions.",
-  },
-  {
-    when: "Fall",
-    title: "Research showcase",
-    blurb: "Ten Yale labs, grad students presenting to undergrads. Last year a hundred people came.",
-  },
-  {
-    when: "Spring",
-    title: "Company trip",
-    blurb: "A day inside top companies and AI labs in New York City and Boston. All paid for.",
-  },
-  {
-    when: "May",
-    title: "Yale AI Symposium",
-    blurb: "Project teams get a stage in front of the whole Yale AI community.",
-  },
+  { when: "Wed, Sep 9", title: "Kickoff, sponsored by SpaceXAI", blurb: "The night the year starts. Perks, a demo, and the plan for everything below." },
+  { when: "Opens at the kickoff", title: "Yale AI Fellowship", blurb: "A structured cohort with a curriculum. Finish it with something real to show." },
+  { when: "Fall", title: "Project teams and demo day", blurb: "Small teams, real builds, and a demo day to close the term." },
+  { when: "Every other week", title: "Hands-on workshops", blurb: "Agents, AI-native workflows, mini hackathons." },
+  { when: "Fall", title: "Fireside chats", blurb: "Founders and researchers in conversation, in partnership with Tsai CITY." },
+  { when: "Fall", title: "Research showcase", blurb: "Yale labs and grad students presenting their work to undergrads." },
+  { when: "Spring", title: "Trips", blurb: "Top companies and AI labs in New York City and Boston. All paid for." },
+  { when: "May", title: "Yale AI Symposium", blurb: "Project teams on stage in front of the whole community." },
 ];
 
 // Who we already know, and who is in the pipeline.
