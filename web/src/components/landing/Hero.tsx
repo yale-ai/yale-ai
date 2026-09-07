@@ -23,8 +23,8 @@ export default function Hero() {
       </h1>
 
       <p className="mx-auto mt-[clamp(0.9rem,2.2vh,1.4rem)] max-w-3xl leading-relaxed text-muted text-[clamp(0.88rem,min(1.45vw,1.8vh),0.98rem)]">
-        The people behind Grok are sponsoring our kickoff, so <span className="font-semibold text-fg">frontier-lab tools, credits, and people</span> are
-        coming to campus. Project teams that ship, a fellowship, a research showcase, a direct line to the labs.{" "}
+        <span className="font-semibold text-fg">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</span>{" "}
+        Frontier-lab tools, credits, and people are coming to campus. Project teams that ship, a fellowship, a research showcase, a direct line to the labs.{" "}
         <span className="font-semibold text-fg">All builders and people interested in AI are invited. All years.</span>
       </p>
 

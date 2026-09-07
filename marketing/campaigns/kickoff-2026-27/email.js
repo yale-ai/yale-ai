@@ -154,25 +154,21 @@ export function renderEmail({
     ? `<img src="${sponsorLogoSrc}" width="210" height="28" alt="SpaceXAI" style="width:210px;height:28px;display:inline-block;vertical-align:-3px;border:0;">`
     : `<span style="font-family:${SANS};font-weight:700;letter-spacing:0.2em;color:${WHITE};">SPACEXAI</span>`;
 
-  const button = (href, text) => `
+  const button = (href, text, opts = {}) => {
+    const big = opts.big ? "padding:17px 36px;font-size:17px;" : "padding:14px 28px;font-size:15px;";
+    return `
     <!--[if mso]>
-    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${href}" style="height:46px;v-text-anchor:middle;width:230px;" arcsize="50%" stroke="f" fillcolor="${LIME}">
-      <w:anchorlock/><center style="color:#000000;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">${text}</center>
+    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${href}" style="height:${opts.big ? 54 : 46}px;v-text-anchor:middle;width:${opts.big ? 280 : 230}px;" arcsize="50%" stroke="f" fillcolor="${LIME}">
+      <w:anchorlock/><center style="color:#000000;font-family:Arial,sans-serif;font-size:${opts.big ? 17 : 15}px;font-weight:bold;">${text} &#8594;</center>
     </v:roundrect>
     <![endif]-->
     <!--[if !mso]><!-->
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="left"><tr>
-      <td align="center" bgcolor="${LIME}" style="border-radius:999px;background:${LIME};">
-        <a href="${href}" target="_blank" style="display:block;padding:14px 26px;font-family:${SANS};font-size:15px;font-weight:700;color:#000000;text-decoration:none;white-space:nowrap;border-radius:999px;">${text} &#8594;</a>
-      </td>
-    </tr></table>
+    <a href="${href}" target="_blank" style="display:inline-block;${big}font-family:${SANS};font-weight:700;letter-spacing:0.01em;color:#000000;text-decoration:none;white-space:nowrap;border-radius:999px;background:${LIME};background-image:linear-gradient(180deg,#eef4d2 0%,${LIME} 55%,#c9d88f 100%);border:1.5px solid #f4f9dc;box-shadow:0 12px 32px -10px rgba(217,228,168,0.75), inset 0 1px 0 rgba(255,255,255,0.7);mso-hide:all;">${text} &nbsp;&#8594;</a>
     <!--<![endif]-->`;
-  const ghost = (href, text) => `
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="left"><tr>
-      <td align="center" bgcolor="#1c1c1c" style="border-radius:999px;background:#1c1c1c;border:1px solid rgba(255,255,255,0.18);">
-        <a href="${href}" target="_blank" style="display:block;padding:13px 22px;font-family:${SANS};font-size:14px;font-weight:600;color:${WHITE};text-decoration:none;white-space:nowrap;border-radius:999px;">${text}</a>
-      </td>
-    </tr></table>`;
+  };
+  // Secondary: a bordered pill on the anchor itself, no cell background, so nothing draws a box behind it.
+  const ghost = (href, text) => `<a href="${href}" target="_blank" style="display:inline-block;padding:13px 22px;font-family:${SANS};font-size:14px;font-weight:600;color:${WHITE};text-decoration:none;white-space:nowrap;border-radius:999px;border:1px solid rgba(255,255,255,0.22);">${text}</a>`;
+  const textLink = (href, text) => `<a href="${href}" target="_blank" style="font-family:${SANS};font-size:14px;font-weight:600;color:#c9c9c9;text-decoration:underline;text-underline-offset:3px;">${text} &#8594;</a>`;
 
   const wordmark = `<a href="${siteUrl}" target="_blank" style="text-decoration:none;">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
@@ -217,10 +213,13 @@ export function renderEmail({
   a { color:${WHITE}; }
   @media (max-width:620px) {
     .wrap { width:100% !important; }
-    .pad { padding-left:20px !important; padding-right:20px !important; }
+    .outer { padding:14px 10px 28px !important; }
+    .pad { padding-left:18px !important; padding-right:18px !important; }
     .stack { display:block !important; width:100% !important; padding-right:0 !important; }
-    .bot-cell { display:none !important; }
-    .h1 { font-size:36px !important; line-height:40px !important; }
+    .photo { display:block !important; width:100% !important; padding:0 0 8px 0 !important; }
+    .bot-cell, .hide-m { display:none !important; }
+    .h1 { font-size:34px !important; line-height:38px !important; }
+    .h2 { font-size:28px !important; line-height:34px !important; }
   }
   [data-ogsc] body, [data-ogsc] .bg { background:#000000 !important; }
 </style>
@@ -228,7 +227,7 @@ export function renderEmail({
 <body style="margin:0;padding:0;background:#000000;">
 <div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${PREHEADER}${"&#847;&zwnj;&nbsp;".repeat(40)}</div>
 <table role="presentation" class="bg" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#000000" style="background:#000000;">
-<tr><td align="center" style="padding:24px 12px 40px;">
+<tr><td class="outer" align="center" style="padding:24px 12px 40px;">
 <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
 <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;">
 
@@ -242,7 +241,7 @@ export function renderEmail({
           <td valign="middle">${sponsor}</td>
         </tr></table>
       </td>
-      <td align="right" valign="middle" style="${label}color:${LIME};">Kickoff 2026&#8211;27</td>
+      <td class="hide-m" align="right" valign="middle" style="${label}color:${LIME};">Kickoff 2026&#8211;27</td>
     </tr></table>
   </td></tr>
 
@@ -251,12 +250,10 @@ export function renderEmail({
     <div style="display:inline-block;border:1px solid ${CARD_BORDER};border-radius:999px;background:${CARD_BG};padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#9a9a9a;"><span style="color:${WHITE};font-weight:600;">Kickoff is Wednesday, Sep 9</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
     <div class="h1" style="${serif}font-size:44px;line-height:48px;letter-spacing:-0.5px;padding-top:22px;">Build the <span style="font-weight:600;">future of AI</span> at Yale.</div>
     <div style="${serif}font-size:32px;line-height:40px;color:#a7a7a7;padding-top:6px;">Now backed by ${sponsorBig}</div>
-    <div style="${body}font-size:15px;line-height:24px;padding-top:18px;max-width:520px;margin:0 auto;">The people behind Grok are sponsoring our kickoff, so <span style="color:${WHITE};font-weight:600;">frontier-lab tools, credits, and people</span> are coming to campus. Project teams that ship, a fellowship, a research showcase, a direct line to the labs. <span style="color:${WHITE};font-weight:600;">All builders and people interested in AI are invited. All years.</span></div>
-    <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0"><tr>
-      <td class="stack" style="padding:22px 10px 0 0;">${button(lumaUrl, "RSVP for the kickoff")}</td>
-      <td class="stack" style="padding:22px 0 0 0;">${ghost(siteUrl + "/team", "Meet the board")}</td>
-    </tr></table>
-    <div style="${pixel}color:#6f6f6f;text-transform:none;letter-spacing:0.02em;font-size:11px;padding-top:16px;">built by Yalies who ship. no AI experience required.</div>
+    <div style="${body}font-size:15px;line-height:24px;padding-top:18px;max-width:520px;margin:0 auto;"><span style="color:${WHITE};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</span> Frontier-lab tools, credits, and people are coming to campus. Project teams that ship, a fellowship, a research showcase, a direct line to the labs. <span style="color:${WHITE};font-weight:600;">All builders and people interested in AI are invited. All years.</span></div>
+    <div style="padding-top:26px;">${button(lumaUrl, "RSVP for the kickoff", { big: true })}</div>
+    <div style="padding-top:14px;">${textLink(siteUrl + "/team", "Meet the board")}</div>
+    <div style="${pixel}color:#6f6f6f;text-transform:none;letter-spacing:0.02em;font-size:11px;padding-top:18px;">built by Yalies who ship. no AI experience required.</div>
   </td></tr>
 
   <!-- greeting -->
@@ -276,10 +273,7 @@ export function renderEmail({
         <div style="font-family:${SANS};font-size:20px;line-height:26px;font-weight:700;color:${LIME};">${k.timeLine}</div>
         <div style="font-family:${SANS};font-size:15px;line-height:22px;color:#a7a7a7;padding-top:2px;">${k.where}</div>
         <div style="${body}font-size:14px;line-height:22px;padding-top:12px;">Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.</div>
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-          <td class="stack" style="padding:18px 10px 0 0;">${button(lumaUrl, "RSVP on Luma")}</td>
-          <td class="stack" style="padding:18px 0 0 0;">${ghost(gcal, "Add to calendar")}</td>
-        </tr></table>
+        <div style="padding-top:20px;">${button(lumaUrl, "RSVP on Luma")}&nbsp;&nbsp;&nbsp;${ghost(gcal, "Add to calendar")}</div>
       </td>
       ${botSrc ? `<td class="bot-cell" valign="middle" align="center" width="190" style="width:190px;padding:0 24px 0 0;"><img src="${botSrc}" width="170" alt="" style="width:170px;height:auto;display:block;border:0;"></td>` : ""}
     </tr></table>
@@ -288,7 +282,7 @@ export function renderEmail({
   <!-- this year -->
   <tr><td class="pad" align="center" style="padding:44px 6px 18px;">
     <div style="${pixel}">This year, in one glance</div>
-    <div style="${serif}font-size:34px;line-height:40px;padding-top:12px;">A club with <span style="font-weight:600;">real outputs</span>, not a mailing list.</div>
+    <div class="h2" style="${serif}font-size:34px;line-height:40px;padding-top:12px;">A club with <span style="font-weight:600;">real outputs</span>, not a mailing list.</div>
     <div style="${body}font-size:14px;line-height:22px;padding-top:10px;max-width:500px;margin:0 auto;">Everything below has a date, an owner on the board, and a way in. Applications for the fellowship and the project teams open at the kickoff.</div>
   </td></tr>
   <tr><td style="padding:0;">
@@ -300,11 +294,11 @@ export function renderEmail({
   <tr><td style="padding:28px 0 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr><td class="pad" style="padding:28px 28px 26px;">
       <div style="${pixel}">Trips</div>
-      <div style="${serif}font-size:30px;line-height:36px;padding-top:10px;">We go where the work is. <span style="font-weight:600;">All paid for.</span></div>
+      <div class="h2" style="${serif}font-size:30px;line-height:36px;padding-top:10px;">We go where the work is. <span style="font-weight:600;">All paid for.</span></div>
       ${photo1Src && photo2Src ? `
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-top:18px;"><tr>
-        <td width="58%" valign="top" style="padding:0 6px 0 0;"><img src="${photo1Src}" width="310" alt="A talk in the MIT-IBM Watson AI Lab auditorium" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
-        <td width="42%" valign="top" style="padding:0 0 0 6px;"><img src="${photo2Src}" width="220" alt="Yale AI members outside the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
+        <td class="photo" width="58%" valign="top" style="padding:0 6px 0 0;"><img src="${photo1Src}" width="310" alt="A talk in the MIT-IBM Watson AI Lab auditorium" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
+        <td class="photo" width="42%" valign="top" style="padding:0 0 0 6px;"><img src="${photo2Src}" width="220" alt="Yale AI members outside the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;"></td>
       </tr></table>
       ${photo3Src ? `<img src="${photo3Src}" width="540" alt="A panel on stage at the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;margin-top:12px;">` : ""}
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="padding-top:14px;"><tr>
@@ -338,12 +332,10 @@ export function renderEmail({
 
   <!-- close -->
   <tr><td class="pad" align="center" style="padding:40px 6px 34px;">
-    <div style="${serif}font-size:40px;line-height:44px;">Let&#8217;s do this.</div>
+    <div class="h2" style="${serif}font-size:40px;line-height:44px;">Let&#8217;s do this.</div>
     <div style="${body}font-size:15px;line-height:24px;padding-top:12px;max-width:500px;margin:0 auto;">The people who build the next decade are picking rooms right now. Pick this one. Come Wednesday, and bring a friend who thinks AI is not for them.</div>
-    <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0"><tr>
-      <td class="stack" style="padding:22px 10px 0 0;">${button(lumaUrl, "RSVP on Luma")}</td>
-      <td class="stack" style="padding:22px 0 0 0;">${ghost(siteUrl, "yale-ai.org")}</td>
-    </tr></table>
+    <div style="padding-top:26px;">${button(lumaUrl, "RSVP on Luma", { big: true })}</div>
+    <div style="padding-top:14px;">${textLink(siteUrl, "yale-ai.org")}</div>
   </td></tr>
 
   <!-- footer -->
@@ -365,7 +357,7 @@ export function renderEmail({
 BUILD THE FUTURE OF AI AT YALE. NOW BACKED BY SPACEXAI.
 Kickoff is Wednesday, Sep 9. A month of Cursor Pro+ for everyone, free credits, giveaways, more.
 
-The people behind Grok are sponsoring our kickoff, so frontier-lab tools, credits, and people are coming to campus. Project teams that ship, a fellowship, a research showcase, a direct line to the labs. All builders and people interested in AI are invited. All years.
+The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You. Frontier-lab tools, credits, and people are coming to campus. Project teams that ship, a fellowship, a research showcase, a direct line to the labs. All builders and people interested in AI are invited. All years.
 
 RSVP for the kickoff: ${lumaUrl}
 Meet the board: ${siteUrl}/team
