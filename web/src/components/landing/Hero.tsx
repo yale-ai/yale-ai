@@ -14,10 +14,10 @@ export default function Hero() {
 
       <h1
         id="hero-title"
-        className="mt-[clamp(0.8rem,2vh,1.3rem)] leading-[1.04] text-fg text-[clamp(2.2rem,min(5vw,6.2vh),3.6rem)]"
+        className="mt-[clamp(0.8rem,2vh,1.3rem)] leading-[1.04] text-fg text-[clamp(1.6rem,min(6.9vw,6.2vh),3.6rem)] whitespace-nowrap"
       >
         Build the <span className="font-semibold">future of AI</span> at Yale.
-        <span className="mt-[0.12em] block text-muted text-[0.82em]">
+        <span className="mt-[0.12em] block whitespace-normal text-muted text-[0.82em]">
           Now backed by <span className="spacexai h-[0.64em] align-middle -translate-y-[0.1em] text-fg" role="img" aria-label="SpaceXAI" />
         </span>
       </h1>
