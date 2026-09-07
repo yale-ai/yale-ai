@@ -9,14 +9,14 @@
 // one lime button. Table-based and inline-styled so it survives Gmail, Apple
 // Mail, and Outlook. Images are hosted, never attached.
 
-export const BG = "#f4f4ef";
+export const BG = "#ffffff";
 export const LIME = "#d9e4a8";
 export const TEAL = "#148f82";
 export const BLUE = "#6ea8ff";
 export const WHITE = "#ffffff";
 export const INK = "#101010";
 export const LIME_INK = "#5f6d22";
-export const CARD_BG = "#ffffff";
+export const CARD_BG = "#f7f7f4";
 export const CARD_BORDER = "rgba(16,16,16,0.12)";
 
 export const CAMPAIGN = { id: "kickoff-2026-27", tag: "kickoff-2026-27" };
@@ -258,7 +258,7 @@ export function renderEmail({
     <div style="${serif}font-size:32px;line-height:40px;color:#5a5a5a;padding-top:6px;">Now backed by ${sponsorBig}</div>
     <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${INK};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. <span style="font-style:italic;text-decoration:underline;text-underline-offset:3px;">And they want you there. Yes. You.</span></div>
     <div style="padding-top:26px;">${button(lumaUrl, "RSVP for the kickoff", { big: true })}</div>
-    <div style="${pixel}color:#6a6a6a;text-transform:none;letter-spacing:0.02em;font-size:13px;line-height:20px;padding-top:18px;">built by Yalies who ship. no AI experience required.</div>
+    <div style="${pixel}color:#6a6a6a;text-transform:none;letter-spacing:0.02em;font-size:13px;line-height:20px;padding-top:18px;">made for all Yalies interested in AI. first-year or senior? come anyway!</div>
   </td></tr>
 
   <!-- greeting -->
