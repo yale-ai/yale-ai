@@ -48,7 +48,7 @@ export const ASSETS = [
   { key: "photo1Src", cid: "photo1", file: "mit-ibm-1.jpg", type: "image/jpeg" },
   { key: "photo2Src", cid: "photo2", file: "mit-ibm-2.jpg", type: "image/jpeg" },
   { key: "photo3Src", cid: "photo3", file: "mit-ibm-3.jpg", type: "image/jpeg" },
-  { key: "labLogoSrc", cid: "lablogo", file: "mit-ibm-lab.png", type: "image/png" },
+  { key: "labLogoSrc", cid: "lablogo", file: "mit-ibm-lab-2.png", type: "image/png" },
   { key: "quoteAvatarSrc", cid: "rauch", file: "rauch.png", type: "image/png" },
 ];
 
