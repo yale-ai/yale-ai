@@ -40,8 +40,8 @@ export default function Home() {
           </div>
         </main>
 
-        <footer className="reveal reveal-3 flex flex-col pb-1" style={{ gap: "clamp(0.4rem, 1.1vh, 0.7rem)" }}>
-          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 font-semibold tracking-wide text-muted text-[clamp(0.64rem,1.35vh,0.72rem)]">
+        <footer className="reveal reveal-3 flex flex-col pb-1" style={{ gap: "clamp(0.55rem, 1.4vh, 0.9rem)" }}>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 font-medium tracking-wide text-muted text-[clamp(0.6rem,1.25vh,0.66rem)]">
             {TEAM.map((m) => (
               <Link key={m.email} href={`mailto:${m.email}`} className="transition-colors hover:text-fg">
                 {m.email}

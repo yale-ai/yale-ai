@@ -18,7 +18,7 @@ type Node = { x: number; y: number; vx: number; vy: number; r: number; color: [n
 type Star = { x: number; y: number; r: number; phase: number; rate: number; base: number };
 
 const STAR_PARALLAX = 0.35;
-const CONNECT_DIST = 130;
+const CONNECT_DIST = 150;
 const POINTER_DIST = 170;
 
 export default function Constellation() {
@@ -43,7 +43,7 @@ export default function Constellation() {
 
     function buildNodes() {
       nodes.length = 0;
-      const target = Math.round(Math.min(80, Math.max(40, (width * height) / 16000)));
+      const target = Math.round(Math.min(170, Math.max(70, (width * height) / 7500)));
       for (let i = 0; i < target; i++) {
         nodes.push({
           x: Math.random() * width,
@@ -55,7 +55,7 @@ export default function Constellation() {
         });
       }
       stars.length = 0;
-      const starTarget = Math.round(Math.min(260, Math.max(90, (width * height) / 4200)));
+      const starTarget = Math.round(Math.min(480, Math.max(160, (width * height) / 2400)));
       for (let i = 0; i < starTarget; i++) {
         stars.push({
           x: Math.random() * width,
