@@ -180,7 +180,7 @@ export function renderEmail({
 
   const wordmark = `<a href="${siteUrl}" target="_blank" style="text-decoration:none;">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-      ${markSrc ? `<td valign="middle" style="padding:0 8px 0 0;"><img src="${markSrc}" width="34" height="34" alt="" style="width:34px;height:34px;display:block;border:0;"></td>` : ""}
+      ${markSrc ? `<td valign="middle" style="padding:0 8px 0 0;"><img src="${markSrc}" width="32" height="32" alt="" style="width:32px;height:32px;display:block;border:0;"></td>` : ""}
       <td valign="middle">
         <div style="font-family:${SANS};font-weight:700;font-size:19px;line-height:20px;letter-spacing:-0.5px;color:${INK};">Yale AI</div>
         <div style="font-family:${SANS};font-weight:600;font-size:8px;line-height:12px;letter-spacing:0.14em;text-transform:uppercase;color:#6a6a6a;">An Undergraduate Organization</div>
