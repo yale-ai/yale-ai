@@ -286,7 +286,7 @@ export function renderEmail({
   <!-- this year -->
   <tr><td class="pad" align="center" style="padding:44px 6px 18px;">
     <div style="${pixel}">This year, in one glance</div>
-    <div class="h2" style="${serif}font-size:34px;line-height:40px;padding-top:12px;">A club with <span style="font-weight:600;">real outputs</span>, not a mailing list.</div>
+    <div class="h2" style="${serif}font-size:34px;line-height:40px;padding-top:12px;">We&#8217;re a club with <span style="font-weight:600;">real outputs</span>, not just a mailing list.</div>
     <div style="${body}font-size:14px;line-height:22px;padding-top:10px;max-width:500px;margin:0 auto;">Everything below has a date, an owner on the board, and a way in. Applications for the fellowship and the project teams open at the kickoff.</div>
   </td></tr>
   <tr><td style="padding:0;">

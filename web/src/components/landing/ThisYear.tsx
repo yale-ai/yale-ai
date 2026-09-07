@@ -7,7 +7,7 @@ export default function ThisYear() {
       <div className="mx-auto max-w-3xl text-center">
         <p className="pixel-caps text-[0.82rem]">This year, in one glance</p>
         <h2 id="this-year-title" className="display mt-4 leading-[1.05] text-fg text-[clamp(2rem,4.6vw,3.4rem)]">
-          A club with <span className="font-semibold">real outputs</span>, not a mailing list.
+          We&apos;re a club with <span className="font-semibold">real outputs</span>, not just a mailing list.
         </h2>
         <p className="mx-auto mt-5 max-w-2xl leading-relaxed text-muted text-[clamp(0.92rem,1.5vw,1.02rem)]">
           Everything below has a date, an owner on the board, and a way in. Applications for the fellowship and the project
