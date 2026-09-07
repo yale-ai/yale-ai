@@ -24,7 +24,9 @@ export default function Hero() {
 
       <p className="mx-auto mt-[clamp(0.9rem,2.2vh,1.4rem)] max-w-3xl leading-relaxed text-muted text-[clamp(0.88rem,min(1.45vw,1.8vh),0.98rem)]">
         <span className="text-fg">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. <em className="font-semibold underline decoration-1 underline-offset-4">And they want you there. Yes. You.</em></span>{" "}
-        We&apos;re the hub for AI companies, research, networking, and learning on campus, and we want you in.
+        <span className="font-semibold text-fg">We&apos;re the hub for AI companies, research, networking, and learning on campus, and we want you in.</span>{" "}
+        Come to our kickoff Wednesday at 8pm (Tsai CITY) and you&apos;ll get 1 month of Cursor Pro+ free, a shot at more credits, exclusive demos
+        from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year. Seriously :).
       </p>
 
       <div className="mt-[clamp(1rem,2.6vh,1.7rem)] flex flex-wrap items-center justify-center gap-3">
@@ -32,7 +34,7 @@ export default function Hero() {
           RSVP for the kickoff <span aria-hidden>→</span>
         </Link>
       </div>
-      <p className="mono-aside mt-[clamp(0.6rem,1.6vh,1rem)]">built by Yalies who ship. no AI experience required.</p>
+      <p className="mono-aside mt-[clamp(0.6rem,1.6vh,1rem)]">made for all Yalies interested in AI. first-year or senior? come anyway!</p>
     </section>
   );
 }
