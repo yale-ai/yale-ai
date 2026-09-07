@@ -44,7 +44,7 @@ export const EVENTS = {
 // Files expected in campaigns/kickoff-2026-27/assets/. Missing files are simply
 // omitted by the template, so a logo can be dropped in later without a code change.
 export const ASSETS = [
-  { key: "markSrc", cid: "mark", file: "mark-white.png", type: "image/png" },
+  { key: "markSrc", cid: "mark", file: "mark-y.png", type: "image/png" },
   { key: "sponsorLogoSrc", cid: "spacexai", file: "spacexai-black.png", type: "image/png" },
   { key: "botSrc", cid: "bot", file: "bot-dark.png", type: "image/png" },
   { key: "photo1Src", cid: "photo1", file: "mit-ibm-1.jpg", type: "image/jpeg" },
