@@ -1,0 +1,4 @@
+# Sent ledger for the kickoff-2026-27-v2 campaign. One line per successful send.
+# Tab separated: email	resend message id	ISO timestamp.
+# scripts/send.js appends here and skips any address already listed.
+filippo.fonseca@yale.edu	b0020362-cf66-45ce-8313-670629676e69	2026-09-07T14:52:12.796Z
