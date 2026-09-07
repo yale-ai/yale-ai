@@ -28,7 +28,7 @@ export default function FieldTrips() {
             Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked
             around the tech hub that is Boston.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
+          <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3">
             <img src="/logos/mit.svg" alt="MIT" className="h-10 w-auto" />
             <span className="h-10 w-px bg-line" aria-hidden />
             <img src="/logos/mit-ibm-watson-ai-lab.png" alt="MIT-IBM Watson AI Lab" className="lab-logo h-10 w-auto" />
