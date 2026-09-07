@@ -37,7 +37,7 @@ export default function KickoffCard() {
       </div>
 
       <p className="relative max-w-xl leading-relaxed text-muted text-[clamp(0.85rem,1.75vh,0.95rem)] lg:pr-[13.5rem]">
-        <span className="font-semibold text-fg">There&apos;s a quick build competition during the kickoff too</span> (for the chance to win more SpaceXAI credits). Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.
+        <span className="font-semibold text-fg">There&apos;s a quick build competition during the kickoff too</span> (for the chance to win more SpaceXAI credits). We have limited capacity, so RSVP as soon as possible. We&apos;ll also explain our fellowships, learning resources, and opportunities to join project teams this year.
       </p>
 
       <div className="relative flex flex-wrap items-center gap-3 lg:pr-[13.5rem]">
