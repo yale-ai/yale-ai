@@ -21,7 +21,7 @@ export const CARD_BORDER = "rgba(16,16,16,0.12)";
 
 export const CAMPAIGN = { id: "kickoff-2026-27", tag: "kickoff-2026-27" };
 
-export const SUBJECT = "YaleAI Kickoff (sponsored by SpaceXAI): You don't want to miss this!";
+export const SUBJECT = "Our kickoff (sponsored by SpaceXAI): You don't want to miss this!";
 export const PREHEADER =
   "Wednesday at Tsai CITY. A month of Cursor Pro+ for everyone, an exclusive Grok Bot demo, a competition for SpaceXAI credits, free boba.";
 
