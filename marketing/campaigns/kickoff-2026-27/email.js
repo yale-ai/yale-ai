@@ -179,7 +179,7 @@ export function renderEmail({
   const textLink = (href, text) => `<a href="${href}" target="_blank" style="font-family:${SANS};font-size:14px;font-weight:600;color:#3d3d3d;text-decoration:underline;text-underline-offset:3px;">${text} &#8594;</a>`;
 
   const wordmark = `<a href="${siteUrl}" target="_blank" style="text-decoration:none;">
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+    <table role="presentation" class="logo-table" cellpadding="0" cellspacing="0" border="0"><tr>
       ${markSrc ? `<td valign="middle" style="padding:0 8px 0 0;"><img src="${markSrc}" width="32" height="32" alt="" style="width:32px;height:32px;display:block;border:0;"></td>` : ""}
       <td valign="middle">
         <div style="font-family:${SANS};font-weight:700;font-size:19px;line-height:20px;letter-spacing:-0.5px;color:${INK};">YaleAI Association</div>
@@ -232,6 +232,8 @@ export function renderEmail({
     .photo { display:block !important; width:100% !important; padding:0 0 8px 0 !important; }
     .photo-first { padding-top:26px !important; }
     .bot-cell, .hide-m { display:none !important; }
+    .logo-cell { text-align:center !important; }
+    .logo-table { margin:0 auto !important; }
     .h1 { font-size:26px !important; line-height:30px !important; white-space:nowrap !important; }
     .h2 { font-size:28px !important; line-height:34px !important; }
   }
@@ -248,7 +250,7 @@ export function renderEmail({
   <!-- header: Yale AI x SpaceXAI -->
   <tr><td class="pad" style="padding:6px 6px 30px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-      <td align="left" valign="middle">${wordmark}</td>
+      <td class="logo-cell" align="left" valign="middle">${wordmark}</td>
     </tr></table>
   </td></tr>
 
