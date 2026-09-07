@@ -280,7 +280,7 @@ export function renderEmail({
           <td valign="middle" style="${label}padding:0 8px 0 0;">Powered by</td>
           <td valign="middle" style="padding:0;">${sponsor}</td>
         </tr></table>
-        <div style="font-family:${SANS};font-size:19px;line-height:26px;font-weight:400;color:${INK};padding-top:14px;">Fancy <span style="font-weight:700;">a month of Cursor Pro+</span>, <span style="font-weight:700;">an exclusive Grok Bot demo</span>, <span style="font-weight:700;">a competition for SpaceXAI credits</span>, and <span style="font-weight:700;">free boba</span>? <span style="color:${LIME_INK};font-weight:600;">Yeah, we thought so.</span></div>
+        <div style="font-family:${SANS};font-size:19px;line-height:26px;font-weight:400;color:${INK};padding-top:14px;">Fancy <span style="font-weight:700;">a month of Cursor Pro+</span>, <span style="font-weight:700;">an exclusive Grok Bot demo</span>, <span style="font-weight:700;">a competition for SpaceXAI credits</span>, and <span style="font-weight:700;">free boba</span>?</div>
         <div style="font-family:${SANS};font-size:24px;line-height:30px;font-weight:700;color:${INK};padding-top:16px;">${k.dayLine}</div>
         <div style="font-family:${SANS};font-size:20px;line-height:26px;font-weight:700;color:${LIME_INK};">${k.timeLine}</div>
         <div style="font-family:${SANS};font-size:15px;line-height:22px;color:#5a5a5a;padding-top:2px;">${k.where}</div>
@@ -385,7 +385,7 @@ Remember to RSVP for the kickoff here: ${lumaUrl}
 - The Yale AI team
 
 THE KICKOFF (powered by SpaceXAI)
-Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba? Yeah, we thought so.
+Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba?
 ${k.dayLine}, ${k.timeLine}
 ${k.where}
 There's a quick build competition during the kickoff too (for the chance to win more SpaceXAI credits). We have limited capacity, so RSVP as soon as possible. We'll also explain our fellowships, learning resources, and opportunities to join project teams this year.
