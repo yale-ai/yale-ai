@@ -221,7 +221,7 @@ export function renderEmail({
     .stack { display:block !important; width:100% !important; padding-right:0 !important; }
     .photo { display:block !important; width:100% !important; padding:0 0 8px 0 !important; }
     .bot-cell, .hide-m { display:none !important; }
-    .h1 { font-size:34px !important; line-height:38px !important; }
+    .h1 { font-size:26px !important; line-height:30px !important; white-space:nowrap !important; }
     .h2 { font-size:28px !important; line-height:34px !important; }
   }
   [data-ogsc] body, [data-ogsc] .bg { background:#000000 !important; }
@@ -251,7 +251,7 @@ export function renderEmail({
   <!-- hero, centred, as on the site -->
   <tr><td class="pad" align="center" style="padding:0 6px;">
     <div style="display:inline-block;border:1px solid ${CARD_BORDER};border-radius:999px;background:${CARD_BG};padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#9a9a9a;"><span style="color:${WHITE};font-weight:600;">Kickoff is Wednesday, Sep 9</span> &nbsp;&middot;&nbsp; a month of Cursor Pro+ for everyone, free credits, giveaways, more</div>
-    <div class="h1" style="${serif}font-size:44px;line-height:48px;letter-spacing:-0.5px;padding-top:22px;">Build the <span style="font-weight:600;">future of AI</span> at Yale.</div>
+    <div class="h1" style="${serif}font-size:44px;line-height:48px;letter-spacing:-0.5px;padding-top:22px;white-space:nowrap;">Build the <span style="font-weight:600;">future of AI</span> at Yale.</div>
     <div style="${serif}font-size:32px;line-height:40px;color:#a7a7a7;padding-top:6px;">Now backed by ${sponsorBig}</div>
     <div style="${body}font-size:15px;line-height:24px;padding-top:18px;max-width:520px;margin:0 auto;"><span style="color:${WHITE};font-weight:600;">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.</span> Frontier-lab tools, credits, and people are coming to campus. Project teams that ship, a fellowship, a research showcase, a direct line to the labs. <span style="color:${WHITE};font-weight:600;">All builders and people interested in AI are invited. All years.</span></div>
     <div style="padding-top:26px;">${button(lumaUrl, "RSVP for the kickoff", { big: true })}</div>
