@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { KICKOFF, LUMA_URL, calendarUrl } from "@/lib/site";
-import JoinInline from "@/components/landing/JoinInline";
 
 export default function KickoffCard() {
   return (
@@ -49,9 +48,6 @@ export default function KickoffCard() {
         </Link>
       </div>
 
-      <div className="relative max-w-md border-t border-line pt-[clamp(0.7rem,1.6vh,1rem)] lg:pr-0">
-        <JoinInline compact />
-      </div>
     </section>
   );
 }
