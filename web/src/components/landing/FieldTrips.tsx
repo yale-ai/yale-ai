@@ -12,11 +12,11 @@ export default function FieldTrips() {
     <section id="trips" className="scroll-mt-20" aria-labelledby="trips-title">
       <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
         <AnimateIn>
-          <div className="grid grid-cols-[1.35fr_1fr] gap-3">
+          <div className="grid grid-cols-[1.35fr_1fr] items-stretch gap-3">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-line">
               <Image src="/photos/mit-ibm-1.jpg" alt="A talk in the MIT-IBM Watson AI Lab auditorium" fill sizes="(min-width: 1024px) 35vw, 60vw" className="object-cover" />
             </div>
-            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-line">
+            <div className="relative h-full min-h-0 overflow-hidden rounded-2xl border border-line">
               <Image src="/photos/mit-ibm-2.jpg" alt="Yale AI members outside the MIT-IBM Watson AI Lab in Boston" fill sizes="(min-width: 1024px) 25vw, 40vw" className="object-cover" />
             </div>
             <div className="relative col-span-2 aspect-[21/8] overflow-hidden rounded-2xl border border-line">
