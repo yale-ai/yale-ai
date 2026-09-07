@@ -3,13 +3,13 @@ import { CONNECTIONS } from "@/lib/site";
 import AnimateIn from "@/components/AnimateIn";
 
 /*
-  The trip to the MIT-IBM Watson AI Lab, as proof that the connections are
-  real, and the pipeline line under it. The lab's two parents get their own
-  colours: MIT cardinal and IBM blue.
+  Trips: proof that the connections are real. Last spring's visit to the
+  MIT-IBM Watson AI Lab, with the two parents' marks under the photos in their
+  own colours, and this year's plan for NYC and Boston.
 */
 export default function FieldTrips() {
   return (
-    <section id="connections" className="scroll-mt-20" aria-labelledby="trips-title">
+    <section id="trips" className="scroll-mt-20" aria-labelledby="trips-title">
       <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
         <AnimateIn>
           <div className="grid grid-cols-[1.35fr_1fr] gap-3">
@@ -19,22 +19,28 @@ export default function FieldTrips() {
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-line">
               <Image src="/photos/mit-ibm-2.jpg" alt="Yale AI members outside the MIT-IBM Watson AI Lab in Boston" fill sizes="(min-width: 1024px) 25vw, 40vw" className="object-cover" />
             </div>
+            <div className="relative col-span-2 aspect-[21/8] overflow-hidden rounded-2xl border border-line">
+              <Image src="/photos/mit-ibm-3.jpg" alt="A panel on stage at the MIT-IBM Watson AI Lab" fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover object-[50%_35%]" />
+            </div>
           </div>
-          <p className="mono-aside mt-3">spring 2026 · MIT-IBM Watson AI Lab, Boston, MA</p>
+          <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <img src="/logos/mit.svg" alt="MIT" className="h-6 w-auto" />
+            <span className="h-5 w-px bg-line" aria-hidden />
+            <img src="/logos/mit-ibm-watson-ai-lab.png" alt="MIT-IBM Watson AI Lab" className="lab-logo h-9 w-auto" />
+            <span className="mono-aside ml-auto">spring 2026 · Boston, MA</span>
+          </div>
         </AnimateIn>
 
         <AnimateIn delay={0.1}>
-          <p className="pixel-caps text-[0.64rem]">Connections</p>
+          <p className="pixel-caps text-[0.64rem]">Trips</p>
           <h2 id="trips-title" className="display mt-4 leading-[1.05] text-fg text-[clamp(1.9rem,4.2vw,3.1rem)]">
-            Last spring we sat in the{" "}
-            <span className="whitespace-nowrap font-semibold">
-              <span className="mit">MIT</span>-<span className="ibm">IBM</span> Watson AI Lab.
-            </span>
+            We go where the work is. <span className="font-semibold">All paid for.</span>
           </h2>
           <p className="mt-5 leading-relaxed text-muted text-[clamp(0.92rem,1.5vw,1.02rem)]">
-            A room of Yale students, a lab director at the front, and the kind of conversation you cannot get from a
-            lecture hall. That is one trip. This year the kickoff is backed by SpaceXAI, the spring trip has SpaceX New
-            York and Cursor on the shortlist, and we are building the pipeline out from there.
+            Last spring we sat in the MIT-IBM Watson AI Lab in Boston: a room of Yale students, a lab director at the front,
+            and the kind of conversation you cannot get from a lecture hall. This year we are working on trips to top
+            companies and AI labs in <span className="font-semibold text-fg">New York City and Boston</span>. Travel, food, the
+            lot: <span className="font-semibold text-fg">all paid for.</span>
           </p>
           <p className="mt-4 font-semibold leading-relaxed text-fg text-[clamp(0.95rem,1.55vw,1.05rem)]">
             We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.

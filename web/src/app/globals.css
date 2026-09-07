@@ -386,3 +386,7 @@ html, body { background: var(--background); color: var(--fg); transition: backgr
     background-image: linear-gradient(100deg, var(--teal-ink) 0%, var(--teal-ink) 38%, #6fe0d2 50%, var(--teal-ink) 62%, var(--teal-ink) 100%);
   }
 }
+
+/* The MIT-IBM lockup is white on transparent; flip it on paper. */
+:root[data-theme="light"] .lab-logo, .theme-light .lab-logo { filter: invert(1) hue-rotate(180deg); }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .lab-logo { filter: invert(1) hue-rotate(180deg); } }
