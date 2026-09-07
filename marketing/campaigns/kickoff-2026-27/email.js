@@ -276,7 +276,7 @@ export function renderEmail({
       <td class="pad" valign="middle" style="padding:28px 8px 28px 28px;">
         <div style="${pixel}">Our kickoff night with free perks for everyone in the room.</div>
         <div style="${label}padding-top:6px;">Powered by&nbsp;&nbsp;${sponsor}</div>
-        <div style="font-family:${SANS};font-size:19px;line-height:26px;font-weight:600;color:${INK};padding-top:14px;">Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba? <span style="color:${LIME_INK};">Yeah, we thought so.</span></div>
+        <div style="font-family:${SANS};font-size:19px;line-height:26px;font-weight:400;color:${INK};padding-top:14px;">Fancy <span style="font-weight:700;">a month of Cursor Pro+</span>, <span style="font-weight:700;">an exclusive Grok Bot demo</span>, <span style="font-weight:700;">a competition for SpaceXAI credits</span>, and <span style="font-weight:700;">free boba</span>? <span style="color:${LIME_INK};font-weight:600;">Yeah, we thought so.</span></div>
         <div style="font-family:${SANS};font-size:24px;line-height:30px;font-weight:700;color:${INK};padding-top:16px;">${k.dayLine}</div>
         <div style="font-family:${SANS};font-size:20px;line-height:26px;font-weight:700;color:${LIME_INK};">${k.timeLine}</div>
         <div style="font-family:${SANS};font-size:15px;line-height:22px;color:#5a5a5a;padding-top:2px;">${k.where}</div>
