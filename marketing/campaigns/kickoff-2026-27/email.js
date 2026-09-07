@@ -49,6 +49,7 @@ export const ASSETS = [
   { key: "photo2Src", cid: "photo2", file: "mit-ibm-2.jpg", type: "image/jpeg" },
   { key: "photo3Src", cid: "photo3", file: "mit-ibm-3.jpg", type: "image/jpeg" },
   { key: "labLogoSrc", cid: "lablogo", file: "mit-ibm-lab-2.png", type: "image/png" },
+  { key: "mitLogoSrc", cid: "mit", file: "mit.png", type: "image/png" },
   { key: "quoteAvatarSrc", cid: "rauch", file: "rauch.png", type: "image/png" },
 ];
 
@@ -120,6 +121,7 @@ export const THIS_YEAR = [
  * @param {string} [o.photo2Src]       MIT-IBM Watson AI Lab, the group
  * @param {string} [o.photo3Src]       MIT-IBM Watson AI Lab, the panel
  * @param {string} [o.labLogoSrc]      the MIT-IBM Watson AI Lab lockup, white on transparent
+ * @param {string} [o.mitLogoSrc]      the MIT logo, transparent
  * @param {string} [o.quoteAvatarSrc]  Guillermo Rauch's avatar; empty shows initials
  * @returns {{subject:string, html:string, text:string}}
  */
@@ -134,6 +136,7 @@ export function renderEmail({
   photo2Src = "",
   photo3Src = "",
   labLogoSrc = "",
+  mitLogoSrc = "",
   quoteAvatarSrc = "",
 } = {}) {
   const k = EVENTS.kickoff;
@@ -306,7 +309,7 @@ export function renderEmail({
       </tr></table>
       ${photo3Src ? `<img src="${photo3Src}" width="540" alt="A panel on stage at the MIT-IBM Watson AI Lab" style="width:100%;height:auto;display:block;border-radius:14px;border:0;margin-top:12px;">` : ""}
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="padding-top:14px;"><tr>
-        <td valign="middle" style="padding:0 14px 0 0;font-family:${SANS};font-weight:800;font-size:26px;line-height:28px;letter-spacing:-1px;color:#a31f34;">MIT</td>
+        <td valign="middle" style="padding:0 14px 0 0;">${mitLogoSrc ? `<img src="${mitLogoSrc}" width="58" height="30" alt="MIT" style="width:58px;height:30px;display:block;border:0;">` : `<span style="font-family:${SANS};font-weight:800;font-size:26px;line-height:28px;letter-spacing:-1px;color:#a31f34;">MIT</span>`}</td>
         ${labLogoSrc ? `<td valign="middle" style="padding:0 0 0 14px;border-left:1px solid #2a2a2a;"><img src="${labLogoSrc}" width="56" alt="MIT-IBM Watson AI Lab" style="width:56px;height:auto;display:block;border:0;"></td>` : ""}
         <td valign="middle" style="padding:0 0 0 16px;font-family:${MONO};font-size:11px;line-height:16px;color:#6f6f6f;">spring 2026 &middot; Boston, MA</td>
       </tr></table>` : ""}
@@ -320,7 +323,8 @@ export function renderEmail({
   </td></tr>
 
   <!-- the time is now -->
-  <tr><td class="pad" style="padding:40px 6px 0;"><div style="${pixel}">The time is now</div></td></tr>
+  <tr><td class="pad" style="padding:40px 6px 0;"><div style="${pixel}">The time is now</div>
+    <div style="${body}padding-top:10px;">We&#8217;ll leave you with this to instill a certain sense of urgency (and hopefully excitement!). It really is the best time to be alive.</div></td></tr>
   <tr><td style="padding:12px 0 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${CARD}"><tr><td class="pad" style="padding:24px 28px 24px;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
@@ -389,6 +393,8 @@ TRIPS
 Check out one of our trips from last year, where a bunch of us went on an all-expenses-paid trip to the MIT-IBM Watson AI Lab in Boston :). We also met up with the Harvard Machine Intelligence Group, had a mixer, and walked around the tech hub that is Boston. We get you in the rooms that matter, all paid for. This year we are working on trips to top companies and AI labs in New York City and Boston. All paid for. We have numerous top companies in the pipeline to connect you with. Being in the room is the whole point.
 
 THE TIME IS NOW
+We'll leave you with this to instill a certain sense of urgency (and hopefully excitement!). It really is the best time to be alive.
+
 Guillermo Rauch, CEO at Vercel, on LinkedIn:
 "Anyone that works in AI is working the hardest they've ever worked in their lives. On the surface it's somewhat ironic (AI should give us back time!), but the reality is that it's the most fun, fascinating and empowering epoch in human history. The intelligence revolution."
 
