@@ -282,7 +282,7 @@ export function renderEmail({
         <div style="font-family:${SANS};font-size:24px;line-height:30px;font-weight:700;color:${WHITE};padding-top:16px;">${k.dayLine}</div>
         <div style="font-family:${SANS};font-size:20px;line-height:26px;font-weight:700;color:${LIME};">${k.timeLine}</div>
         <div style="font-family:${SANS};font-size:15px;line-height:22px;color:#a7a7a7;padding-top:2px;">${k.where}</div>
-        <div style="${body}font-size:14px;line-height:22px;padding-top:12px;">Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.</div>
+        <div style="${body}font-size:14px;line-height:22px;padding-top:12px;"><span style="color:${WHITE};font-weight:600;">There&#8217;s a quick build competition during the kickoff too</span>, for the chance to win more SpaceXAI credits. Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.</div>
         <div style="padding-top:20px;">${button(lumaUrl, "RSVP on Luma")}&nbsp;&nbsp;&nbsp;${ghost(gcal, "Add to calendar")}</div>
       </td>
       ${botSrc ? `<td class="bot-cell" valign="middle" align="center" width="190" style="width:190px;padding:0 24px 0 0;"><img src="${botSrc}" width="170" alt="" style="width:170px;height:auto;display:block;border:0;"></td>` : ""}
@@ -382,7 +382,7 @@ THE KICKOFF (powered by SpaceXAI)
 Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba? Yeah, we thought so.
 ${k.dayLine}, ${k.timeLine}
 ${k.where}
-Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.
+There's a quick build competition during the kickoff too, for the chance to win more SpaceXAI credits. Limited capacity, filled from the RSVP list. Fellowship and project-team applications open in the room. No AI experience needed.
 
 RSVP on Luma: ${lumaUrl}
 Add to Google Calendar: ${gcal}
