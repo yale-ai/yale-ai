@@ -33,9 +33,6 @@ export default function Hero() {
         <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="cta px-5 py-2.5 text-[0.78rem] md:text-[0.82rem]">
           RSVP for the kickoff <span aria-hidden>→</span>
         </Link>
-        <Link href="/team" className="ghost px-4.5 py-2.5 text-[0.78rem] md:text-[0.82rem]">
-          Meet the board
-        </Link>
       </div>
       <p className="mono-aside mt-[clamp(0.6rem,1.6vh,1rem)]">built by Yalies who ship. no AI experience required.</p>
     </section>
