@@ -18,13 +18,13 @@ const DEADLINE_HUMAN = "Thursday, September 10, 11:59 PM";
 export const metadata: Metadata = {
   title: "Rapid-fire Cursor: the kickoff competition",
   description:
-    "How quickly can you build a useful app for Yale students? Build it in Cursor, put a screenshot in the README, submit the GitHub link by Thursday, September 10 at 11:59 PM. Three winners get three months of Cursor from SpaceXAI.",
+    "How quickly can you build a useful web app for Yale students? Build it in Cursor, put a screenshot in the README, submit the GitHub link by Thursday, September 10 at 11:59 PM. Three winners get three months of Cursor from SpaceXAI.",
 };
 
 const RULES = [
   {
     k: "The brief",
-    t: "A useful app for Yale students",
+    t: "A useful web app for Yale students",
     p: "Built in Cursor. Classes, clubs, dining, schedules, recruiting, research: anything you actually wish existed. Useful beats flashy.",
   },
   {
@@ -62,7 +62,7 @@ export default function CompetitionPage() {
             Rapid-fire <span className="teal-flow">Cursor</span>.
           </h1>
           <p className="mt-4 max-w-2xl text-[clamp(1.15rem,2.2vw,1.5rem)] font-medium leading-snug">
-            How quickly can you build an app for Yale students?
+            How quickly can you build a web app for Yale students?
           </p>
           <p className="mt-4 max-w-2xl text-[1rem] leading-relaxed text-muted">
             It started at the kickoff on Wednesday, September 9 and closes <span className="text-fg">{DEADLINE_HUMAN}</span>.
