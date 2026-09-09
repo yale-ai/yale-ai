@@ -22,7 +22,7 @@ for everything else (Helvetica fallback). Cards are `#121212` with a 20px radius
 | Where | Tsai CITY, ground floor |
 | RSVP | https://luma.com/o5g51mh0 |
 
-Everyone who attends gets 1 month of Cursor Pro+ free. There are Cursor and Grok credits
+Everyone who attends gets 1 month of Cursor Pro free. There are Cursor and Grok credits
 to win at the event. Food. All majors, all class years. Capacity is limited, so attending
 requires an RSVP on Luma.
 

@@ -5,7 +5,7 @@ export const SITE = {
   shortName: "Yale AI",
   url: "https://yale-ai.org",
   description:
-    "Yale AI is the hub for AI companies, research, networking, and learning on campus. Kickoff Wednesday, September 9 at 8pm, Tsai CITY, sponsored by SpaceXAI: a month of Cursor Pro+ for everyone, free credits, giveaways, and more. All builders and people interested in AI are invited. All years.",
+    "Yale AI is the hub for AI companies, research, networking, and learning on campus. Kickoff Wednesday, September 9 at 8pm, Tsai CITY, sponsored by SpaceXAI: a month of Cursor Pro for everyone, free credits, giveaways, and more. All builders and people interested in AI are invited. All years.",
 };
 
 export const LUMA_URL = "https://luma.com/o5g51mh0";
@@ -35,7 +35,7 @@ export function calendarUrl() {
     text: "Yale AI: Kickoff 2026-27",
     dates: `${KICKOFF.startUtc}/${KICKOFF.endUtc}`,
     location: KICKOFF.location,
-    details: `Yale AI kickoff, sponsored by ${KICKOFF.sponsor}. A month of Cursor Pro+ for everyone who attends, AI credits to win, and what the club is doing this year.\n\nRSVP on Luma: ${LUMA_URL}\n\n${SITE.url}`,
+    details: `Yale AI kickoff, sponsored by ${KICKOFF.sponsor}. A month of Cursor Pro for everyone who attends, AI credits to win, and what the club is doing this year.\n\nRSVP on Luma: ${LUMA_URL}\n\n${SITE.url}`,
   });
   return `https://calendar.google.com/calendar/render?${p.toString()}`;
 }

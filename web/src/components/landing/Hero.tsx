@@ -7,7 +7,7 @@ export default function Hero() {
       <span className="badge hero-badge max-w-full whitespace-normal">
         <span className="flex flex-col items-center gap-0.5 text-center leading-snug">
           <span className="font-semibold text-fg">Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY</span>
-          <span>a month of Cursor Pro+ for everyone, free credits, giveaways, more</span>
+          <span>a month of Cursor Pro for everyone, free credits, giveaways, more</span>
         </span>
       </span>
 
@@ -32,7 +32,7 @@ export default function Hero() {
         </Link>
       </div>
       <p className="mx-auto mt-[clamp(0.9rem,2.2vh,1.4rem)] max-w-2xl leading-relaxed text-muted text-[clamp(0.88rem,min(1.45vw,1.8vh),0.98rem)]">
-        Come to our kickoff Wednesday at 8pm (Tsai CITY) and you&apos;ll get 1 month of Cursor Pro+ free, a shot at more credits, exclusive demos
+        Come to our kickoff Wednesday at 8pm (Tsai CITY) and you&apos;ll get 1 month of Cursor Pro free, a shot at more credits, exclusive demos
         from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year. We&apos;re personally very excited, and whether you want to learn about AI for the first time or are a seasoned builder, there&apos;s a place for you Wednesday. :)
       </p>
       <p className="mono-aside mt-[clamp(0.6rem,1.6vh,1rem)]">made for all Yalies interested in AI. first-year or senior? come anyway!</p>

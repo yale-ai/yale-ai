@@ -22,7 +22,7 @@ export default function KickoffCard() {
       </div>
 
       <h2 id="kickoff-title" className="relative font-normal leading-[1.35] text-fg text-[clamp(1rem,2.1vh,1.25rem)] lg:pr-[13.5rem]">
-        Fancy <strong>a month of Cursor Pro+</strong>, <strong>an exclusive Grok Bot demo</strong>, <strong>a competition for SpaceXAI credits</strong>, and <strong>free boba</strong>?{" "}
+        Fancy <strong>a month of Cursor Pro</strong>, <strong>an exclusive Grok Bot demo</strong>, <strong>a competition for SpaceXAI credits</strong>, and <strong>free boba</strong>?{" "}
         <span className="font-semibold text-accent-ink">Yeah, we thought so.</span>
       </h2>
 

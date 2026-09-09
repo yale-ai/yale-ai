@@ -23,7 +23,7 @@ export const CAMPAIGN = { id: "kickoff-2026-27", tag: "kickoff-2026-27" };
 
 export const SUBJECT = "Our kickoff (sponsored by SpaceXAI): You don't want to miss this!";
 export const PREHEADER =
-  "Wednesday at Tsai CITY. A month of Cursor Pro+ for everyone, an exclusive Grok Bot demo, a competition for SpaceXAI credits, free boba.";
+  "Wednesday at Tsai CITY. A month of Cursor Pro for everyone, an exclusive Grok Bot demo, a competition for SpaceXAI credits, free boba.";
 
 export const DEFAULT_LUMA_URL = "https://luma.com/o5g51mh0";
 export const DEFAULT_SITE_URL = "https://yale-ai.org";
@@ -87,7 +87,7 @@ export function gcalLink(ev, lumaUrl) {
     dates: `${ev.startUtc}/${ev.endUtc}`,
     location: ev.location,
     details:
-      `Yale AI Association kickoff. Sponsored by SpaceXAI. Everyone who attends gets 1 month of Cursor Pro+ free, ` +
+      `Yale AI Association kickoff. Sponsored by SpaceXAI. Everyone who attends gets 1 month of Cursor Pro free, ` +
       `there is a competition for SpaceXAI credits, an exclusive Grok Bot demo, and free boba and snacks. All majors, all class years.\n\n` +
       `Capacity is limited, so RSVP for the kickoff: ${lumaUrl}\n\nyale-ai.org`,
   });
@@ -256,7 +256,7 @@ export function renderEmail({
 
   <!-- hero, centred, as on the site -->
   <tr><td class="pad" align="center" style="padding:0 6px;">
-    <div style="display:inline-block;border-radius:999px;background:${CARD_BG};padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#5f5f5f;"><span style="color:${INK};font-weight:600;">Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY</span><br>a month of Cursor Pro+ for all, free credits, giveaways, more</div>
+    <div style="display:inline-block;border-radius:999px;background:${CARD_BG};padding:8px 14px;font-family:${SANS};font-size:12px;line-height:16px;color:#5f5f5f;"><span style="color:${INK};font-weight:600;">Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY</span><br>a month of Cursor Pro for all, free credits, giveaways, more</div>
     <div class="h1" style="${serif}font-size:44px;line-height:48px;letter-spacing:-0.5px;padding-top:22px;white-space:nowrap;">Build the <span style="font-weight:600;">future of AI</span> at Yale.</div>
     <div style="${serif}font-size:32px;line-height:40px;color:#5a5a5a;padding-top:6px;">Now backed by ${sponsorBig}</div>
     <div style="${body}font-size:16px;line-height:25px;padding-top:18px;max-width:520px;margin:0 auto;color:${INK};">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. <span style="font-style:italic;text-decoration:underline;text-underline-offset:3px;font-weight:600;">And they want you there. Yes. You.</span></div>
@@ -267,7 +267,7 @@ export function renderEmail({
   <!-- greeting -->
   <tr><td class="pad" style="padding:34px 6px 0;">
     <div style="font-family:${SANS};font-size:17px;line-height:24px;font-weight:600;color:${INK};">${greeting}</div>
-    <div style="${body}padding-top:10px;"><span style="color:${INK};font-weight:600;">We&#8217;re the hub for AI companies, research, networking, and learning on campus, and we want you in.</span> Come to our kickoff <span style="color:${INK};font-weight:600;">Wednesday at 8pm (Tsai CITY)</span> and you&#8217;ll get <span style="color:${INK};font-weight:700;">1 month of Cursor Pro+ free</span>, a shot at more credits, exclusive demos from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year (plus future events with frontier AI companies, quant firms, and networking panels). We&#8217;re personally very excited, and whether you want to learn about AI for the first time or are a seasoned builder, there&#8217;s a place for you Wednesday. :)</div>
+    <div style="${body}padding-top:10px;"><span style="color:${INK};font-weight:600;">We&#8217;re the hub for AI companies, research, networking, and learning on campus, and we want you in.</span> Come to our kickoff <span style="color:${INK};font-weight:600;">Wednesday at 8pm (Tsai CITY)</span> and you&#8217;ll get <span style="color:${INK};font-weight:700;">1 month of Cursor Pro free</span>, a shot at more credits, exclusive demos from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year (plus future events with frontier AI companies, quant firms, and networking panels). We&#8217;re personally very excited, and whether you want to learn about AI for the first time or are a seasoned builder, there&#8217;s a place for you Wednesday. :)</div>
     <div style="${body}padding-top:12px;">Remember to RSVP for the kickoff <a href="${lumaUrl}" target="_blank" style="color:${INK};font-weight:600;text-decoration:underline;text-underline-offset:3px;">here</a>!</div>
     <div style="${body}padding-top:12px;">&#8211; The Yale AI team</div>
   </td></tr>
@@ -282,7 +282,7 @@ export function renderEmail({
           <td valign="middle" style="${label}padding:0 8px 0 0;">Powered by</td>
           <td valign="middle" style="padding:0;">${sponsor}</td>
         </tr></table>
-        <div style="font-family:${SANS};font-size:19px;line-height:26px;font-weight:400;color:${INK};padding-top:14px;">Fancy <span style="font-weight:700;">a month of Cursor Pro+</span>, <span style="font-weight:700;">an exclusive Grok Bot demo</span>, <span style="font-weight:700;">a competition for SpaceXAI credits</span>, and <span style="font-weight:700;">free boba</span>?</div>
+        <div style="font-family:${SANS};font-size:19px;line-height:26px;font-weight:400;color:${INK};padding-top:14px;">Fancy <span style="font-weight:700;">a month of Cursor Pro</span>, <span style="font-weight:700;">an exclusive Grok Bot demo</span>, <span style="font-weight:700;">a competition for SpaceXAI credits</span>, and <span style="font-weight:700;">free boba</span>?</div>
         <div style="font-family:${SANS};font-size:24px;line-height:30px;font-weight:700;color:${INK};padding-top:16px;">${k.dayLine}</div>
         <div style="font-family:${SANS};font-size:20px;line-height:26px;font-weight:700;color:${LIME_INK};">${k.timeLine}</div>
         <div style="font-family:${SANS};font-size:15px;line-height:22px;color:#5a5a5a;padding-top:2px;">${k.where}</div>
@@ -372,7 +372,7 @@ export function renderEmail({
   const text = `YALE AI x SPACEXAI. KICKOFF 2026-27 (${siteUrl})
 
 BUILD THE FUTURE OF AI AT YALE. NOW BACKED BY SPACEXAI.
-Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY. A month of Cursor Pro+ for all, free credits, giveaways, more.
+Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY. A month of Cursor Pro for all, free credits, giveaways, more.
 
 The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. And they want you there. Yes. You.
 
@@ -380,14 +380,14 @@ RSVP for the kickoff (LIMITED CAPACITY): ${lumaUrl}
 
 ${greeting}
 
-We're the hub for AI companies, research, networking, and learning on campus, and we want you in. Come to our kickoff Wednesday at 8pm (Tsai CITY) and you'll get 1 month of Cursor Pro+ free, a shot at more credits, exclusive demos from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year (plus future events with frontier AI companies, quant firms, and networking panels). We're personally very excited, and whether you want to learn about AI for the first time or are a seasoned builder, there's a place for you Wednesday. :)
+We're the hub for AI companies, research, networking, and learning on campus, and we want you in. Come to our kickoff Wednesday at 8pm (Tsai CITY) and you'll get 1 month of Cursor Pro free, a shot at more credits, exclusive demos from SpaceXAI, and a first look at the projects, trips, and fellowships Yale AI is running this year (plus future events with frontier AI companies, quant firms, and networking panels). We're personally very excited, and whether you want to learn about AI for the first time or are a seasoned builder, there's a place for you Wednesday. :)
 
 Remember to RSVP for the kickoff here: ${lumaUrl}
 
 - The Yale AI team
 
 THE KICKOFF (powered by SpaceXAI)
-Fancy a month of Cursor Pro+, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba?
+Fancy a month of Cursor Pro, an exclusive Grok Bot demo, a competition for SpaceXAI credits, and free boba?
 ${k.dayLine}, ${k.timeLine}
 ${k.where}
 There's a quick build competition during the kickoff too (for the chance to win more SpaceXAI credits). We have limited capacity, so RSVP as soon as possible. We'll also explain our fellowships, learning resources, and opportunities to join project teams this year.

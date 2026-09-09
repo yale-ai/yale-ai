@@ -23,7 +23,7 @@ export const CAMPAIGN = { id: "kickoff-2026-27-v2", tag: "kickoff-2026-27" };
 
 export const SUBJECT = "YaleAI Kickoff (sponsored by SpaceXAI): You don't want to miss this!";
 export const PREHEADER =
-  "Wednesday at Tsai CITY. A month of Cursor Pro+ for everyone, an exclusive Grok Bot demo, a competition for SpaceXAI credits, free boba.";
+  "Wednesday at Tsai CITY. A month of Cursor Pro for everyone, an exclusive Grok Bot demo, a competition for SpaceXAI credits, free boba.";
 
 export const DEFAULT_LUMA_URL = "https://luma.com/o5g51mh0";
 export const DEFAULT_SITE_URL = "https://yale-ai.org";
@@ -114,7 +114,7 @@ export function gcalLink(ev, lumaUrl) {
     dates: `${ev.startUtc}/${ev.endUtc}`,
     location: ev.location,
     details:
-      `Yale AI Association kickoff. Sponsored by SpaceXAI. Everyone who attends gets 1 month of Cursor Pro+ free, ` +
+      `Yale AI Association kickoff. Sponsored by SpaceXAI. Everyone who attends gets 1 month of Cursor Pro free, ` +
       `there is a competition for SpaceXAI credits, an exclusive Grok Bot demo, and free boba and snacks. All majors, all class years.\n\n` +
       `Capacity is limited, so RSVP for the kickoff: ${lumaUrl}\n\nyale-ai.org`,
   });
@@ -364,7 +364,7 @@ export function renderEmail({
           <td class="stack">${ghost(gcal, "Add to calendar")}</td>
         </tr></table>
         <div class="fg" style="${italic}font-size:19px;line-height:27px;padding-top:22px;">
-          <span class="lm" style="color:${LIME};font-style:normal;font-weight:600;">One month of Cursor Pro+</span> for everyone who attends. Cursor and Grok credits to win. Food. All majors, all class years. Capacity is limited, so RSVP.
+          <span class="lm" style="color:${LIME};font-style:normal;font-weight:600;">One month of Cursor Pro</span> for everyone who attends. Cursor and Grok credits to win. Food. All majors, all class years. Capacity is limited, so RSVP.
         </div>
       </td></tr>
     </table>
@@ -469,7 +469,7 @@ ${k.where}
 RSVP on Luma: ${lumaUrl}
 Add to Google Calendar: ${gcal}
 
-One month of Cursor Pro+ for everyone who attends. Cursor and Grok credits to win. Food. All majors, all class years. Capacity is limited, so RSVP.
+One month of Cursor Pro for everyone who attends. Cursor and Grok credits to win. Food. All majors, all class years. Capacity is limited, so RSVP.
 
 THE YEAR IN ONE GLANCE
 We're a club with real outputs, not just a mailing list. Everything below has a date, an owner on the board, and a way in. Fellowship and project-team applications open at the kickoff.
