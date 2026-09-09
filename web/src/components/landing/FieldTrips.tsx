@@ -17,7 +17,7 @@ export default function FieldTrips() {
               <Image src="/photos/mit-ibm-1.jpg" alt="A talk in the MIT-IBM Watson AI Lab auditorium" fill sizes="(min-width: 1024px) 35vw, 60vw" className="object-cover" />
             </div>
             <div className="relative h-full min-h-0 overflow-hidden rounded-2xl border border-line">
-              <Image src="/photos/mit-ibm-2.jpg" alt="Yale AI members outside the MIT-IBM Watson AI Lab in Boston" fill sizes="(min-width: 1024px) 25vw, 40vw" className="object-cover" />
+              <Image src="/photos/mit-ibm-2.jpg" alt="YaleAI members outside the MIT-IBM Watson AI Lab in Boston" fill sizes="(min-width: 1024px) 25vw, 40vw" className="object-cover" />
             </div>
             <div className="relative col-span-2 aspect-[21/8] overflow-hidden rounded-2xl border border-line">
               <Image src="/photos/mit-ibm-3.jpg" alt="A panel on stage at the MIT-IBM Watson AI Lab" fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover object-[50%_35%]" />

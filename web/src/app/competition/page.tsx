@@ -57,7 +57,7 @@ export default function CompetitionPage() {
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col px-5 py-5 md:px-8 md:py-6">
         <TopBar />
         <main className="pb-10 pt-10 md:pt-16">
-          <p className="pixel-caps text-[0.8rem] tracking-[0.14em]">Kickoff competition · Yale AI × SpaceXAI</p>
+          <p className="pixel-caps text-[0.8rem] tracking-[0.14em]">Kickoff competition · YaleAI × SpaceXAI</p>
           <h1 className="mt-3 text-[clamp(2.4rem,6vw,4.6rem)] font-bold leading-[0.95] tracking-[-0.04em]">
             Rapid-fire <span className="teal-flow">Cursor</span>.
           </h1>
@@ -115,10 +115,10 @@ export default function CompetitionPage() {
               <li>Open to Yale students. Submit with your Yale email.</li>
               <li>One submission per person or team. Teams of up to three; list everyone on the form.</li>
               <li>The repository must be public and must include the Cursor screenshot in its README.</li>
-              <li>Judged by the Yale AI board on usefulness to Yale students, craft, and how far you got in the time.</li>
+              <li>Judged by the YaleAI board on usefulness to Yale students, craft, and how far you got in the time.</li>
               <li>Winners are contacted by email within a few days of the deadline. SpaceXAI applies the three months of Cursor to the winners&apos; accounts.</li>
               <li>
-                Questions: <Link href={`mailto:${CONTACT_EMAIL}`} className="u-lime text-fg">{CONTACT_EMAIL}</Link>, or the Yale AI Slack at{" "}
+                Questions: <Link href={`mailto:${CONTACT_EMAIL}`} className="u-lime text-fg">{CONTACT_EMAIL}</Link>, or the YaleAI Slack at{" "}
                 <Link href="/slack" className="u-lime text-fg">yale-ai.org/slack</Link>.
               </li>
             </ul>

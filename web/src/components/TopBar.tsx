@@ -16,7 +16,7 @@ export default function TopBar() {
   const onTeam = pathname.startsWith("/team");
   return (
     <header className="flex items-center justify-between gap-4">
-      <Link href="/" className="group flex items-center gap-2.5" aria-label="Yale AI home">
+      <Link href="/" className="group flex items-center gap-2.5" aria-label="YaleAI home">
         <Wordmark className="text-[1.05rem] md:text-[1.15rem] transition-transform duration-300 group-hover:-translate-y-px" />
       </Link>
 
@@ -27,10 +27,10 @@ export default function TopBar() {
         <Link href="/#kickoff" className={navLink}>
           Kickoff
         </Link>
-        <Link href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Yale AI on Instagram" className={iconBtn}>
+        <Link href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="YaleAI on Instagram" className={iconBtn}>
           <InstagramIcon className="h-[0.95rem] w-[0.95rem]" />
         </Link>
-        <Link href={SOCIALS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Yale AI on LinkedIn" className={iconBtn}>
+        <Link href={SOCIALS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="YaleAI on LinkedIn" className={iconBtn}>
           <LinkedInIcon className="h-[0.9rem] w-[0.9rem]" />
         </Link>
         <ThemeToggle />

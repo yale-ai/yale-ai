@@ -2,7 +2,7 @@ RAPID-FIRE CURSOR: YALE AI x SPACEXAI BUILD COMPETITION
 Google Form content. Banner: banner.png in this folder (1600x400, Google Forms header size).
 
 === TITLE ===
-Rapid-fire Cursor: Yale AI x SpaceXAI build competition
+Rapid-fire Cursor: YaleAI x SpaceXAI build competition
 
 === DESCRIPTION ===
 How quickly can you build a useful app for Yale students?
@@ -14,7 +14,7 @@ Your GitHub repository must be public, and its README must include a screenshot 
 Three winners each get three months of Cursor from SpaceXAI. Winners hear from us by email within a few days. Solo or teams of up to three.
 
 Rules and details: yale-ai.org/competition
-Questions: yaleaiassociation@gmail.com, or the Yale AI Slack at yale-ai.org/slack
+Questions: yaleaiassociation@gmail.com, or the YaleAI Slack at yale-ai.org/slack
 
 === SETTINGS ===
 - Collect email addresses: on (verified, Yale accounts if you restrict to the domain; otherwise let Q2 carry it)
@@ -63,7 +63,7 @@ Questions: yaleaiassociation@gmail.com, or the Yale AI Slack at yale-ai.org/slac
     Paragraph. Optional.
     Description: What was hard, what you would do next, what to click first.
 
-11. Can we feature your project on Yale AI's website and socials?
+11. Can we feature your project on YaleAI's website and socials?
     Multiple choice. Required.
     - Yes
     - No

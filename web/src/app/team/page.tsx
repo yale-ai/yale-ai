@@ -22,7 +22,7 @@ export default function TeamPage() {
         <main className="pb-10 pt-10 md:pt-16">
           <p className="pixel-caps text-[0.8rem] tracking-[0.14em]">The board, 2026-27</p>
           <h1 className="mt-3 text-[clamp(2.4rem,6vw,4.6rem)] font-bold leading-[0.95] tracking-[-0.04em]">
-            The people running <span className="teal-flow">Yale AI</span>.
+            The people running <span className="teal-flow">YaleAI</span>.
           </h1>
           <p className="mt-5 max-w-2xl text-[1rem] leading-relaxed text-muted">
             Seven students, a lot of majors, one thing in common: we would rather build the thing than read about it.
