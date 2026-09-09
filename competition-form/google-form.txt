@@ -1,0 +1,78 @@
+RAPID-FIRE CURSOR: YALE AI x SPACEXAI BUILD COMPETITION
+Google Form content. Banner: banner.png in this folder (1600x400, Google Forms header size).
+
+=== TITLE ===
+Rapid-fire Cursor: Yale AI x SpaceXAI build competition
+
+=== DESCRIPTION ===
+How quickly can you build a useful app for Yale students?
+
+Build it in Cursor, on the month of Cursor Pro SpaceXAI gave the room at the kickoff, and submit here by Thursday, September 10 at 11:59 PM.
+
+Your GitHub repository must be public, and its README must include a screenshot of you building the project in Cursor.
+
+Three winners each get three months of Cursor from SpaceXAI. Winners hear from us by email within a few days. Solo or teams of up to three.
+
+Rules and details: yale-ai.org/competition
+Questions: yaleaiassociation@gmail.com, or the Yale AI Slack at yale-ai.org/slack
+
+=== SETTINGS ===
+- Collect email addresses: on (verified, Yale accounts if you restrict to the domain; otherwise let Q2 carry it)
+- Limit to 1 response: on
+- Confirmation message: "Got it. We read every submission. Winners hear from us by email within a few days of the deadline. Keep building: yale-ai.org/slack"
+
+=== QUESTIONS ===
+
+1. Your name
+   Short answer. Required.
+
+2. Your Yale email
+   Short answer. Required. Response validation: text, contains "yale.edu".
+
+3. Teammates, if any
+   Paragraph. Optional.
+   Description: Names and Yale emails. Teams of up to three total.
+
+4. Project name
+   Short answer. Required.
+
+5. GitHub repository link
+   Short answer. Required. Response validation: text, contains "github.com".
+   Description: Must be public. The README must include a screenshot of you building it in Cursor.
+
+6. One sentence: what does it do, and for which Yale students?
+   Short answer. Required.
+
+7. Does your README include a screenshot of you building it in Cursor?
+   Multiple choice. Required.
+   - Yes
+   - Not yet, I will add it before the deadline
+
+8. Live demo link or short video (optional)
+   Short answer. Optional.
+   Description: A deployed URL, a Loom, or a YouTube link.
+
+9. Which SpaceXAI tools did you use?
+   Checkboxes. Optional.
+   - Cursor
+   - Grok 4.6 as the model in Cursor
+   - Grok Bot
+   - Other (with text field)
+
+10. Anything the judges should know?
+    Paragraph. Optional.
+    Description: What was hard, what you would do next, what to click first.
+
+11. Can we feature your project on Yale AI's website and socials?
+    Multiple choice. Required.
+    - Yes
+    - No
+
+12. Were you at the kickoff on September 9?
+    Multiple choice. Optional.
+    - Yes
+    - No, but I want in anyway
+
+=== JUDGING (internal, not on the form) ===
+Usefulness to Yale students, craft, and speed (how far you got in the time). Three winners.
+After judging: send the winners' emails to Fiona Whittington at SpaceXAI, who applies the three months of Cursor.
