@@ -81,6 +81,7 @@ export const TEAM: Member[] = [
     classYear: "2029",
     bio: "Quantum computing and quant finance. Part of the team that won first place in the Alice & Bob challenge at MIT's iQuHack 2026.",
     linkedin: "https://www.linkedin.com/in/henrywn/",
+    photo: "/team/henry.jpg",
   },
   {
     slug: "david",
