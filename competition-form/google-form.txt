@@ -9,7 +9,7 @@ How quickly can you build a useful web app for Yale students?
 
 Build it in Cursor, on the month of Cursor Pro SpaceXAI gave the room at the kickoff, and submit here by Thursday, September 10 at 11:59 PM.
 
-Your GitHub repository must be public. Its README must include: a screenshot of you building the project in Cursor, usage instructions (logins, test accounts, anything we need to run it), and a link to a 1 to 2 minute demo video (YouTube or anywhere else).
+Your GitHub repository must be public. Its README must include: a screenshot of you building the project in Cursor, usage instructions (logins, test accounts, anything we need to run it), and a public link to a 1 to 2 minute demo video (YouTube, Google Drive, anywhere).
 
 Three winners each get three months of Cursor from SpaceXAI. Winners hear from us by email within a few days. Solo or teams of up to three.
 
@@ -50,7 +50,7 @@ Questions: yaleaiassociation@gmail.com, or the YaleAI Slack at yale-ai.org/slack
 
 8. Demo video link (1 to 2 minutes)
    Short answer. Required. Response validation: text, contains "http".
-   Description: YouTube, Loom, or anywhere else. Also link it from the README.
+   Description: A public link: YouTube, Google Drive, Loom, anywhere. Also put it in the README.
 
 8b. Live app URL (optional)
    Short answer. Optional.
