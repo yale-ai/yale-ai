@@ -111,6 +111,9 @@
   .prob .t { display: flex; align-items: center; gap: 10px; font: 600 22px/1.1 var(--sans); margin-bottom: 14px; }
   .prob .t img { width: 28px; height: 28px; }
   .prob img.s { display: block; width: 100%; border-radius: 10px; }
+  .prob.fix { border-color: rgba(1,201,113,.55); background: #f3fcf7; }
+  .prob.fix .t { gap: 12px; }
+  .prob.fix p { margin: 0; font: 400 21px/1.35 var(--sans); color: var(--grey); }
 
   /* routine work diagram */
   .frame { margin-top: 30px; border: 1.5px solid #f5a623; border-radius: 26px; padding: 40px 48px; background: var(--cream); }
@@ -326,7 +329,7 @@
       <div class="row"><span class="n">02</span><span>Yale AI: what we are doing this year.</span><span class="who">The board</span></div>
       <div class="row"><span class="n">03</span><span>Get Cursor Pro, on SpaceXAI. Scan, redeem, done.</span><span class="who sx">SpaceXAI</span></div>
       <div class="row"><span class="n">04</span><span>Build time! Rapid-fire Cursor: the challenge.</span><span class="who">Everyone</span></div>
-      <div class="row"><span class="n">05</span><span>Submit by tomorrow midnight. Boba. How to keep building with us.</span><span class="who">Everyone</span></div>
+      <div class="row"><span class="n">05</span><span>Submit by tomorrow midnight. How to keep building with us.</span><span class="who">Everyone</span></div>
     </div>
   </div>
   <div class="foot"><img class="xglyph" src="assets/grok/spacex-x-black.png" alt=""><span class="conf">Yale AI × SpaceXAI · September 2026</span></div>
@@ -385,6 +388,14 @@
       <div class="prob"><div class="t"><img src="assets/grok/icon-x.png" alt="">Connector limitations</div><img class="s" src="assets/grok/shot-connectors.png" alt=""></div>
       <div class="prob"><div class="t"><img src="assets/grok/icon-x.png" alt="">Constant monitoring</div><img class="s" src="assets/grok/shot-approval.png" alt=""></div>
       <div class="prob"><div class="t"><img src="assets/grok/icon-x.png" alt="">Painful sharing</div><img class="s" src="assets/grok/shot-files.png" alt=""></div>
+    </div>
+    <div class="body" style="margin-top:44px; font-size:30px; color:var(--ink)"><b>Grok Bot flips every one of these.</b></div>
+    <div class="probs fixes" style="margin-top:18px">
+      <div class="prob fix"><div class="t"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#01c971"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Talk to it</div><p>No config files. Tell a bot its job in plain English, like a new teammate.</p></div>
+      <div class="prob fix"><div class="t"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#01c971"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Its own computer</div><p>Runs in the cloud, 24/7. Nothing to install, nothing tied to your laptop.</p></div>
+      <div class="prob fix"><div class="t"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#01c971"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Logs into your tools</div><p>Gmail, Slack, Canvas, Sheets, the browser. It uses them like you would.</p></div>
+      <div class="prob fix"><div class="t"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#01c971"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Works unattended</div><p>Routines and automations. It reports back; you do not babysit it.</p></div>
+      <div class="prob fix"><div class="t"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#01c971"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Share it like a link</div><p>Hand your bot to a friend or your whole club in one click.</p></div>
     </div>
   </div>
   <div class="num">06</div>
@@ -504,7 +515,7 @@
   <div class="c">
     <div class="top">
       <span class="wordmark"><img src="assets/icon.svg" alt=""><span class="t"><b>Yale AI</b><span>An Undergraduate Organization</span></span></span>
-      <img class="sx" src="assets/spacexai-white.png" alt="SpaceXAI" style="height:34px;width:auto;opacity:.85">
+      <span style="display:flex; flex-direction:column; align-items:flex-end; gap:10px"><span class="pixel" style="font-size:14px; color:rgba(255,255,255,.55)">Kickoff powered by</span><img class="sx" src="assets/spacexai-white.png" alt="SpaceXAI" style="height:30px;width:auto;opacity:.9"></span>
     </div>
     <div class="pixel" style="margin-top:150px">Now, the club</div>
     <h1>Build the <i>future of AI</i><br>at Yale.</h1>
@@ -686,8 +697,8 @@
       </div>
       <div class="rules">
         <div class="rule"><div class="k">The brief</div><p>A <b>useful app for Yale students</b>, built in Cursor. Classes, clubs, dining, schedules, recruiting, research, anything you actually wish existed.</p></div>
-        <div class="rule"><div class="k">Proof</div><p>A <b>screenshot of you building it in Cursor</b> in the project README. Solo or a team of up to three.</p></div>
-        <div class="rule"><div class="k">Submit</div><p>The <b>GitHub link</b> at <b>yale-ai.org/win</b> by <b>Thursday, September 10, 11:59 PM</b>. Everything on this slide lives at <b>yale-ai.org/competition</b>.</p></div>
+        <div class="rule"><div class="k">Proof</div><p>A <b>screenshot of you building it in Cursor</b> in the project <b>README</b>. Solo or a team of up to three.</p></div>
+        <div class="rule"><div class="k"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true" style="vertical-align:-6px; margin-right:8px"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Submit</div><p>The <b>GitHub link</b> at <b>yale-ai.org/win</b> by <b>Thursday, September 10, 11:59 PM</b>. Set the repo to <b>public</b>. Everything on this slide lives at <b>yale-ai.org/competition</b>.</p></div>
         <div class="rule"><div class="k">Prizes</div><p><b>Three winners</b>, each with <b>three months of Cursor</b> from SpaceXAI. Judged on usefulness, craft, and speed. <b>Winners get an email</b> within a few days.</p></div>
       </div>
     </div>
@@ -739,7 +750,7 @@
     <div class="split" style="grid-template-columns: 1fr 560px; gap: 80px; align-items: center; margin-top: 40px">
       <div>
         <h2>Submit at<br><span class="pu">yale-ai.org/win</span></h2>
-        <div class="body" style="margin-top:26px; font-size:29px; max-width:900px">One form: your name, the GitHub link, one sentence on what it does. The README needs a screenshot of you building it in Cursor.</div>
+        <div class="body" style="margin-top:26px; font-size:29px; max-width:900px">One form: your name, the <svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true" style="vertical-align:-6px; margin-right:8px"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><b>GitHub link</b> (repo set to <b>public</b>), one sentence on what it does. The <b>README</b> needs a screenshot of you building it in Cursor.</div>
         <div class="body" style="margin-top:18px; font-size:29px; max-width:900px"><b>Winners hear from us by email</b> within a few days. Start now, ship by tomorrow night.</div>
         <div class="fine"><span>Solo or teams of <b>3</b></span><span>Judged on <b>usefulness</b>, craft, speed</span><span><b>Three</b> winners · <b>three months</b> of Cursor each</span></div>
       </div>
@@ -770,7 +781,7 @@
       <div class="card"><div class="k">This year</div><h3>More <i>credits</i> for builders</h3><p>Keep building with Yale AI (fellowship, project teams, workshops) and SpaceXAI keeps backing you.</p></div>
     </div>
   </div>
-  <div class="foot"><span class="site">yale-ai<b>.org</b></span><span class="x">&times;</span><img class="sx" src="assets/spacexai-white.png" alt="SpaceXAI"></div>
+  <div class="foot"><span class="site">yale-ai<b>.org</b></span><span class="x">&middot;</span><span class="site">kickoff powered by</span><img class="sx" src="assets/spacexai-white.png" alt="SpaceXAI"></div>
   <div class="num">20</div>
 </section>
 
@@ -799,7 +810,7 @@
       </div>
     </div>
   </div>
-  <div class="foot" style="left:560px"><span class="site">brought to you by</span><img class="sx" src="assets/spacexai-white.png" alt="SpaceXAI"></div>
+  <div class="foot" style="left:560px"><span class="site">kickoff powered by</span><img class="sx" src="assets/spacexai-white.png" alt="SpaceXAI"></div>
   <div class="num">21</div>
 </section>
 
