@@ -7,7 +7,7 @@ Rapid-fire Cursor: YaleAI x SpaceXAI build competition
 === DESCRIPTION ===
 How quickly can you build a useful web app for Yale students?
 
-Build it in Cursor, on the month of Cursor Pro SpaceXAI gave the room at the kickoff, and submit here by Thursday, September 10 at 11:59 PM.
+Build it in Cursor, on the month of Cursor Pro SpaceXAI gave the room at the kickoff, and submit here by Friday, September 11 at 11:59 PM.
 
 Your GitHub repository must be public. Its README must include: a screenshot of you building the project in Cursor, usage instructions (logins, test accounts, anything we need to run it), and a public link to a 1 to 2 minute demo video (YouTube, Google Drive, anywhere).
 

@@ -13,12 +13,12 @@ import { CONTACT_EMAIL } from "@/lib/site";
 
 const FORM_URL = "https://forms.gle/4LDrUb9xhVkJrjP49";
 const REDEEM_URL = "https://cursor.com/redeem/event/yale-ai-association-fall-kickoff";
-const DEADLINE_HUMAN = "Thursday, September 10, 11:59 PM";
+const DEADLINE_HUMAN = "Friday, September 11, 11:59 PM";
 
 export const metadata: Metadata = {
   title: "Rapid-fire Cursor: the kickoff competition",
   description:
-    "How quickly can you build a useful web app for Yale students? Build it in Cursor, put a screenshot, usage instructions, and a demo video link in the README, submit the GitHub link by Thursday, September 10 at 11:59 PM. Three winners get three months of Cursor from SpaceXAI.",
+    "How quickly can you build a useful web app for Yale students? Build it in Cursor, put a screenshot, usage instructions, and a demo video link in the README, submit the GitHub link by Friday, September 11 at 11:59 PM. Three winners get three months of Cursor from SpaceXAI.",
 };
 
 const RULES = [
