@@ -149,6 +149,7 @@
   .rule .k { font: 700 16px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--purple-ink); }
   .rule p { margin: 10px 0 0; font: 400 25px/1.35 var(--sans); color: var(--ink); }
   .rule p b { font-weight: 700; }
+  .rule p a { color: var(--purple-ink); text-decoration: underline; text-underline-offset: .18em; }
 
   /* Slack message, rebuilt; the real screenshot replaces it when assets/fiona-slack.png exists */
   .slack { width: 1280px; border-radius: 22px; background: #1a1d21; border: 1px solid rgba(255,255,255,.08); padding: 34px 40px 30px; color: #d1d2d3; font-family: 'Instrument Sans', -apple-system, system-ui, sans-serif; box-shadow: 0 50px 100px -40px rgba(0,0,0,.6); text-align: left; }
@@ -694,7 +695,9 @@
 
 <section class="slide yai">
   <div class="grid"></div>
-  <img class="m bob" src="/deck/assets/chars/group-five.png" alt="" style="--j:0; left:-60px; bottom:-140px; width:620px">
+  <img class="m bob" src="/deck/assets/chars/orb-white.png" alt="" style="--j:0; left:130px; bottom:90px; width:210px">
+  <img class="m bob" src="/deck/assets/chars/squircle-teal.png" alt="" style="--j:1; left:380px; bottom:110px; width:110px">
+  <img class="m bob" src="/deck/assets/chars/triangle-pink.png" alt="" style="--j:2; left:540px; bottom:100px; width:120px">
   <div class="c">
     <div class="top"><span class="wordmark"><img src="/deck/assets/icon.svg" alt=""><span class="t"><b>Yale AI</b><span>An Undergraduate Organization</span></span></span><span class="pixel">Get involved</span></div>
     <div class="split" style="grid-template-columns: 1fr 460px; gap: 60px; align-items: center; margin: 60px 0 0 0">
@@ -714,7 +717,7 @@
       </div>
     </div>
   </div>
-  <div class="foot"><span class="site">yale-ai<b>.org</b></span></div>
+  <div class="foot" style="left:auto; right:120px; bottom:100px"><span class="site">yale-ai<b>.org</b></span></div>
   <div class="num">17</div>
 </section>
 
@@ -768,17 +771,6 @@
   <div class="num">19</div>
 </section>
 
-<!-- Transition into the competition -->
-<section class="slide grok purple">
-  <img class="sx-corner" src="/deck/assets/spacexai-white.png" alt="SpaceXAI">
-  <img class="cloud" src="/deck/assets/grok/cloud-white.png" alt="">
-  <div class="c">
-    <h1 style="font-size:100px; max-width:1100px">Who's ready to earn perks from SpaceXAI<br>and build something cool?</h1>
-    <div class="who">A competition. Three winners, three months of Cursor each. Starts right now.</div>
-  </div>
-  <div class="num">20</div>
-</section>
-
 <!-- 11 · The challenge -->
 <section class="slide grok">
   <img class="m bob" src="/deck/assets/chars/orb-white.png" alt="" style="--j:0; left:120px; bottom:70px; width:300px"><img class="m" src="/deck/assets/chars/squircle-teal.png" alt="" style="--j:1; left:440px; bottom:90px; width:120px">
@@ -792,17 +784,17 @@
         <div style="font: 700 17px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--purple-ink); margin-bottom: 14px">The competition</div>
         <h2>Rapid-fire<br><span class="pu">Cursor.</span></h2>
         <div class="body" style="margin-top:24px; font-size:31px; color:var(--ink)">How quickly can you build an app for Yale students?</div>
-        <div class="body" style="margin-top:20px">Start here, in the room, on the Pro you just redeemed. Finish tonight or tomorrow. <b>Useful</b> beats <b>flashy</b>. Three winners get <b>three months of Cursor</b>.</div>
+        <div class="body" style="margin-top:20px">Start right now, here in the room, with the Cursor Pro you just redeemed, and finish tonight or tomorrow. <b>Useful beats flashy.</b> The three best builds each win <b>three months of Cursor</b>.</div>
       </div>
       <div class="rules">
         <div class="rule"><div class="k">The brief</div><p>A <b>useful app for Yale students</b>, built in Cursor. Classes, clubs, dining, schedules, recruiting, research, anything you actually wish existed.</p></div>
         <div class="rule"><div class="k">Proof</div><p>A <b>screenshot of you building it in Cursor</b> in the project <b>README</b>. Solo or a team of up to three.</p></div>
-        <div class="rule"><div class="k"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true" style="vertical-align:-6px; margin-right:8px"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Submit</div><p>The <b>GitHub link</b> at <b>yale-ai.org/win</b> by <b>Thursday, September 10, 11:59 PM</b>. Set the repo to <b>public</b>. Everything on this slide lives at <b>yale-ai.org/competition</b>.</p></div>
+        <div class="rule"><div class="k"><svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true" style="vertical-align:-6px; margin-right:8px"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Submit</div><p>The <b>GitHub link</b> at <a href="https://yale-ai.org/win" target="_blank" rel="noopener"><b>yale-ai.org/win</b></a> by <b>Thursday, September 10, 11:59 PM</b>. Set the repo to <b>public</b>.<br>Everything on this slide: <a href="https://yale-ai.org/competition" target="_blank" rel="noopener"><b>yale-ai.org/competition</b></a></p></div>
         <div class="rule"><div class="k">Prizes</div><p><b>Three winners</b>, each with <b>three months of Cursor</b> from SpaceXAI. Judged on usefulness, craft, and speed. <b>Winners get an email</b> within a few days.</p></div>
       </div>
     </div>
   </div>
-  <div class="num">21</div>
+  <div class="num">20</div>
 </section>
 
 <!-- Prizes: SpaceXAI's commitment -->
@@ -820,7 +812,7 @@
     </div>
     <div class="small" style="margin-top:16px">Fiona Whittington, community at SpaceXAI, on Slack the night before the kickoff.</div>
   </div>
-  <div class="num">22</div>
+  <div class="num">21</div>
 </section>
 <template id="slack-mock">
   <div class="slack">
@@ -848,7 +840,7 @@
     </div>
     <div class="split" style="grid-template-columns: 1fr 560px; gap: 80px; align-items: center; margin-top: 40px">
       <div>
-        <h2>Submit at<br><span class="pu">yale-ai.org/win</span></h2>
+        <h2>Submit at<br><a href="https://yale-ai.org/win" target="_blank" rel="noopener" class="pu" style="text-decoration:none">yale-ai.org/win</a></h2>
         <div class="body" style="margin-top:26px; font-size:29px; max-width:900px">One form: your name, the <svg viewBox="0 0 16 16" width="26" height="26" aria-hidden="true" style="vertical-align:-6px; margin-right:8px"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><b>GitHub link</b> (repo set to <b>public</b>), one sentence on what it does. The <b>README</b> needs a screenshot of you building it in Cursor.</div>
         <div class="body" style="margin-top:18px; font-size:29px; max-width:900px"><b>Winners hear from us by email</b> within a few days. Start now, ship by tomorrow night.</div>
         <div class="fine"><span>Solo or teams of <b>3</b></span><span>Judged on <b>usefulness</b>, craft, speed</span><span><b>Three</b> winners · <b>three months</b> of Cursor each</span></div>
@@ -861,7 +853,7 @@
       </div>
     </div>
   </div>
-  <div class="num">23</div>
+  <div class="num">22</div>
 </section>
 
 <!-- 14 · Keep building with Yale AI -->
@@ -881,7 +873,7 @@
     </div>
   </div>
   <div class="foot"><span class="site">yale-ai<b>.org</b></span><span class="x">&middot;</span><span class="site">kickoff powered by</span><img class="sx" src="/deck/assets/spacexai-white.png" alt="SpaceXAI"></div>
-  <div class="num">24</div>
+  <div class="num">23</div>
 </section>
 
 <!-- 15 · Closing -->
@@ -910,7 +902,7 @@
     </div>
   </div>
   <div class="foot" style="left:560px"><span class="site">kickoff powered by</span><img class="sx" src="/deck/assets/spacexai-white.png" alt="SpaceXAI"></div>
-  <div class="num">25</div>
+  <div class="num">24</div>
 </section>
 
 </div>
