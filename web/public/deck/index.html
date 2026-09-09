@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yale AI · Fall Kickoff 2026 · brought to you by SpaceXAI</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Instrument+Serif:ital@0;1&family=Pixelify+Sans:wght@600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /*
+    Two looks in one deck.
+    .grok slides copy the SpaceXAI Grok Bot template: cream ground, Google Sans-style
+    type, purple accent, blob mascots, purple gradient dividers.
+    .yai slides are Yale AI: black ground, Instrument Serif and Sans, lime and teal,
+    the drafting grid from yale-ai.org.
+  */
+  :root {
+    --purple: #a77dfd; --purple-ink: #7c4dff; --pink: #fe2f9b; --orange: #fea302; --blue: #1281fa; --green: #01c971; --teal-g: #01baa5; --red: #fe253a;
+    --cream: #fffbf5; --ink: #111; --grey: #5f5f5f; --rule: rgba(0,0,0,.12);
+    --sans: 'Plus Jakarta Sans', 'Google Sans', 'Product Sans', system-ui, sans-serif;
+    --lime: #d9e4a8; --lime-deep: #c4d485; --teal: #4fd8c8; --yblue: #6ea8ff;
+    --ysans: 'Instrument Sans', system-ui, sans-serif; --ydisplay: 'Instrument Serif', Georgia, serif; --ypixel: 'Pixelify Sans', monospace; --ymono: 'IBM Plex Mono', monospace;
+  }
+  @page { size: 1920px 1080px; margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; background: #000; color: #fff; }
+  img { max-width: none; }
+
+  /* ---------- deck ---------- */
+  .deck { width: 1920px; margin: 0 auto; }
+  .slide { position: relative; width: 1920px; height: 1080px; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; padding: 96px 120px; }
+  .c { position: relative; display: flex; flex-direction: column; flex: 1; min-height: 0; z-index: 2; }
+  .num { position: absolute; right: 120px; bottom: 56px; font: 700 15px/1 var(--sans); letter-spacing: .22em; z-index: 3; }
+  .foot { position: absolute; left: 120px; bottom: 52px; display: flex; align-items: center; gap: 22px; z-index: 3; }
+
+  /* ---------- SpaceXAI / Grok Bot look ---------- */
+  .grok { background: var(--cream); color: var(--ink); font-family: var(--sans); }
+  .grok.white { background: #fff; }
+  .grok .num { color: rgba(0,0,0,.35); }
+  .grok .lockup { display: flex; align-items: center; justify-content: space-between; }
+  .grok .lockup img.gb { height: 56px; width: auto; display: block; }
+  .grok .tag { display: inline-flex; align-items: center; gap: 12px; border: 1.5px solid rgba(0,0,0,.14); border-radius: 999px; padding: 12px 22px; font: 600 17px/1 var(--sans); letter-spacing: .04em; color: var(--grey); background: #fff; }
+  .grok .tag b { color: var(--ink); font-weight: 700; }
+  .grok .tag .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--purple); box-shadow: 0 0 0 4px rgba(167,125,253,.25); }
+  .grok h1 { margin: 0; font: 500 132px/1.02 var(--sans); letter-spacing: -.035em; color: var(--ink); }
+  .grok h1 .pu { color: var(--purple); }
+  .grok h2 { margin: 0; font: 600 76px/1.06 var(--sans); letter-spacing: -.03em; color: var(--ink); }
+  .grok h2 .pu { color: var(--purple); }
+  .grok .sub { margin-top: 26px; font: 400 36px/1.35 var(--sans); color: var(--grey); max-width: 1100px; }
+  .grok .body { font: 400 27px/1.45 var(--sans); color: var(--grey); }
+  .grok .body b { color: var(--ink); font-weight: 700; }
+  .grok .body .pu { color: var(--purple-ink); font-weight: 700; }
+  .grok .body ol, .grok .body ul { margin: 12px 0 0; padding-left: 34px; }
+  .grok .body li { margin: 6px 0; }
+  .grok .body a { color: var(--purple-ink); text-decoration: underline; text-underline-offset: .18em; }
+  .grok .small { margin-top: 26px; font: 400 17px/1.45 var(--sans); color: #8a8a8a; }
+  .grok .cobrand { display: flex; align-items: center; gap: 26px; }
+  .grok .cobrand img { display: block; }
+  .grok .cobrand .x { font: 500 34px/1 var(--sans); color: #9a9a9a; }
+  .grok .cobrand .sx { height: 30px; width: auto; }
+  .grok .cobrand .yaiword { display: inline-flex; align-items: center; gap: 12px; font: 700 34px/1 var(--sans); letter-spacing: -.03em; color: var(--ink); }
+  .grok .cobrand .yaiword img { height: 46px; width: 46px; }
+  .grok .ghost-sx { position: absolute; right: -40px; bottom: 60px; height: 74px; width: auto; opacity: .10; z-index: 1; }
+  .grok .xglyph { height: 34px; width: auto; opacity: .85; }
+  .grok .conf { font: 500 13px/1 var(--sans); color: #b0b0b0; letter-spacing: .04em; }
+
+  /* mascots: absolutely placed, cut by the frame like the template */
+  .m { position: absolute; z-index: 1; pointer-events: none; }
+
+  /* agenda table */
+  .agenda { margin-top: 40px; width: 1240px; border-top: 2px solid var(--ink); }
+  .agenda .row { display: grid; grid-template-columns: 120px 1fr auto; align-items: center; padding: 26px 8px; border-bottom: 1.5px solid var(--rule); font: 500 40px/1.1 var(--sans); }
+  .agenda .row .n { color: #9a9a9a; font-weight: 400; }
+  .agenda .row .who { font: 500 20px/1 var(--sans); color: #9a9a9a; letter-spacing: .04em; text-transform: uppercase; }
+  .agenda .row .who.sx { color: var(--purple-ink); }
+
+  /* purple divider */
+  .grok.purple { background: #b592f8 url("/deck/assets/grok/bg-purple.png") center / cover no-repeat; color: #fff; }
+  .grok.purple h1 { color: #fff; font-weight: 500; font-size: 118px; }
+  .grok.purple .who { margin-top: 30px; font: 500 30px/1.2 var(--sans); color: rgba(255,255,255,.85); }
+  .grok.purple .num { color: rgba(255,255,255,.55); }
+  .grok.purple .cloud { position: absolute; left: 50%; top: 50%; width: 520px; transform: translate(-50%, -50%); z-index: 1; filter: drop-shadow(0 30px 60px rgba(60,20,120,.35)); }
+
+  /* dark product slide */
+  .grok.dark { background: #2b1b4d url("/deck/assets/grok/bg-purple-dark.png") center / cover no-repeat; color: #fff; }
+  .grok.dark h2 { color: #fff; display: flex; align-items: center; justify-content: center; gap: 24px; font-size: 68px; }
+  .grok.dark h2 img { height: 66px; width: auto; }
+  .grok.dark .num { color: rgba(255,255,255,.5); }
+  .shot-wrap { position: relative; margin: 34px auto 0; width: 1240px; }
+  .shot-wrap img.shot { display: block; width: 100%; border-radius: 16px; box-shadow: 0 50px 120px -30px rgba(0,0,0,.8); }
+  .callout { position: absolute; width: 300px; font: 500 22px/1.3 var(--sans); color: #fff; }
+  .callout::before { content: ""; position: absolute; top: 14px; width: 60px; height: 2px; background: rgba(255,255,255,.7); }
+  .callout.l { right: calc(100% + 80px); text-align: right; }
+  .callout.l::before { right: -76px; }
+  .callout.r { left: calc(100% + 80px); }
+  .callout.r::before { left: -76px; }
+
+  /* step-up cards (AI is evolving fast) */
+  .steps { display: flex; align-items: flex-end; gap: 30px; margin-top: 60px; height: 620px; }
+  .step { width: 400px; border: 1.5px solid rgba(0,0,0,.12); border-radius: 22px; background: var(--cream); padding: 34px 34px 40px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .step img { height: 60px; width: 60px; margin-bottom: 26px; }
+  .step h3 { margin: 0; font: 600 38px/1.1 var(--sans); }
+  .step p { margin: 12px 0 0; font: 400 24px/1.35 var(--sans); color: var(--grey); }
+  .step.s1 { height: 300px; } .step.s2 { height: 430px; } .step.s3 { height: 560px; border-color: var(--purple); border-width: 2px; }
+  .step.s3 h3 { color: var(--purple-ink); }
+  .output { align-self: stretch; display: flex; flex-direction: column; align-items: center; justify-content: space-between; width: 80px; margin-left: 20px; }
+  .output .arrow { flex: 1; width: 2px; background: var(--ink); position: relative; margin: 14px 0; }
+  .output .arrow::before { content: ""; position: absolute; top: -2px; left: -9px; border: 10px solid transparent; border-bottom: 16px solid var(--ink); border-top: 0; }
+  .output span { font: 500 20px/1 var(--sans); color: var(--grey); }
+
+  /* five problem cards */
+  .probs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; margin-top: 50px; }
+  .prob { border: 1.5px solid #f5a623; border-radius: 18px; padding: 20px; background: #fff; }
+  .prob .t { display: flex; align-items: center; gap: 10px; font: 600 22px/1.1 var(--sans); margin-bottom: 14px; }
+  .prob .t img { width: 28px; height: 28px; }
+  .prob img.s { display: block; width: 100%; border-radius: 10px; }
+
+  /* routine work diagram */
+  .frame { margin-top: 30px; border: 1.5px solid #f5a623; border-radius: 26px; padding: 40px 48px; background: var(--cream); }
+  .frame .head { display: flex; align-items: flex-start; justify-content: space-between; }
+  .frame .legend { display: flex; gap: 30px; font: 500 20px/1.2 var(--sans); color: var(--grey); }
+  .frame .legend span::before { content: ""; display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 10px; vertical-align: -1px; background: var(--green); }
+  .frame .legend span.o::before { background: var(--orange); }
+  .frame img { display: block; width: 100%; margin-top: 24px; }
+
+  /* redeem + build slides */
+  .split { display: grid; grid-template-columns: 1fr 640px; gap: 80px; align-items: start; margin-top: 30px; }
+  .qrcard { position: relative; background: #fff; border: 2px solid var(--purple); border-radius: 34px; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 22px; box-shadow: 0 40px 100px -40px rgba(124,77,255,.55); }
+  .qrcard .qr { width: 470px; height: 470px; }
+  .qrcard .qr svg, .qrcard .qr img { width: 100%; height: 100%; display: block; }
+  .qrcard .lab { font: 700 22px/1.2 var(--sans); color: var(--purple-ink); letter-spacing: .04em; text-transform: uppercase; }
+  .qrcard .url { font: 500 17px/1.35 var(--sans); color: var(--grey); text-align: center; overflow-wrap: anywhere; max-width: 470px; }
+  .corner { position: absolute; width: 38px; height: 38px; border: 4px solid var(--purple); }
+  .tl { top: -14px; left: -14px; border-right: 0; border-bottom: 0; border-radius: 10px 0 0 0; }
+  .tr { top: -14px; right: -14px; border-left: 0; border-bottom: 0; border-radius: 0 10px 0 0; }
+  .bl { bottom: -14px; left: -14px; border-right: 0; border-top: 0; border-radius: 0 0 0 10px; }
+  .br { bottom: -14px; right: -14px; border-left: 0; border-top: 0; border-radius: 0 0 10px 0; }
+  .stepsl { counter-reset: s; list-style: none; margin: 30px 0 0; padding: 0; }
+  .stepsl li { counter-increment: s; position: relative; padding: 0 0 0 86px; margin: 0 0 24px; font: 400 30px/1.35 var(--sans); color: var(--ink); min-height: 60px; }
+  .stepsl li b { font-weight: 700; }
+  .stepsl li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 60px; height: 60px; border-radius: 50%; background: var(--purple); color: #fff; font: 700 28px/60px var(--sans); text-align: center; }
+  .stepsl li small { display: block; font-size: 22px; color: var(--grey); margin-top: 4px; }
+  .fine { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
+  .fine span { border: 1.5px solid rgba(0,0,0,.14); border-radius: 999px; padding: 10px 18px; font: 600 18px/1 var(--sans); color: var(--grey); background: #fff; }
+  .fine span b { color: var(--purple-ink); }
+  .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 40px; margin-top: 30px; }
+  .rule { border: 1.5px solid rgba(0,0,0,.12); border-radius: 22px; padding: 26px 30px; background: #fff; }
+  .rule .k { font: 700 16px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--purple-ink); }
+  .rule p { margin: 10px 0 0; font: 400 25px/1.35 var(--sans); color: var(--ink); }
+  .rule p b { font-weight: 700; }
+
+  /* big timer */
+  .timer { margin: 40px auto 0; text-align: center; }
+  .timer .t { font: 700 300px/1 var(--sans); letter-spacing: -.04em; color: var(--ink); font-variant-numeric: tabular-nums; cursor: pointer; user-select: none; }
+  .timer .t.run { color: var(--purple-ink); }
+  .timer .t.done { color: var(--red); }
+  .timer .hint { margin-top: 14px; font: 500 22px/1.3 var(--sans); color: #9a9a9a; }
+
+  /* ---------- Yale AI look ---------- */
+  .yai { background:
+      radial-gradient(1100px 520px at 50% -10%, rgba(79,216,200,.16), transparent 60%),
+      radial-gradient(800px 420px at 88% 100%, rgba(217,228,168,.09), transparent 60%),
+      radial-gradient(700px 400px at 8% 92%, rgba(110,168,255,.06), transparent 60%),
+      #000;
+    color: #fff; font-family: var(--ysans); }
+  .yai .grid { position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+    background-size: 72px 72px;
+    -webkit-mask-image: radial-gradient(1300px 900px at 50% 40%, #000 60%, transparent 100%); mask-image: radial-gradient(1300px 900px at 50% 40%, #000 60%, transparent 100%); }
+  .yai .num { color: rgba(255,255,255,.35); font-family: var(--ymono); }
+  .yai .top { display: flex; align-items: center; justify-content: space-between; }
+  .yai .wordmark { display: inline-flex; align-items: center; gap: 16px; }
+  .yai .wordmark img { width: 64px; height: 64px; }
+  .yai .wordmark .t { display: flex; flex-direction: column; justify-content: space-between; height: 64px; }
+  .yai .wordmark .t b { font: 700 36px/1 var(--ysans); letter-spacing: -.03em; }
+  .yai .wordmark .t span { font: 600 13px/1 var(--ysans); letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+  .yai .pixel { font: 700 20px/1.25 var(--ypixel); letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
+  .yai h1 { margin: 22px 0 0; font: 400 150px/.98 var(--ydisplay); letter-spacing: -.02em; }
+  .yai h1 i, .yai h2 i { font-style: italic; color: var(--lime); }
+  .yai h2 { margin: 18px 0 0; font: 400 96px/1.02 var(--ydisplay); letter-spacing: -.02em; }
+  .yai .lead { margin-top: 26px; font: 400 36px/1.35 var(--ysans); color: rgba(255,255,255,.82); max-width: 1400px; }
+  .yai .lead b { color: #fff; font-weight: 600; }
+  .yai .lead .lm { color: var(--lime); font-weight: 600; }
+  .yai .glass { border-radius: 26px; border: 1px solid rgba(255,255,255,.13); padding: 36px 40px;
+    background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04) 45%, rgba(255,255,255,.03)), rgba(6,10,14,.66);
+    box-shadow: 0 30px 80px -40px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.1); }
+  .yai .cards { display: grid; gap: 26px; margin-top: 40px; }
+  .yai .cards.c3 { grid-template-columns: repeat(3, 1fr); }
+  .yai .cards.c2 { grid-template-columns: repeat(2, 1fr); }
+  .yai .card { border-radius: 26px; border: 1px solid rgba(255,255,255,.13); padding: 34px 38px;
+    background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04) 45%, rgba(255,255,255,.03)), rgba(6,10,14,.66); }
+  .yai .card .k { font: 700 15px/1.25 var(--ypixel); letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
+  .yai .card h3 { margin: 12px 0 0; font: 400 44px/1.08 var(--ydisplay); }
+  .yai .card h3 i { color: var(--lime); }
+  .yai .card p, .yai .card li { margin: 12px 0 0; font: 400 25px/1.4 var(--ysans); color: rgba(255,255,255,.82); }
+  .yai .card ul { margin: 8px 0 0; padding-left: 26px; }
+  .yai .card li { margin: 6px 0; }
+  .yai .card li::marker { color: var(--lime); }
+  .yai .cta { display: inline-flex; align-items: center; gap: 12px; border-radius: 999px; padding: 20px 36px; color: #000; font: 700 24px/1 var(--ysans); letter-spacing: .02em;
+    background: linear-gradient(180deg, #eaf2c9, var(--lime) 55%, var(--lime-deep)); box-shadow: 0 18px 50px -16px rgba(217,228,168,.6); }
+  .yai .ghostb { display: inline-flex; align-items: center; border-radius: 999px; padding: 18px 30px; color: #fff; font: 600 24px/1 var(--ysans); border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.05); }
+  .yai .mono { font: 500 20px/1.4 var(--ymono); color: rgba(255,255,255,.6); }
+  .yai .snaprow { display: flex; justify-content: center; align-items: flex-start; gap: 0; margin-top: 40px; }
+  .yai .snap { position: relative; width: var(--w); background: #f6f2ea; padding: 12px 12px 42px; border-radius: 4px; transform: rotate(var(--r, 0deg)); box-shadow: 0 34px 70px rgba(0,0,0,.65); }
+  .yai .snap img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .yai .snap .cap { position: absolute; left: 16px; right: 16px; bottom: 14px; font: 700 12px/1.25 var(--ypixel); letter-spacing: .1em; text-transform: uppercase; color: #2a2a2a; white-space: nowrap; overflow: hidden; }
+  .yai .snap .tape { position: absolute; top: -13px; left: 50%; width: 120px; height: 28px; transform: translateX(-50%) rotate(-4deg); background: rgba(217,228,168,.85); box-shadow: 0 2px 8px rgba(0,0,0,.35); }
+  .yai .pills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; max-width: 1500px; }
+  .yai .pills span { border: 1px solid rgba(217,228,168,.55); border-radius: 999px; padding: 12px 20px; font: 500 21px/1 var(--ysans); color: #fff; background: rgba(217,228,168,.06); }
+  .yai .pills span.t { border-color: rgba(79,216,200,.55); background: rgba(79,216,200,.06); }
+  .deck.present .slide.on .yai .snaprow .snap, .deck.present .slide.on .snaprow .snap { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--j, 0) * 140ms + 420ms); }
+  .yai .draft { position: absolute; right: 120px; top: 96px; z-index: 3; font: 700 13px/1.25 var(--ypixel); letter-spacing: .1em; text-transform: uppercase; color: #000; background: var(--lime); border-radius: 999px; padding: 9px 14px; }
+  .yai .people { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 40px; }
+  .yai .person { display: flex; align-items: center; gap: 20px; border-radius: 22px; border: 1px solid rgba(255,255,255,.13); padding: 22px 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04)), rgba(6,10,14,.66); }
+  .yai .pfp { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex: 0 0 auto; border: 2px solid rgba(217,228,168,.6); }
+  .yai .pfp.initials { display: grid; place-items: center; background: linear-gradient(180deg, rgba(79,216,200,.35), rgba(79,216,200,.12)); font: 600 30px/1 var(--ysans); color: #fff; }
+  .yai .pname { font: 600 27px/1.1 var(--ysans); letter-spacing: -.01em; }
+  .yai .prole { margin-top: 5px; font: 400 19px/1.25 var(--ysans); color: var(--lime); }
+  .yai .pmeta { margin-top: 5px; font: 500 13px/1.2 var(--ymono); letter-spacing: .04em; color: rgba(255,255,255,.5); }
+  .yai .cards.c4 { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .yai .cards.c4 .card { padding: 26px 28px; }
+  .yai .cards.c4 .card h3 { font-size: 34px; }
+  .yai .cards.c4 .card p { font-size: 21px; line-height: 1.35; }
+  .yai .placeholder { flex: 1; margin-top: 34px; border: 3px dashed rgba(217,228,168,.6); border-radius: 30px; background: rgba(217,228,168,.05); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px; padding: 40px; }
+  .yai .placeholder .pixel { font-size: 24px; }
+  .yai .placeholder h3 { margin: 0; font: 400 66px/1.05 var(--ydisplay); }
+  .yai .placeholder p { margin: 0; font: 400 28px/1.4 var(--ysans); color: rgba(255,255,255,.72); max-width: 1200px; }
+  .yai .qrcard { background: #fff; border-color: var(--lime); box-shadow: 0 40px 100px -40px rgba(217,228,168,.5); }
+  .yai .qrcard .lab { color: #000; }
+  .yai .qrcard .url { color: #444; }
+  .yai .corner { border-color: var(--lime); }
+  .yai .foot .sx { height: 26px; width: auto; opacity: .8; }
+  .yai .foot .x { font: 500 22px/1 var(--ysans); color: rgba(255,255,255,.45); }
+  .yai .foot .site { font: 600 16px/1 var(--ysans); letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+  .yai .foot .site b { color: var(--lime); }
+  .yai .socials { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 26px; }
+  .yai .socials span { border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 12px 20px; font: 500 20px/1 var(--ysans); color: rgba(255,255,255,.85); }
+  .yai .socials span b { color: var(--teal); font-weight: 600; }
+
+  /* ---------- motion ---------- */
+  @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+  @keyframes fade { from { opacity: 0; } to { opacity: var(--to, 1); } }
+  @keyframes pop { from { opacity: 0; transform: scale(.85) rotate(-4deg); } to { opacity: 1; transform: none; } }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+  @keyframes flow { from { background-position: 100% 0; } to { background-position: 0% 0; } }
+  @media screen {
+    .deck.present .slide.on .c > * { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i, 0) * 90ms + 80ms); }
+    .deck.present .slide.on .people > .person, .deck.present .slide.on .cards > .card, .deck.present .slide.on .probs > .prob, .deck.present .slide.on .steps > .step, .deck.present .slide.on .rules > .rule, .deck.present .slide.on .agenda > .row, .deck.present .slide.on .stepsl > li { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--j, 0) * 110ms + 380ms); }
+    .deck.present .slide.on .m { animation: pop .9s cubic-bezier(.2,.9,.2,1.1) both; animation-delay: calc(var(--j, 0) * 120ms + 300ms); }
+    .deck.present .slide.on .m.bob { animation: pop .9s cubic-bezier(.2,.9,.2,1.1) both, bob 5s ease-in-out 1.2s infinite; animation-delay: calc(var(--j, 0) * 120ms + 300ms), 1.2s; }
+    .deck.present .slide.on .grid, .deck.present .slide.on .num, .deck.present .slide.on .foot, .deck.present .slide.on .ghost-sx, .deck.present .slide.on .cloud { animation: fade 1.2s ease both; }
+    .deck.present .slide.on .callout { animation: fade .6s ease both; animation-delay: calc(var(--j, 0) * 160ms + 900ms); }
+    .yai h1 i, .yai h2 i, .yai .lead .lm { background-image: linear-gradient(100deg, var(--lime) 0%, var(--lime) 38%, #f7fbe6 50%, var(--lime) 62%, var(--lime) 100%); background-size: 260% 100%; background-repeat: no-repeat; -webkit-background-clip: text; background-clip: text; color: transparent; animation: flow 4.5s linear infinite; }
+    .deck.present .slide { transition: opacity .35s ease; }
+    .deck.present .slide.leaving { opacity: 0; }
+    /* step-through: cards dim and light one at a time */
+    .stepping > .card, .stepping > .rule, .stepping > .prob, .stepping > .step, .stepping > li, .stepping > .person { transition: opacity .35s ease, transform .35s ease, border-color .35s ease, box-shadow .35s ease; }
+    .stepping > *:not(.lit) { opacity: .35; }
+    .stepping > .lit { opacity: 1; transform: scale(1.03); }
+    .grok .stepping > .lit { border-color: var(--purple); box-shadow: 0 0 0 4px rgba(167,125,253,.25), 0 30px 60px -30px rgba(124,77,255,.6); }
+    .yai .stepping > .lit { border-color: var(--lime); box-shadow: 0 0 0 3px rgba(217,228,168,.3), 0 24px 60px -20px rgba(217,228,168,.5); }
+  }
+  @media (prefers-reduced-motion: reduce) { .deck.present .slide.on * { animation: none !important; } }
+
+  /* ---------- presenting on screen ---------- */
+  @media screen {
+    .deck.present { width: 100vw; height: 100vh; overflow: hidden; margin: 0; }
+    .deck.present .slide { position: absolute; inset: 0; width: 1920px; height: 1080px; transform-origin: top left; display: none; }
+    .deck.present .slide.on { display: flex; }
+    .nav { position: fixed; right: 18px; bottom: 16px; display: flex; align-items: center; gap: 10px; z-index: 9; }
+    .navbtn { width: 40px; height: 40px; border-radius: 999px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.08); color: #fff; font-size: 18px; cursor: pointer; transition: background .2s, border-color .2s; }
+    .navbtn:hover { background: rgba(167,125,253,.35); border-color: rgba(167,125,253,.8); }
+    .navbtn:disabled { opacity: .3; cursor: default; }
+    .navpos { font: 600 12px/1 var(--sans); color: rgba(255,255,255,.5); letter-spacing: .1em; min-width: 54px; text-align: center; }
+    .progress { position: fixed; left: 0; top: 0; height: 4px; width: 0; z-index: 50; border-radius: 0 999px 999px 0; background: linear-gradient(90deg, var(--purple), var(--pink) 60%, var(--lime)); transition: width .5s cubic-bezier(.2,.7,.2,1); }
+  }
+  @media print {
+    .nav, .progress { display: none; }
+    /* Headless Chrome runs the screen script before printing: undo the fit-to-window transform. */
+    .deck.present { width: 1920px; height: auto; overflow: visible; }
+    .deck.present .slide { position: relative; inset: auto; transform: none !important; display: flex !important; }
+    .yai h1 i, .yai h2 i, .yai .lead .lm { color: var(--lime); background: none; -webkit-text-fill-color: var(--lime); }
+  }
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<!-- 01 · Title (SpaceXAI template) -->
+<section class="slide grok">
+  <img class="m bob" src="/deck/assets/grok/blobs-cluster.png" alt="" style="--j:0; right:-120px; bottom:-140px; width:1080px">
+  <img class="ghost-sx" src="/deck/assets/grok/spacex-wordmark-black.png" alt="">
+  <div class="c">
+    <div class="lockup">
+      <img class="gb" src="/deck/assets/grok/grokbot-lockup-black.png" alt="Grok Bot">
+      <span class="tag"><span class="dot"></span><b>Yale AI Fall Kickoff</b> Wednesday, September 9 · Tsai CITY</span>
+    </div>
+    <h1 style="margin-top:150px">Meet your new<br><span class="pu">AI teammates</span></h1>
+    <div class="sub">Agents with their own computers that get work done.<br>Tonight: a live demo, a month of Cursor Pro for the room, and a build challenge.</div>
+    <div class="cobrand" style="margin-top:auto">
+      <span class="x">X</span><img class="sx" src="/deck/assets/grok/spacex-wordmark-black.png" alt="SpaceX">
+      <span class="x">&times;</span>
+      <span class="yaiword"><img src="/deck/assets/mark-lime-light.svg" alt="">Yale AI</span>
+    </div>
+  </div>
+  <div class="num">01</div>
+</section>
+
+<!-- 02 · Agenda -->
+<section class="slide grok white">
+  <img class="m" src="/deck/assets/chars/cloud-blue.png" alt="" style="--j:0; right:150px; top:190px; width:300px">
+  <img class="m" src="/deck/assets/chars/triangle-pink.png" alt="" style="--j:1; right:420px; top:520px; width:230px">
+  <img class="m" src="/deck/assets/chars/squircle-teal.png" alt="" style="--j:2; right:120px; bottom:-90px; width:360px">
+  <div class="c">
+    <h2>Agenda</h2>
+    <div class="agenda">
+      <div class="row"><span class="n">01</span><span>Welcome. Then a live Grok Bot demo.</span><span class="who sx">SpaceXAI</span></div>
+      <div class="row"><span class="n">02</span><span>Yale AI: what we are doing this year.</span><span class="who">The board</span></div>
+      <div class="row"><span class="n">03</span><span>Get Cursor Pro, on SpaceXAI. Scan, redeem, done.</span><span class="who sx">SpaceXAI</span></div>
+      <div class="row"><span class="n">04</span><span>Build time! Rapid-fire Cursor: the challenge.</span><span class="who">Everyone</span></div>
+      <div class="row"><span class="n">05</span><span>Demos, boba, and how to keep building with us.</span><span class="who">Everyone</span></div>
+    </div>
+  </div>
+  <div class="foot"><img class="xglyph" src="/deck/assets/grok/spacex-x-black.png" alt=""><span class="conf">Yale AI × SpaceXAI · September 2026</span></div>
+  <div class="num">02</div>
+</section>
+
+<!-- 03 · Divider: live demo -->
+<section class="slide grok purple">
+  <img class="cloud" src="/deck/assets/grok/cloud-white.png" alt="">
+  <div class="c">
+    <h1>Live<br>Grok Bot<br>demo</h1>
+    <div class="who">Filippo Fonseca, Yale AI</div>
+  </div>
+  <div class="num">03</div>
+</section>
+
+<!-- 04 · Introducing Grok Bot -->
+<section class="slide grok dark">
+  <div class="c">
+    <h2>Introducing <img src="/deck/assets/grok/grokbot-lockup-white.png" alt="Grok Bot"></h2>
+    <div class="shot-wrap">
+      <img class="shot" src="/deck/assets/grok/app-screenshot.png" alt="The Grok Bot desktop app">
+      <div class="callout l" style="--j:0; top:40px">Create bots for different jobs</div>
+      <div class="callout l" style="--j:1; top:300px">Message bots like teammates</div>
+      <div class="callout l" style="--j:2; top:560px">Bots keep context in memory and improve as they go</div>
+      <div class="callout r" style="--j:3; top:40px">Log bots into your tools and they use them like you</div>
+      <div class="callout r" style="--j:4; top:300px">Set up automations and routines</div>
+      <div class="callout r" style="--j:5; top:560px">Easily share your bots with others</div>
+    </div>
+  </div>
+  <div class="num">04</div>
+</section>
+
+<!-- 05 · AI is evolving fast -->
+<section class="slide grok white">
+  <img class="m" src="/deck/assets/grok/blob-trio.png" alt="" style="--j:0; right:-60px; bottom:-80px; width:620px">
+  <div class="c">
+    <h2>AI is evolving<br>fast</h2>
+    <div class="steps">
+      <div class="step s1"><img src="/deck/assets/grok/icon-chat.png" alt=""><h3>Chatbots</h3><p>Answer questions, people do the work</p></div>
+      <div class="step s2"><img src="/deck/assets/grok/icon-cursors.png" alt=""><h3>Copilots</h3><p>Help with tasks, people drive every step</p></div>
+      <div class="step s3"><img src="/deck/assets/grok/icon-people.png" alt=""><h3>AI teammates</h3><p>Own outcomes, start to finish. People set direction and review</p></div>
+      <div class="output"><span>Output</span><div class="arrow"></div><span>&nbsp;</span></div>
+    </div>
+  </div>
+  <div class="num">05</div>
+</section>
+
+<!-- 06 · The challenge with most agents -->
+<section class="slide grok white">
+  <div class="c">
+    <h2>The challenge<br>with most agents</h2>
+    <div class="probs">
+      <div class="prob"><div class="t"><img src="/deck/assets/grok/icon-x.png" alt="">Complicated setup</div><img class="s" src="/deck/assets/grok/shot-instructions.png" alt=""></div>
+      <div class="prob"><div class="t"><img src="/deck/assets/grok/icon-x.png" alt="">Local first</div><img class="s" src="/deck/assets/grok/shot-terminal.png" alt=""></div>
+      <div class="prob"><div class="t"><img src="/deck/assets/grok/icon-x.png" alt="">Connector limitations</div><img class="s" src="/deck/assets/grok/shot-connectors.png" alt=""></div>
+      <div class="prob"><div class="t"><img src="/deck/assets/grok/icon-x.png" alt="">Constant monitoring</div><img class="s" src="/deck/assets/grok/shot-approval.png" alt=""></div>
+      <div class="prob"><div class="t"><img src="/deck/assets/grok/icon-x.png" alt="">Painful sharing</div><img class="s" src="/deck/assets/grok/shot-files.png" alt=""></div>
+    </div>
+  </div>
+  <div class="num">06</div>
+</section>
+
+<!-- 07 · Routine work -->
+<section class="slide grok">
+  <div class="c">
+    <div class="frame">
+      <div class="head">
+        <h2 style="font-size:60px">Today everyone wastes<br>time with routine work</h2>
+        <div class="legend"><span>High value / leverage</span><span class="o">Rote, repetitive work</span></div>
+      </div>
+      <img src="/deck/assets/grok/schedule-diagram.png" alt="Today versus tomorrow: Grok Bots operate 24/7">
+    </div>
+  </div>
+  <div class="num">07</div>
+</section>
+
+<!-- Grok 4.6 on the benchmark chart -->
+<section class="slide grok white">
+  <img class="m" src="/deck/assets/chars/dome-blue.png" alt="" style="--j:0; right:-80px; bottom:-230px; width:520px; opacity:.9">
+  <div class="c">
+    <div class="lockup">
+      <h2>Grok 4.6: frontier accuracy, <span class="pu">a fraction of the cost.</span></h2>
+    </div>
+    <div class="body" style="margin-top:14px; max-width:1500px">The model inside Grok Bot. <b>69.9% accuracy at $2.34 a task</b> (Grok 4.6 high, the default): a point above Fable 5.1 at under half its cost, and clear of everything else at its price. Accuracy against average cost per task, frontier models, September 2026.</div>
+    <div style="margin-top:22px; width:1400px; border:1.5px solid rgba(0,0,0,.12); border-radius:22px; background:#fff; padding:18px 24px 10px">
+      <img src="/deck/assets/grok46-benchmark.png" alt="Accuracy versus average cost per task; Grok 4.6 leads at its price" style="display:block; width:100%; border-radius:12px" onerror="this.replaceWith(document.getElementById('bench-svg').content.cloneNode(true))">
+    </div>
+  </div>
+  <div class="num">08</div>
+</section>
+<template id="bench-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 640" font-family="Plus Jakarta Sans, system-ui, sans-serif">
+<line x1="110" y1="560.0" x2="1360" y2="560.0" stroke="rgba(0,0,0,.09)"/><text x="94" y="568.0" text-anchor="end" font-size="22" fill="#8a8a8a">45%</text>
+<line x1="110" y1="465.4" x2="1360" y2="465.4" stroke="rgba(0,0,0,.09)"/><text x="94" y="473.4" text-anchor="end" font-size="22" fill="#8a8a8a">50%</text>
+<line x1="110" y1="370.7" x2="1360" y2="370.7" stroke="rgba(0,0,0,.09)"/><text x="94" y="378.7" text-anchor="end" font-size="22" fill="#8a8a8a">55%</text>
+<line x1="110" y1="276.1" x2="1360" y2="276.1" stroke="rgba(0,0,0,.09)"/><text x="94" y="284.1" text-anchor="end" font-size="22" fill="#8a8a8a">60%</text>
+<line x1="110" y1="181.4" x2="1360" y2="181.4" stroke="rgba(0,0,0,.09)"/><text x="94" y="189.4" text-anchor="end" font-size="22" fill="#8a8a8a">65%</text>
+<line x1="110" y1="86.8" x2="1360" y2="86.8" stroke="rgba(0,0,0,.09)"/><text x="94" y="94.8" text-anchor="end" font-size="22" fill="#8a8a8a">70%</text>
+<line x1="110.0" y1="30" x2="110.0" y2="560" stroke="rgba(0,0,0,.09)"/><text x="110.0" y="600" text-anchor="middle" font-size="22" fill="#8a8a8a">$10</text>
+<line x1="735.0" y1="30" x2="735.0" y2="560" stroke="rgba(0,0,0,.09)"/><text x="735.0" y="600" text-anchor="middle" font-size="22" fill="#8a8a8a">$5</text>
+<line x1="1360.0" y1="30" x2="1360.0" y2="560" stroke="rgba(0,0,0,.09)"/><text x="1360.0" y="600" text-anchor="middle" font-size="22" fill="#8a8a8a">$0</text>
+<text x="735" y="632" text-anchor="middle" font-size="20" fill="#8a8a8a">Average cost per task</text>
+<path d="M1008.8,84.9 L1065.0,101.9 L1201.2,154.9 L1270.0,270.4" fill="none" stroke="#111" stroke-width="4" opacity="1"/>
+<circle cx="1008.8" cy="84.9" r="7" fill="#111" opacity="1"/>
+<circle cx="1065.0" cy="101.9" r="9" fill="#a77dfd" opacity="1"/>
+<circle cx="1201.2" cy="154.9" r="7" fill="#111" opacity="1"/>
+<circle cx="1270.0" cy="270.4" r="7" fill="#111" opacity="1"/>
+<text x="1047.0" y="73.9" text-anchor="end" font-size="26" font-weight="700" fill="#111" opacity="1">Grok 4.6 (high, default): 69.9% at $2.34</text>
+<path d="M153.7,35.7 L488.8,47.0 L758.8,111.4 L917.5,137.9 L996.2,172.0" fill="none" stroke="#e0a93a" stroke-width="2.5" opacity=".55"/>
+<circle cx="153.7" cy="35.7" r="5.5" fill="#e0a93a" opacity=".55"/>
+<circle cx="488.8" cy="47.0" r="5.5" fill="#e0a93a" opacity=".55"/>
+<circle cx="758.8" cy="111.4" r="5.5" fill="#e0a93a" opacity=".55"/>
+<circle cx="917.5" cy="137.9" r="5.5" fill="#e0a93a" opacity=".55"/>
+<circle cx="996.2" cy="172.0" r="5.5" fill="#e0a93a" opacity=".55"/>
+<text x="772.8" y="93.4" text-anchor="start" font-size="20" font-weight="500" fill="#e0a93a" opacity="0.85">Fable 5.1</text>
+<path d="M331.2,100.0 L440.0,113.3 L871.2,162.5 L948.8,207.9 L1041.2,236.3" fill="none" stroke="#5aa9e6" stroke-width="2.5" opacity=".55"/>
+<circle cx="331.2" cy="100.0" r="5.5" fill="#5aa9e6" opacity=".55"/>
+<circle cx="440.0" cy="113.3" r="5.5" fill="#5aa9e6" opacity=".55"/>
+<circle cx="871.2" cy="162.5" r="5.5" fill="#5aa9e6" opacity=".55"/>
+<circle cx="948.8" cy="207.9" r="5.5" fill="#5aa9e6" opacity=".55"/>
+<circle cx="1041.2" cy="236.3" r="5.5" fill="#5aa9e6" opacity=".55"/>
+<text x="885.2" y="146.5" text-anchor="start" font-size="20" font-weight="500" fill="#5aa9e6" opacity="0.85">Opus 5</text>
+<path d="M648.7,153.0 L875.0,204.1 L1011.2,223.1 L1113.8,289.3 L1232.5,427.5" fill="none" stroke="#c94a5a" stroke-width="2.5" opacity=".55"/>
+<circle cx="648.7" cy="153.0" r="5.5" fill="#c94a5a" opacity=".55"/>
+<circle cx="875.0" cy="204.1" r="5.5" fill="#c94a5a" opacity=".55"/>
+<circle cx="1011.2" cy="223.1" r="5.5" fill="#c94a5a" opacity=".55"/>
+<circle cx="1113.8" cy="289.3" r="5.5" fill="#c94a5a" opacity=".55"/>
+<circle cx="1232.5" cy="427.5" r="5.5" fill="#c94a5a" opacity=".55"/>
+<text x="1127.8" y="273.3" text-anchor="start" font-size="20" font-weight="500" fill="#c94a5a" opacity="0.85">GPT-5.6 Sol</text>
+<path d="M1061.2,115.2 L1118.8,156.8" fill="none" stroke="#7b6cf0" stroke-width="2.5" opacity=".55"/>
+<circle cx="1061.2" cy="115.2" r="5.5" fill="#7b6cf0" opacity=".55"/>
+<circle cx="1118.8" cy="156.8" r="5.5" fill="#7b6cf0" opacity=".55"/>
+<text x="1075.2" y="99.2" text-anchor="start" font-size="20" font-weight="500" fill="#7b6cf0" opacity="0.85">Gemini 3.8 Flash</text>
+<path d="M1072.5,196.6 L1216.2,302.6 L1270.0,397.2 L1298.8,471.0 L1306.2,537.3" fill="none" stroke="#e07a3e" stroke-width="2.5" opacity=".55"/>
+<circle cx="1072.5" cy="196.6" r="5.5" fill="#e07a3e" opacity=".55"/>
+<circle cx="1216.2" cy="302.6" r="5.5" fill="#e07a3e" opacity=".55"/>
+<circle cx="1270.0" cy="397.2" r="5.5" fill="#e07a3e" opacity=".55"/>
+<circle cx="1298.8" cy="471.0" r="5.5" fill="#e07a3e" opacity=".55"/>
+<circle cx="1306.2" cy="537.3" r="5.5" fill="#e07a3e" opacity=".55"/>
+<text x="1288.8" y="501.0" text-anchor="end" font-size="20" font-weight="500" fill="#e07a3e" opacity="0.85">GPT-5.6 Terra</text>
+<path d="M1196.2,139.8 L1230.0,215.5 L1256.2,257.1 L1263.8,268.5 L1303.8,380.2 L1326.2,503.2" fill="none" stroke="#3b82f6" stroke-width="2.5" opacity=".55"/>
+<circle cx="1196.2" cy="139.8" r="5.5" fill="#3b82f6" opacity=".55"/>
+<circle cx="1230.0" cy="215.5" r="5.5" fill="#3b82f6" opacity=".55"/>
+<circle cx="1256.2" cy="257.1" r="5.5" fill="#3b82f6" opacity=".55"/>
+<circle cx="1263.8" cy="268.5" r="5.5" fill="#3b82f6" opacity=".55"/>
+<circle cx="1303.8" cy="380.2" r="5.5" fill="#3b82f6" opacity=".55"/>
+<circle cx="1326.2" cy="503.2" r="5.5" fill="#3b82f6" opacity=".55"/>
+<text x="1242.2" y="241.1" text-anchor="end" font-size="20" font-weight="500" fill="#3b82f6" opacity="0.85">Muse Spark 1.3</text>
+<path d="M1311.2,268.5 L1330.0,332.9 L1338.8,349.9 L1350.0,522.1" fill="none" stroke="#8f8f8f" stroke-width="2.5" opacity=".55"/>
+<circle cx="1311.2" cy="268.5" r="5.5" fill="#8f8f8f" opacity=".55"/>
+<circle cx="1330.0" cy="332.9" r="5.5" fill="#8f8f8f" opacity=".55"/>
+<circle cx="1338.8" cy="349.9" r="5.5" fill="#8f8f8f" opacity=".55"/>
+<circle cx="1350.0" cy="522.1" r="5.5" fill="#8f8f8f" opacity=".55"/>
+<text x="1297.2" y="252.5" text-anchor="end" font-size="20" font-weight="500" fill="#8f8f8f" opacity="0.85">GPT-5.6 Luna</text>
+<circle cx="1305.0" cy="363.1" r="5.5" fill="#f97316" opacity=".55"/>
+<text x="1291.0" y="347.1" text-anchor="end" font-size="20" font-weight="500" fill="#f97316" opacity="0.85">Composer 2.5</text>
+<path d="M1023.8,274.2 L1122.5,293.1 L1236.2,467.3" fill="none" stroke="#e879c8" stroke-width="2.5" opacity=".55"/>
+<circle cx="1023.8" cy="274.2" r="5.5" fill="#e879c8" opacity=".55"/>
+<circle cx="1122.5" cy="293.1" r="5.5" fill="#e879c8" opacity=".55"/>
+<circle cx="1236.2" cy="467.3" r="5.5" fill="#e879c8" opacity=".55"/>
+<text x="1009.8" y="258.2" text-anchor="end" font-size="20" font-weight="500" fill="#e879c8" opacity="0.85">Kimi K3</text>
+<path d="M821.3,260.9 L1012.5,313.9 L1093.8,348.0 L1177.5,431.3 L1251.2,520.2" fill="none" stroke="#4caf7a" stroke-width="2.5" opacity=".55"/>
+<circle cx="821.3" cy="260.9" r="5.5" fill="#4caf7a" opacity=".55"/>
+<circle cx="1012.5" cy="313.9" r="5.5" fill="#4caf7a" opacity=".55"/>
+<circle cx="1093.8" cy="348.0" r="5.5" fill="#4caf7a" opacity=".55"/>
+<circle cx="1177.5" cy="431.3" r="5.5" fill="#4caf7a" opacity=".55"/>
+<circle cx="1251.2" cy="520.2" r="5.5" fill="#4caf7a" opacity=".55"/>
+<text x="835.3" y="288.9" text-anchor="start" font-size="20" font-weight="500" fill="#4caf7a" opacity="0.85">Sonnet 5</text>
+</svg></template>
+
+<!-- 08 · Handoff to Yale AI -->
+<section class="slide yai">
+  <div class="grid"></div>
+  <img class="m bob" src="/deck/assets/chars/group-white.png" alt="" style="--j:0; right:-40px; bottom:-60px; width:900px">
+  <div class="c">
+    <div class="top">
+      <span class="wordmark"><img src="/deck/assets/icon.svg" alt=""><span class="t"><b>Yale AI</b><span>An Undergraduate Organization</span></span></span>
+      <img class="sx" src="/deck/assets/spacexai-white.png" alt="SpaceXAI" style="height:34px;width:auto;opacity:.85">
+    </div>
+    <div class="pixel" style="margin-top:150px">Now, the club</div>
+    <h1>Build the <i>future of AI</i><br>at Yale.</h1>
+    <div class="lead">We're a club with <b>real outputs</b>, not just a mailing list. Here is what this year looks like.</div>
+  </div>
+  <div class="foot"><span class="site">yale-ai<b>.org</b></span></div>
+  <div class="num">09</div>
+</section>
+
+<!-- Yale AI section: DRAFT from the Sept board notes. Content owned by Addison and Aryan; replace when it lands. -->
+<section class="slide yai">
+  <div class="grid"></div>
+  <span class="draft">Draft · content from Addison and Aryan to come</span>
+  <div class="c">
+    <div class="top">
+      <span class="wordmark"><img src="/deck/assets/icon.svg" alt=""><span class="t"><b>Yale AI</b><span>An Undergraduate Organization</span></span></span>
+    </div>
+    <span class="pixel" style="margin-top:34px">The board</span>
+    <h2>Seven people <i>who build.</i></h2>
+    <div class="people">
+      <div class="person"><img class="pfp" src="/deck/assets/team/aryan.jpg" alt=""><div><div class="pname">Aryan Agarwal</div><div class="prole">Co-President</div><div class="pmeta">COGSCI · 2027</div></div></div>
+      <div class="person"><img class="pfp" src="/deck/assets/team/addison.jpg" alt=""><div><div class="pname">Addison Shea</div><div class="prole">Co-President</div><div class="pmeta">PHYSICS + ENERGY · 2029</div></div></div>
+      <div class="person"><img class="pfp" src="/deck/assets/team/hanson.jpg" alt=""><div><div class="pname">Hanson Qin</div><div class="prole">Treasurer</div><div class="pmeta">MATH + CS · 2028</div></div></div>
+      <div class="person"><img class="pfp" src="/deck/assets/team/filippo.jpg" alt=""><div><div class="pname">Filippo Fonseca</div><div class="prole">Head of Development</div><div class="pmeta">MECHE + EECS · 2028</div></div></div>
+      <div class="person"><span class="pfp initials">HV</span><div><div class="pname">Hari Viswanathan</div><div class="prole">Head of Events</div><div class="pmeta">2028</div></div></div>
+      <div class="person"><span class="pfp initials">HN</span><div><div class="pname">Henry Ng</div><div class="prole">Head of Sponsorships</div><div class="pmeta">2029</div></div></div>
+      <div class="person"><img class="pfp" src="/deck/assets/team/david.jpg" alt=""><div><div class="pname">David Antwi</div><div class="prole">Projects Director</div><div class="pmeta">EECS · 2028</div></div></div>
+      <div class="person" style="border-style:dashed; border-color: rgba(217,228,168,.5); background: rgba(217,228,168,.05)"><span class="pfp initials" style="border-style:dashed; font-size:40px">?</span><div><div class="pname">You</div><div class="prole">Project lead, fellow, builder</div><div class="pmeta">APPLY TONIGHT</div></div></div>
+    </div>
+    <div class="lead" style="margin-top:44px; max-width:1500px">We're the home for people who build with AI at Yale. <b>All builders and people interested in AI are invited. All years.</b> Will you join us?</div>
+  </div>
+  <img class="m bob" src="/deck/assets/chars/blob-orange.png" alt="" style="--j:0; right:60px; bottom:-40px; width:300px">
+  <img class="m" src="/deck/assets/chars/cloud-blue.png" alt="" style="--j:1; right:400px; bottom:-90px; width:280px">
+  <div class="foot"><span class="site">yale-ai<b>.org</b></span></div>
+  <div class="num">10</div>
+</section>
+
+<section class="slide yai">
+  <div class="grid"></div>
+  <span class="draft">Draft · content from Addison and Aryan to come</span>
+  <div class="c">
+    <div class="top">
+      <span class="wordmark"><img src="/deck/assets/icon.svg" alt=""><span class="t"><b>Yale AI</b><span>An Undergraduate Organization</span></span></span>
+    </div>
+    <span class="pixel" style="margin-top:34px">What we are doing this year</span>
+    <h2>Real outputs, <i>not a mailing list.</i></h2>
+    <div class="cards c4">
+      <div class="card"><div class="k">Opens tonight</div><h3>The Yale AI <i>Fellowship</i></h3><p>A structured program with an application and a curriculum, run by the board. Finish it and it goes on your LinkedIn for a reason.</p></div>
+      <div class="card"><div class="k">Fall</div><h3>Project <i>teams</i></h3><p>Three teams to apply to tonight, each paired with a professor or grad student. Poster-session demo day in the fall; the ambitious ones go further.</p></div>
+      <div class="card"><div class="k">Every other week</div><h3><i>Workshops</i></h3><p>Coding agents, AI-native workflows, mini hackathons. Build an agent that manages your classes. Hands on, every time.</p></div>
+      <div class="card"><div class="k">November 10</div><h3>Fireside <i>chat</i></h3><p>With a climate-AI founder, alongside SciCity at Tsai CITY. We lead the conversation, you bring the questions.</p></div>
+      <div class="card"><div class="k">Fall</div><h3>Research <i>showcase</i></h3><p>Ten labs, grad students presenting, a hundred people in the room. Built for first-years who cannot take the advanced AI courses yet.</p></div>
+      <div class="card"><div class="k">Spring</div><h3><i>Trips</i></h3><p>NYC in April. SpaceX New York and Cursor are on the shortlist. All paid for.</p></div>
+      <div class="card"><div class="k">May</div><h3>Yale AI <i>Symposium</i></h3><p>The year's project teams get their own presentation slot. The capstone.</p></div>
+      <div class="card"><div class="k">Always</div><h3>The <i>community</i></h3><p>Slack channels per project team, a weekly email, and connections to the frontier labs: SpaceXAI, Cursor, OpenAI, MIT-IBM Watson AI Lab.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span class="site">yale-ai<b>.org</b></span></div>
+  <div class="num">11</div>
+</section>
+
+<section class="slide yai">
+  <div class="grid"></div>
+  <span class="draft">Draft · content from Addison and Aryan to come</span>
+  <div class="c">
+    <div class="top">
+      <span class="wordmark"><img src="/deck/assets/icon.svg" alt=""><span class="t"><b>Yale AI</b><span>An Undergraduate Organization</span></span></span>
+    </div>
+    <span class="pixel" style="margin-top:34px">Trips and connections</span>
+    <h2>We get you in the rooms that matter. <i>All paid for.</i></h2>
+    <div class="lead" style="margin-top:14px">Last spring: the MIT-IBM Watson AI Lab. This spring: New York in April, with SpaceX New York and Cursor on the shortlist. Plus fireside chats with founders on campus, and the people behind Cursor, Grok Bot, and OpenAI in our corner.</div>
+    <div class="snaprow">
+      <div class="snap" style="--w:430px; --r:-4deg; --j:0; top:8px"><div class="tape"></div><img src="/deck/assets/photos/mit-ibm-1.jpg" alt=""><div class="cap">MIT-IBM Watson AI Lab · Spring 2026</div></div>
+      <div class="snap" style="--w:430px; --r:3deg; --j:1; top:-8px; margin-left:-26px"><div class="tape"></div><img src="/deck/assets/photos/mit-ibm-2.jpg" alt=""><div class="cap">Cambridge, MA</div></div>
+      <div class="snap" style="--w:430px; --r:-2deg; --j:2; top:6px; margin-left:-26px"><div class="tape"></div><img src="/deck/assets/photos/mit-ibm-3.jpg" alt=""><div class="cap">All paid for</div></div>
+    </div>
+  </div>
+  <div class="foot"><span class="site">yale-ai<b>.org</b></span></div>
+  <div class="num">12</div>
+</section>
+
+<section class="slide yai">
+  <div class="grid"></div>
+  <span class="draft">Draft · content from Addison and Aryan to come</span>
+  <img class="m bob" src="/deck/assets/chars/orb-gradcap.png" alt="" style="--j:0; right:-60px; bottom:-170px; width:560px">
+  <div class="c">
+    <div class="top">
+      <span class="wordmark"><img src="/deck/assets/icon.svg" alt=""><span class="t"><b>Yale AI</b><span>An Undergraduate Organization</span></span></span>
+    </div>
+    <span class="pixel" style="margin-top:34px">Get involved tonight</span>
+    <h2>Concrete options, <i>not vague promises.</i></h2>
+    <div class="cards c3" style="max-width:1400px">
+      <div class="card"><div class="k">01</div><h3>Apply to the <i>fellowship</i></h3><p>Application opens tonight. Link and QR to come from the board.</p></div>
+      <div class="card"><div class="k">02</div><h3>Apply to a <i>project team</i></h3><p>Three teams. Tell us what you want to build on the interest form and we cluster from there.</p></div>
+      <div class="card"><div class="k">03</div><h3>Join the <i>list</i></h3><p>Scan the QR at the end, follow us on Instagram and LinkedIn, and watch for the X account.</p></div>
+    </div>
+    <div class="pills">
+      <span>builders + community</span><span class="t">AI × medicine</span><span class="t">AI × finance</span><span>kickoff challenge</span><span>club trips</span><span>portfolio projects</span><span class="t">connections to frontier AI companies</span><span>fellowship</span><span>research showcase</span>
+    </div>
+  </div>
+  <div class="foot"><span class="site">yale-ai<b>.org</b></span></div>
+  <div class="num">13</div>
+</section>
+
+<!-- 10 · Redeem Cursor Pro -->
+<section class="slide grok">
+  <img class="m bob" src="/deck/assets/chars/orb-gradcap.png" alt="" style="--j:0; left:-60px; bottom:-150px; width:520px">
+  <div class="c">
+    <div class="lockup">
+      <img class="gb" src="/deck/assets/grok/grokbot-lockup-black.png" alt="Grok Bot">
+      <span class="tag"><span class="dot"></span><b>Tonight only</b> room code · 200 redemptions</span>
+    </div>
+    <div class="split">
+      <div>
+        <h2>Get <span class="pu">Cursor Pro.</span><br>On SpaceXAI.</h2>
+        <ol class="stepsl">
+          <li><b>Scan the code</b> on the right.<small>It opens Cursor's redeem page for this room.</small></li>
+          <li><b>Sign in to Cursor</b>, or create an account.<small>Any email works. Your Yale one is easiest.</small></li>
+          <li><b>Claim the credit:</b> $22 in Cursor credits.<small>Pro is $20 a month, so that is a month of Cursor Pro. The credit is just how it is handed out. Pro is what unlocks Grok Bot.</small></li>
+          <li><b>Open Cursor, open Grok Bot,</b> and start building.<small>Then keep going: the build challenge is next.</small></li>
+        </ol>
+        <div class="fine"><span>Courtesy of <b>SpaceXAI</b></span><span>One per person</span><span>Expires when the room's <b>200</b> are gone</span></div>
+      </div>
+      <div class="qrcard">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="qr"><img src="/deck/assets/qr-redeem.svg" alt="QR code to the Cursor redeem link"></div>
+        <div class="lab">Scan to redeem</div>
+        <div class="url" data-link="redeem"></div>
+      </div>
+    </div>
+  </div>
+  <div class="num">14</div>
+</section>
+
+<!-- Use the month -->
+<section class="slide grok">
+  <img class="m bob" src="/deck/assets/chars/cloud-orange.png" alt="" style="--j:0; right:-100px; bottom:-200px; width:640px">
+  <img class="m" src="/deck/assets/chars/blob-pink.png" alt="" style="--j:1; right:600px; bottom:-40px; width:220px">
+  <div class="c">
+    <div class="lockup">
+      <img class="gb" src="/deck/assets/grok/grokbot-lockup-black.png" alt="Grok Bot">
+      <span class="tag"><span class="dot"></span><b>You have a month.</b> Use all of it.</span>
+    </div>
+    <h2 style="margin-top:50px; max-width:1300px">Cursor is the editor. Grok 4.6 is the model. <span class="pu">Grok Bot is the teammate.</span></h2>
+    <div class="body" style="margin-top:22px; max-width:1300px; font-size:29px">The whole SpaceXAI suite, unlocked tonight. Pick one real thing you are already doing this week and hand it over.</div>
+    <div class="rules" style="grid-template-columns: repeat(3, 1fr); max-width:1400px">
+      <div class="rule"><div class="k">Cursor</div><p>Write your psets, your side project, your club's website <b>in Cursor</b>. Tab, agent mode, the works. Pro is the full experience.</p></div>
+      <div class="rule"><div class="k">Grok 4.6</div><p>Set it as your model in Cursor. <b>Frontier accuracy</b>, cheap enough to leave running on the long tasks.</p></div>
+      <div class="rule"><div class="k">Grok Bot</div><p>Give a bot a job: inbox triage, meeting notes, a research digest, your recruiting tracker. <b>It has its own computer.</b> Let it work.</p></div>
+    </div>
+  </div>
+  <div class="num">15</div>
+</section>
+
+<!-- 11 · The challenge -->
+<section class="slide grok">
+  <img class="m" src="/deck/assets/grok/blob-red-group.png" alt="" style="--j:0; left:-140px; bottom:-200px; width:640px">
+  <div class="c">
+    <div class="lockup">
+      <img class="gb" src="/deck/assets/grok/grokbot-lockup-black.png" alt="Grok Bot">
+      <span class="tag"><span class="dot"></span><b>Build time!</b> starts now, ends tomorrow at midnight</span>
+    </div>
+    <div class="split" style="grid-template-columns: 560px 1fr; gap: 70px">
+      <div>
+        <h2>Rapid-fire<br><span class="pu">Cursor.</span></h2>
+        <div class="body" style="margin-top:24px; font-size:31px; color:var(--ink)">How quickly can you build an app for Yale students?</div>
+        <div class="body" style="margin-top:20px">Start here, in the room, on the Pro you just redeemed. Finish tonight or tomorrow. <b>Useful</b> beats <b>flashy</b>.</div>
+      </div>
+      <div class="rules">
+        <div class="rule"><div class="k">The brief</div><p>A <b>useful app for Yale students</b>, built in Cursor. Classes, clubs, dining, schedules, recruiting, research, anything you actually wish existed.</p></div>
+        <div class="rule"><div class="k">Proof</div><p>A <b>screenshot of you building it in Cursor</b> in the project README. Solo or a team of up to three.</p></div>
+        <div class="rule"><div class="k">Submit</div><p>The <b>GitHub link</b>, through the Google Form on the next slide, by <b>Thursday, September 10, 11:59 PM</b>.</p></div>
+        <div class="rule"><div class="k">Prizes</div><p><b>SpaceXAI credits</b> for the best builds. Judged on usefulness, craft, and speed. <b>Winners get an email</b> within a few days.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="num">16</div>
+</section>
+
+<!-- 12 · Timer + submit -->
+<section class="slide grok white">
+  <img class="m" src="/deck/assets/chars/pentagon-orange.png" alt="" style="--j:0; right:-120px; bottom:-200px; width:520px">
+  <div class="c">
+    <div class="lockup">
+      <h2 style="font-size:64px">Go. <span class="pu">Twenty-five minutes</span> to a first version.</h2>
+      <span class="tag"><span class="dot"></span>click the clock to start · <b>R</b> resets</span>
+    </div>
+    <div class="split" style="grid-template-columns: 1fr 520px; gap: 60px; align-items: center; margin-top: 10px">
+      <div class="timer">
+        <div class="t" id="buildtimer">25:00</div>
+        <div class="hint">Then demos. Then boba. Submissions stay open until tomorrow at midnight.</div>
+      </div>
+      <div class="qrcard" style="padding:30px">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="qr" style="width:380px;height:380px"><img src="/deck/assets/qr-submit.svg" alt="QR code to the submission form"></div>
+        <div class="lab">Submit your GitHub link</div>
+        <div class="url" data-link="submit"></div>
+      </div>
+    </div>
+  </div>
+  <div class="num">17</div>
+</section>
+
+<!-- 13 · Divider: audience demos -->
+<section class="slide grok purple">
+  <img class="cloud" src="/deck/assets/grok/cloud-white.png" alt="">
+  <div class="c">
+    <h1>Audience<br>demos :)</h1>
+    <div class="who">Two minutes each. Show us what you built.</div>
+  </div>
+  <div class="num">18</div>
+</section>
+
+<!-- 14 · Keep building with Yale AI -->
+<section class="slide yai">
+  <div class="grid"></div>
+  <img class="m bob" src="/deck/assets/chars/group-five.png" alt="" style="--j:0; right:-60px; bottom:-120px; width:760px; opacity:.95">
+  <div class="c">
+    <div class="top">
+      <span class="wordmark"><img src="/deck/assets/icon.svg" alt=""><span class="t"><b>Yale AI</b><span>An Undergraduate Organization</span></span></span>
+      <span class="pixel">Keep building</span>
+    </div>
+    <h2>Tonight was the <i>start.</i></h2>
+    <div class="cards c3" style="max-width:1320px">
+      <div class="card"><div class="k">Tonight</div><h3>A month of <i>Cursor Pro</i></h3><p>Redeemed in this room, on SpaceXAI. Grok Bot unlocked.</p></div>
+      <div class="card"><div class="k">This week</div><h3>Ship the <i>app</i></h3><p>Submit by Thursday at midnight. The best builds win SpaceXAI credits.</p></div>
+      <div class="card"><div class="k">This year</div><h3>More <i>credits</i> for builders</h3><p>Keep building with Yale AI (fellowship, project teams, workshops) and SpaceXAI keeps backing you.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span class="site">yale-ai<b>.org</b></span><span class="x">&times;</span><img class="sx" src="/deck/assets/spacexai-white.png" alt="SpaceXAI"></div>
+  <div class="num">19</div>
+</section>
+
+<!-- 15 · Closing -->
+<section class="slide yai">
+  <div class="grid"></div>
+  <img class="m bob" src="/deck/assets/chars/orb-white-big.png" alt="" style="--j:0; right:-80px; bottom:-140px; width:820px">
+  <div class="c">
+    <div class="top">
+      <span class="wordmark"><img src="/deck/assets/icon.svg" alt=""><span class="t"><b>Yale AI</b><span>An Undergraduate Organization</span></span></span>
+      <span class="pixel">Thank you</span>
+    </div>
+    <div class="split" style="grid-template-columns: 1fr 520px; gap: 80px; align-items: center; margin-top: 80px">
+      <div>
+        <h1 style="font-size:132px">Now go <i>build.</i></h1>
+        <div class="lead">Join Yale AI, follow along, and come to the next one. Boba is by the door.</div>
+        <div class="socials">
+          <span><b>web</b> yale-ai.org</span><span><b>instagram</b> @yale_ai</span><span><b>linkedin</b> Yale AI Association</span><span><b>email</b> yaleaiassociation@gmail.com</span>
+        </div>
+      </div>
+      <div class="qrcard">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="qr" style="width:400px;height:400px"><img src="/deck/assets/qr-join.svg" alt="QR code to yale-ai.org"></div>
+        <div class="lab">Join Yale AI</div>
+        <div class="url">yale-ai.org</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span class="site">brought to you by</span><img class="sx" src="/deck/assets/spacexai-white.png" alt="SpaceXAI"></div>
+  <div class="num">20</div>
+</section>
+
+</div>
+<div class="progress" id="progress"></div>
+<div class="nav" id="nav">
+  <button type="button" class="navbtn" id="prev" aria-label="Previous slide">&#8592;</button>
+  <span class="navpos" id="hint"></span>
+  <button type="button" class="navbtn" id="next" aria-label="Next slide">&#8594;</button>
+</div>
+<script src="/deck/assets/links.js"></script>
+<script>
+  // Fill in the links printed under the QR codes from links.json (via assets/links.js).
+  (function () {
+    var L = window.LINKS || {};
+    Array.prototype.forEach.call(document.querySelectorAll('[data-link]'), function (el) {
+      var v = L[el.getAttribute('data-link')] || '';
+      if (!v) { el.textContent = 'link coming: paste it in slides/links.json'; return; }
+      el.textContent = v.indexOf('mailto:') === 0 ? 'or email ' + v.slice(7).split('?')[0] : v.replace(/^https?:\/\//, '');
+    });
+  })();
+  // Build timer: click to start or pause, R to reset.
+  (function () {
+    var el = document.getElementById('buildtimer'); if (!el) return;
+    var total = 25 * 60, left = total, id = null;
+    function draw() { var m = Math.floor(left / 60), s = left % 60; el.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s; el.classList.toggle('done', left === 0); }
+    function tick() { if (left > 0) left--; draw(); if (left === 0) { clearInterval(id); id = null; el.classList.remove('run'); } }
+    el.addEventListener('click', function () { if (id) { clearInterval(id); id = null; el.classList.remove('run'); } else if (left > 0) { id = setInterval(tick, 1000); el.classList.add('run'); } });
+    window.addEventListener('keydown', function (e) { if (e.key.toLowerCase() === 'r') { clearInterval(id); id = null; left = total; el.classList.remove('run'); draw(); } });
+    draw();
+  })();
+  // On screen: one slide at a time, scaled to the window. Arrow keys, space,
+  // click, or swipe. Print/PDF: every slide on its own page, unscaled.
+  (function () {
+    var deck = document.getElementById('deck');
+    var slides = Array.prototype.slice.call(deck.querySelectorAll('.slide'));
+    var hint = document.getElementById('hint');
+    if (window.matchMedia && window.matchMedia('print').matches) return;
+    var i = Math.max(0, Math.min(slides.length - 1, (parseInt(location.hash.slice(1), 10) || 1) - 1));
+    deck.classList.add('present');
+    function fit() {
+      var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+      var x = (window.innerWidth - 1920 * s) / 2, y = (window.innerHeight - 1080 * s) / 2;
+      slides.forEach(function (el) { el.style.transform = 'translate(' + x + 'px,' + y + 'px) scale(' + s + ')'; });
+    }
+    slides.forEach(function (el) {
+      Array.prototype.forEach.call(el.querySelectorAll('.c > *'), function (ch, k) { ch.style.setProperty('--i', k); });
+      Array.prototype.forEach.call(el.querySelectorAll('.cards > .card, .probs > .prob, .steps > .step, .rules > .rule, .agenda > .row, .stepsl > li, .people > .person'), function (ch, k) { ch.style.setProperty('--j', k); });
+    });
+    // Slides with a stepped group light one item at a time before moving on.
+    var step = 0;
+    function group(el) { return el.querySelector('.cards, .rules, .probs, .stepsl, .people'); }
+    function steppers(el) { var g = group(el); return g ? Array.prototype.slice.call(g.children) : []; }
+    function applyStep(el) {
+      var g = group(el); if (!g) return;
+      g.classList.toggle('stepping', step > 0);
+      steppers(el).forEach(function (p, k) { p.classList.toggle('lit', step > 0 && k === step - 1); });
+    }
+    function next() { var n = steppers(slides[i]).length; if (n && step < n) { step++; applyStep(slides[i]); return; } show(i + 1); }
+    function prev() { if (steppers(slides[i]).length && step > 0) { step--; applyStep(slides[i]); return; } show(i - 1); }
+    function show(n) {
+      step = 0;
+      i = Math.max(0, Math.min(slides.length - 1, n));
+      slides.forEach(function (el) { var g = group(el); if (g) { g.classList.remove('stepping'); Array.prototype.forEach.call(g.children, function (p) { p.classList.remove('lit'); }); } });
+      slides.forEach(function (el, k) { var on = k === i; if (on) { el.classList.remove('on'); void el.offsetWidth; } el.classList.toggle('on', on); });
+      location.hash = i + 1;
+      hint.textContent = (i + 1) + ' / ' + slides.length;
+      document.getElementById('progress').style.width = ((i + 1) / slides.length * 100) + '%';
+      document.getElementById('prev').disabled = i === 0;
+      document.getElementById('next').disabled = i === slides.length - 1;
+    }
+    window.addEventListener('resize', fit);
+    window.addEventListener('keydown', function (e) {
+      if (['ArrowRight', ' ', 'PageDown', 'Enter'].indexOf(e.key) >= 0) { e.preventDefault(); next(); }
+      else if (['ArrowLeft', 'PageUp', 'Backspace'].indexOf(e.key) >= 0) { e.preventDefault(); prev(); }
+      else if (e.key === 'Home') show(0);
+      else if (e.key === 'End') show(slides.length - 1);
+      else if (e.key.toLowerCase() === 'f') { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); }
+    });
+    document.getElementById('prev').addEventListener('click', function () { prev(); });
+    document.getElementById('next').addEventListener('click', function () { next(); });
+    var tx = null;
+    window.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+    window.addEventListener('touchend', function (e) { if (tx === null) return; var dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 40) { if (dx < 0) next(); else prev(); } tx = null; });
+    fit(); show(i);
+  })();
+</script>
+</body></html>
