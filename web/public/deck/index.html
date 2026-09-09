@@ -261,7 +261,7 @@
     .deck.present .slide.on .m.bob { animation: pop .9s cubic-bezier(.2,.9,.2,1.1) both, bob 5s ease-in-out 1.2s infinite; animation-delay: calc(var(--j, 0) * 120ms + 300ms), 1.2s; }
     .deck.present .slide.on .grid, .deck.present .slide.on .num, .deck.present .slide.on .foot, .deck.present .slide.on .ghost-sx, .deck.present .slide.on .cloud { animation: fade 1.2s ease both; }
     .deck.present .slide.on .callout { animation: fade .6s ease both; animation-delay: calc(var(--j, 0) * 160ms + 900ms); }
-    .yai h1 i, .yai h2 i, .yai .lead .lm { background-image: linear-gradient(100deg, var(--lime) 0%, var(--lime) 38%, #f7fbe6 50%, var(--lime) 62%, var(--lime) 100%); background-size: 260% 100%; background-repeat: no-repeat; -webkit-background-clip: text; background-clip: text; color: transparent; animation: flow 4.5s linear infinite; }
+    .yai h1 i, .yai h2 i, .yai .lead .lm { display: inline-block; padding: .12em .18em .24em .1em; margin: -.12em -.18em -.24em -.1em; background-image: linear-gradient(100deg, var(--lime) 0%, var(--lime) 38%, #f7fbe6 50%, var(--lime) 62%, var(--lime) 100%); background-size: 260% 100%; background-repeat: no-repeat; -webkit-background-clip: text; background-clip: text; color: transparent; animation: flow 4.5s linear infinite; }
     .deck.present .slide { transition: opacity .35s ease; }
     .deck.present .slide.leaving { opacity: 0; }
     /* step-through: cards dim and light one at a time */
@@ -303,7 +303,7 @@
 <!-- 00 · Cover (Yale AI) -->
 <section class="slide yai">
   <div class="grid"></div>
-  <img class="m bob" src="/deck/assets/chars/group-white.png" alt="" style="--j:0; right:-140px; bottom:-200px; width:880px">
+  <img class="m bob" src="/deck/assets/chars/group-white.png" alt="" style="--j:0; right:-30px; bottom:-60px; width:760px">
   <div class="c">
     <div class="top">
       <span class="wordmark"><img src="/deck/assets/icon.svg" alt=""><span class="t"><b>Yale AI</b><span>An Undergraduate Organization</span></span></span>
