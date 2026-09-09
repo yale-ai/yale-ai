@@ -292,6 +292,8 @@
   }
   @media print {
     .nav, .progress { display: none; }
+    .video-wrap .yt { display: none; }
+    .video-wrap .yt-poster { display: block !important; }
     /* Headless Chrome runs the screen script before printing: undo the fit-to-window transform. */
     .deck.present { width: 1920px; height: auto; overflow: visible; }
     .deck.present .slide { position: relative; inset: auto; transform: none !important; display: flex !important; }
@@ -621,17 +623,12 @@
   <img class="sx-corner" src="/deck/assets/spacexai-white.png" alt="SpaceXAI">
   <div class="c">
     <h2 style="justify-content:flex-start; font-size:60px">Grok Bot, <span class="pu" style="margin-left:.25em">the launch video.</span></h2>
-    <a href="https://x.ai/news/introducing-grok-bot" target="_blank" rel="noopener" class="video-wrap" style="position:relative; display:block; margin: 26px auto 0; width:1400px; aspect-ratio:16/9; border-radius:18px; overflow:hidden; box-shadow: 0 50px 120px -30px rgba(0,0,0,.8); background:#000; text-decoration:none">
-      <img src="/deck/assets/grok/app-screenshot.png" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.45; filter: blur(2px)">
-      <span style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px">
-        <span style="width:150px; height:150px; border-radius:50%; background:#fff; display:grid; place-items:center; box-shadow: 0 30px 80px -20px rgba(0,0,0,.9)"><svg viewBox="0 0 24 24" width="66" height="66" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#2b1b4d"/></svg></span>
-        <span style="font: 600 34px/1.2 var(--sans); color:#fff">Play the launch video</span>
-        <span style="font: 500 22px/1.2 var(--sans); color:rgba(255,255,255,.7)">Opens x.ai/news/introducing-grok-bot in a new tab</span>
-      </span>
-    </a>
-    <div style="margin-top:14px; font: 500 20px/1.3 var(--sans); color: rgba(255,255,255,.6); text-align:center">SpaceXAI, August 11, 2026 · the video only plays on SpaceXAI's own page</div>
+    <div class="video-wrap" style="position:relative; margin: 26px auto 0; width:1480px; aspect-ratio:16/9; border-radius:18px; overflow:hidden; box-shadow: 0 50px 120px -30px rgba(0,0,0,.8); background:#000">
+      <iframe class="yt" src="https://www.youtube-nocookie.com/embed/F1_0Lkp16Rc?rel=0&modestbranding=1" title="Introducing Grok Bot" style="position:absolute; inset:0; width:100%; height:100%; border:0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      <img class="yt-poster" src="/deck/assets/grok/launch-video-poster.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:none">
+    </div>
+    <div style="margin-top:14px; font: 500 20px/1.3 var(--sans); color: rgba(255,255,255,.6); text-align:center">Introducing Grok Bot · SpaceXAI, August 2026 · youtu.be/F1_0Lkp16Rc</div>
   </div>
-  <div style="position:absolute; right:120px; bottom:56px; z-index:3; display:flex; align-items:center; gap:14px"><span style="font: 600 15px/1.2 var(--sans); color:rgba(255,255,255,.7); text-align:right">Watch it later<br>x.ai/news/introducing-grok-bot</span><span style="width:110px; height:110px; background:#fff; border-radius:12px; padding:8px; display:block"><img src="/deck/assets/qr-grokbot.svg" alt="" style="width:100%; height:100%; display:block"></span></div>
   <div class="num">15</div>
 </section>
 
