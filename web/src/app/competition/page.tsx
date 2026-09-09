@@ -18,7 +18,7 @@ const DEADLINE_HUMAN = "Thursday, September 10, 11:59 PM";
 export const metadata: Metadata = {
   title: "Rapid-fire Cursor: the kickoff competition",
   description:
-    "How quickly can you build a useful web app for Yale students? Build it in Cursor, put a screenshot in the README, submit the GitHub link by Thursday, September 10 at 11:59 PM. Three winners get three months of Cursor from SpaceXAI.",
+    "How quickly can you build a useful web app for Yale students? Build it in Cursor, put a screenshot, usage instructions, and a demo video link in the README, submit the GitHub link by Thursday, September 10 at 11:59 PM. Three winners get three months of Cursor from SpaceXAI.",
 };
 
 const RULES = [
@@ -28,9 +28,9 @@ const RULES = [
     p: "Built in Cursor. Classes, clubs, dining, schedules, recruiting, research: anything you actually wish existed. Useful beats flashy.",
   },
   {
-    k: "Proof",
-    t: "A screenshot in the README",
-    p: "Your project README must include a screenshot of you building it in Cursor. Solo or a team of up to three.",
+    k: "The README",
+    t: "Screenshot, usage instructions, demo video",
+    p: "Your README must include a screenshot of you building it in Cursor, usage instructions (logins, test accounts, whatever we need to run it), and a link to a 1 to 2 minute demo video on YouTube or anywhere else. Solo or a team of up to three.",
   },
   {
     k: "Submit",
@@ -47,7 +47,7 @@ const RULES = [
 const STEPS = [
   { n: "1", t: "Redeem Cursor Pro", p: "If you were at the kickoff and have not yet, use the room code. Pro is what unlocks Grok Bot.", href: REDEEM_URL, cta: "Redeem" },
   { n: "2", t: "Build", p: "Open Cursor, pick the one thing you wish existed at Yale, and ship a first version. Small and working beats big and half done." },
-  { n: "3", t: "Submit", p: "Push it to a public GitHub repo with the Cursor screenshot in the README, then send us the link.", href: FORM_URL, cta: "Open the form" },
+  { n: "3", t: "Submit", p: "Push it to a public GitHub repo. The README needs the Cursor screenshot, usage instructions, and the demo video link. Then send us the link.", href: FORM_URL, cta: "Open the form" },
 ];
 
 export default function CompetitionPage() {
@@ -114,7 +114,7 @@ export default function CompetitionPage() {
             <ul className="mt-3 max-w-prose list-disc space-y-1.5 pl-5 text-[0.95rem] leading-relaxed text-muted">
               <li>Open to Yale students. Submit with your Yale email.</li>
               <li>One submission per person or team. Teams of up to three; list everyone on the form.</li>
-              <li>The repository must be public and must include the Cursor screenshot in its README.</li>
+              <li>The repository must be public. Its README must include the Cursor screenshot, usage instructions (logins, test accounts, anything needed to run it), and a link to a 1 to 2 minute demo video (YouTube or anywhere else).</li>
               <li>Judged by the YaleAI board on usefulness to Yale students, craft, and how far you got in the time.</li>
               <li>Winners are contacted by email within a few days of the deadline. SpaceXAI applies the three months of Cursor to the winners&apos; accounts.</li>
               <li>
