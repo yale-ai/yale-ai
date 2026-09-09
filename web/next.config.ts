@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     return [
       // Short links printed on the kickoff deck (slides/ in this repo).
       { source: "/win", destination: "https://forms.gle/4LDrUb9xhVkJrjP49", permanent: false },
+      { source: "/apply", destination: "https://forms.gle/nvkHQyJ7qyekY6Tu9", permanent: false },
       { source: "/slack", destination: "https://join.slack.com/t/yale-ai/shared_invite/zt-495gi7v9z-0rO7~Oo1bvg4vVKkOgIMfw", permanent: false },
     ];
   },
