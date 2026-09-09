@@ -61,6 +61,7 @@
   .grok .xglyph { height: 34px; width: auto; opacity: .85; }
   .grok .conf { font: 500 13px/1 var(--sans); color: #b0b0b0; letter-spacing: .04em; }
 
+  .grok .sx-corner { position: absolute; right: 120px; top: 108px; height: 28px; width: auto; z-index: 3; }
   /* mascots: absolutely placed, cut by the frame like the template */
   .m { position: absolute; z-index: 1; pointer-events: none; }
 
@@ -74,7 +75,7 @@
   /* purple divider */
   .grok.purple { background: #b592f8 url("assets/grok/bg-purple.png") center / cover no-repeat; color: #fff; }
   .grok.purple h1 { color: #fff; font-weight: 500; font-size: 118px; }
-  .grok.purple .who { margin-top: 30px; font: 500 30px/1.2 var(--sans); color: rgba(255,255,255,.85); }
+  .grok.purple .who { margin-top: 30px; font: 500 30px/1.3 var(--sans); color: rgba(255,255,255,.85); max-width: 640px; position: relative; z-index: 2; }
   .grok.purple .num { color: rgba(255,255,255,.55); }
   .grok.purple .cloud { position: absolute; left: 50%; top: 50%; width: 520px; transform: translate(-50%, -50%); z-index: 1; filter: drop-shadow(0 30px 60px rgba(60,20,120,.35)); }
 
@@ -363,6 +364,7 @@
 
 <!-- 04 · Introducing Grok Bot -->
 <section class="slide grok dark">
+  <img class="sx-corner" src="assets/spacexai-white.png" alt="SpaceXAI">
   <div class="c">
     <h2>Introducing <img src="assets/grok/grokbot-lockup-white.png" alt="Grok Bot"></h2>
     <div class="shot-wrap">
@@ -380,6 +382,7 @@
 
 <!-- 05 · AI is evolving fast -->
 <section class="slide grok white">
+  <img class="sx-corner" src="assets/spacexai-black.png" alt="SpaceXAI">
   <img class="m" src="assets/grok/blob-trio.png" alt="" style="--j:0; right:-60px; bottom:-80px; width:620px">
   <div class="c">
     <h2>AI is evolving<br>fast</h2>
@@ -395,6 +398,7 @@
 
 <!-- 06 · The challenge with most agents -->
 <section class="slide grok white">
+  <img class="sx-corner" src="assets/spacexai-black.png" alt="SpaceXAI">
   <div class="c">
     <h2>The challenge<br>with most agents</h2>
     <div class="probs">
@@ -418,6 +422,7 @@
 
 <!-- 07 · Routine work -->
 <section class="slide grok">
+  <img class="sx-corner" src="assets/spacexai-black.png" alt="SpaceXAI">
   <div class="c">
     <div class="frame">
       <div class="head">
@@ -432,10 +437,11 @@
 
 <!-- Grok 4.6 on the benchmark chart -->
 <section class="slide grok white">
+  <img class="sx-corner" src="assets/spacexai-black.png" alt="SpaceXAI">
   <img class="m" src="assets/chars/dome-blue.png" alt="" style="--j:0; right:-80px; bottom:-230px; width:520px; opacity:.9">
   <div class="c">
     <div class="lockup">
-      <h2>Grok 4.6: frontier accuracy, <span class="pu">a fraction of the cost.</span></h2>
+      <h2 style="max-width:1300px">Grok 4.6: frontier accuracy, <span class="pu">a fraction of the cost.</span></h2>
     </div>
     <div class="body" style="margin-top:14px; max-width:1500px">The model inside Grok Bot. <b>69.9% accuracy at $2.34 a task</b> (Grok 4.6 high, the default): a point above Fable 5.1 at under half its cost, and clear of everything else at its price. Accuracy against average cost per task, frontier models, September 2026.</div>
     <div style="margin-top:22px; width:1400px; border:1.5px solid rgba(0,0,0,.12); border-radius:22px; background:#fff; padding:18px 24px 10px">
@@ -525,10 +531,11 @@
 
 <!-- 03 · Divider: live demo -->
 <section class="slide grok purple">
+  <img class="sx-corner" src="assets/spacexai-white.png" alt="SpaceXAI">
   <img class="cloud" src="assets/grok/cloud-white.png" alt="">
   <div class="c">
     <h1>Live<br>Grok Bot<br>demo</h1>
-    <div class="who">Filippo Fonseca, Yale AI</div>
+    <div class="who">Filippo Fonseca<br>Head of Development, Yale AI · SpaceXAI Campus Lead @ Yale</div>
   </div>
   <div class="num">09</div>
 </section>
@@ -577,7 +584,7 @@
     <div class="people">
       <div class="person"><img class="pfp" src="assets/team/aryan.jpg" alt=""><div><div class="pname">Aryan Agarwal</div><div class="prole">Co-President</div><div class="pmeta">COGSCI · 2027</div></div></div>
       <div class="person"><img class="pfp" src="assets/team/addison.jpg" alt=""><div><div class="pname">Addison Shea</div><div class="prole">Co-President</div><div class="pmeta">PHYSICS + ENERGY · 2029</div></div></div>
-      <div class="person"><img class="pfp" src="assets/team/filippo.jpg" alt=""><div><div class="pname">Filippo Fonseca</div><div class="prole">Head of Development</div><div class="pmeta">MECHE + EECS · 2028</div></div></div>
+      <div class="person"><img class="pfp" src="assets/team/filippo.jpg" alt=""><div><div class="pname">Filippo Fonseca</div><div class="prole">Head of Development · SpaceXAI Campus Lead</div><div class="pmeta">MECHE + EECS · 2028</div></div></div>
       <div class="person"><img class="pfp" src="assets/team/hanson.jpg" alt=""><div><div class="pname">Hanson Qin</div><div class="prole">Treasurer</div><div class="pmeta">MATH + CS · 2028</div></div></div>
       <div class="person"><img class="pfp" src="assets/team/david.jpg" alt=""><div><div class="pname">David Antwi</div><div class="prole">Projects Director</div><div class="pmeta">EECS · 2028</div></div></div>
       <div class="person"><span class="pfp initials">HV</span><div><div class="pname">Hari Viswanathan</div><div class="prole">Head of Events</div><div class="pmeta">2028</div></div></div>
@@ -738,7 +745,7 @@
   <div class="c">
     <div class="lockup">
       <img class="gb" src="assets/grok/grokbot-lockup-black.png" alt="Grok Bot">
-      <span class="tag"><span class="dot"></span><b>You have a month.</b> Use all of it.</span>
+      <span style="display:inline-flex; align-items:center; gap:28px"><img src="assets/spacexai-black.png" alt="SpaceXAI" style="height:30px; width:auto; display:block"><span class="tag"><span class="dot"></span><b>You have a month.</b> Use all of it.</span></span>
     </div>
     <h2 style="margin-top:50px; max-width:1300px">Cursor is the editor. Grok 4.6 is the model. <span class="pu">Grok Bot is the teammate.</span></h2>
     <div class="body" style="margin-top:22px; max-width:1300px; font-size:29px">The whole SpaceXAI suite, unlocked tonight. Pick one real thing you are already doing this week and hand it over.</div>
@@ -753,6 +760,7 @@
 
 <!-- Transition into the competition -->
 <section class="slide grok purple">
+  <img class="sx-corner" src="assets/spacexai-white.png" alt="SpaceXAI">
   <img class="cloud" src="assets/grok/cloud-white.png" alt="">
   <div class="c">
     <h1 style="font-size:100px; max-width:1100px">Who's ready to earn perks from SpaceXAI<br>and build something cool?</h1>
@@ -767,7 +775,7 @@
   <div class="c">
     <div class="lockup">
       <img class="gb" src="assets/grok/grokbot-lockup-black.png" alt="Grok Bot">
-      <span class="tag"><span class="dot"></span><b>Competition</b> starts now · ends tomorrow at midnight</span>
+      <span style="display:inline-flex; align-items:center; gap:28px"><img src="assets/spacexai-black.png" alt="SpaceXAI" style="height:30px; width:auto; display:block"><span class="tag"><span class="dot"></span><b>Competition</b> starts now · ends tomorrow at midnight</span></span>
     </div>
     <div class="split" style="grid-template-columns: 560px 1fr; gap: 70px">
       <div>
