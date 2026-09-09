@@ -267,9 +267,12 @@
     /* step-through: cards dim and light one at a time */
     .stepping > .card, .stepping > .rule, .stepping > .prob, .stepping > .step, .stepping > li, .stepping > .person { transition: opacity .35s ease, transform .35s ease, border-color .35s ease, box-shadow .35s ease; }
     .stepping > *:not(.lit) { opacity: .35; }
-    .stepping > .lit { opacity: 1; transform: scale(1.03); }
-    .grok .stepping > .lit { border-color: var(--purple); box-shadow: 0 0 0 4px rgba(167,125,253,.25), 0 30px 60px -30px rgba(124,77,255,.6); }
-    .yai .stepping > .lit { border-color: var(--lime); box-shadow: 0 0 0 3px rgba(217,228,168,.3), 0 24px 60px -20px rgba(217,228,168,.5); }
+    .stepping > .lit { opacity: 1; transform: scale(1.03); border-radius: 22px; }
+    .grok .stepping > .lit { border-color: var(--purple); box-shadow: 0 0 0 8px rgba(167,125,253,.22), 0 30px 60px -30px rgba(124,77,255,.6); }
+    .yai .stepping > .lit { border-color: var(--lime); box-shadow: 0 0 0 8px rgba(217,228,168,.25), 0 24px 60px -20px rgba(217,228,168,.5); }
+    /* Items without a box of their own (the numbered steps) get a padded, rounded glow. */
+    .stepping > li.lit { border-radius: 18px; background: rgba(167,125,253,.14); box-shadow: 0 0 0 16px rgba(167,125,253,.14); transform: scale(1.02); }
+    .stepping > .step.lit { border-radius: 22px; }
   }
   @media (prefers-reduced-motion: reduce) { .deck.present .slide.on * { animation: none !important; } }
 
