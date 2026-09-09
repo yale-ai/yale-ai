@@ -72,6 +72,8 @@ export const TEAM: Member[] = [
     role: "Head of Events",
     email: "hari.viswanathan@yale.edu",
     classYear: "2028",
+    major: "Applied Mathematics + Philosophy",
+    photo: "/team/hari.jpg",
   },
   {
     slug: "henry",
