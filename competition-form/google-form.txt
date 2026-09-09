@@ -5,7 +5,7 @@ Google Form content. Banner: banner.png in this folder (1600x400, Google Forms h
 Rapid-fire Cursor: YaleAI x SpaceXAI build competition
 
 === DESCRIPTION ===
-How quickly can you build a useful app for Yale students?
+How quickly can you build a useful web app for Yale students?
 
 Build it in Cursor, on the month of Cursor Pro SpaceXAI gave the room at the kickoff, and submit here by Thursday, September 10 at 11:59 PM.
 
