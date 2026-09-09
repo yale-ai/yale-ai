@@ -4,5 +4,6 @@ window.LINKS = {
   "submit": "https://yale-ai.org/win",
   "join": "https://yale-ai.org",
   "luma": "https://luma.com/o5g51mh0",
-  "slack": "https://yale-ai.org/slack"
+  "slack": "https://yale-ai.org/slack",
+  "apply": "https://yale-ai.org"
 };
