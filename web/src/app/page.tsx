@@ -2,16 +2,16 @@ import Link from "next/link";
 import TopBar from "@/components/TopBar";
 import AnnounceBar from "@/components/AnnounceBar";
 import Hero from "@/components/landing/Hero";
-import KickoffCard from "@/components/landing/KickoffCard";
+import SpotlightCard from "@/components/landing/SpotlightCard";
 import ThisYear from "@/components/landing/ThisYear";
 import FieldTrips from "@/components/landing/FieldTrips";
 import Constellation from "@/components/landing/Constellation";
 import { CONTACT_EMAIL, SITE, SOCIALS } from "@/lib/site";
 
 /*
-  First screen: the hero and the kickoff card, pinned to the viewport height on
-  desktop in the shape of yalerover.com. Below it the page scrolls: the year in
-  one glance, the connections, the footer.
+  First screen: the hero and the spotlight card (the next event), pinned to the
+  viewport height on desktop in the shape of yalerover.com. Below it the page
+  scrolls: the year in one glance, past events, the connections, the footer.
 */
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
           </div>
           <div className="flex w-full flex-1 items-center justify-center lg:min-h-0">
             <div className="reveal reveal-2 w-full max-w-4xl">
-              <KickoffCard />
+              <SpotlightCard />
             </div>
           </div>
         </main>
