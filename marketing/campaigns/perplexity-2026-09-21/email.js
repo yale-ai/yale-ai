@@ -169,7 +169,7 @@ export function renderEmail({
   <tr><td align="center" class="pad" style="padding:30px 32px 0;">
     <div class="tl" style="${kicker}">Recruiting event</div>
     <div class="hero fg" style="font-family:${SERIF};font-weight:400;font-size:42px;line-height:46px;letter-spacing:-0.5px;color:${WHITE};padding-top:12px;">Perplexity is coming to Yale <span class="tl" style="font-style:italic;color:${TEAL};">this Monday.</span></div>
-    <div style="${italic}font-size:19px;line-height:27px;color:#bdbdbd;padding-top:10px;">Recruiting, a live coding competition, and prizes.</div>
+    <div style="${italic}font-size:19px;line-height:27px;color:#bdbdbd;padding-top:10px;">And they want to recruit you on Monday evening (a few of you will get guaranteed interviews). Really.</div>
   </td></tr>
 
   <!-- the facts -->
@@ -224,7 +224,7 @@ export function renderEmail({
   const text = `Yale AI x Perplexity (${siteUrl})
 
 PERPLEXITY IS COMING TO YALE THIS MONDAY
-Recruiting, a live coding competition, and prizes.
+And they want to recruit you on Monday evening (a few of you will get guaranteed interviews). Really.
 ${ev.dayLine}, ${ev.timeLine}, ${ev.where}
 Spots are limited and registration is required.
 
