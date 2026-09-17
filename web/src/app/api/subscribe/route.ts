@@ -54,7 +54,7 @@ export async function POST(req: Request) {
   if (error) {
     // A duplicate is a success from the person's point of view.
     if (/already exists/i.test(error.message ?? "")) {
-      return NextResponse.json({ message: "You were already on the list. See you at the kickoff." });
+      return NextResponse.json({ message: "You were already on the list. See you at the next event." });
     }
     console.error("resend contacts.create failed", error);
     return NextResponse.json({ message: "Could not add you right now. Email us instead." }, { status: 502 });

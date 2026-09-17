@@ -51,7 +51,7 @@ export default async function Image() {
               fontWeight: 700,
             }}
           >
-            Kickoff sponsored by SpaceX
+            Perplexity recruiting night, Sep 21
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -61,13 +61,13 @@ export default async function Image() {
         </div>
         <div style={{ display: "flex", gap: 12, fontSize: 22 }}>
           <div style={{ display: "flex", background: "#d9e4a8", color: "#0b0b0b", borderRadius: 999, padding: "10px 22px", fontWeight: 700 }}>
-            1 month free Cursor Pro
+            guaranteed interviews
           </div>
           <div style={{ display: "flex", border: "2px solid #d9e4a8", color: "#d9e4a8", borderRadius: 999, padding: "10px 22px" }}>
-            project teams
+            live coding competition
           </div>
           <div style={{ display: "flex", border: "2px solid #d9e4a8", color: "#d9e4a8", borderRadius: 999, padding: "10px 22px" }}>
-            fellowship
+            Perplexity Max + API credits
           </div>
           <div style={{ display: "flex", border: "2px solid #d9e4a8", color: "#d9e4a8", borderRadius: 999, padding: "10px 22px" }}>
             all years welcome

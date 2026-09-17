@@ -24,8 +24,8 @@ export default function TopBar() {
         <Link href={onTeam ? "/" : "/team"} className={navLink}>
           {onTeam ? "Home" : "Team"}
         </Link>
-        <Link href="/#kickoff" className={navLink}>
-          Kickoff
+        <Link href="/#spotlight" className={navLink}>
+          Perplexity night
         </Link>
         <Link href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="YaleAI on Instagram" className={iconBtn}>
           <InstagramIcon className="h-[0.95rem] w-[0.95rem]" />
@@ -35,7 +35,7 @@ export default function TopBar() {
         </Link>
         <ThemeToggle />
         <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="cta px-3.5 py-1.5 text-[0.72rem] md:text-[0.76rem]">
-          Kickoff Sep 9 <span aria-hidden>→</span>
+          Perplexity Sep 21 <span aria-hidden>→</span>
         </Link>
       </nav>
     </header>
