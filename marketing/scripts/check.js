@@ -11,7 +11,7 @@ import "dotenv/config";
 import { Resend } from "resend";
 import { promises as dns } from "node:dns";
 import { loadCampaign, listCampaigns } from "../lib/campaign.js";
-import { loadAssets } from "../lib/assets.js";
+import { loadAssets, loadFiles } from "../lib/assets.js";
 import { loadSent, loadUnsubscribed } from "../lib/recipients.js";
 
 // ---- args -------------------------------------------------------------------
@@ -40,6 +40,14 @@ if (campaignName) {
   console.log(`subject:  ${campaign.subject}`);
   console.log(`assets:   ${assets.map((a) => a.file).join(", ") || "(none)"}`);
   if (missing.length) console.log(`missing:  ${missing.map((a) => a.file).join(", ")}`);
+  if (campaign.files.length) {
+    try {
+      const files = loadFiles(campaign.files, campaign.assetsDir);
+      console.log(`files:    ${files.map((f) => `${f.filename} (${(f.content.length / 1024).toFixed(0)} KB)`).join(", ")}`);
+    } catch (e) {
+      console.log(`files:    MISSING: ${e.message}`);
+    }
+  }
   console.log(`ledger:   ${loadSent(campaign.dir).size} address(es) already sent`);
   console.log("");
 } else {

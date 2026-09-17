@@ -24,7 +24,7 @@ import "dotenv/config";
 import { createHash } from "node:crypto";
 import { Resend } from "resend";
 import { loadCampaign, listCampaigns } from "../lib/campaign.js";
-import { loadAssets, cidProps, hostedProps, attachments, HOSTED_BASE } from "../lib/assets.js";
+import { loadAssets, cidProps, hostedProps, attachments, loadFiles, fileAttachments, HOSTED_BASE } from "../lib/assets.js";
 import {
   parseRecipient,
   loadList,
@@ -169,6 +169,16 @@ if (recipients.length > limit) recipients = recipients.slice(0, limit);
 // ---- payload ----------------------------------------------------------------
 const assets = loadAssets(campaign.assets, campaign.assetsDir);
 const imageProps = inlineImages ? cidProps(assets) : hostedProps(assets, campaign.id);
+// Plain attachments declared by the campaign (a flyer PDF, say). Loaded once,
+// attached to every message in every image mode. Missing files abort the run.
+let files;
+try {
+  files = loadFiles(campaign.files, campaign.assetsDir);
+} catch (e) {
+  console.error(e.message);
+  process.exit(2);
+}
+const fileParts = fileAttachments(files);
 const resend = new Resend(apiKey || "re_dry_run");
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -180,6 +190,9 @@ console.log(
   `assets:   ${assets.map((a) => a.file).join(", ") || "(none)"} ` +
     `(${inlineImages ? "inline CID" : `hosted at ${HOSTED_BASE}/${campaign.id}`})`,
 );
+if (files.length) {
+  console.log(`files:    ${files.map((f) => `${f.filename} (${(f.content.length / 1024).toFixed(0)} KB)`).join(", ")} attached to every message`);
+}
 console.log(
   `to:       ${recipients.length} recipient(s)${dryRun ? " [dry run]" : ""}` +
     `${skipped ? `, ${skipped} already in sent.tsv and skipped` : ""}` +
@@ -210,9 +223,10 @@ function buildPayload(r) {
       "List-Unsubscribe": `<${unsubMailto}>`,
       "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
     },
-    // Hosted images by default: no attachments, no paperclip in Gmail. No .ics
-    // either, since a calendar attachment makes Gmail render this as an invite.
-    attachments: inlineImages ? attachments(assets) : [],
+    // Hosted images by default: no image attachments, no paperclip in Gmail. No
+    // .ics either, since a calendar attachment makes Gmail render this as an
+    // invite. Campaign FILES (a flyer PDF, say) are always attached.
+    attachments: [...(inlineImages ? attachments(assets) : []), ...fileParts],
     tags: [{ name: "campaign", value: campaign.tag }],
   };
 }
@@ -227,7 +241,7 @@ function idemFor(r, payload) {
 function idemForBatch(chunk, payloads) {
   const fingerprint =
     `${campaign.id}|${payloads[0].subject}|${chunk.map((r) => r.email.toLowerCase()).join(",")}` +
-    `|${payloads[0].html}${force ? `|${Date.now()}` : ""}`;
+    `|${payloads[0].html}|${payloads[0].attachments.map((a) => a.filename).join(",")}${force ? `|${Date.now()}` : ""}`;
   return `${campaign.id}-batch-${createHash("sha256").update(fingerprint).digest("hex").slice(0, 40)}`;
 }
 
@@ -253,9 +267,10 @@ if (dryRun) {
     failed++;
   }
 } else {
-  // Batches of 100 (Resend's maximum per call). Inline CID attachments are not
-  // allowed on the batch endpoint, so that mode falls back to one at a time.
-  const BATCH = inlineImages ? 1 : 100;
+  // Batches of 100 (Resend's maximum per call). Attachments are not allowed on
+  // the batch endpoint, so inline CID images and campaigns with FILES both fall
+  // back to one message per call.
+  const BATCH = inlineImages || files.length ? 1 : 100;
   for (let i = 0; i < recipients.length; i += BATCH) {
     const chunk = recipients.slice(i, i + BATCH);
     const payloads = chunk.map(buildPayload);

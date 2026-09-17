@@ -93,6 +93,10 @@ Flags:
 | `--dry-run` | Prints what would go out and sends nothing. Needs no API key. |
 | `--limit N` | Cap this run at N recipients, for sending in waves. |
 | `--inline-images` | Attach images as CID parts instead of linking hosted URLs. Forces one send at a time, since the batch endpoint rejects attachments. |
+
+A campaign that exports `FILES` (see below) attaches those files to every message, in
+every image mode. Because the batch endpoint rejects attachments, such a campaign also
+goes out one message per call.
 | `--force` | Salt the idempotency key so Resend accepts an identical resend. |
 | `--ignore-log` | Do not skip addresses found in the campaign ledger. Unsubscribes are still honored. |
 
@@ -148,7 +152,7 @@ identical content is a no-op unless you pass `--force`.
 
 1. `mkdir -p campaigns/<name>/assets`
 2. Write `campaigns/<name>/email.js` exporting `CAMPAIGN = { id, tag }`, `SUBJECT`,
-   `PREHEADER`, `ASSETS`, and `renderEmail(props) -> { subject, html, text }`.
+   `PREHEADER`, `ASSETS`, optionally `FILES`, and `renderEmail(props) -> { subject, html, text }`.
    `renderEmail` should take an optional `firstName` and default every other prop, so
    `preview` works with no environment at all.
 3. Create `campaigns/<name>/sent.tsv` with a `#` header comment line.
@@ -158,6 +162,11 @@ identical content is a no-op unless you pass `--force`.
 `ASSETS` entries look like
 `{ key: "posterSrc", cid: "poster", file: "poster.jpg", type: "image/jpeg" }`. A file that
 is missing from disk is simply skipped, so the template must handle an empty prop.
+
+`FILES` entries look like
+`{ file: "flyer.pdf", filename: "Perplexity x YaleAI Recruiting Flyer.pdf", type: "application/pdf" }`
+and are plain attachments sent with every message, read from the same `assets/` folder.
+Unlike images, a missing file aborts the run. Filenames are part of the idempotency key.
 
 ## Template conventions
 

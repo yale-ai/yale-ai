@@ -2,7 +2,7 @@
 //
 // A campaign is a directory under campaigns/ holding:
 //   email.js    exports CAMPAIGN = { id, tag }, SUBJECT, PREHEADER, ASSETS,
-//               and renderEmail(props) -> { subject, html, text }
+//               optionally FILES, and renderEmail(props) -> { subject, html, text }
 //   assets/     images referenced by ASSETS
 //   sent.tsv    the per-campaign send ledger
 //   README.md   what this campaign is and when it goes out
@@ -30,7 +30,7 @@ export function listCampaigns() {
  * Load campaigns/<name>/email.js.
  * @param {string} name
  * @returns {Promise<{id:string, tag:string, subject:string, preheader:string,
- *   render:Function, assets:Array, dir:string, assetsDir:string, module:object}>}
+ *   render:Function, assets:Array, files:Array, dir:string, assetsDir:string, module:object}>}
  */
 export async function loadCampaign(name) {
   if (!name) {
@@ -56,6 +56,9 @@ export async function loadCampaign(name) {
     preheader: mod.PREHEADER || "",
     render,
     assets: mod.ASSETS || [],
+    // Plain file attachments (a flyer PDF, say) that ride along on every send.
+    // Entries look like { file, filename, type }; see lib/assets.js loadFiles().
+    files: mod.FILES || [],
     dir,
     assetsDir: join(dir, "assets"),
     module: mod,
