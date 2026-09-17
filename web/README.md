@@ -4,7 +4,7 @@ Next.js 15, Tailwind 4, deployed on Vercel. Design taken from the 2026-27 EC Baz
 
 ## Pages
 
-- `/`: landing. Hero, kickoff card, this year's programs, mailing-list signup.
+- `/`: landing. Hero, the spotlight card for the next event, this year's programs, past events, trips.
 - `/team`: the board. Edit `src/lib/team.ts`; photos go in `public/team/<slug>.jpg` (missing photo shows initials).
 - `/api/subscribe`: adds a contact to a Resend audience.
 

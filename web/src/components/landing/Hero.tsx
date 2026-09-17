@@ -6,8 +6,8 @@ export default function Hero() {
     <section className="text-center pt-[clamp(0.4rem,1.4vh,1.2rem)]" aria-labelledby="hero-title">
       <span className="badge hero-badge max-w-full whitespace-normal">
         <span className="flex flex-col items-center gap-0.5 text-center leading-snug">
-          <span className="font-semibold text-fg">Kickoff is Wed, Sep 9 @ 8pm, Tsai CITY</span>
-          <span>a month of Cursor Pro for everyone, free credits, giveaways, more</span>
+          <span className="font-semibold text-fg">Perplexity is at Tsai CITY on Mon, Sep 21 @ 6:30pm</span>
+          <span>guaranteed interviews for a few of you, a live coding competition, prizes, free food</span>
         </span>
       </span>
 
@@ -22,18 +22,18 @@ export default function Hero() {
       </h1>
 
       <p className="mx-auto mt-[clamp(0.9rem,2.2vh,1.4rem)] max-w-3xl leading-relaxed text-muted text-[clamp(0.88rem,min(1.45vw,1.8vh),0.98rem)]">
-        <span className="text-fg">The people behind Cursor, Grok Bot, etc. are sponsoring our kickoff. <em className="font-semibold underline decoration-1 underline-offset-4">And they want you there. Yes. You.</em></span>{" "}
+        <span className="text-fg">Perplexity is coming to campus this Monday to recruit. <em className="font-semibold underline decoration-1 underline-offset-4">And they want you there. Yes. You.</em></span>{" "}
         <span className="font-semibold text-fg">We&apos;re the hub for AI companies, research, networking, and learning on campus, and we want you in.</span>
       </p>
 
       <div className="mt-[clamp(1rem,2.6vh,1.7rem)] flex flex-wrap items-center justify-center gap-3">
         <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="cta px-9 py-4 text-[1rem] md:text-[1.06rem]">
-          RSVP for the kickoff <span aria-hidden>→</span>
+          Sign up on Luma <span aria-hidden>→</span>
         </Link>
       </div>
       <p className="mx-auto mt-[clamp(0.9rem,2.2vh,1.4rem)] max-w-2xl leading-relaxed text-muted text-[clamp(0.88rem,min(1.45vw,1.8vh),0.98rem)]">
-        Come to our kickoff Wednesday at 8pm (Tsai CITY) and you&apos;ll get 1 month of Cursor Pro free, a shot at more credits, exclusive demos
-        from SpaceXAI, and a first look at the projects, trips, and fellowships YaleAI is running this year. We&apos;re personally very excited, and whether you want to learn about AI for the first time or are a seasoned builder, there&apos;s a place for you Wednesday. :)
+        Come to Tsai CITY this Monday at 6:30pm to meet Perplexity&apos;s recruiting team, hear about internships and new grad roles, and compete
+        in a live coding competition where top performers interview for new grad roles. We&apos;re personally very excited, and whether you want to learn about AI for the first time or are a seasoned builder, there&apos;s a place for you Monday. :)
       </p>
       <p className="mono-aside mt-[clamp(0.6rem,1.6vh,1rem)]">made for all Yalies interested in AI. first-year or senior? come anyway!</p>
     </section>

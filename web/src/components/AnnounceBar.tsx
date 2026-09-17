@@ -3,7 +3,7 @@ import { LUMA_URL } from "@/lib/site";
 
 /*
   Slim strip above everything. The Yale Y is set in YaleNew Bold on a
-  Yale-blue disc, as on yalerover.com. The link points at the kickoff RSVP.
+  Yale-blue disc, as on yalerover.com. The link points at the spotlight event's Luma page.
 */
 export default function AnnounceBar() {
   return (
@@ -15,7 +15,7 @@ export default function AnnounceBar() {
           <span className="block sm:inline">Will you join us?</span>{" "}
           <Link href={LUMA_URL} target="_blank" rel="noopener noreferrer" className="group">
             <span className="whitespace-nowrap text-teal-ink underline decoration-teal-ink/60 decoration-1 underline-offset-[3px] transition-colors group-hover:text-fg group-hover:decoration-fg">
-              RSVP for the kickoff <span aria-hidden>→</span>
+              Sign up for the Perplexity night <span aria-hidden>→</span>
             </span>
           </Link>
         </p>
