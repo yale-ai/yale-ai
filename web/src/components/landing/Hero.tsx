@@ -33,7 +33,7 @@ export default function Hero() {
       </div>
       <p className="mx-auto mt-[clamp(0.9rem,2.2vh,1.4rem)] max-w-2xl leading-relaxed text-muted text-[clamp(0.88rem,min(1.45vw,1.8vh),0.98rem)]">
         Come to Tsai CITY this Monday at 6:30pm to meet Perplexity&apos;s recruiting team, hear about internships and new grad roles, and compete
-        in a live coding competition where top performers interview for new grad roles (with Perplexity Max subscriptions and API credits as prizes). We&apos;re personally very excited, and whether you want to learn about AI for the first time or are a seasoned builder, there&apos;s a place for you Monday. :)
+        in a live coding competition where top performers interview for new grad roles. We&apos;re personally very excited, and whether you want to learn about AI for the first time or are a seasoned builder, there&apos;s a place for you Monday. :)
       </p>
       <p className="mono-aside mt-[clamp(0.6rem,1.6vh,1rem)]">made for all Yalies interested in AI. first-year or senior? come anyway!</p>
     </section>

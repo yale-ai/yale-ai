@@ -48,11 +48,10 @@ export default function SpotlightCard() {
         <span className="font-medium text-muted text-[clamp(0.9rem,1.9vh,1.05rem)]">{SPOTLIGHT.where}</span>
       </div>
 
-      <p className="relative max-w-xl leading-relaxed text-muted text-[clamp(0.85rem,1.75vh,0.95rem)] lg:pr-[14.5rem]">
-        <span className="font-semibold text-fg">We start with an hour with {SPOTLIGHT.partner}&apos;s recruiting team</span> (internships and new grad
-        roles, ask them anything), then {SPOTLIGHT.partner} hosts a live coding competition. Top performers interview for new grad Member of
-        Technical Staff roles, and prizes include {SPOTLIGHT.partner} Max subscriptions and thousands of dollars in API credits. There&apos;s free
-        food and drinks, spots are limited, and you need to RSVP.
+      <p className="relative max-w-2xl leading-relaxed text-muted text-[clamp(0.85rem,1.75vh,0.95rem)] lg:pr-[14.5rem]">
+        <span className="font-semibold text-fg">An hour with {SPOTLIGHT.partner}&apos;s recruiting team</span> (internships and new grad roles), then a
+        live coding competition. Top performers interview for new grad Member of Technical Staff roles, and prizes include {SPOTLIGHT.partner} Max
+        subscriptions and thousands of dollars in API credits. There&apos;s free food and drinks, and spots are limited, so RSVP.
       </p>
 
       <div className="relative flex flex-wrap items-center gap-3 lg:pr-[14.5rem]">
