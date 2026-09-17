@@ -171,7 +171,7 @@ export function renderEmail({
   <tr><td align="center" class="pad" style="padding:30px 32px 0;">
     <div class="tl" style="${kicker}">Recruiting event</div>
     <div class="hero fg" style="font-family:${SERIF};font-weight:400;font-size:42px;line-height:46px;letter-spacing:-0.5px;color:${WHITE};padding-top:12px;">Perplexity is coming to Yale <span class="tl" style="font-style:italic;color:${TEAL};">this Monday.</span></div>
-    <div style="${italic}font-size:19px;line-height:27px;color:#bdbdbd;padding-top:10px;">And they want to recruit you on Monday evening (a few of you will get guaranteed interviews). Really.</div>
+    <div style="${italic}font-size:19px;line-height:27px;color:#bdbdbd;padding-top:10px;">And they want to <b style="color:#fff;font-style:normal;">recruit you on Monday evening</b> (a few of you will get <b style="color:#fff;font-style:normal;">guaranteed interviews</b>). Really.</div>
   </td></tr>
 
   <!-- the torus, from the event artwork -->
