@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Instagram post for the Perplexity recruiting event, 1080 x 1350 (4:5). Render with a
+     headless browser at device scale 1 and hand the PNG to whoever runs the account.
+     Same language as the email: black stage, lime and teal, the torus from the Luma art. */
+  :root { --lime:#d9e4a8; --teal:#4fd8c8; --serif:'Instrument Serif',Georgia,serif; --sans:'Instrument Sans',Helvetica,Arial,sans-serif; }
+  body { margin:0; background:#000; }
+  .post { position:relative; width:1080px; height:1350px; overflow:hidden; background:#000; color:#fff; font-family:var(--sans); }
+  .torus { position:absolute; left:50%; top:556px; width:940px; transform:translateX(-50%); }
+  .grid { position:absolute; inset:0; opacity:.55;
+    background-image:linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size:60px 60px; -webkit-mask-image:radial-gradient(800px 700px at 50% 35%, #000 40%, transparent 100%); mask-image:radial-gradient(800px 700px at 50% 35%, #000 40%, transparent 100%); }
+  .c { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; text-align:center; padding:72px 70px 0; }
+  .lockup { display:flex; align-items:center; gap:22px; }
+  .lockup .mark { width:64px; height:64px; }
+  .lockup .name { font-weight:700; font-size:42px; letter-spacing:-1px; }
+  .lockup .x { color:#8a8a8a; font-size:34px; }
+  .lockup .pplx { height:60px; background:#fff; border-radius:16px; padding:0 20px; display:flex; align-items:center; }
+  .lockup .pplx img { height:34px; display:block; }
+  .kicker { margin-top:54px; font-weight:700; font-size:20px; letter-spacing:6px; text-transform:uppercase; color:var(--teal); }
+  h1 { margin:18px 0 0; font-family:var(--serif); font-weight:400; font-size:92px; line-height:1.0; letter-spacing:-1px; }
+  h1 i { color:var(--teal); }
+  .sub { margin-top:22px; font-family:var(--serif); font-style:italic; font-size:36px; line-height:1.25; color:#cfcfcf; max-width:900px; }
+  .sub b { font-style:normal; color:#fff; }
+  .card { position:absolute; left:70px; right:70px; bottom:70px; border-radius:34px; padding:40px 44px 44px;
+    background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04)), rgba(8,8,8,.96); border:1px solid rgba(255,255,255,.14);
+    box-shadow:0 30px 80px -30px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.12); text-align:center; }
+  .when { font-weight:700; font-size:40px; letter-spacing:-.5px; }
+  .when span { color:var(--lime); }
+  .where { margin-top:8px; font-family:var(--serif); font-style:italic; font-size:32px; color:#d8d8d8; }
+  .perks { margin-top:22px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .perk { border-radius:999px; border:1px solid rgba(217,228,168,.5); background:rgba(217,228,168,.1); padding:12px 22px; font-weight:600; font-size:22px; color:var(--lime); }
+  .pill { margin-top:30px; display:inline-flex; align-items:center; gap:14px; border-radius:999px; padding:24px 48px; color:#0b0b0b; font-weight:700; font-size:28px; letter-spacing:2px; text-transform:uppercase;
+    background:linear-gradient(180deg, #e6efb8, #d9e4a8 55%, #c4d485); box-shadow:0 20px 50px -14px rgba(217,228,168,.7), inset 0 1px 0 rgba(255,255,255,.6); }
+  .link { margin-top:16px; font-weight:600; font-size:24px; color:#9a9a9a; letter-spacing:.5px; }
+  .link b { color:#fff; }
+</style></head>
+<body>
+<div class="post" id="post">
+  <div class="grid"></div>
+  <img class="torus" src="assets/torus.jpg" alt="">
+  <div class="c">
+    <div class="lockup">
+      <svg class="mark" viewBox="0 0 24 24"><path fill="#0b0b0b" d="m12 1c-7.71 0-11 3.29-11 11s3.29 11 11 11 11-3.29 11-11-3.29-11-11-11z"/><path fill="#d9e4a8" d="m12 1c-7.71 0-11 3.29-11 11s3.29 11 11 11 11-3.29 11-11-3.29-11-11-11zm1 13.407v2.593c0 .553-.447 1-1 1s-1-.447-1-1v-2.593c-.855-.911-3.182-3.697-3.496-7.32-.048-.551.359-1.035.909-1.083.554-.055 1.035.359 1.083.909.214 2.465 1.632 4.537 2.504 5.599.872-1.062 2.29-3.134 2.504-5.599.048-.55.524-.956 1.083-.909.55.048.957.532.909 1.083-.315 3.624-2.642 6.409-3.496 7.32z"/></svg>
+      <div class="name">YaleAI</div>
+      <div class="x">&times;</div>
+      <div class="pplx"><img src="assets/perplexity-logo.png" alt="Perplexity"></div>
+    </div>
+    <div class="kicker">Recruiting event</div>
+    <h1>Perplexity is coming<br>to Yale <i>this Monday.</i></h1>
+    <div class="sub">And they want to <b>recruit you</b> on Monday evening. A few of you will get <b>guaranteed interviews</b>. Really.</div>
+  </div>
+  <div class="card">
+    <div class="when">Monday, September 21 <span>&middot;</span> 6:30 to 9:00 PM</div>
+    <div class="where">Tsai CITY</div>
+    <div class="perks">
+      <div class="perk">Live coding competition</div>
+      <div class="perk">Perplexity Max</div>
+      <div class="perk">API credits</div>
+      <div class="perk">Free food</div>
+    </div>
+    <div class="pill">Sign up on Luma &rarr;</div>
+    <div class="link">RSVP required, spots are limited <b>&middot;</b> <b>luma.com/f7vu165w</b></div>
+  </div>
+</div>
+</body></html>
