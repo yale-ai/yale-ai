@@ -112,7 +112,7 @@ export function renderEmail({
   const lockup = `
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr>
       ${markSrc ? `<td valign="middle" style="padding:0 9px 0 0;"><a href="${siteUrl}" target="_blank" style="text-decoration:none;"><img src="${markSrc}" width="32" height="32" alt="Yale AI" style="width:32px;height:32px;display:block;border:0;"></a></td>` : ""}
-      <td valign="middle" style="padding:0;"><a href="${siteUrl}" target="_blank" class="fg" style="font-family:${SANS};font-weight:700;font-size:21px;line-height:32px;letter-spacing:-0.5px;color:${WHITE};text-decoration:none;">Yale AI</a></td>
+      <td valign="middle" style="padding:0;"><a href="${siteUrl}" target="_blank" class="fg" style="font-family:${SANS};font-weight:700;font-size:21px;line-height:32px;letter-spacing:-0.5px;color:${WHITE};text-decoration:none;">YaleAI</a></td>
       <td valign="middle" style="padding:0 14px;"><span style="font-family:${SANS};font-weight:400;font-size:18px;line-height:32px;color:#8a8a8a;">&times;</span></td>
       <td valign="middle" style="padding:0;"><a href="https://www.perplexity.ai" target="_blank" style="text-decoration:none;">${partner}</a></td>
     </tr></table>`;
