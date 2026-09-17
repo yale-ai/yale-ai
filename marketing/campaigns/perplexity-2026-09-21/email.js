@@ -51,9 +51,7 @@ export const ASSETS = [
 ];
 
 // Attached to every send of this campaign, in every mode.
-export const FILES = [
-  { file: "flyer.pdf", filename: "Perplexity x YaleAI Recruiting Flyer.pdf", type: "application/pdf" },
-];
+export const FILES = []; // no attachment: batches of 100 instead of one message per call
 
 const SERIF = "'Instrument Serif', Georgia, 'Times New Roman', Times, serif";
 const SANS = "'Instrument Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif";
@@ -256,7 +254,6 @@ Sign up on Luma here: ${lumaUrl}
 Best,
 The Yale AI Team
 
-The flyer is attached as a PDF.
 
 Questions? Just reply to this email. :) It goes to the Yale AI leadership (fellow Yale students).
 
