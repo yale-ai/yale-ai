@@ -59,6 +59,7 @@ export async function loadCampaign(name) {
     // Plain file attachments (a flyer PDF, say) that ride along on every send.
     // Entries look like { file, filename, type }; see lib/assets.js loadFiles().
     files: mod.FILES || [],
+    replyTo: mod.REPLY_TO || null, // a campaign may pin its own reply-to list
     dir,
     assetsDir: join(dir, "assets"),
     module: mod,

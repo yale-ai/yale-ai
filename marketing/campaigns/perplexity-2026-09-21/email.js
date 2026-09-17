@@ -26,7 +26,9 @@ export const PREHEADER =
 
 export const DEFAULT_LUMA_URL = "https://luma.com/f7vu165w";
 export const DEFAULT_SITE_URL = "https://yale-ai.org";
-export const CONTACT_EMAIL = "filippo.fonseca@yale.edu";
+export const CONTACT_EMAIL = "yaleaiassociation@gmail.com";
+// Replies and the unsubscribe mailto go to the club inbox for this campaign.
+export const REPLY_TO = ["yaleaiassociation@gmail.com"];
 
 export const EVENTS = {
   perplexity: {

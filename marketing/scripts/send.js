@@ -131,7 +131,7 @@ const apiKey = dryRun ? process.env.RESEND_API_KEY || "" : need("RESEND_API_KEY"
 // Sender on the verified yale-ai.org domain. Override with EMAIL_FROM / REPLY_TO
 // (comma-separated) in marketing/.env.
 const from = process.env.EMAIL_FROM || "YaleAI Association <info@yale-ai.org>";
-const replyTo = (process.env.REPLY_TO || "yaleaiassociation@gmail.com, aryan.agarwal@yale.edu, addison.shea@yale.edu, filippo.fonseca@yale.edu")
+const replyTo = (process.env.REPLY_TO || (campaign.replyTo && campaign.replyTo.join(", ")) || "yaleaiassociation@gmail.com, aryan.agarwal@yale.edu, addison.shea@yale.edu, filippo.fonseca@yale.edu")
   .split(",")
   .map((s) => s.trim())
   .filter(Boolean);
