@@ -4,6 +4,7 @@ import AnnounceBar from "@/components/AnnounceBar";
 import Hero from "@/components/landing/Hero";
 import SpotlightCard from "@/components/landing/SpotlightCard";
 import ThisYear from "@/components/landing/ThisYear";
+import PastEvents from "@/components/landing/PastEvents";
 import FieldTrips from "@/components/landing/FieldTrips";
 import Constellation from "@/components/landing/Constellation";
 import { CONTACT_EMAIL, SITE, SOCIALS } from "@/lib/site";
@@ -40,6 +41,7 @@ export default function Home() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-24 px-5 pb-10 pt-20 md:gap-32 md:px-8 md:pt-28">
         <ThisYear />
+        <PastEvents />
         <FieldTrips />
 
         <footer className="flex flex-col gap-3 border-t border-line pt-8">
