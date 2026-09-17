@@ -45,6 +45,7 @@ export const EVENTS = {
 export const ASSETS = [
   { key: "markSrc", cid: "mark", file: "mark-plate.png", type: "image/png" },
   { key: "partnerLogoSrc", cid: "perplexity", file: "perplexity-plate.png", type: "image/png" },
+  { key: "torusSrc", cid: "torus", file: "torus.jpg", type: "image/jpeg" },
 ];
 
 // Attached to every send of this campaign, in every mode.
@@ -77,6 +78,7 @@ export function renderEmail({
   siteUrl = DEFAULT_SITE_URL,
   markSrc = "",
   partnerLogoSrc = "",
+  torusSrc = "",
 } = {}) {
   const ev = EVENTS.perplexity;
   const greeting = firstName ? `Hi ${esc(firstName)}!` : "Hi all!";
@@ -171,6 +173,11 @@ export function renderEmail({
     <div class="hero fg" style="font-family:${SERIF};font-weight:400;font-size:42px;line-height:46px;letter-spacing:-0.5px;color:${WHITE};padding-top:12px;">Perplexity is coming to Yale <span class="tl" style="font-style:italic;color:${TEAL};">this Monday.</span></div>
     <div style="${italic}font-size:19px;line-height:27px;color:#bdbdbd;padding-top:10px;">And they want to recruit you on Monday evening (a few of you will get guaranteed interviews). Really.</div>
   </td></tr>
+
+  <!-- the torus, from the event artwork -->
+  ${torusSrc ? `<tr><td align="center" style="padding:18px 32px 0;">
+    <img src="${torusSrc}" width="536" alt="" style="display:block;width:536px;max-width:100%;height:auto;border:0;border-radius:18px;">
+  </td></tr>` : ""}
 
   <!-- the facts -->
   <tr><td class="pad" style="padding:26px 32px 0;">
