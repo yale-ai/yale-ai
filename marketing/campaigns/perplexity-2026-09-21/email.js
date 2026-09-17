@@ -20,7 +20,7 @@ export const TEAL = "#4fd8c8";
 
 export const CAMPAIGN = { id: "perplexity-2026-09-21", tag: "perplexity-2026-09-21" };
 
-export const SUBJECT = "Perplexity at Yale this Monday: recruiting, a live coding competition, and prizes";
+export const SUBJECT = "Perplexity is coming to Tsai City on Monday to recruit you! Guaranteed interviews offered.";
 export const PREHEADER =
   "Monday 9/21, 6:30 to 9:00 PM at Tsai CITY. Interviews for new grad MTS roles, Perplexity Max, API credits, free food.";
 
