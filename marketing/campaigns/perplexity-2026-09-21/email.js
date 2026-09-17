@@ -195,7 +195,7 @@ export function renderEmail({
     <div class="fg" style="font-family:${SANS};font-weight:600;font-size:17px;line-height:25px;color:${WHITE};">${greeting}</div>
     <div style="${bodySans}padding-top:12px;">The Yale AI Association is back with another frontier AI company. Join us this Monday (9/21) from 6:30 to 9:00 PM at Tsai CITY to meet the team from <span class="fg" style="${strong}">Perplexity</span>!</div>
     <div style="${bodySans}padding-top:14px;">We&#8217;ll kick off with an hour with Perplexity&#8217;s recruiting team, where you can learn more about the company, ask questions, and hear about internships and new grad opportunities.</div>
-    <div style="${bodySans}padding-top:14px;">Then, Perplexity will host a <span class="fg" style="${strong}">live coding competition</span>. Top performers will be selected for an interview for Perplexity&#8217;s new grad Member of Technical Staff (MTS) roles.</div>
+    <div style="${bodySans}padding-top:14px;">Then, Perplexity will host a <span class="fg" style="${strong}">live coding competition</span>. Top performers will be <b style="color:#fff;">selected for an interview for Perplexity&#8217;s new grad Member of Technical Staff (MTS) roles</b>.</div>
     <div style="${bodySans}padding-top:14px;">There are also prizes for top performers, including <span class="fg" style="${strong}">Perplexity Max subscriptions</span> and <span class="fg" style="${strong}">thousands of dollars in API credits</span>.</div>
     <div style="${bodySans}padding-top:14px;">Come to compete, learn more about Perplexity, ask about recruiting, or just grab some free food and drinks. Spots are limited and registration is required.</div>
   </td></tr>
