@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
       { source: "/win", destination: "https://forms.gle/4LDrUb9xhVkJrjP49", permanent: false },
       { source: "/apply", destination: "https://forms.gle/nvkHQyJ7qyekY6Tu9", permanent: false },
       { source: "/pareto", destination: "https://airtable.com/appjKiKKB0lT0Cu8R/pagLNURMr3GQ1bWE9/form", permanent: false },
+      // Short link on the Perplexity night Instagram post and flyers, Sep 21 2026.
+      { source: "/perplexity", destination: "https://luma.com/f7vu165w", permanent: false },
       { source: "/slack", destination: "https://join.slack.com/t/yale-ai/shared_invite/zt-495gi7v9z-0rO7~Oo1bvg4vVKkOgIMfw", permanent: false },
     ];
   },

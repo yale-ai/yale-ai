@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LUMA_URL } from "@/lib/site";
+import { KICKOFF, LUMA_URL } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -16,10 +16,20 @@ export default function Hero() {
         className="mt-[clamp(0.8rem,2vh,1.3rem)] leading-[1.04] text-fg text-[clamp(1.6rem,min(6.9vw,6.2vh),3.6rem)] whitespace-nowrap"
       >
         Build the <span className="font-semibold">future of AI</span> at Yale.
-        <span className="mt-[0.12em] block whitespace-normal text-muted text-[0.82em]">
-          Now backed by <span className="spacexai h-[0.64em] align-middle -translate-y-[0.1em] text-fg" role="img" aria-label="SpaceXAI" />
-        </span>
       </h1>
+
+      <a
+        href={KICKOFF.lumaUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="badge hero-badge mt-[clamp(0.7rem,1.8vh,1.1rem)] max-w-full whitespace-normal leading-snug"
+      >
+        <span>
+          Our kickoff was powered by{" "}
+          <span className="spacexai h-[0.78em] align-middle -translate-y-[0.08em] text-fg" role="img" aria-label="SpaceXAI" />.{" "}
+          <span className="font-semibold text-fg underline decoration-1 underline-offset-4">Learn more <span aria-hidden>→</span></span>
+        </span>
+      </a>
 
       <p className="mx-auto mt-[clamp(0.9rem,2.2vh,1.4rem)] max-w-3xl leading-relaxed text-muted text-[clamp(0.88rem,min(1.45vw,1.8vh),0.98rem)]">
         <span className="text-fg">Perplexity is coming to campus this Monday to recruit. <em className="font-semibold underline decoration-1 underline-offset-4">And they want you there. Yes. You.</em></span>{" "}
