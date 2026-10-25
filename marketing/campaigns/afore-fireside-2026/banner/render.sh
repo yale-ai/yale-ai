@@ -7,8 +7,8 @@ cd "$(dirname "$0")"
   --window-size=1200,600 --force-device-scale-factor=2 \
   --virtual-time-budget=6000 \
   --screenshot="${TMPDIR:-/tmp}/afore-banner.png" "file://$PWD/banner.html" 2>/dev/null
-sips -s format jpeg -s formatOptions 82 -Z 1600 "${TMPDIR:-/tmp}/afore-banner.png" --out ../assets/banner-v2.jpg >/dev/null
+sips -s format jpeg -s formatOptions 82 -Z 1600 "${TMPDIR:-/tmp}/afore-banner.png" --out ../assets/banner-v3.jpg >/dev/null
 mkdir -p ../../../hosted/afore-fireside-2026
-cp ../assets/banner-v2.jpg ../../../hosted/afore-fireside-2026/banner-v2.jpg
-sips -g pixelWidth -g pixelHeight ../assets/banner-v2.jpg | tail -2
-ls -lh ../assets/banner-v2.jpg | awk '{print $5}'
+cp ../assets/banner-v3.jpg ../../../hosted/afore-fireside-2026/banner-v3.jpg
+sips -g pixelWidth -g pixelHeight ../assets/banner-v3.jpg | tail -2
+ls -lh ../assets/banner-v3.jpg | awk '{print $5}'
