@@ -1,7 +1,7 @@
 # afore-fireside-2026
 
-The invite for YaleAI's fireside chat with Nathan Yu (Investor @ Afore Capital), plus
-lightning pitches. Kept short on purpose: the banner, four short paragraphs, one button
+The invite for YaleAI's fireside chat with Nathan Yu (Principal Investor @ Afore Capital), plus
+lightning pitches. Kept short on purpose: the banner, five short paragraphs, one button
 to Luma.
 
 ## The event
