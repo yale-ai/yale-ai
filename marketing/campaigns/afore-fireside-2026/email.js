@@ -11,8 +11,7 @@ export const WHITE = "#ffffff";
 
 export const CAMPAIGN = { id: "afore-fireside-2026", tag: "afore-fireside-2026" };
 
-// The facts the email states. The Luma link is still a [bracketed] placeholder and must
-// be filled in before a real send (see README.md).
+// The facts the email states (see README.md).
 export const EVENT = {
   speaker: "Nathan Yu",
   title: "Principal Investor @ Afore Capital",
@@ -21,7 +20,7 @@ export const EVENT = {
   where: "Tsai CITY",
 };
 
-export const DEFAULT_LUMA_URL = "https://luma.com/[event-id]";
+export const DEFAULT_LUMA_URL = "https://luma.com/3qmnfwtw";
 export const DEFAULT_SITE_URL = "https://yale-ai.org";
 export const CONTACT_EMAIL = "yaleaiassociation@gmail.com";
 // Replies and the unsubscribe mailto go to the club inbox, same as the Perplexity send.

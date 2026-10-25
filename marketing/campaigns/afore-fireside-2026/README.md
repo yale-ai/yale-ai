@@ -14,10 +14,10 @@ to Luma.
 | Afore | First checks of $500K to $2M+, pre-idea welcome |
 | Also | Open Q&A and networking, all majors welcome, Yale students only |
 | Where, when | Tsai CITY, 4:30 to 6:30 PM (no date in the copy) |
-| Apply | **TBD**: set `DEFAULT_LUMA_URL` (or pass `LUMA_URL` in `.env`). Under 2 minutes, rolling acceptance, capped attendance |
+| Apply | https://luma.com/3qmnfwtw (under 2 minutes, rolling acceptance, capped attendance) |
 
 The body copy is Filippo's, used as written apart from small fixes ("looks for", "Tsai
-CITY"). Do not send to a list until the Luma link is real.
+CITY").
 
 Subject: "Afore Capital is coming to Yale (and they want to meet you)"
 
