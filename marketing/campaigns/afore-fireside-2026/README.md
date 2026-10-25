@@ -8,19 +8,18 @@ to Luma.
 
 | | |
 | --- | --- |
-| What | A fireside with Nathan Yu of Afore Capital: what a top VC looks for in student founders, and his path from big tech to startups |
-| Then | Lightning pitches: 10 to 15 slots, three minutes each, pitching Afore live |
+| Who | [Nathan Yu](https://www.linkedin.com/in/nathan-yu), Principal Investor @ Afore Capital |
+| What | What a top VC looks for in student founders and builders, and his path from big tech into VC and startups |
+| Then | Rapid-fire pitches: 10 to 15 students selected to pitch Afore live |
 | Afore | First checks of $500K to $2M+, pre-idea welcome |
-| Also | Open Q&A and networking, all majors welcome |
-| When | **TBD**: fill `EVENT.dayLine` and `EVENT.timeLine` in `email.js` |
-| Where | **TBD**: fill `EVENT.where` |
-| Register | **TBD**: set `DEFAULT_LUMA_URL` (or pass `LUMA_URL` in `.env`) |
+| Also | Open Q&A and networking, all majors welcome, Yale students only |
+| Where, when | Tsai CITY, 4:30 to 6:30 PM (no date in the copy) |
+| Apply | **TBD**: set `DEFAULT_LUMA_URL` (or pass `LUMA_URL` in `.env`). Under 2 minutes, rolling acceptance, capped attendance |
 
-Every fact above comes from the Luma cover (`afore-vc-scout/luma-banner`). The bracketed
-placeholders render visibly in the preview, so a test send makes any gap obvious. Do not
-send to a list until all three are filled.
+The body copy is Filippo's, used as written apart from small fixes ("looks for", "Tsai
+CITY"). Do not send to a list until the Luma link is real.
 
-Subject: "A fireside with Afore Capital, and a chance to pitch them"
+Subject: "Afore Capital is coming to Yale (and they want to meet you)"
 
 ## Files
 

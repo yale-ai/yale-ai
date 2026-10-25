@@ -11,14 +11,14 @@ export const WHITE = "#ffffff";
 
 export const CAMPAIGN = { id: "afore-fireside-2026", tag: "afore-fireside-2026" };
 
-// The facts the email states. Anything in [brackets] is not confirmed yet and must be
-// filled in before a real send (see README.md).
+// The facts the email states. The Luma link is still a [bracketed] placeholder and must
+// be filled in before a real send (see README.md).
 export const EVENT = {
   speaker: "Nathan Yu",
-  firm: "Afore Capital",
-  dayLine: "[Day, Month Date]",
-  timeLine: "[start to end time]",
-  where: "[room]",
+  title: "Principal Investor @ Afore Capital",
+  linkedin: "https://www.linkedin.com/in/nathan-yu",
+  timeLine: "4:30 to 6:30 PM",
+  where: "Tsai CITY",
 };
 
 export const DEFAULT_LUMA_URL = "https://luma.com/[event-id]";
@@ -27,8 +27,8 @@ export const CONTACT_EMAIL = "yaleaiassociation@gmail.com";
 // Replies and the unsubscribe mailto go to the club inbox, same as the Perplexity send.
 export const REPLY_TO = ["yaleaiassociation@gmail.com"];
 
-export const SUBJECT = "A fireside with Afore Capital, and a chance to pitch them";
-export const PREHEADER = `${EVENT.dayLine}, ${EVENT.timeLine} at ${EVENT.where}. Nathan Yu on what a top VC looks for in student founders, then three-minute pitches.`;
+export const SUBJECT = "Afore Capital is coming to Yale (and they want to meet you)";
+export const PREHEADER = `${EVENT.where}, ${EVENT.timeLine}. Hear from Nathan Yu, then 10-15 of you pitch Afore live. Apply on Luma in under 2 minutes.`;
 
 // banner.jpg is 1600x800, shown at 536x268. A missing file drops the banner.
 export const ASSETS = [{ key: "bannerSrc", cid: "banner", file: "banner.jpg", type: "image/jpeg" }];
@@ -59,13 +59,13 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
     <!--[if mso]>
     <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${lumaUrl}" style="height:48px;v-text-anchor:middle;width:220px;" arcsize="50%" stroke="f" fillcolor="${BLUE}">
       <w:anchorlock/>
-      <center style="color:${WHITE};font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">Register on Luma</center>
+      <center style="color:${WHITE};font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">Apply on Luma</center>
     </v:roundrect>
     <![endif]-->
     <!--[if !mso]><!-->
     <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
       <td align="center" bgcolor="${BLUE}" style="border-radius:999px;background:${BLUE};">
-        <a href="${lumaUrl}" target="_blank" class="btn" style="display:block;padding:14px 28px;font-family:${SANS};font-size:15px;font-weight:600;color:${WHITE} !important;text-decoration:none;white-space:nowrap;border-radius:999px;">Register on Luma &#8594;</a>
+        <a href="${lumaUrl}" target="_blank" class="btn" style="display:block;padding:14px 28px;font-family:${SANS};font-size:15px;font-weight:600;color:${WHITE} !important;text-decoration:none;white-space:nowrap;border-radius:999px;">Apply on Luma &#8594;</a>
       </td>
     </tr></table>
     <!--<![endif]-->`;
@@ -107,19 +107,21 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="wrap" style="width:600px;max-width:600px;background:${WHITE};" bgcolor="${WHITE}">
 
   ${bannerSrc ? `<tr><td class="pad" style="padding:28px 32px 0;">
-    <a href="${lumaUrl}" target="_blank" style="text-decoration:none;"><img src="${bannerSrc}" width="536" alt="A fireside with Afore Capital: Nathan Yu, Investor at Afore Capital. Plus lightning pitches: pitch Afore Capital in three minutes." style="display:block;width:536px;max-width:100%;height:auto;border:0;border-radius:14px;"></a>
+    <a href="${lumaUrl}" target="_blank" style="text-decoration:none;"><img src="${bannerSrc}" width="536" alt="A fireside with Afore Capital: Nathan Yu, Principal Investor at Afore Capital. Plus lightning pitches: pitch Afore Capital in three minutes. Tsai CITY, 4:30 to 6:30 PM, Yale students only." style="display:block;width:536px;max-width:100%;height:auto;border:0;border-radius:14px;"></a>
   </td></tr>` : ""}
 
   <tr><td class="pad" style="padding:28px 32px 0;">
     <p style="${p}">${greeting}</p>
-    <p style="${p}padding-top:14px;">YaleAI is hosting a fireside chat with <span style="${b}">${ev.speaker}</span>, an investor at <span style="${b}">${ev.firm}</span>, on <span style="${b}">${ev.dayLine}</span> from ${ev.timeLine} at ${ev.where}.</p>
-    <p style="${p}padding-top:14px;">Nathan will talk about what a top VC looks for in student founders and his path from big tech to startups. Then we&#8217;re running <span style="${b}">lightning pitches</span>: 10 to 15 of you get three minutes to pitch Afore live. Afore writes first checks of $500K to $2M+, and pre-idea is welcome.</p>
-    <p style="${p}padding-top:14px;">Open Q&amp;A and networking after. All majors welcome!</p>
+    <p style="${p}padding-top:14px;"><a href="${ev.linkedin}" target="_blank" style="${b}color:${BLUE};text-decoration:underline;">${ev.speaker}</a> (${ev.title}) is coming to Yale and he wants to meet you. Afore writes first checks of <span style="${b}">$500K to $2M+</span>, and pre-idea is welcome.</p>
+    <p style="${p}padding-top:14px;">Afore Capital will be hosting an exclusive event open to <span style="${b}">Yale students only</span> at <span style="${b}">${ev.where} from ${ev.timeLine}</span>. Not only will you get to hear from Nathan about what a top VC looks for in student founders and potential builders, but also about his journey into VC and startups from big tech.</p>
+    <p style="${p}padding-top:14px;"><span style="${b}">ALSO:</span> If you have an idea or are a builder of any kind... Afore is giving you the opportunity to pitch to them. Right there at ${ev.where}. Seriously. <span style="${b}">10-15 of you will be selected to give a rapid-fire pitch to Afore Capital.</span> If they like your idea... the possibilities are endless.</p>
+    <p style="${p}padding-top:14px;">There will also be an open Q&amp;A and networking time. All majors are welcome to come! Since we expect large amounts of interest, we&#8217;re capping the number of people that can attend. <span style="${b}">Apply on Luma (&lt;2 min) as soon as possible to secure your spot!</span> Acceptance is rolling.</p>
+    <p style="${p}padding-top:14px;">You don&#8217;t want to miss this (these opportunities don&#8217;t come around often to get access to a top VC firm like this).</p>
   </td></tr>
 
   <tr><td class="pad" style="padding:24px 32px 0;">
     ${button}
-    <p style="font-family:${SANS};font-size:13px;line-height:20px;color:#6b7280;margin:0;padding-top:10px;">Want a pitch slot? Apply on the same Luma page.</p>
+    <p style="font-family:${SANS};font-size:13px;line-height:20px;color:#6b7280;margin:0;padding-top:10px;">Takes under 2 minutes. Acceptance is rolling.</p>
   </td></tr>
 
   <tr><td class="pad" style="padding:26px 32px 0;">
@@ -143,14 +145,18 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
 
   const text = `${firstName ? `Hi ${firstName}!` : "Hi all!"}
 
-YaleAI is hosting a fireside chat with ${ev.speaker}, an investor at ${ev.firm}, on ${ev.dayLine} from ${ev.timeLine} at ${ev.where}.
+${ev.speaker} (${ev.title}) is coming to Yale and he wants to meet you. Afore writes first checks of $500K to $2M+, and pre-idea is welcome.
+${ev.linkedin}
 
-Nathan will talk about what a top VC looks for in student founders and his path from big tech to startups. Then we're running lightning pitches: 10 to 15 of you get three minutes to pitch Afore live. Afore writes first checks of $500K to $2M+, and pre-idea is welcome.
+Afore Capital will be hosting an exclusive event open to Yale students only at ${ev.where} from ${ev.timeLine}. Not only will you get to hear from Nathan about what a top VC looks for in student founders and potential builders, but also about his journey into VC and startups from big tech.
 
-Open Q&A and networking after. All majors welcome!
+ALSO: If you have an idea or are a builder of any kind... Afore is giving you the opportunity to pitch to them. Right there at ${ev.where}. Seriously. 10-15 of you will be selected to give a rapid-fire pitch to Afore Capital. If they like your idea... the possibilities are endless.
 
-Register on Luma: ${lumaUrl}
-Want a pitch slot? Apply on the same Luma page.
+There will also be an open Q&A and networking time. All majors are welcome to come! Since we expect large amounts of interest, we're capping the number of people that can attend. Apply on Luma (<2 min) as soon as possible to secure your spot! Acceptance is rolling.
+
+You don't want to miss this (these opportunities don't come around often to get access to a top VC firm like this).
+
+Apply on Luma: ${lumaUrl}
 
 Best,
 The Yale AI Team
