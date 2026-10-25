@@ -112,7 +112,7 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
 
   <tr><td class="pad" style="padding:28px 32px 0;">
     <p style="${p}">${greeting}</p>
-    <p style="${p}padding-top:14px;"><a href="${ev.linkedin}" target="_blank" style="${b}color:${BLUE};text-decoration:underline;">${ev.speaker}</a> (${ev.title}) is coming to Yale and he wants to meet you. Afore writes first checks of <span style="${b}">$500K to $2M+</span>, and pre-idea is welcome.</p>
+    <p style="${p}padding-top:14px;"><a href="${ev.linkedin}" target="_blank" style="${b}color:${BLUE};text-decoration:underline;">${ev.speaker}</a> (${ev.title}) is coming to Yale and he wants to meet you. Afore writes first checks of <span style="${b}">$500K to $2M+</span>, and pre-idea is welcome (they often back college founders, btw).</p>
     <p style="${p}padding-top:14px;">Afore Capital will be hosting an exclusive event open to <span style="${b}">Yale students only</span> at <span style="${b}">${ev.where} from ${ev.timeLine}</span>. Not only will you get to hear from Nathan about what a top VC looks for in student founders and potential builders, but also about his journey into VC and startups from big tech.</p>
     <p style="${p}padding-top:14px;"><span style="${b}">ALSO:</span> If you have an idea or are a builder of any kind... Afore is giving you the opportunity to pitch to them. Right there at ${ev.where}. Seriously. <span style="${b}">10-15 of you will be selected to give a rapid-fire pitch to Afore Capital.</span> If they like your idea... the possibilities are endless.</p>
     <p style="${p}padding-top:14px;">There will also be an open Q&amp;A and networking time. All majors are welcome to come! Since we expect large amounts of interest, we&#8217;re capping the number of people that can attend. <span style="${b}">Apply on Luma (&lt;2 min) as soon as possible to secure your spot!</span> Acceptance is rolling.</p>
@@ -145,7 +145,7 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
 
   const text = `${firstName ? `Hi ${firstName}!` : "Hi all!"}
 
-${ev.speaker} (${ev.title}) is coming to Yale and he wants to meet you. Afore writes first checks of $500K to $2M+, and pre-idea is welcome.
+${ev.speaker} (${ev.title}) is coming to Yale and he wants to meet you. Afore writes first checks of $500K to $2M+, and pre-idea is welcome (they often back college founders, btw).
 ${ev.linkedin}
 
 Afore Capital will be hosting an exclusive event open to Yale students only at ${ev.where} from ${ev.timeLine}. Not only will you get to hear from Nathan about what a top VC looks for in student founders and potential builders, but also about his journey into VC and startups from big tech.
