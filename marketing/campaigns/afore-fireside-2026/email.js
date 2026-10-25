@@ -29,8 +29,8 @@ export const REPLY_TO = ["yaleaiassociation@gmail.com"];
 export const SUBJECT = "Afore Capital is coming to Yale (and they want to meet you)";
 export const PREHEADER = `${EVENT.where}, ${EVENT.timeLine}. Hear from Nathan Yu, then 10-15 of you pitch Afore live. Apply on Luma in under 2 minutes.`;
 
-// banner-v2.jpg is 1600x800, shown at 536x268. A missing file drops the banner.
-export const ASSETS = [{ key: "bannerSrc", cid: "banner", file: "banner-v2.jpg", type: "image/jpeg" }];
+// banner-v3.jpg is 1600x800, shown at 536x268. A missing file drops the banner.
+export const ASSETS = [{ key: "bannerSrc", cid: "banner", file: "banner-v3.jpg", type: "image/jpeg" }];
 export const FILES = [];
 
 const SANS = "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif";
