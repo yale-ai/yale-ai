@@ -116,7 +116,7 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
     <p style="${p}padding-top:14px;">Afore Capital will be hosting an exclusive event open to <span style="${b}">Yale students only</span> at <span style="${b}">${ev.where} from ${ev.timeLine}</span>. Not only will you get to hear from Nathan about what a top VC looks for in student founders and potential builders, but also about his journey into VC and startups from big tech.</p>
     <p style="${p}padding-top:14px;"><span style="${b}">ALSO:</span> If you have an idea or are a builder of any kind... Afore is giving you the opportunity to pitch to them. Right there at ${ev.where}. Seriously. <span style="${b}">10-15 of you will be selected to give a rapid-fire pitch to Afore Capital.</span> If they like your idea... the possibilities are endless.</p>
     <p style="${p}padding-top:14px;">There will also be an open Q&amp;A and networking time. All majors are welcome to come! Since we expect large amounts of interest, we&#8217;re capping the number of people that can attend. <span style="${b}">Apply on Luma (&lt;2 min) as soon as possible to secure your spot!</span> Acceptance is rolling.</p>
-    <p style="${p}padding-top:14px;">You don&#8217;t want to miss this (these opportunities don&#8217;t come around often to get access to a top VC firm like this).</p>
+    <p style="${p}padding-top:14px;">You don&#8217;t want to miss this (these opportunities don&#8217;t come around often to get access to a top VC firm like this). Unsure if you want to found a startup now or sometime in the future? Come anyway. Afore wants to meet top talent at Yale regardless...</p>
   </td></tr>
 
   <tr><td class="pad" style="padding:24px 32px 0;">
@@ -154,7 +154,7 @@ ALSO: If you have an idea or are a builder of any kind... Afore is giving you th
 
 There will also be an open Q&A and networking time. All majors are welcome to come! Since we expect large amounts of interest, we're capping the number of people that can attend. Apply on Luma (<2 min) as soon as possible to secure your spot! Acceptance is rolling.
 
-You don't want to miss this (these opportunities don't come around often to get access to a top VC firm like this).
+You don't want to miss this (these opportunities don't come around often to get access to a top VC firm like this). Unsure if you want to found a startup now or sometime in the future? Come anyway. Afore wants to meet top talent at Yale regardless...
 
 Apply on Luma: ${lumaUrl}
 
