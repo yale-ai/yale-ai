@@ -30,8 +30,8 @@ export const REPLY_TO = ["yaleaiassociation@gmail.com"];
 export const SUBJECT = "Afore Capital is coming to Yale (and they want to meet you)";
 export const PREHEADER = `${EVENT.dayLine}, ${EVENT.timeLine} at ${EVENT.where}. Hear from Nathan Yu, then 10-15 of you pitch Afore live. Apply on Luma in under 2 minutes.`;
 
-// banner-v5.jpg is 1600x800, shown at 536x268. A missing file drops the banner.
-export const ASSETS = [{ key: "bannerSrc", cid: "banner", file: "banner-v5.jpg", type: "image/jpeg" }];
+// banner-v6.jpg is 1600x800, shown at 536x268. A missing file drops the banner.
+export const ASSETS = [{ key: "bannerSrc", cid: "banner", file: "banner-v6.jpg", type: "image/jpeg" }];
 export const FILES = [];
 
 const SANS = "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif";
@@ -107,7 +107,7 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="wrap" style="width:600px;max-width:600px;background:${WHITE};" bgcolor="${WHITE}">
 
   ${bannerSrc ? `<tr><td class="pad" style="padding:28px 32px 0;">
-    <a href="${lumaUrl}" target="_blank" style="text-decoration:none;"><img src="${bannerSrc}" width="536" alt="YaleAI Association. Want to meet with Afore Capital? Nathan Yu, Principal Investor at Afore Capital. Plus lightning pitches: pitch Afore Capital in three minutes. Wednesday 11/4, 4:30 to 6:30 PM, Tsai CITY, Yale students only." style="display:block;width:536px;max-width:100%;height:auto;border:0;border-radius:14px;"></a>
+    <a href="${lumaUrl}" target="_blank" style="text-decoration:none;"><img src="${bannerSrc}" width="536" alt="YaleAI Association. Fireside chat + lightning pitches. Want to meet with Afore Capital? Nathan Yu, Principal Investor at Afore Capital. Plus lightning pitches: pitch Afore Capital in three minutes. Wednesday 11/4, 4:30 to 6:30 PM, Tsai CITY, Yale students only." style="display:block;width:536px;max-width:100%;height:auto;border:0;border-radius:14px;"></a>
   </td></tr>` : ""}
 
   <tr><td class="pad" style="padding:28px 32px 0;">
