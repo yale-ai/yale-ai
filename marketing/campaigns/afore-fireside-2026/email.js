@@ -41,7 +41,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 /**
  * Render the Afore fireside email.
  * @param {object} o
- * @param {string} [o.firstName]   greeting name; omitted gives "Hi all!"
+ * @param {string} [o.firstName]   unused; the greeting is always "Hi!"
  * @param {string} [o.lumaUrl]     Luma registration link (the only CTA)
  * @param {string} [o.siteUrl]     yale-ai.org
  * @param {string} [o.bannerSrc]   the header banner; empty drops it
@@ -49,7 +49,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
  */
 export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = DEFAULT_SITE_URL, bannerSrc = "" } = {}) {
   const ev = EVENT;
-  const greeting = firstName ? `Hi ${esc(firstName)}!` : "Hi all!";
+  const greeting = "Hi!";
   const unsubMailto = `mailto:${CONTACT_EMAIL}?subject=unsubscribe&body=${encodeURIComponent("Please take me off the Yale AI list.")}`;
 
   const p = `font-family:${SANS};font-size:16px;line-height:25px;color:${INK};margin:0;`;
@@ -143,7 +143,7 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
 </body>
 </html>`;
 
-  const text = `${firstName ? `Hi ${firstName}!` : "Hi all!"}
+  const text = `Hi!
 
 ${ev.speaker} (${ev.title}) is coming to Yale from SF and he wants to meet you. Afore writes first checks of $500K to $2M+, and pre-idea is welcome (they often back college founders, btw).
 ${ev.linkedin}
