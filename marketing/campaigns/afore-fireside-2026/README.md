@@ -13,7 +13,7 @@ to Luma.
 | Then | Rapid-fire pitches: 10 to 15 students selected to pitch Afore live |
 | Afore | First checks of $500K to $2M+, pre-idea welcome |
 | Also | Open Q&A and networking, all majors welcome, Yale students only |
-| Where, when | Tsai CITY, 4:30 to 6:30 PM (no date in the copy) |
+| Where, when | Wednesday, November 4, 2026, 4:30 to 6:30 PM, Tsai CITY |
 | Apply | https://luma.com/3qmnfwtw (under 2 minutes, rolling acceptance, capped attendance) |
 
 The body copy is Filippo's, used as written apart from small fixes ("looks for", "Tsai
@@ -25,12 +25,12 @@ Subject: "Afore Capital is coming to Yale (and they want to meet you)"
 
 - `email.js`: the template. Plain white layout; the banner carries the brand.
 - `banner/banner.html`: the email banner, the Luma cover redrawn as a 2:1 strip. Run
-  `banner/render.sh` after editing it; it writes `assets/banner-v4.jpg` (1600x800, shown at
+  `banner/render.sh` after editing it; it writes `assets/banner-v5.jpg` (1600x800, shown at
   536x268) and copies it to `marketing/hosted/afore-fireside-2026/`.
 - `sent.tsv`: the send ledger. Do not hand-edit it unless you intend to re-send.
 
 The hosted copy has to be deployed (see `marketing/hosted/README.md`) and return 200 at
-`https://yale-ai-email-assets.vercel.app/afore-fireside-2026/banner-v4.jpg` before a real send.
+`https://yale-ai-email-assets.vercel.app/afore-fireside-2026/banner-v5.jpg` before a real send.
 
 ## Preview and send
 
