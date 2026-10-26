@@ -113,8 +113,9 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
   <tr><td class="pad" style="padding:28px 32px 0;">
     <p style="${p}">${greeting}</p>
     <p style="${p}padding-top:14px;"><a href="${ev.linkedin}" target="_blank" style="${b}color:${BLUE};text-decoration:underline;">${ev.speaker}</a> (${ev.title}) is coming to Yale from SF and he wants to meet you. Afore writes first checks of <span style="${b}">$500K to $2M+</span>, and pre-idea is welcome (they often back college founders, btw).</p>
-    <p style="${p}padding-top:14px;">Afore Capital will be hosting an exclusive event open to <span style="${b}">Yale students only</span> on <span style="${b}">${ev.dayLine}</span> at <span style="${b}">${ev.where} from ${ev.timeLine}</span>. Not only will you get to hear from Nathan about what a top VC looks for in student founders and potential builders, but about his journey into VC and startups from big tech.</p>
-    <p style="${p}padding-top:14px;"><span style="${b}">ALSO:</span> If you have an idea or are a builder of any kind... Afore is giving you the opportunity to pitch to them (right there at ${ev.where}). Seriously. <span style="${b}">10-15 of you will be selected to give a rapid-fire pitch to Afore Capital.</span> If they like your idea... the possibilities are endless.</p>
+    <p style="${p}padding-top:14px;">Afore Capital will be hosting an exclusive event open to <span style="${b}">Yale students only</span> on <span style="${b}">${ev.dayLine}</span> at <span style="${b}">${ev.where} from ${ev.timeLine}</span>.</p>
+    <p style="${p}padding-top:14px;">If you have an idea or are a builder of any kind... Afore is giving you the opportunity to pitch to them (right there at ${ev.where}). Seriously. <span style="${b}">10-15 of you will be selected to give a rapid-fire pitch to Afore Capital.</span> If they like your idea... the possibilities are endless.</p>
+    <p style="${p}padding-top:14px;"><span style="${b}">ALSO:</span> Not only will you get to hear from Nathan about what a top VC looks for in student founders and potential builders, but about his journey into VC and startups from big tech.</p>
     <p style="${p}padding-top:14px;">There will be an open Q&amp;A and networking time as well. All majors are welcome to come! Since we expect large amounts of interest, we&#8217;re capping the number of people that can attend. <span style="${b}">Apply on Luma (&lt;2 min) as soon as possible to secure your spot!</span> Acceptance is rolling.</p>
     <p style="${p}padding-top:14px;">You don&#8217;t want to miss this (these opportunities don&#8217;t come around often to get access to a top VC firm like this). Unsure if you want to found a startup now or sometime in the future? Come anyway. Afore wants to meet top talent at Yale regardless...</p>
   </td></tr>
@@ -148,9 +149,11 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
 ${ev.speaker} (${ev.title}) is coming to Yale from SF and he wants to meet you. Afore writes first checks of $500K to $2M+, and pre-idea is welcome (they often back college founders, btw).
 ${ev.linkedin}
 
-Afore Capital will be hosting an exclusive event open to Yale students only on ${ev.dayLine} at ${ev.where} from ${ev.timeLine}. Not only will you get to hear from Nathan about what a top VC looks for in student founders and potential builders, but about his journey into VC and startups from big tech.
+Afore Capital will be hosting an exclusive event open to Yale students only on ${ev.dayLine} at ${ev.where} from ${ev.timeLine}.
 
-ALSO: If you have an idea or are a builder of any kind... Afore is giving you the opportunity to pitch to them (right there at ${ev.where}). Seriously. 10-15 of you will be selected to give a rapid-fire pitch to Afore Capital. If they like your idea... the possibilities are endless.
+If you have an idea or are a builder of any kind... Afore is giving you the opportunity to pitch to them (right there at ${ev.where}). Seriously. 10-15 of you will be selected to give a rapid-fire pitch to Afore Capital. If they like your idea... the possibilities are endless.
+
+ALSO: Not only will you get to hear from Nathan about what a top VC looks for in student founders and potential builders, but about his journey into VC and startups from big tech.
 
 There will be an open Q&A and networking time as well. All majors are welcome to come! Since we expect large amounts of interest, we're capping the number of people that can attend. Apply on Luma (<2 min) as soon as possible to secure your spot! Acceptance is rolling.
 
