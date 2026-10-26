@@ -125,7 +125,7 @@ export function renderEmail({ firstName, lumaUrl = DEFAULT_LUMA_URL, siteUrl = D
   </td></tr>
 
   <tr><td class="pad" style="padding:26px 32px 0;">
-    <p style="${p}">Best,<br>The Yale AI Team</p>
+    <p style="${p}">Best,<br>The Yale AI Association Team</p>
   </td></tr>
 
   <tr><td class="pad" style="padding:36px 32px 40px;">
@@ -159,7 +159,7 @@ You don't want to miss this (these opportunities don't come around often to get 
 Apply on Luma: ${lumaUrl}
 
 Best,
-The Yale AI Team
+The Yale AI Association Team
 
 
 Questions? Just reply to this email. It goes to the Yale AI leadership (fellow Yale students).
