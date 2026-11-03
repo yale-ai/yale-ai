@@ -60,6 +60,7 @@ export async function loadCampaign(name) {
     // Entries look like { file, filename, type }; see lib/assets.js loadFiles().
     files: mod.FILES || [],
     replyTo: mod.REPLY_TO || null, // a campaign may pin its own reply-to list
+    from: mod.FROM || null, // and its own sender (still on the verified domain)
     dir,
     assetsDir: join(dir, "assets"),
     module: mod,
