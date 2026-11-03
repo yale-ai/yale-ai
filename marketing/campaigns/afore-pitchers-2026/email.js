@@ -9,7 +9,7 @@ export const CAMPAIGN = { id: "afore-pitchers-2026", tag: "afore-pitchers-2026" 
 export const FROM = "Filippo Fonseca <filippo@yale-ai.org>";
 export const REPLY_TO = ["filippo.fonseca@yale.edu"];
 
-export const SUBJECT = "You've been selected to pitch Afore Capital on 11/4";
+export const SUBJECT = "You've been selected to pitch Afore Capital on 11/4!";
 export const PREHEADER = "Congratulations! Two minutes to pitch, one minute of Q&A, at Tsai CITY on Wednesday.";
 
 export const LUMA_URL = "https://luma.com/3qmnfwtw";
