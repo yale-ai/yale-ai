@@ -46,7 +46,7 @@ export function renderEmail({ firstName, lumaUrl = LUMA_URL } = {}) {
 <p style="${p}">We&#8217;ll ask that you keep your pitch to no more than 2 minutes, allowing for a 1 minute Q&amp;A. If you go over two minutes, you can go up to three minutes, but will lose the chance to answer questions from Afore.</p>
 <p style="${p}">You will pitch after Nathan&#8217;s speech and Q&amp;A in front of everyone present (~100 fellow Yale students) at Tsai! The event runs from 4:30 to 6:30 PM, as you know.</p>
 <p style="${p}">Please reply by end of day Tuesday confirming you&#8217;d still like to pitch Afore; it doesn&#8217;t have to be the idea you submitted on the Luma!</p>
-<p style="margin:0;">Best regards,<br>Filippo</p>
+<p style="margin:0;">Best regards,<br>Filippo<br>Afore Capital Scout<br>Davenport &#8217;28</p>
 </div>
 </body>
 </html>`;
@@ -63,6 +63,8 @@ Please reply by end of day Tuesday confirming you'd still like to pitch Afore; i
 
 Best regards,
 Filippo
+Afore Capital Scout
+Davenport '28
 `;
 
   return { subject: SUBJECT, html, text };
